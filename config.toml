@@ -1,5 +1,5 @@
 ################################# Default configuration ###################
-baseURL = "https://examplesite.com"
+baseURL = "https://ia4lab.github.io"
 title = "Meghna"
 theme = "meghna"
 themesDir = "./themes"
