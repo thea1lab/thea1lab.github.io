@@ -38,6 +38,8 @@ link = "plugins/shuffle/shuffle.min.js"
 link = "plugins/magnific-popup/jquery.magnific-popup.min.js"
 [[params.plugins.js]]
 link = "plugins/lazy-load/lozad.min.js"
+[[params.plugins.js]]
+link = "https://www.google.com/recaptcha/api.js"
 # [[params.plugins.js]]
 # link = "plugins/google-map/map.js"
 
