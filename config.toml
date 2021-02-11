@@ -88,43 +88,43 @@ weight = 7
 ################### Portuguese Navigation ########################
 [[Languages.pt.menu.main]]
 name = "sobre"
-pre = "#"
+pre = "/pt/#"
 url = "about"
 weight = 1
 
 [[Languages.pt.menu.main]]
 name = "servicos"
-pre = "#"
+pre = "/pt/#"
 url = "services"
 weight = 2
 
 [[Languages.pt.menu.main]]
 name = "portfólio"
-pre = "#"
+pre = "/pt/#"
 url = "portfolio"
 weight = 3
 
 [[Languages.pt.menu.main]]
 name = "equipe"
-pre = "#"
+pre = "/pt/#"
 url = "team"
 weight = 4
 
 [[Languages.pt.menu.main]]
 name = "preço"
-pre = "#"
+pre = "/pt/#"
 url = "pricing"
 weight = 5
 
 [[Languages.pt.menu.main]]
 name = "blog"
-pre = "#"
+pre = "/pt/#"
 url = "blog"
 weight = 6
 
 [[Languages.pt.menu.main]]
 name = "contato"
-pre = "#"
+pre = "/pt/#"
 url = "contact"
 weight = 7
 
