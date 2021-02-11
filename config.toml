@@ -8,7 +8,7 @@ paginate = "6"
 # post excerpt
 summaryLength = "15"
 # disqus short name
-disqusShortname = "" # get your shortname form here : https://disqus.com
+# disqusShortname = "" # get your shortname form here : https://disqus.com
 # disable language
 disableLanguages = []
 
@@ -38,8 +38,8 @@ link = "plugins/shuffle/shuffle.min.js"
 link = "plugins/magnific-popup/jquery.magnific-popup.min.js"
 [[params.plugins.js]]
 link = "plugins/lazy-load/lozad.min.js"
-[[params.plugins.js]]
-link = "plugins/google-map/map.js"
+# [[params.plugins.js]]
+# link = "plugins/google-map/map.js"
 
 ################### English Navigation ########################
 [[Languages.en.menu.main]]
@@ -84,61 +84,50 @@ pre = "#"
 url = "contact"
 weight = 7
 
-[[Languages.en.menu.main]]
-name = "themefisher"
-pre = ""
-url = "https://themefisher.com/"
-weight = 8
 
-
-################### French Navigation ########################
-[[Languages.fr.menu.main]]
-name = "sur"
+################### Portuguese Navigation ########################
+[[Languages.pt.menu.main]]
+name = "sobre"
 pre = "#"
 url = "about"
 weight = 1
 
-[[Languages.fr.menu.main]]
-name = "un service"
+[[Languages.pt.menu.main]]
+name = "servicos"
 pre = "#"
 url = "services"
 weight = 2
 
-[[Languages.fr.menu.main]]
-name = "portefeuille"
+[[Languages.pt.menu.main]]
+name = "portfólio"
 pre = "#"
 url = "portfolio"
 weight = 3
 
-[[Languages.fr.menu.main]]
-name = "équipe"
+[[Languages.pt.menu.main]]
+name = "equipe"
 pre = "#"
 url = "team"
 weight = 4
 
-[[Languages.fr.menu.main]]
-name = "tarification"
+[[Languages.pt.menu.main]]
+name = "preço"
 pre = "#"
 url = "pricing"
 weight = 5
 
-[[Languages.fr.menu.main]]
+[[Languages.pt.menu.main]]
 name = "blog"
 pre = "#"
 url = "blog"
 weight = 6
 
-[[Languages.fr.menu.main]]
-name = "contact"
+[[Languages.pt.menu.main]]
+name = "contato"
 pre = "#"
 url = "contact"
 weight = 7
 
-[[Languages.fr.menu.main]]
-name = "themefisher"
-pre = ""
-url = "https://themefisher.com/"
-weight = 8
 
 ############################# Default Parameters ##########################
 [params]
@@ -147,7 +136,7 @@ logo = "images/logo.png"
 description = "Responsive Multipurpose Parallax Hugo Template"
 author = "Themefisher"
 # Google Analytics
-google_analytics_id = "" # Your ID
+# google_analytics_id = "" # Your ID
 # post share
 post_share = true
 
@@ -162,37 +151,37 @@ enable = false
 expire_days = 2
 
 # google map
-[params.map]
-enable = false
-gmap_api = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"
-map_latitude = "51.5223477"
-map_longitude = "-0.1622023"
-map_marker = "images/marker.png"
+# [params.map]
+# enable = false
+# gmap_api = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"
+# map_latitude = "51.5223477"
+# map_longitude = "-0.1622023"
+# map_marker = "images/marker.png"
 
 ############################# social icons ##########################
 [[params.social]]
-icon = "ti-facebook" # themify icon pack : https://themify.me/themify-icons
-link = "#"
+icon = "ti-github" # themify icon pack : https://themify.me/themify-icons
+link = "https://github.com/lab-a1"
 
-[[params.social]]
-icon = "ti-twitter-alt" # themify icon pack : https://themify.me/themify-icons
-link = "#"
+# [[params.social]]
+# icon = "ti-twitter-alt" # themify icon pack : https://themify.me/themify-icons
+# link = "#"
 
-[[params.social]]
-icon = "ti-youtube" # themify icon pack : https://themify.me/themify-icons
-link = "#"
+# [[params.social]]
+# icon = "ti-youtube" # themify icon pack : https://themify.me/themify-icons
+# link = "#"
 
-[[params.social]]
-icon = "ti-linkedin" # themify icon pack : https://themify.me/themify-icons
-link = "#"
+# [[params.social]]
+# icon = "ti-linkedin" # themify icon pack : https://themify.me/themify-icons
+# link = "#"
 
-[[params.social]]
-icon = "ti-dribbble" # themify icon pack : https://themify.me/themify-icons
-link = "#"
+# [[params.social]]
+# icon = "ti-dribbble" # themify icon pack : https://themify.me/themify-icons
+# link = "#"
 
-[[params.social]]
-icon = "ti-pinterest" # themify icon pack : https://themify.me/themify-icons
-link = "#"
+# [[params.social]]
+# icon = "ti-pinterest" # themify icon pack : https://themify.me/themify-icons
+# link = "#"
 
 
 ################################ English Language ########################
@@ -202,13 +191,13 @@ languageCode = "en-us"
 contentDir = "content/english"
 weight = 1
 home = "Home"
-copyright = "Copyright &copy; 2020 Designed by [Themefisher](https://themefisher.com) & Developed by [Gethugothemes](https://gethugothemes.com)"
+copyright = "Copyright &copy; 2021 Designed by [Themefisher](https://themefisher.com) & Developed by [Gethugothemes](https://gethugothemes.com)."
 
-################################ France Language ########################
-[Languages.fr]
-languageName = "Fr"
-languageCode = "fr-fr"
-contentDir = "content/french"
+################################ Portuguese Language ########################
+[Languages.pt]
+languageName = "Pt"
+languageCode = "pt-br"
+contentDir = "content/portuguese"
 weight = 2
-home = "Accueil"
-copyright = "Copyright &copy; 2020 Designed by [Themefisher](https://themefisher.com) & Developed by [Gethugothemes](https://gethugothemes.com)"
+home = "Home"
+copyright = "Copyright &copy; 2021 Projetado por [Themefisher](https://themefisher.com) & Desenvolvido por [Gethugothemes](https://gethugothemes.com)."
