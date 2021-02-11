@@ -8,14 +8,14 @@ contact:
   # Contact details
   contact_list:
     - icon : ti-location-pin # themify icon pack : https://themify.me/themify-icons
-      info : "Brazil"
-      
+      info : "Brasil"
+
     #- icon : ti-mobile # themify icon pack : https://themify.me/themify-icons
       #info : "Phone: +880-31-000-000"
-      
+
     #- icon : ti-printer # themify icon pack : https://themify.me/themify-icons
       #info : "Fax: +880-31-000-000"
-      
+
     - icon : ti-email # themify icon pack : https://themify.me/themify-icons
       info : "E-mail: a1-lab@protonmail.com"
 
