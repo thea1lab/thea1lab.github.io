@@ -8,24 +8,24 @@ contact:
   # Contact details
   contact_list:
     - icon : ti-location-pin # themify icon pack : https://themify.me/themify-icons
-      info : "Khaja Road, Bayzid, Chittagong, Bangladesh"
+      info : "Brazil"
       
-    - icon : ti-mobile # themify icon pack : https://themify.me/themify-icons
-      info : "Phone: +880-31-000-000"
+    #- icon : ti-mobile # themify icon pack : https://themify.me/themify-icons
+      #info : "Phone: +880-31-000-000"
       
-    - icon : ti-printer # themify icon pack : https://themify.me/themify-icons
-      info : "Fax: +880-31-000-000"
+    #- icon : ti-printer # themify icon pack : https://themify.me/themify-icons
+      #info : "Fax: +880-31-000-000"
       
     - icon : ti-email # themify icon pack : https://themify.me/themify-icons
-      info : "Email: hello@meghna.com"
+      info : "E-mail: a1-lab@protonmail.com"
 
 
   # Contact form
   contact_form:
     enable : true
-    form_action : "#" #contact form works with https://formspree.io
-    name : "votre nom"
-    email : "Votre email"
-    subject : "Matière"
-    message : "Message"
-    submit : "Soumettre"
+    form_action : "https://formspree.io/f/xdopvnez" #contact form works with https://formspree.io
+    name : "Seu nome"
+    email : "Seu e-mail"
+    subject : "Assunto"
+    message : "Mensagem"
+    submit : "Enviar"
