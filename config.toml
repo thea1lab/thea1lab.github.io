@@ -1,6 +1,6 @@
 ################################# Default configuration ###################
-baseURL = "https://ia4lab.github.io"
-title = "ia4all"
+baseURL = "https://lab-a1.github.io"
+title = "A1 Lab"
 theme = "meghna"
 themesDir = "./themes"
 # post pagination
