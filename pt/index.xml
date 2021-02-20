@@ -94,20 +94,11 @@
     </item>
     
     <item>
-      <title>John Doe</title>
-      <link>https://lab-a1.github.io/pt/author/john-doe/</link>
+      <title>Claudio Scheer</title>
+      <link>https://lab-a1.github.io/pt/author/claudio-scheer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://lab-a1.github.io/pt/author/john-doe/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet vulputate augue. Duis auctor lacus id vehicula gravida.</description>
-    </item>
-    
-    <item>
-      <title>Mark Dinn</title>
-      <link>https://lab-a1.github.io/pt/author/mark-dinn/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://lab-a1.github.io/pt/author/mark-dinn/</guid>
+      <guid>https://lab-a1.github.io/pt/author/claudio-scheer/</guid>
       <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet vulputate augue. Duis auctor lacus id vehicula gravida.</description>
     </item>
     
