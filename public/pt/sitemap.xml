@@ -196,30 +196,16 @@
   </url>
   
   <url>
-    <loc>https://lab-a1.github.io/pt/author/john-doe/</loc>
+    <loc>https://lab-a1.github.io/pt/author/claudio-scheer/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://lab-a1.github.io/author/john-doe/"
+                href="https://lab-a1.github.io/author/claudio-scheer/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="pt"
-                href="https://lab-a1.github.io/pt/author/john-doe/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://lab-a1.github.io/pt/author/mark-dinn/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://lab-a1.github.io/author/mark-dinn/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="pt"
-                href="https://lab-a1.github.io/pt/author/mark-dinn/"
+                href="https://lab-a1.github.io/pt/author/claudio-scheer/"
                 />
   </url>
   

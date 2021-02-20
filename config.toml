@@ -173,9 +173,9 @@ link = "https://github.com/lab-a1"
 # icon = "ti-youtube" # themify icon pack : https://themify.me/themify-icons
 # link = "#"
 
-# [[params.social]]
-# icon = "ti-linkedin" # themify icon pack : https://themify.me/themify-icons
-# link = "#"
+[[params.social]]
+icon = "ti-linkedin" # themify icon pack : https://themify.me/themify-icons
+link = "https://www.linkedin.com/company/a1-lab"
 
 # [[params.social]]
 # icon = "ti-dribbble" # themify icon pack : https://themify.me/themify-icons
