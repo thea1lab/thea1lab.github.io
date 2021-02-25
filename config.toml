@@ -11,6 +11,7 @@ summaryLength = "15"
 # disqusShortname = "" # get your shortname form here : https://disqus.com
 # disable language
 disableLanguages = []
+defaultContentLanguage = "pt"
 
 ############################# Plugins ##########################
 # css plugins
@@ -43,93 +44,91 @@ link = "plugins/lazy-load/lozad.min.js"
 # [[params.plugins.js]]
 # link = "plugins/google-map/map.js"
 
-################### English Navigation ########################
-[[Languages.en.menu.main]]
-name = "about"
-pre = "#"
-url = "about"
-weight = 1
-
-[[Languages.en.menu.main]]
-name = "services"
-pre = "#"
-url = "services"
-weight = 2
-
-[[Languages.en.menu.main]]
-name = "portfolio"
-pre = "#"
-url = "portfolio"
-weight = 3
-
-[[Languages.en.menu.main]]
-name = "team"
-pre = "#"
-url = "team"
-weight = 4
-
-[[Languages.en.menu.main]]
-name = "pricing"
-pre = "#"
-url = "pricing"
-weight = 5
-
-[[Languages.en.menu.main]]
-name = "blog"
-pre = "#"
-url = "blog"
-weight = 6
-
-[[Languages.en.menu.main]]
-name = "contact"
-pre = "#"
-url = "contact"
-weight = 7
-
-
 ################### Portuguese Navigation ########################
 [[Languages.pt.menu.main]]
 name = "sobre"
-pre = "/pt/#"
+pre = "#"
 url = "about"
 weight = 1
 
 [[Languages.pt.menu.main]]
 name = "serviços"
-pre = "/pt/#"
+pre = "#"
 url = "services"
 weight = 2
 
 [[Languages.pt.menu.main]]
 name = "portfólio"
-pre = "/pt/#"
+pre = "#"
 url = "portfolio"
 weight = 3
 
 [[Languages.pt.menu.main]]
 name = "equipe"
-pre = "/pt/#"
+pre = "#"
 url = "team"
 weight = 4
 
 [[Languages.pt.menu.main]]
 name = "preço"
-pre = "/pt/#"
+pre = "#"
 url = "pricing"
 weight = 5
 
 [[Languages.pt.menu.main]]
 name = "blog"
-pre = "/pt/#"
+pre = "#"
 url = "blog"
 weight = 6
 
 [[Languages.pt.menu.main]]
 name = "contato"
-pre = "/pt/#"
+pre = "#"
 url = "contact"
 weight = 7
 
+################### English Navigation ########################
+[[Languages.en.menu.main]]
+name = "about"
+pre = "/en/#"
+url = "about"
+weight = 1
+
+[[Languages.en.menu.main]]
+name = "services"
+pre = "/en/#"
+url = "services"
+weight = 2
+
+[[Languages.en.menu.main]]
+name = "portfolio"
+pre = "/en/#"
+url = "portfolio"
+weight = 3
+
+[[Languages.en.menu.main]]
+name = "team"
+pre = "/en/#"
+url = "team"
+weight = 4
+
+[[Languages.en.menu.main]]
+name = "pricing"
+pre = "/en/#"
+url = "pricing"
+weight = 5
+
+[[Languages.en.menu.main]]
+name = "blog"
+pre = "/en/#"
+url = "blog"
+weight = 6
+
+[[Languages.en.menu.main]]
+name = "contact"
+pre = "/en/#"
+url = "contact"
+weight = 7
 
 ############################# Default Parameters ##########################
 [params]
@@ -185,21 +184,20 @@ link = "https://www.linkedin.com/company/a1-lab"
 # icon = "ti-pinterest" # themify icon pack : https://themify.me/themify-icons
 # link = "#"
 
+################################ Portuguese Language ########################
+[Languages.pt]
+languageName = "Pt"
+languageCode = "pt-br"
+contentDir = "content/portuguese"
+weight = 1
+home = "Home"
+copyright = "Copyright &copy; 2021 Projetado por [Themefisher](https://themefisher.com) & Desenvolvido por [Gethugothemes](https://gethugothemes.com)."
 
 ################################ English Language ########################
 [Languages.en]
 languageName = "En"
 languageCode = "en-us"
 contentDir = "content/english"
-weight = 1
-home = "Home"
-copyright = "Copyright &copy; 2021 Designed by [Themefisher](https://themefisher.com) & Developed by [Gethugothemes](https://gethugothemes.com)."
-
-################################ Portuguese Language ########################
-[Languages.pt]
-languageName = "Pt"
-languageCode = "pt-br"
-contentDir = "content/portuguese"
 weight = 2
 home = "Home"
-copyright = "Copyright &copy; 2021 Projetado por [Themefisher](https://themefisher.com) & Desenvolvido por [Gethugothemes](https://gethugothemes.com)."
+copyright = "Copyright &copy; 2021 Designed by [Themefisher](https://themefisher.com) & Developed by [Gethugothemes](https://gethugothemes.com)."
