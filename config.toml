@@ -77,7 +77,7 @@ weight = 4
 
 [[Languages.pt.menu.main]]
 name = "blog"
-pre = "#"
+pre = ""
 url = "blog"
 weight = 6
 
@@ -90,43 +90,43 @@ weight = 7
 ################### English Navigation ########################
 [[Languages.en.menu.main]]
 name = "about"
-pre = "/en/#"
+pre = "en/#"
 url = "about"
 weight = 1
 
 [[Languages.en.menu.main]]
 name = "services"
-pre = "/en/#"
+pre = "en/#"
 url = "services"
 weight = 2
 
 [[Languages.en.menu.main]]
 name = "portfolio"
-pre = "/en/#"
+pre = "en/#"
 url = "portfolio"
 weight = 3
 
 [[Languages.en.menu.main]]
 name = "team"
-pre = "/en/#"
+pre = "en/#"
 url = "team"
 weight = 4
 
 #[[Languages.en.menu.main]]
 #name = "pricing"
-#pre = "/en/#"
+#pre = "en/#"
 #url = "pricing"
 #weight = 5
 
 [[Languages.en.menu.main]]
 name = "blog"
-pre = "/en/#"
+pre = "en/"
 url = "blog"
 weight = 6
 
 [[Languages.en.menu.main]]
 name = "contact"
-pre = "/en/#"
+pre = "en/#"
 url = "contact"
 weight = 7
 
