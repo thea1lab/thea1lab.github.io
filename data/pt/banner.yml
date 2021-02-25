@@ -5,6 +5,7 @@ banner:
   bg_image: "images/backgrounds/hero-area.jpg"
   icon: "" # themify icon pack : https://themify.me/themify-icons
   title: "Laboratório de Inteligência Artificial"
+  under_development: "Site em desenvolvimento."
   content: "Abordando problemas do mundo real com inteligência artificial."
   button:
     enable: true

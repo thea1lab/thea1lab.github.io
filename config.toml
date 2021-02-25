@@ -69,11 +69,11 @@ pre = "#"
 url = "team"
 weight = 4
 
-[[Languages.pt.menu.main]]
-name = "preço"
-pre = "#"
-url = "pricing"
-weight = 5
+#[[Languages.pt.menu.main]]
+#name = "preço"
+#pre = "#"
+#url = "pricing"
+#weight = 5
 
 [[Languages.pt.menu.main]]
 name = "blog"
@@ -112,11 +112,11 @@ pre = "/en/#"
 url = "team"
 weight = 4
 
-[[Languages.en.menu.main]]
-name = "pricing"
-pre = "/en/#"
-url = "pricing"
-weight = 5
+#[[Languages.en.menu.main]]
+#name = "pricing"
+#pre = "/en/#"
+#url = "pricing"
+#weight = 5
 
 [[Languages.en.menu.main]]
 name = "blog"
