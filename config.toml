@@ -77,7 +77,7 @@ weight = 4
 
 [[Languages.pt.menu.main]]
 name = "blog"
-pre = ""
+pre = "#"
 url = "blog"
 weight = 6
 
