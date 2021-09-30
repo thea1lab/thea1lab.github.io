@@ -120,7 +120,7 @@ weight = 4
 
 [[Languages.en.menu.main]]
 name = "blog"
-pre = "en/"
+pre = "en/#"
 url = "blog"
 weight = 6
 
