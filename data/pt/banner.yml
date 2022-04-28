@@ -4,9 +4,9 @@ banner:
   bg_image_webp: "images/backgrounds/hero-area.webp"
   bg_image: "images/backgrounds/hero-area.jpg"
   icon: "" # themify icon pack : https://themify.me/themify-icons
-  title: "Laboratório de Inteligência Artificial"
+  title: "A1 Software Lab"
   under_development: "Site em desenvolvimento."
-  content: "Abordando problemas do mundo real com inteligência artificial."
+  content: "Problemas reais, A1 softwares."
   button:
     enable: true
     label: "Explorar"
