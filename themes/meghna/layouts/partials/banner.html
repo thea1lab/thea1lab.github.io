@@ -14,7 +14,10 @@
 		</div>
 		{{ end }}
 		<h2>{{ .under_development | markdownify }}</h2>
-		<h1>{{ .title | markdownify }}</h1>
+		<h1>
+			<img class="lozad" data-src="{{ site.Params.logo2 | absURL }}" alt="{{ .Site.Title }}" style="width: 100%; max-height: 300px;" />
+			<!-- {{ .title | markdownify }} -->
+		</h1>
 		<p>{{ .content | markdownify }}</p>
 		{{ if .button.enable }}
 		{{ with .button }}

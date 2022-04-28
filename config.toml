@@ -133,6 +133,7 @@ weight = 7
 ############################# Default Parameters ##########################
 [params]
 logo = "images/logo.png"
+logo2 = "images/full-logo.png"
 # Meta data
 description = "A1 Software Lab"
 author = "A1 Lab"
@@ -143,7 +144,7 @@ post_share = false
 
 # preloader
 [params.preloader]
-enable = false
+enable = true
 preloader = "images/logo.png"
 
 # cookies
