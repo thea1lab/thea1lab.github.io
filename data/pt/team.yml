@@ -6,7 +6,7 @@ team:
     - name: Claudio Scheer
       image_webp: images/team/team-1.webp
       image: images/team/team-1.jpg
-      designation: Engenheiro de Machine Learning
+      designation: Software Engineer
       # content: Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur necessitatibus ullam, culpa odio.
       social:
         - icon: ti-github # themify icon pack : https://themify.me/themify-icons
