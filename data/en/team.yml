@@ -12,6 +12,16 @@ team:
         - icon: ti-github # themify icon pack : https://themify.me/themify-icons
           link: "https://github.com/claudioscheer"
         - icon: ti-linkedin # themify icon pack : https://themify.me/themify-icons
-          link: "https://br.linkedin.com/in/claudioscheer"
+          link: "https://linkedin.com/in/claudioscheer"
         - icon: ti-link # themify icon pack : https://themify.me/themify-icons
           link: "https://claudioscheer.github.io"
+    - name: Welliton Scheer
+      image_webp: images/team/team-welliton.webp
+      image: images/team/team-welliton.jpeg
+      designation: Software Engineer
+      # content: Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur necessitatibus ullam, culpa odio.
+      social:
+        - icon: ti-github # themify icon pack : https://themify.me/themify-icons
+          link: "https://github.com/wellitonscheer"
+        - icon: ti-linkedin # themify icon pack : https://themify.me/themify-icons
+          link: "https://linkedin.com/in/welliton-scheer"
