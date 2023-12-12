@@ -44,49 +44,6 @@ link = "plugins/lazy-load/lozad.min.js"
 # [[params.plugins.js]]
 # link = "plugins/google-map/map.js"
 
-################### Portuguese Navigation ########################
-# [[Languages.pt.menu.main]]
-# name = "sobre"
-# pre = "/#"
-# url = "about"
-# weight = 1
-
-# [[Languages.pt.menu.main]]
-# name = "serviços"
-# pre = "/#"
-# url = "services"
-# weight = 2
-
-# [[Languages.pt.menu.main]]
-# name = "portfólio"
-# pre = "/#"
-# url = "portfolio"
-# weight = 3
-
-[[Languages.pt.menu.main]]
-name = "equipe"
-pre = "/#"
-url = "team"
-weight = 4
-
-# [[Languages.pt.menu.main]]
-# name = "preço"
-# pre = "/#"
-# url = "pricing"
-# weight = 5
-
-[[Languages.pt.menu.main]]
-name = "blog"
-pre = "/#"
-url = "blog"
-weight = 6
-
-[[Languages.pt.menu.main]]
-name = "contato"
-pre = "/#"
-url = "contact"
-weight = 7
-
 ################### English Navigation ########################
 # [[Languages.en.menu.main]]
 # name = "about"
@@ -108,7 +65,7 @@ weight = 7
 
 [[Languages.en.menu.main]]
 name = "team"
-pre = "/en/#"
+pre = "/#"
 url = "team"
 weight = 4
 
@@ -120,13 +77,56 @@ weight = 4
 
 [[Languages.en.menu.main]]
 name = "blog"
-pre = "/en/#"
+pre = "/#"
 url = "blog"
 weight = 6
 
 [[Languages.en.menu.main]]
 name = "contact"
-pre = "/en/#"
+pre = "/#"
+url = "contact"
+weight = 7
+
+################### Portuguese Navigation ########################
+# [[Languages.pt.menu.main]]
+# name = "sobre"
+# pre = "/#"
+# url = "about"
+# weight = 1
+
+# [[Languages.pt.menu.main]]
+# name = "serviços"
+# pre = "/#"
+# url = "services"
+# weight = 2
+
+# [[Languages.pt.menu.main]]
+# name = "portfólio"
+# pre = "/#"
+# url = "portfolio"
+# weight = 3
+
+[[Languages.pt.menu.main]]
+name = "equipe"
+pre = "/pt/#"
+url = "team"
+weight = 4
+
+# [[Languages.pt.menu.main]]
+# name = "preço"
+# pre = "/#"
+# url = "pricing"
+# weight = 5
+
+[[Languages.pt.menu.main]]
+name = "blog"
+pre = "/pt/#"
+url = "blog"
+weight = 6
+
+[[Languages.pt.menu.main]]
+name = "contato"
+pre = "/pt/#"
 url = "contact"
 weight = 7
 
@@ -185,20 +185,20 @@ link = "https://www.linkedin.com/company/lab-a1"
 # icon = "ti-pinterest" # themify icon pack : https://themify.me/themify-icons
 # link = "#"
 
-################################ Portuguese Language ########################
-[Languages.pt]
-languageName = "Pt"
-languageCode = "pt-br"
-contentDir = "content/portuguese"
-weight = 1
-home = "Home"
-copyright = "Copyright &copy; 2021 Projetado por [Themefisher](https://themefisher.com) & Desenvolvido por [Gethugothemes](https://gethugothemes.com)."
-
 ################################ English Language ########################
 [Languages.en]
 languageName = "En"
 languageCode = "en-us"
 contentDir = "content/english"
-weight = 2
+weight = 1
 home = "Home"
 copyright = "Copyright &copy; 2021 Designed by [Themefisher](https://themefisher.com) & Developed by [Gethugothemes](https://gethugothemes.com)."
+
+################################ Portuguese Language ########################
+[Languages.pt]
+languageName = "Pt"
+languageCode = "pt-br"
+contentDir = "content/portuguese"
+weight = 2
+home = "Home"
+copyright = "Copyright &copy; 2021 Projetado por [Themefisher](https://themefisher.com) & Desenvolvido por [Gethugothemes](https://gethugothemes.com)."
