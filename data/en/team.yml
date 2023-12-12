@@ -4,8 +4,8 @@ team:
   title: Our Team
   team_member:
     - name: Claudio Scheer
-      image_webp: images/team/team-1.webp
-      image: images/team/team-1.jpg
+      image_webp: images/team/team-claudio.webp
+      image: images/team/team-claudio.jpg
       designation: Software Engineer
       # content: Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur necessitatibus ullam, culpa odio.
       social:
@@ -17,7 +17,7 @@ team:
           link: "https://claudioscheer.github.io"
     - name: Welliton Scheer
       image_webp: images/team/team-welliton.webp
-      image: images/team/team-welliton.jpeg
+      image: images/team/team-welliton.jpg
       designation: Software Engineer
       # content: Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur necessitatibus ullam, culpa odio.
       social:
