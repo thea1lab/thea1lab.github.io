@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <sitemap>
-    <loc>https://lab-a1.github.io/en/sitemap.xml</loc>
-    
-      <lastmod>2018-09-12T14:51:12+06:00</lastmod>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>https://lab-a1.github.io/pt/sitemap.xml</loc>
-    
-      <lastmod>2018-09-12T14:51:12+06:00</lastmod>
-    
-  </sitemap>
-  
-</sitemapindex>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://lab-a1.github.io/</loc>
+    <lastmod>2023-12-23T15:48:14+03:00</lastmod>
+  </url><url>
+    <loc>https://lab-a1.github.io/blog/ai-planning/</loc>
+    <lastmod>2023-12-23T15:48:14+03:00</lastmod>
+  </url><url>
+    <loc>https://lab-a1.github.io/blog/</loc>
+    <lastmod>2023-12-23T15:48:14+03:00</lastmod>
+  </url><url>
+    <loc>https://lab-a1.github.io/author/</loc>
+  </url><url>
+    <loc>https://lab-a1.github.io/categories/</loc>
+  </url><url>
+    <loc>https://lab-a1.github.io/author/claudio-scheer/</loc>
+  </url><url>
+    <loc>https://lab-a1.github.io/tags/</loc>
+  </url>
+</urlset>
