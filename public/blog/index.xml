@@ -7,15 +7,14 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright &amp;copy; 2021 Designed by [Themefisher](https://themefisher.com) &amp; Developed by [Gethugothemes](https://gethugothemes.com).</copyright>
-    <lastBuildDate>Sat, 23 Dec 2023 15:48:14 +0300</lastBuildDate><atom:link href="https://lab-a1.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 23 Dec 2023 15:48:14 +0300</lastBuildDate>
+    <atom:link href="https://lab-a1.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI Planning: An Introduction</title>
       <link>https://lab-a1.github.io/blog/ai-planning/</link>
       <pubDate>Sat, 23 Dec 2023 15:48:14 +0300</pubDate>
-      
       <guid>https://lab-a1.github.io/blog/ai-planning/</guid>
       <description>In straightforward terms, AI Planning is a branch of AI (Artificial Intelligence) focused on generating strategies to accomplish specific objectives.</description>
     </item>
-    
   </channel>
 </rss>

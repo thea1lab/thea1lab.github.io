@@ -6,15 +6,14 @@
     <description>Recent content in Authors on A1 Lab</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Copyright &amp;copy; 2021 Designed by [Themefisher](https://themefisher.com) &amp; Developed by [Gethugothemes](https://gethugothemes.com).</copyright><atom:link href="https://lab-a1.github.io/author/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Copyright &amp;copy; 2021 Designed by [Themefisher](https://themefisher.com) &amp; Developed by [Gethugothemes](https://gethugothemes.com).</copyright>
+    <atom:link href="https://lab-a1.github.io/author/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Claudio Scheer</title>
       <link>https://lab-a1.github.io/author/claudio-scheer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://lab-a1.github.io/author/claudio-scheer/</guid>
       <description>I&amp;rsquo;m a software engineer and have a master&amp;rsquo;s degree in Computer Science from PUCRS. I&amp;rsquo;m deeply passionate about exploring new technologies to solve real-world problems.</description>
     </item>
-    
   </channel>
 </rss>
