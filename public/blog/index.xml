@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogs on A1 Lab</title>
-    <link>https://thea1lab.github.io/blog/</link>
+    <link>https://www.a1lab.com.br/blog/</link>
     <description>Recent content in Blogs on A1 Lab</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright &amp;copy; 2021 Designed by [Themefisher](https://themefisher.com) &amp; Developed by [Gethugothemes](https://gethugothemes.com).</copyright>
     <lastBuildDate>Sat, 23 Dec 2023 15:48:14 +0300</lastBuildDate>
-    <atom:link href="https://thea1lab.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://www.a1lab.com.br/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>AI Planning: An Introduction</title>
-      <link>https://thea1lab.github.io/blog/ai-planning/</link>
+      <link>https://www.a1lab.com.br/blog/ai-planning/</link>
       <pubDate>Sat, 23 Dec 2023 15:48:14 +0300</pubDate>
-      <guid>https://thea1lab.github.io/blog/ai-planning/</guid>
+      <guid>https://www.a1lab.com.br/blog/ai-planning/</guid>
       <description>In straightforward terms, AI Planning is a branch of AI (Artificial Intelligence) focused on generating strategies to accomplish specific objectives.</description>
     </item>
   </channel>

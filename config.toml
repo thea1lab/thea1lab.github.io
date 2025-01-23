@@ -1,5 +1,5 @@
 ################################# Default configuration ###################
-baseURL = "https://thea1lab.github.io"
+baseURL = "https://www.a1lab.com.br"
 title = "A1 Lab"
 theme = "meghna"
 themesDir = "./themes"
