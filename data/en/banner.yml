@@ -6,7 +6,7 @@ banner:
   icon: "" # themify icon pack : https://themify.me/themify-icons
   title: "A1 Software Lab"
   under_development: "Site under development."
-  content: "Real-world problems, software A1."
+  content: "Solving Challenges the A1 Way"
   button:
     enable: true
     label: "Explore Us"
