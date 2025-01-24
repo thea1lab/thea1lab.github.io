@@ -1,16 +1,16 @@
 ############################# About ###################################
 about:
-  enable: false
+  enable: true
   title: About Us
   about_item:
-    - icon: ti-ruler-pencil # themify icon pack : https://themify.me/themify-icons
-      title: We're Creative
-      content: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos.
+    - icon: ti-light-bulb # themify icon pack : https://themify.me/themify-icons
+      title: We're <span class="color">Creative</span>
+      content: "At A1 Lab, we bring innovation and creativity to every challenge. We love transforming complex ideas into clear, engaging solutions that spark curiosity. Our passion lies in simplifying technical concepts and making learning accessible for everyone."
 
-    - icon: ti-cup # themify icon pack : https://themify.me/themify-icons
-      title: We're Professional
-      content: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos.
+    - icon: ti-briefcase # themify icon pack : https://themify.me/themify-icons
+      title: We're <span class="color">Professional</span>
+      content: "We are a team of experienced professionals dedicated to sharing our knowledge. With years of practice and a strong commitment to excellence, we continuously strive to grow and contribute to the learning and development of our community."
 
-    - icon: ti-thought # themify icon pack : https://themify.me/themify-icons
-      title: We're Genius
-      content: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos.
+    - icon: ti-comments # themify icon pack : https://themify.me/themify-icons
+      title: the <span class="color">A1 Way</span>
+      content: "Our approach is simple: tackle challenges with integrity, curiosity, and a focus on collaboration. At A1 Lab, we are inspired by the open-source philosophy - sharing knowledge freely, encouraging innovation, and building a community where teaching and learning grow together."

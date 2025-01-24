@@ -45,11 +45,11 @@ link = "plugins/lazy-load/lozad.min.js"
 # link = "plugins/google-map/map.js"
 
 ################### English Navigation ########################
-# [[Languages.en.menu.main]]
-# name = "about"
-# pre = "/en/#"
-# url = "about"
-# weight = 1
+[[Languages.en.menu.main]]
+name = "about"
+pre = "en/#"
+url = "about"
+weight = 1
 
 # [[Languages.en.menu.main]]
 # name = "services"
@@ -88,11 +88,11 @@ url = "contact"
 weight = 7
 
 ################### Portuguese Navigation ########################
-# [[Languages.pt.menu.main]]
-# name = "sobre"
-# pre = "/#"
-# url = "about"
-# weight = 1
+[[Languages.pt.menu.main]]
+name = "sobre"
+pre = "#"
+url = "about"
+weight = 1
 
 # [[Languages.pt.menu.main]]
 # name = "serviços"

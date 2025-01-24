@@ -1,16 +1,16 @@
 ############################# About ###################################
 about:
-  enable: false
-  title: Sobre nós
+  enable: true
+  title: Sobre Nós
   about_item:
-    - icon: ti-ruler-pencil # themify icon pack : https://themify.me/themify-icons
-      title: We're Creative
-      content: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos.
+    - icon: ti-light-bulb # themify icon pack : https://themify.me/themify-icons
+      title: Somos <span class="color">Criativos</span>
+      content: "No A1 Lab, trazemos inovação e criatividade a cada desafio. Adoramos transformar ideias complexas em soluções claras e envolventes que despertem curiosidade. Nossa paixão está em simplificar conceitos técnicos e tornar o aprendizado acessível para todos."
 
-    - icon: ti-cup # themify icon pack : https://themify.me/themify-icons
-      title: We're Professional
-      content: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos.
+    - icon: ti-briefcase # themify icon pack : https://themify.me/themify-icons
+      title: Somos <span class="color">Profissionais</span>
+      content: "Somos uma equipe de profissionais experientes dedicados a compartilhar nosso conhecimento. Com anos de prática e um forte compromisso com a excelência, buscamos continuamente crescer e contribuir para o aprendizado e desenvolvimento da nossa comunidade."
 
-    - icon: ti-thought # themify icon pack : https://themify.me/themify-icons
-      title: We're Genius
-      content: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, nihil, libero, perspiciatis eos provident laborum eum dignissimos.
+    - icon: ti-comments # themify icon pack : https://themify.me/themify-icons
+      title: o <span class="color">A1 Way</span>
+      content: "Nossa abordagem é simples: enfrentar desafios com integridade, curiosidade e foco na colaboração. Na A1 Lab, somos inspirados pela filosofia open-source - compartilhando conhecimento livremente, incentivando a inovação e construindo uma comunidade onde o ensino e a aprendizagem crescem juntos."

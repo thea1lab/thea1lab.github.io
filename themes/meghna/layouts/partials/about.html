@@ -25,7 +25,7 @@
 					</div>
 					{{"<!-- Express About Yourself -->" | safeHTML}}
 					<div class="content text-center">
-						<h3>{{ .title }}</h3>
+						<h3>{{ .title | safeHTML }}</h3>
 						<p>{{ .content | markdownify }}</p>
 					</div>
 				</div>
