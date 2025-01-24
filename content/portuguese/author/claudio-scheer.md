@@ -1,6 +1,6 @@
 ---
 title: "Claudio Scheer"
-image: images/team/team-1.jpg
+image: images/team/team-claudio.webp
 email: "claudioscheer@protonmail.com"
 social:
     - icon: ti-github # themify icon pack : https://themify.me/themify-icons
@@ -11,5 +11,4 @@ social:
       link: "https://claudioscheer.github.io"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet vulputate augue. Duis auctor lacus id vehicula gravida. Nam suscipit vitae purus et laoreet.
-Donec nisi dolor, consequat vel pretium id, auctor in dui. Nam iaculis, neque ac ullamcorper.
+Sou engenheiro de software com mestrado em Ciência da Computação, profundamente apaixonado por explorar novas tecnologias e utilizar ferramentas avançadas de IA para resolver problemas do mundo real. Minha trajetória na tecnologia é movida pela curiosidade, que me impulsiona a otimizar fluxos de trabalho, melhorar o desempenho de sistemas e entregar soluções de alta qualidade com foco em inovação e escalabilidade. Por meio desta plataforma, espero compartilhar minhas explorações, aprendizados e experiências impactantes com você.

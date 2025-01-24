@@ -3,7 +3,7 @@ contact:
   enable: true
   title: Contact Us
   subtitle: Contact Details
-  content: If you want to know more about our work, please contact us.
+  content: To know more about our work, please contact us.
 
   # Contact details
   contact_list:

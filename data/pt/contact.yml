@@ -3,7 +3,7 @@ contact:
   enable: true
   title: Contato
   subtitle: Detalhes para contato
-  content: Se quiser saber mais sobre nosso trabalho, entre em contato conosco.
+  content: Para saber mais sobre nosso trabalho, entre em contato conosco.
 
   # Contact details
   contact_list:
