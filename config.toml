@@ -4,7 +4,7 @@ title = "A1 Lab"
 theme = "meghna"
 themesDir = "./themes"
 # post pagination
-paginate = "7"
+paginate = "8"
 # post excerpt
 summaryLength = "15"
 # disqus short name
