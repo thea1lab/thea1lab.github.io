@@ -11,4 +11,4 @@ social:
     link: "https://claudioscheer.github.io"
 ---
 
-Experienced software engineer with a master's degree in Computer Science, skilled in leveraging advanced AI tools and methodologies to solve complex problems and drive impactful results. Proven ability to optimize workflows, enhance system performance, and deliver high-quality solutions across diverse projects, with a strong focus on innovation and scalability.
+I’m a software engineer with a master’s degree in Computer Science, deeply passionate about exploring new technologies and leveraging advanced AI tools to solve real-world problems. My journey in tech is fueled by curiosity, driving me to optimize workflows, enhance system performance, and deliver high-quality solutions with a strong focus on innovation and scalability. Through this platform, I look forward to sharing my explorations, learnings, and impactful experiences with you.
