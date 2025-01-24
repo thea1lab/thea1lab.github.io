@@ -5,23 +5,23 @@
     <link>https://www.a1lab.com.br/</link>
     <description>Recent content on A1 Lab</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Copyright &amp;copy; 2021 Designed by [Themefisher](https://themefisher.com) &amp; Developed by [Gethugothemes](https://gethugothemes.com).</copyright>
+    <language>pt-br</language>
+    <copyright>Copyright &amp;copy; 2021 Projetado por [Themefisher](https://themefisher.com) &amp; Desenvolvido por [Gethugothemes](https://gethugothemes.com).</copyright>
     <lastBuildDate>Sat, 23 Dec 2023 15:48:14 +0300</lastBuildDate>
     <atom:link href="https://www.a1lab.com.br/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>AI Planning: An Introduction</title>
+      <title>AI Planning: Uma Introdução</title>
       <link>https://www.a1lab.com.br/blog/ai-planning/</link>
       <pubDate>Sat, 23 Dec 2023 15:48:14 +0300</pubDate>
       <guid>https://www.a1lab.com.br/blog/ai-planning/</guid>
-      <description>In straightforward terms, AI Planning is a branch of AI (Artificial Intelligence) focused on generating strategies to accomplish specific objectives.</description>
+      <description>Em termos simples, o Planejamento de IA (AI Planning) é um ramo da Inteligência Artificial (IA) focado na geração de estratégias para alcançar objetivos específicos.</description>
     </item>
     <item>
       <title>Claudio Scheer</title>
       <link>https://www.a1lab.com.br/author/claudio-scheer/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://www.a1lab.com.br/author/claudio-scheer/</guid>
-      <description>I’m a software engineer with a master’s degree in Computer Science, deeply passionate about exploring new technologies and leveraging advanced AI tools to solve real-world problems.</description>
+      <description>Sou engenheiro de software com mestrado em Ciência da Computação, profundamente apaixonado por explorar novas tecnologias e utilizar ferramentas avançadas de IA para resolver problemas do mundo real.</description>
     </item>
   </channel>
 </rss>

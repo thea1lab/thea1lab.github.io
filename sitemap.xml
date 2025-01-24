@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>https://www.a1lab.com.br/</loc>
-    <lastmod>2023-12-23T15:48:14+03:00</lastmod>
-  </url><url>
-    <loc>https://www.a1lab.com.br/blog/ai-planning/</loc>
-    <lastmod>2023-12-23T15:48:14+03:00</lastmod>
-  </url><url>
-    <loc>https://www.a1lab.com.br/blog/</loc>
-    <lastmod>2023-12-23T15:48:14+03:00</lastmod>
-  </url><url>
-    <loc>https://www.a1lab.com.br/author/</loc>
-  </url><url>
-    <loc>https://www.a1lab.com.br/categories/</loc>
-  </url><url>
-    <loc>https://www.a1lab.com.br/author/claudio-scheer/</loc>
-  </url><url>
-    <loc>https://www.a1lab.com.br/tags/</loc>
-  </url>
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <sitemap>
+    <loc>https://www.a1lab.com.br/pt/sitemap.xml</loc>
+    
+      <lastmod>2023-12-23T15:48:14+03:00</lastmod>
+    
+  </sitemap>
+  
+  <sitemap>
+    <loc>https://www.a1lab.com.br/en/sitemap.xml</loc>
+    
+      <lastmod>2023-12-23T15:48:14+03:00</lastmod>
+    
+  </sitemap>
+  
+</sitemapindex>

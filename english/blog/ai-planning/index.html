@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta charset="utf-8">
+	<title>AI Planning: An Introduction</title>
+
+	<!-- mobile responsive meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="description" content="A brief introduction to AI Planning and how it can be used to solve complex problems across various domains.">
+	
+	<meta name="author" content="A1 Lab">
+	<meta name="generator" content="Hugo 0.123.7">
+
+  <meta property="og:url" content="http://localhost:1313/english/blog/ai-planning/">
+  <meta property="og:site_name" content="A1 Lab">
+  <meta property="og:title" content="AI Planning: An Introduction">
+  <meta property="og:description" content="A brief introduction to AI Planning and how it can be used to solve complex problems across various domains.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="english">
+    <meta property="article:published_time" content="2023-12-23T15:48:14+03:00">
+    <meta property="article:modified_time" content="2023-12-23T15:48:14+03:00">
+    <meta property="og:image" content="http://localhost:1313/images/blog/ai-planning/about.jpg">
+
+
+	<!-- plugins -->
+	
+	<link rel="stylesheet" href="http://localhost:1313/plugins/bootstrap/bootstrap.min.css">
+	
+	<link rel="stylesheet" href="http://localhost:1313/plugins/themify-icons/themify-icons.css">
+	
+	<link rel="stylesheet" href="http://localhost:1313/plugins/magnific-popup/magnific-popup.css">
+	
+	<link rel="stylesheet" href="http://localhost:1313/plugins/slick/slick.css">
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anaheim%7cQuattrocento&#43;Sans:400,700&amp;display=swap">
+	
+
+	<!-- Main Stylesheet -->
+	
+	<link rel="stylesheet" href="http://localhost:1313/css/style.min.css" media="screen">
+
+	<!-- Custom stylesheet - for your changes -->
+	
+  <link rel="stylesheet" href="http://localhost:1313/css/custom.min.css" media="screen">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="http://localhost:1313/images/favicon.png" type="image/x-icon">
+	<link rel="icon" href="http://localhost:1313/images/favicon.png" type="image/x-icon">
+
+	
+
+</head>
+
+
+<body id="body" data-spy="scroll" data-target=".navbar" data-offset="55">
+  <div id="content">
+    
+<!-- preloader start -->
+<div class="preloader">
+  
+  <img src="http://localhost:1313/images/logo.png" alt="preloader">
+  
+</div>
+<!-- preloader end -->
+
+
+
+<section class="sticky-top navigation">
+	<div class="container">
+		<nav class="navbar navbar-expand-lg navbar-dark">
+			<a class="navbar-brand p-0" href="/">
+				
+				<img class="lozad" data-src="http://localhost:1313/images/logo.png" alt="A1 Lab" height="42">
+				
+			</a>
+
+			<button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navigation">
+				<ul class="navbar-nav ml-auto">
+					
+					<li class="nav-item">
+            <a class="nav-link" href="http://localhost:1313/#team">team</a>
+					</li>
+					
+					<li class="nav-item">
+            <a class="nav-link" href="http://localhost:1313/#blog">blog</a>
+					</li>
+					
+					<li class="nav-item">
+            <a class="nav-link" href="http://localhost:1313/#contact">contact</a>
+					</li>
+					
+				</ul>
+				
+			</div>
+		</nav>
+	</div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 text-center">
+        <h1>AI Planning: An Introduction</h1>
+        <ul class="list-inline mb-50">
+          <li class="list-inline-item"><a href="/author/claudio-scheer/">Claudio Scheer</a></li>
+          <li class="list-inline-item">Saturday, Dec 23, 2023</li>
+        </ul>
+        <img class="img-fluid mb-50 lozad" data-src="http://localhost:1313/images/blog/ai-planning/about.jpg" alt="blog-image">
+      </div>
+      <div class="col-lg-8 offset-lg-2">
+        <div class="post-single-content">
+          <p>In straightforward terms, AI Planning is a branch of AI (Artificial Intelligence) focused on generating strategies to accomplish specific objectives. It involves using autonomous methods to transition from an initial situation to a targeted end state via a series of actions. For example, in the context of vehicle routing, each decision about the route, such as choosing streets and sequencing stops, represents an action contingent on various factors like traffic and distance.</p>
+<p>This article covers the basics of AI Planning and its potential to address problems from different domains.</p>
+<h3 id="planning-for-different-domains">Planning for Different Domains</h3>
+<p>AI Planning is adept at formulating strategies to achieve specific goals across various domains. This process involves autonomously progressing from an initial state to a desired goal state through a series of actions, guided by logical rules. For instance, in logistics, AI Planning can optimize vehicle routing by determining the most efficient paths, considering factors like traffic and distance. Beyond logistics, this methodology can be applied to diverse areas such as healthcare, where it could manage patient treatment plans, or in manufacturing, for streamlining production processes. The adaptability of AI Planning allows for its effective implementation in solving complex problems in different sectors, showcasing its broad applicability and potential for innovation.</p>
+<h3 id="the-role-of-pddl-in-ai-planning">The Role of PDDL in AI Planning</h3>
+<p>Central to the field of AI Planning is the Planning Domain Definition Language (PDDL), a specialized language designed to express planning and scheduling problems. PDDL provides a standardized framework for defining the components of a planning problem, such as actions, states, and objectives. Its structured format allows AI planners to universally interpret and solve complex problems across various domains. To actually solve problems, AI Planning relies on the planners. These planners have evolved with the language, leading to varying levels of support for different PDDL syntaxes. For instance, older planners might not support advanced syntaxes like PDDL 3, while newer planners may not accommodate certain older syntax variants from PDDL 2.1. This divergence necessitates careful selection of planners based on their compatibility with specific problem definitions.</p>
+<h3 id="ai-planning-in-action">AI Planning in Action</h3>
+<p>We&rsquo;ll explore the practical application of AI Planning using LAMA, a specialized planner for intricate real-world challenges. LAMA employs a heuristic forward search, combined with landmark-based strategies, multiple heuristics, and a progressively weighted A* algorithm. Further details on LAMA can be found in its dedicated academic paper <a href="https://arxiv.org/abs/1401.3839">here</a>.</p>
+<h4 id="installing-lama">Installing LAMA</h4>
+<p>To install LAMA, we can use <a href="https://github.com/AI-Planning/planutils">planutils</a>, a toolkit designed for Linux environments to develop, execute, and assess planners. Refer to their GitHub README for complete installation guidelines.</p>
+<h4 id="defining-the-domain">Defining the Domain</h4>
+<p>Envision a basic scenario with a robot navigating a two-dimensional grid. The grid contains &lsquo;X&rsquo;-marked boxes, indicating obstacles the robot cannot traverse. The objective is to guide the robot from a starting point to a destination. In our scenario, the robot&rsquo;s journey from box 1 to box 5 involves circumventing box 3, which is obstructed, necessitating a route through boxes 1, 2, 4, and finally 5.</p>
+<figure><img src="/images/blog/ai-planning/domain.png" height="200px"/><figcaption>
+            <h4>Simple Robot Domain</h4>
+        </figcaption>
+</figure>
+
+<p>To define this domain in PDDL, we need to specify the following:</p>
+<ul>
+<li><strong>Objects</strong>: The objects are the entities in the domain.</li>
+<li><strong>Predicates</strong>: The predicates that define the state of the domain.</li>
+<li><strong>Actions</strong>: The actions that can be performed in the domain.</li>
+<li><strong>Initial State</strong>: The initial state of the domain.</li>
+<li><strong>Goal State</strong>: The goal state of the domain.</li>
+</ul>
+<p>Below is the PDDL domain representation for the given scenario:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lisp" data-lang="lisp"><span style="display:flex;"><span>(define (domain robot)
+</span></span><span style="display:flex;"><span>  (<span style="color:#e6db74">:requirements</span> <span style="color:#e6db74">:strips</span> <span style="color:#e6db74">:typing</span>)
+</span></span><span style="display:flex;"><span>  (<span style="color:#e6db74">:types</span> robot location)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  (<span style="color:#e6db74">:predicates</span>
+</span></span><span style="display:flex;"><span>    (at ?r <span style="color:#a6e22e">-</span> robot ?l <span style="color:#a6e22e">-</span> location)
+</span></span><span style="display:flex;"><span>    (blocked ?l <span style="color:#a6e22e">-</span> location)
+</span></span><span style="display:flex;"><span>    (adjacent ?l1 ?l2 <span style="color:#a6e22e">-</span> location)
+</span></span><span style="display:flex;"><span>  )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  (<span style="color:#e6db74">:action</span> move-up
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">:parameters</span> (?r <span style="color:#a6e22e">-</span> robot ?l1 <span style="color:#a6e22e">-</span> location ?l2 <span style="color:#a6e22e">-</span> location)
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">:precondition</span> (and (at ?r ?l1) (adjacent ?l1 ?l2))
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">:effect</span> (and (at ?r ?l2) (<span style="color:#a6e22e">not</span> (at ?r ?l1))))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  (<span style="color:#e6db74">:action</span> move-down
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">:parameters</span> (?r <span style="color:#a6e22e">-</span> robot ?l1 <span style="color:#a6e22e">-</span> location ?l2 <span style="color:#a6e22e">-</span> location)
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">:precondition</span> (and (at ?r ?l1) (adjacent ?l1 ?l2))
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">:effect</span> (and (at ?r ?l2) (<span style="color:#a6e22e">not</span> (at ?r ?l1))))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  (<span style="color:#e6db74">:action</span> move-left
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">:parameters</span> (?r <span style="color:#a6e22e">-</span> robot ?l1 <span style="color:#a6e22e">-</span> location ?l2 <span style="color:#a6e22e">-</span> location)
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">:precondition</span> (and (at ?r ?l1) (adjacent ?l1 ?l2))
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">:effect</span> (and (at ?r ?l2) (<span style="color:#a6e22e">not</span> (at ?r ?l1))))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  (<span style="color:#e6db74">:action</span> move-right
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">:parameters</span> (?r <span style="color:#a6e22e">-</span> robot ?l1 <span style="color:#a6e22e">-</span> location ?l2 <span style="color:#a6e22e">-</span> location)
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">:precondition</span> (and (at ?r ?l1) (adjacent ?l1 ?l2))
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">:effect</span> (and (at ?r ?l2) (<span style="color:#a6e22e">not</span> (at ?r ?l1)))))
+</span></span></code></pre></div><h4 id="defining-the-problem">Defining the Problem</h4>
+<p>To complement the domain definition, we need the problem PDDL file. This file delineates the specific objects within the domain and describes both the initial and goal states. Below is an illustration of how the PDDL problem file would be structured for this scenario:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lisp" data-lang="lisp"><span style="display:flex;"><span>(define (problem robot)
+</span></span><span style="display:flex;"><span>  (<span style="color:#e6db74">:domain</span> robot)
+</span></span><span style="display:flex;"><span>  (<span style="color:#e6db74">:objects</span>
+</span></span><span style="display:flex;"><span>    robot1 <span style="color:#a6e22e">-</span> robot
+</span></span><span style="display:flex;"><span>    box1 box2 box3 box4 box5 <span style="color:#a6e22e">-</span> location
+</span></span><span style="display:flex;"><span>  )
+</span></span><span style="display:flex;"><span>  (<span style="color:#e6db74">:init</span>
+</span></span><span style="display:flex;"><span>    (at robot1 box1)
+</span></span><span style="display:flex;"><span>    (blocked box3)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    (adjacent box1 box2)
+</span></span><span style="display:flex;"><span>    (adjacent box1 box3)
+</span></span><span style="display:flex;"><span>    (adjacent box2 box4)
+</span></span><span style="display:flex;"><span>    (adjacent box3 box4)
+</span></span><span style="display:flex;"><span>    (adjacent box4 box5)
+</span></span><span style="display:flex;"><span>  )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  (<span style="color:#e6db74">:goal</span> (at robot1 box5))
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p>This PDDL problem file, named robot, defines a specific scenario for a robot navigating a grid:</p>
+<ul>
+<li><strong>Domain</strong>: The domain that the problem is defined in. In this case, the domain is robot.</li>
+<li><strong>Objects</strong>: There are two types of objects:
+<ul>
+<li>robot1, representing the robot.</li>
+<li>box1, box2, box3, box4, box5, representing locations on the grid.</li>
+</ul>
+</li>
+<li><strong>Initial State</strong>: The robot (robot1) starts at box1. box3 is marked as a blocked location. Adjacency relationships between boxes are defined, specifying which boxes are directly accessible from each other.</li>
+<li><strong>Goal State</strong>: The objective is to move robot1 to box5.</li>
+</ul>
+<h4 id="running-lama">Running LAMA</h4>
+<p>To execute LAMA for solving the defined problem, you&rsquo;ll need to run a specific command. This command will direct LAMA to process the domain and problem files, applying its planning algorithms to find a solution. Typically, the command follows a certain syntax, including the paths to both the domain and problem files, and possibly additional parameters specific to LAMA.</p>
+<p>Ensure that LAMA is properly installed and accessible from your command line environment before executing the command.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>lama domain.pddl problem.pddl
+</span></span></code></pre></div><p>Once the command is executed, LAMA will begin processing the domain and problem files. If a solution is found, LAMA will output the solution plan, which is a sequence of actions that can be performed to achieve the goal state. If no solution is found, LAMA will output a message indicating that no solution was found.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lisp" data-lang="lisp"><span style="display:flex;"><span>(move-down robot1 box1 box2)
+</span></span><span style="display:flex;"><span>(move-down robot1 box2 box4)
+</span></span><span style="display:flex;"><span>(move-down robot1 box4 box5)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">; cost = 3 (unit cost)</span>
+</span></span></code></pre></div><p>This example features a straightforward domain with one robot aiming for a single goal. However, the domain can be readily expanded to encompass multiple robots and various goals. For instance, it&rsquo;s possible to create a scenario involving several robots, each with distinct objectives.</p>
+<h3 id="final-thoughts">Final Thoughts</h3>
+<p>AI Planning is a powerful tool for solving complex problems across various domains. In this article, we have seen how AI Planning can be used to solve a simple robot domain. However, AI Planning can be used to solve much more complex problems. For example, AI Planning can be used to solve the <a href="http://ipc.icaps-conference.org/">International Planning Competition</a>. The competition consists of a series of planning problems that are designed to test the limits of AI Planning.</p>
+<p>Some solvers also support numeric planning, which allows for the use of numeric variables in the planning process. For example, numeric planning can be used to solve problems in logistics, where the goal is to minimize the cost of a delivery. In this case, the cost of a delivery is a numeric variable that can be used in the planning process.</p>
+<h3 id="resources">Resources</h3>
+<ul>
+<li><a href="https://planning.wiki/">https://planning.wiki</a></li>
+</ul>
+
+        </div>
+        
+        
+        <div class="mt-5">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  </div><!-- end Contact Area -->
+<footer id="footer" class="section-bg">
+	<div class="container">
+		<div class="row wow fadeInUp" data-wow-duration="500ms">
+			<div class="col-xl-12">
+
+				<!-- Footer Social Links -->
+				<div class="social-icon">
+					<ul class="list-inline">
+						
+						<li class="list-inline-item"><a href="https://github.com/thea1lab" target="_blank"><i class="ti-github"></i></a></li>
+						
+						<li class="list-inline-item"><a href="https://www.youtube.com/@lab-a1" target="_blank"><i class="ti-youtube"></i></a></li>
+						
+						<li class="list-inline-item"><a href="https://www.linkedin.com/company/thea1lab" target="_blank"><i class="ti-linkedin"></i></a></li>
+						
+						<li class="list-inline-item"><a href="https://www.instagram.com/thea1lab" target="_blank"><i class="ti-instagram"></i></a></li>
+						
+					</ul>
+				</div>
+
+				<!-- copyright -->
+				<div class="copyright text-center">
+					<a href="http://localhost:1313/">
+						<img src="http://localhost:1313/images/logo.png" alt="A1 Lab" height="42" />
+					</a>
+					<br>
+					<p></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- /footer -->
+
+<!-- Google Map API -->
+
+
+<!-- JS Plugins -->
+
+<script src="http://localhost:1313/plugins/jquery/jquery.min.js"></script>
+
+<script src="http://localhost:1313/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="http://localhost:1313/plugins/slick/slick.min.js"></script>
+
+<script src="http://localhost:1313/plugins/shuffle/shuffle.min.js"></script>
+
+<script src="http://localhost:1313/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+<script src="http://localhost:1313/plugins/lazy-load/lozad.min.js"></script>
+
+
+<!-- Main Script -->
+
+<script src="http://localhost:1313/js/script.min.6551d7ae7a6f427b013d00f8473133e0c81a3195ad032b25d9e421eb873ae9e3ba7b1cd187288ba9aa0cc63a3045c15d.js" integrity="sha384-ZVHXrnpvQnsBPQD4RzEz4MgaMZWtAysl2eQh64c66eO6exzRhyiLqaoMxjowRcFd"></script>
+
+
+</body>
+
+</html>

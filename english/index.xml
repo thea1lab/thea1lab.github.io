@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Englishes on A1 Lab</title>
+    <link>http://localhost:1313/english/</link>
+    <description>Recent content in Englishes on A1 Lab</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 23 Dec 2023 15:48:14 +0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/english/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI Planning: An Introduction</title>
+      <link>http://localhost:1313/english/blog/ai-planning/</link>
+      <pubDate>Sat, 23 Dec 2023 15:48:14 +0300</pubDate>
+      <guid>http://localhost:1313/english/blog/ai-planning/</guid>
+      <description>In straightforward terms, AI Planning is a branch of AI (Artificial Intelligence) focused on generating strategies to accomplish specific objectives.</description>
+    </item>
+    <item>
+      <title>Claudio Scheer</title>
+      <link>http://localhost:1313/english/author/claudio-scheer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/english/author/claudio-scheer/</guid>
+      <description>I’m a software engineer with a master’s degree in Computer Science, deeply passionate about exploring new technologies and leveraging advanced AI tools to solve real-world problems.</description>
+    </item>
+  </channel>
+</rss>
