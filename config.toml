@@ -177,9 +177,9 @@ link = "https://www.youtube.com/@lab-a1"
 icon = "ti-linkedin" # themify icon pack : https://themify.me/themify-icons
 link = "https://www.linkedin.com/company/thea1lab"
 
-[[params.social]]
-icon = "ti-facebook" # themify icon pack : https://themify.me/themify-icons
-link = "https://www.facebook.com/thea1lab"
+#[[params.social]]
+#icon = "ti-facebook" # themify icon pack : https://themify.me/themify-icons
+#link = "https://www.facebook.com/thea1lab"
 
 [[params.social]]
 icon = "ti-instagram" # themify icon pack : https://themify.me/themify-icons
