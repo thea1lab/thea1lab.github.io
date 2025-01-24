@@ -65,7 +65,7 @@ link = "plugins/lazy-load/lozad.min.js"
 
 [[Languages.en.menu.main]]
 name = "team"
-pre = "/en/#"
+pre = "en/#"
 url = "team"
 weight = 4
 
@@ -77,13 +77,13 @@ weight = 4
 
 [[Languages.en.menu.main]]
 name = "blog"
-pre = "/en/#"
+pre = "en/#"
 url = "blog"
 weight = 6
 
 [[Languages.en.menu.main]]
 name = "contact"
-pre = "/en/#"
+pre = "en/#"
 url = "contact"
 weight = 7
 
@@ -108,7 +108,7 @@ weight = 7
 
 [[Languages.pt.menu.main]]
 name = "equipe"
-pre = "/#"
+pre = "#"
 url = "team"
 weight = 4
 
@@ -120,13 +120,13 @@ weight = 4
 
 [[Languages.pt.menu.main]]
 name = "blog"
-pre = "/#"
+pre = "#"
 url = "blog"
 weight = 6
 
 [[Languages.pt.menu.main]]
 name = "contato"
-pre = "/#"
+pre = "#"
 url = "contact"
 weight = 7
 

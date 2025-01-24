@@ -10,4 +10,4 @@ banner:
   button:
     enable: true
     label: "Explore Us"
-    link: "/en/#team"
+    link: "#team"
