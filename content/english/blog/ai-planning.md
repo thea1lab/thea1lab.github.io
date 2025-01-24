@@ -5,6 +5,8 @@ author: Claudio Scheer
 image_webp: images/blog/ai-planning/about.webp
 image: images/blog/ai-planning/about.jpg
 description : "A brief introduction to AI Planning and how it can be used to solve complex problems across various domains."
+images:
+  - images/blog/ai-planning/about.jpg
 draft: false
 ---
 

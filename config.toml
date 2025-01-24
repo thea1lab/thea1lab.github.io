@@ -135,8 +135,9 @@ weight = 7
 logo = "images/logo.png"
 logo2 = "images/full-logo.png"
 # Meta data
-description = "A1 Software Lab"
+description = "Solving Challenges the A1 Way"
 author = "A1 Lab"
+images = ["images/full-background-logo.png"]
 # Google Analytics
 # google_analytics_id = "" # Your ID
 # post share

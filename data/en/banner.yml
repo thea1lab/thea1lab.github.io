@@ -4,10 +4,10 @@ banner:
   bg_image_webp: "images/backgrounds/hero-area.webp"
   bg_image: "images/backgrounds/hero-area.jpg"
   icon: "" # themify icon pack : https://themify.me/themify-icons
-  title: "A1 Software Lab"
+  title: "Solving Challenges the A1 Way"
   under_development: "Site under development."
   content: "Solving Challenges the A1 Way"
   button:
     enable: true
     label: "Explore Us"
-    link: "#team"
+    link: "/#team"
