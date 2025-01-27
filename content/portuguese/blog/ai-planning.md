@@ -44,7 +44,7 @@ Para definir este domínio em PDDL, precisamos especificar:
 - **Estado Inicial**: O estado inicial do domínio.
 - **Estado Final**: O estado objetivo do domínio.
 
-Abaixo está a representação do domínio em PDDL para o cenário descrito:
+Abaixo está a representação do domínio em PDDL para o cenário proposto:
 
 ```lisp
 (define (domain robot)
