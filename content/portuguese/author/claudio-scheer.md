@@ -11,4 +11,4 @@ social:
       link: "https://claudioscheer.github.io"
 ---
 
-Sou engenheiro de software com mestrado em Ciência da Computação, profundamente apaixonado por explorar novas tecnologias e utilizar ferramentas avançadas de IA para resolver problemas do mundo real. Minha trajetória na tecnologia é movida pela curiosidade, que me impulsiona a otimizar fluxos de trabalho, melhorar o desempenho de sistemas e entregar soluções de alta qualidade com foco em inovação e escalabilidade. Por meio desta plataforma, espero compartilhar minhas explorações, aprendizados e experiências impactantes com você.
+Sou engenheiro de software com mestrado em Ciência da Computação. Gosto de pegar problemas complexos em IA e software e transformá-los em soluções claras e práticas. Neste blog, compartilho o que aprendo pelo caminho — explicações diretas e abordagens simples para desafios difíceis que qualquer pessoa pode aprender e usar.

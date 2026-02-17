@@ -5,12 +5,12 @@ about:
   about_item:
     - icon: ti-light-bulb # themify icon pack : https://themify.me/themify-icons
       title: Creative <span class="color">Thinking</span>
-      content: "We don't take the obvious path. At A1 Lab, we think differently — seeking alternative solutions, looking ahead, and challenging the conventional. It's a creative and enjoyable way to teach and learn, backed by the discipline and rigor that real results demand."
+      content: "We look at complex problems and find the simple solution hidden inside. At A1 Lab, we think differently — cutting through complexity to find what's clear and practical. It's a creative and enjoyable way to teach and learn, backed by the discipline and rigor that real results demand."
 
     - icon: ti-briefcase # themify icon pack : https://themify.me/themify-icons
       title: AI with <span class="color">Purpose</span>
-      content: "Artificial intelligence isn't a buzzword to us — it's a natural part of our daily work. We integrate AI thoughtfully and deliberately, as a tool that enhances engineering, and we share this knowledge freely with the community. No hype, no empty promises."
+      content: "Artificial intelligence isn't a buzzword to us — it's a practical part of our daily work. We integrate AI thoughtfully and deliberately to solve real problems, and we share what we learn freely through our blog and open-source work. No hype, no empty promises."
 
     - icon: ti-comments # themify icon pack : https://themify.me/themify-icons
       title: The <span class="color">A1 Way</span>
-      content: "A1 means top tier. It's a philosophy of excellence that blends creativity, quality engineering, and AI seamlessly integrated into everyday work. We share knowledge openly, contribute to the open source community, and inspire other professionals with integrity and transparency. That's the A1 Way."
+      content: "The A1 Way is about turning complex software and AI into something clear, practical, and understandable. We openly share how we think, build, and solve problems through our blog and open-source work. The result is straightforward explanations, simple solutions to difficult challenges, and knowledge that anyone can learn from and use. That's the A1 Way."

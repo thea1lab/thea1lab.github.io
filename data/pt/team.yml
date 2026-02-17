@@ -7,7 +7,7 @@ team:
       image_webp: images/team/team-claudio.webp
       image: images/team/team-claudio.jpg
       designation: Software Engineer
-      content: "Mestre em Ciência da Computação. Engenheiro de software com experiência em IA, performance de sistemas e arquitetura backend."
+      content: "Mestre em Ciência da Computação. Transforma desafios complexos de IA e backend em soluções claras e práticas — e compartilha o raciocínio por trás delas."
       social:
         - icon: ti-github # themify icon pack : https://themify.me/themify-icons
           link: "https://github.com/claudioscheer"
@@ -19,7 +19,7 @@ team:
       image_webp: images/team/team-welliton.webp
       image: images/team/team-welliton.jpg
       designation: Software Engineer
-      content: "Engenheiro de software com experiência em desenvolvimento full-stack e infraestrutura cloud."
+      content: "Torna full-stack e infraestrutura cloud algo simples e compreensível — construindo soluções limpas que qualquer pessoa pode aprender."
       social:
         - icon: ti-github # themify icon pack : https://themify.me/themify-icons
           link: "https://github.com/wellitonscheer"

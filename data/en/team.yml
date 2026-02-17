@@ -7,7 +7,7 @@ team:
       image_webp: images/team/team-claudio.webp
       image: images/team/team-claudio.jpg
       designation: Software Engineer
-      content: "M.Sc. in Computer Science. Software engineer with experience in AI, system performance, and backend architecture."
+      content: "M.Sc. in Computer Science. Turns complex AI and backend challenges into clear, practical solutions — and shares the thinking behind them."
       social:
         - icon: ti-github # themify icon pack : https://themify.me/themify-icons
           link: "https://github.com/claudioscheer"
@@ -19,7 +19,7 @@ team:
       image_webp: images/team/team-welliton.webp
       image: images/team/team-welliton.jpg
       designation: Software Engineer
-      content: "Software engineer with experience in full-stack development and cloud infrastructure."
+      content: "Makes full-stack and cloud infrastructure simple and understandable — building clean solutions anyone can learn from."
       social:
         - icon: ti-github # themify icon pack : https://themify.me/themify-icons
           link: "https://github.com/wellitonscheer"

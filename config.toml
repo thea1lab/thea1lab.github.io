@@ -135,7 +135,7 @@ weight = 7
 logo = "images/logo.png"
 logo2 = "images/full-logo.png"
 # Meta data
-description = "A1 Lab — Creative thinking, engineering excellence, and open source with purpose."
+description = "A1 Lab — Turning complex software and AI into something clear, practical, and open for everyone."
 author = "A1 Lab"
 images = ["images/full-background-logo.png"]
 # Google Analytics
