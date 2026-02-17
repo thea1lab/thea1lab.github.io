@@ -5,6 +5,8 @@ theme = "meghna"
 themesDir = "./themes"
 # post pagination
 paginate = "7"
+[pagination]
+disableAliases = true
 # post excerpt
 summaryLength = "15"
 # disqus short name
@@ -135,7 +137,7 @@ weight = 7
 logo = "images/logo.png"
 logo2 = "images/full-logo.png"
 # Meta data
-description = "Solving Challenges the A1 Way"
+description = "A1 Lab — Creative thinking, engineering excellence, and AI with purpose."
 author = "A1 Lab"
 images = ["images/full-background-logo.png"]
 # Google Analytics

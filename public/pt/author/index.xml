@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors on A1 Lab</title>
+    <link>https://www.a1lab.com.br/pt/author/</link>
+    <description>Recent content in Authors on A1 Lab</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <copyright>Copyright &amp;copy; 2021 Projetado por [Themefisher](https://themefisher.com) &amp; Desenvolvido por [Gethugothemes](https://gethugothemes.com).</copyright>
+    <atom:link href="https://www.a1lab.com.br/pt/author/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Claudio Scheer</title>
+      <link>https://www.a1lab.com.br/pt/author/claudio-scheer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.a1lab.com.br/pt/author/claudio-scheer/</guid>
+      <description>Sou engenheiro de software com mestrado em Ciência da Computação, profundamente apaixonado por explorar novas tecnologias e utilizar ferramentas avançadas de IA para resolver problemas do mundo real. Minha trajetória na tecnologia é movida pela curiosidade, que me impulsiona a otimizar fluxos de trabalho, melhorar o desempenho de sistemas e entregar soluções de alta qualidade com foco em inovação e escalabilidade. Por meio desta plataforma, espero compartilhar minhas explorações, aprendizados e experiências impactantes com você.</description>
+    </item>
+  </channel>
+</rss>

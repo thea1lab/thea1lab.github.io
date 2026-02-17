@@ -5,16 +5,16 @@
     <link>https://www.a1lab.com.br/blog/</link>
     <description>Recent content in Blogs on A1 Lab</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>pt-br</language>
-    <copyright>Copyright &amp;copy; 2021 Projetado por [Themefisher](https://themefisher.com) &amp; Desenvolvido por [Gethugothemes](https://gethugothemes.com).</copyright>
+    <language>en-us</language>
+    <copyright>Copyright &amp;copy; 2021 Designed by [Themefisher](https://themefisher.com) &amp; Developed by [Gethugothemes](https://gethugothemes.com).</copyright>
     <lastBuildDate>Sat, 23 Dec 2023 15:48:14 +0300</lastBuildDate>
     <atom:link href="https://www.a1lab.com.br/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>AI Planning: Uma Introdução</title>
+      <title>AI Planning: An Introduction</title>
       <link>https://www.a1lab.com.br/blog/ai-planning/</link>
       <pubDate>Sat, 23 Dec 2023 15:48:14 +0300</pubDate>
       <guid>https://www.a1lab.com.br/blog/ai-planning/</guid>
-      <description>Em termos simples, o Planejamento de IA (AI Planning) é um ramo da Inteligência Artificial (IA) focado na geração de estratégias para alcançar objetivos específicos.</description>
+      <description>In straightforward terms, AI Planning is a branch of AI (Artificial Intelligence) focused on generating strategies to accomplish specific objectives. It involves using autonomous methods to transition from an initial situation to a targeted end state via a series of actions. For example, in the context of vehicle routing, each decision about the route, such as choosing streets and sequencing stops, represents an action contingent on various factors like traffic and distance.</description>
     </item>
   </channel>
 </rss>

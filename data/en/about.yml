@@ -4,13 +4,13 @@ about:
   title: About Us
   about_item:
     - icon: ti-light-bulb # themify icon pack : https://themify.me/themify-icons
-      title: We're <span class="color">Creative</span>
-      content: "At A1 Lab, we bring innovation and creativity to every challenge. We love transforming complex ideas into clear, engaging solutions that spark curiosity. Our passion lies in simplifying technical concepts and making learning accessible for everyone."
+      title: Creative <span class="color">Thinking</span>
+      content: "We don't take the obvious path. At A1 Lab, we think differently — seeking alternative solutions, looking ahead, and challenging the conventional. It's a creative and enjoyable way to work, backed by the discipline and rigor that real results demand."
 
     - icon: ti-briefcase # themify icon pack : https://themify.me/themify-icons
-      title: We're <span class="color">Professional</span>
-      content: "We are a team of experienced professionals dedicated to sharing our knowledge. With years of practice and a strong commitment to excellence, we continuously strive to grow and contribute to the learning and development of our community."
+      title: AI with <span class="color">Purpose</span>
+      content: "Artificial intelligence isn't a buzzword to us — it's a natural part of how we work. We integrate AI thoughtfully and deliberately, as a tool that enhances engineering, delivers tangible value, and produces measurable results. No hype, no empty promises."
 
     - icon: ti-comments # themify icon pack : https://themify.me/themify-icons
-      title: the <span class="color">A1 Way</span>
-      content: "Our approach is simple: tackle challenges with integrity, curiosity, and a focus on collaboration. At A1 Lab, we are inspired by the open-source philosophy - sharing knowledge freely, encouraging innovation, and building a community where teaching and learning grow together."
+      title: The <span class="color">A1 Way</span>
+      content: "A1 means top tier. It's a philosophy of excellence that blends creativity, quality engineering, and AI seamlessly integrated into everyday work. We share knowledge openly, contribute to the community, and build solutions with integrity and transparency. That's the A1 Way."

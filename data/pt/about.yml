@@ -4,13 +4,13 @@ about:
   title: Sobre Nós
   about_item:
     - icon: ti-light-bulb # themify icon pack : https://themify.me/themify-icons
-      title: Somos <span class="color">Criativos</span>
-      content: "No A1 Lab, trazemos inovação e criatividade a cada desafio. Adoramos transformar ideias complexas em soluções claras e envolventes que despertem curiosidade. Nossa paixão está em simplificar conceitos técnicos e tornar o aprendizado acessível para todos."
+      title: Pensamento <span class="color">Criativo</span>
+      content: "Não seguimos o caminho óbvio. Na A1 Lab, pensamos de forma diferente — buscamos soluções alternativas, olhamos para o futuro e desafiamos o convencional. É um jeito criativo e divertido de trabalhar, mas com a seriedade e a disciplina que resultados de verdade exigem."
 
     - icon: ti-briefcase # themify icon pack : https://themify.me/themify-icons
-      title: Somos <span class="color">Profissionais</span>
-      content: "Somos uma equipe de profissionais experientes dedicados a compartilhar nosso conhecimento. Com anos de prática e um forte compromisso com a excelência, buscamos continuamente crescer e contribuir para o aprendizado e desenvolvimento da nossa comunidade."
+      title: IA com <span class="color">Propósito</span>
+      content: "Inteligência artificial não é um buzzword para nós — é parte natural do nosso trabalho. Integramos IA de forma inteligente e deliberada, como ferramenta que potencializa a engenharia, gera valor concreto e entrega resultados mensuráveis. Sem exageros, sem promessas vazias."
 
     - icon: ti-comments # themify icon pack : https://themify.me/themify-icons
-      title: o <span class="color">A1 Way</span>
-      content: "Nossa abordagem é simples: enfrentar desafios com integridade, curiosidade e foco na colaboração. Na A1 Lab, somos inspirados pela filosofia open-source - compartilhando conhecimento livremente, incentivando a inovação e construindo uma comunidade onde o ensino e a aprendizagem crescem juntos."
+      title: O <span class="color">A1 Way</span>
+      content: "A1 é o nível mais alto. É uma filosofia de excelência que combina criatividade, engenharia de qualidade e inteligência artificial integrada ao dia a dia. Compartilhamos conhecimento abertamente, contribuímos para a comunidade e construímos soluções com integridade e transparência. Esse é o jeito A1."

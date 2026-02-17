@@ -7,7 +7,7 @@ team:
       image_webp: images/team/team-claudio.webp
       image: images/team/team-claudio.jpg
       designation: Software Engineer
-      # content: Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur necessitatibus ullam, culpa odio.
+      content: "Mestre em Ciência da Computação. Engenheiro de software com experiência em IA, performance de sistemas e arquitetura backend."
       social:
         - icon: ti-github # themify icon pack : https://themify.me/themify-icons
           link: "https://github.com/claudioscheer"
@@ -19,7 +19,7 @@ team:
       image_webp: images/team/team-welliton.webp
       image: images/team/team-welliton.jpg
       designation: Software Engineer
-      # content: Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur necessitatibus ullam, culpa odio.
+      content: "Engenheiro de software com experiência em desenvolvimento full-stack e infraestrutura cloud."
       social:
         - icon: ti-github # themify icon pack : https://themify.me/themify-icons
           link: "https://github.com/wellitonscheer"

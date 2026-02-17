@@ -54,7 +54,7 @@
 							{{ if or (eq .link "#") (eq .link "") }}
 							{{ .name }}
 							{{ else }}
-							<a href="{{ .link | safeURL }}">{{ .name }}</a>
+							<a href="{{ .link | safeURL }}" target="_blank" rel="noopener noreferrer">{{ .name }}</a>
 							{{ end }}
 						</h4>
 						<p>{{ .content | markdownify }}</p>

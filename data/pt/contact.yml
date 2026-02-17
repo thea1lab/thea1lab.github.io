@@ -2,8 +2,8 @@
 contact:
   enable: true
   title: Contato
-  subtitle: Detalhes para contato
-  content: Para saber mais sobre nosso trabalho, entre em contato conosco.
+  subtitle: Vamos conversar
+  content: "Tem um desafio técnico ou quer saber como o jeito A1 pode gerar resultados para o seu projeto? Entre em contato — adoramos uma boa conversa sobre tecnologia."
 
   # Contact details
   contact_list:
@@ -17,7 +17,7 @@ contact:
     #info : "Fax: +880-31-000-000"
 
     - icon: ti-email # themify icon pack : https://themify.me/themify-icons
-      info: "E-mail: a1-lab@protonmail.com"
+      info: "E-mail: contato@a1lab.com.br"
 
   # Contact form
   contact_form:

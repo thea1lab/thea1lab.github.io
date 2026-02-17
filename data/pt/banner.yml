@@ -6,8 +6,8 @@ banner:
   icon: "" # themify icon pack : https://themify.me/themify-icons
   title: "Solving Challenges the A1 Way"
   under_development: "Site em desenvolvimento."
-  content: "Resolvendo Desafios com o A1 Way"
+  content: "Pensamento A1. Resultados reais."
   button:
     enable: true
-    label: "Explorar"
+    label: "Conheça o A1 Way"
     link: "#about"
