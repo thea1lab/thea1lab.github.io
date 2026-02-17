@@ -3,17 +3,15 @@ baseURL = "https://www.a1lab.com.br"
 title = "A1 Lab"
 theme = "meghna"
 themesDir = "./themes"
+# post excerpt
+summaryLength = "15"
+# disable language
+disableLanguages = []
+defaultContentLanguage = "pt"
 # post pagination
 paginate = "7"
 [pagination]
 disableAliases = true
-# post excerpt
-summaryLength = "15"
-# disqus short name
-# disqusShortname = "" # get your shortname form here : https://disqus.com
-# disable language
-disableLanguages = []
-defaultContentLanguage = "pt"
 
 ############################# Plugins ##########################
 # css plugins
@@ -49,7 +47,7 @@ link = "plugins/lazy-load/lozad.min.js"
 ################### English Navigation ########################
 [[Languages.en.menu.main]]
 name = "about"
-pre = "en/#"
+pre = "#"
 url = "about"
 weight = 1
 
@@ -67,7 +65,7 @@ weight = 1
 
 [[Languages.en.menu.main]]
 name = "team"
-pre = "en/#"
+pre = "#"
 url = "team"
 weight = 4
 
@@ -79,13 +77,13 @@ weight = 4
 
 [[Languages.en.menu.main]]
 name = "blog"
-pre = "en/#"
+pre = "#"
 url = "blog"
 weight = 6
 
 [[Languages.en.menu.main]]
 name = "contact"
-pre = "en/#"
+pre = "#"
 url = "contact"
 weight = 7
 
