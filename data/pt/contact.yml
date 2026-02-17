@@ -3,7 +3,7 @@ contact:
   enable: true
   title: Contato
   subtitle: Vamos conversar
-  content: "Tem um desafio técnico ou quer saber como o jeito A1 pode gerar resultados para o seu projeto? Entre em contato — adoramos uma boa conversa sobre tecnologia."
+  content: "Quer trocar uma ideia sobre tecnologia, open source ou o jeito A1 de fazer as coisas? Entre em contato — adoramos uma boa conversa."
 
   # Contact details
   contact_list:

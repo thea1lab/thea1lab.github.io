@@ -3,7 +3,7 @@ contact:
   enable: true
   title: Contact Us
   subtitle: Let's talk
-  content: "Have a technical challenge or want to see how A1 thinking can deliver results for your project? Reach out — we love a good conversation about technology."
+  content: "Want to chat about technology, open source, or the A1 way of doing things? Reach out — we love a good conversation."
 
   # Contact details
   contact_list:
