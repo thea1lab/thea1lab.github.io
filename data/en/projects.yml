@@ -6,3 +6,9 @@ projects:
       icon: images/projects/thoughts.svg
       description: "Capture your fleeting thoughts — by voice or text. A minimal, privacy-first Android app with on-device transcription powered by Whisper AI. No cloud, no accounts, no distractions."
       link: "https://thoughts.a1lab.com.br"
+
+    - name: Margem Forte
+      icon: images/projects/margemforte.svg
+      icon_class: "no-bg"
+      description: "Real profit margin calculator that factors in fixed costs, variable costs, and taxes. Understand the difference between margin and markup, and discover your business's true profit. Free, no sign-up required."
+      link: "https://margemforte.com.br"

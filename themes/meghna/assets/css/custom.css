@@ -42,6 +42,21 @@
   height: 50px;
 }
 
+.project-icon.no-bg {
+  background: none;
+  width: 90px;
+  height: 90px;
+}
+
+.project-card:hover .project-icon.no-bg {
+  background: none;
+}
+
+.project-icon.no-bg img {
+  width: 90px;
+  height: 90px;
+}
+
 .project-card h3 {
   margin-bottom: 15px;
   font-size: 22px;

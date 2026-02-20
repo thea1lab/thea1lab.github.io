@@ -6,3 +6,9 @@ projects:
       icon: images/projects/thoughts.svg
       description: "Capture pensamentos passageiros — por voz ou texto. Um app Android minimalista e focado em privacidade, com transcrição local usando IA Whisper. Sem nuvem, sem contas, sem distrações."
       link: "https://thoughts.a1lab.com.br"
+
+    - name: Margem Forte
+      icon: images/projects/margemforte.svg
+      icon_class: "no-bg"
+      description: "Calculadora de margem de lucro real que inclui custos fixos, variáveis e impostos. Entenda a diferença entre margem e markup, e descubra o lucro real do seu negócio. Gratuita e sem cadastro."
+      link: "https://margemforte.com.br"
