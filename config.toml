@@ -51,11 +51,17 @@ pre = "#"
 url = "about"
 weight = 1
 
+[[Languages.en.menu.main]]
+name = "projects"
+pre = "#"
+url = "projects"
+weight = 2
+
 # [[Languages.en.menu.main]]
 # name = "services"
 # pre = "/en/#"
 # url = "services"
-# weight = 2
+# weight = 3
 
 # [[Languages.en.menu.main]]
 # name = "portfolio"
@@ -94,11 +100,17 @@ pre = "#"
 url = "about"
 weight = 1
 
+[[Languages.pt.menu.main]]
+name = "projetos"
+pre = "#"
+url = "projects"
+weight = 2
+
 # [[Languages.pt.menu.main]]
 # name = "serviços"
 # pre = "/#"
 # url = "services"
-# weight = 2
+# weight = 3
 
 # [[Languages.pt.menu.main]]
 # name = "portfólio"

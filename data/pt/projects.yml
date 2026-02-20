@@ -1,0 +1,8 @@
+projects:
+  enable: true
+  title: Nossos Projetos
+  projects_item:
+    - name: Thoughts
+      icon: images/projects/thoughts.svg
+      description: "Capture pensamentos passageiros — por voz ou texto. Um app Android minimalista e focado em privacidade, com transcrição local usando IA Whisper. Sem nuvem, sem contas, sem distrações."
+      link: "https://thoughts.a1lab.com.br"

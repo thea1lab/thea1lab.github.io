@@ -1,0 +1,40 @@
+{{ $data := index site.Data site.Language.Lang }}
+
+{{ if $data.projects.projects.enable }}
+{{ with $data.projects.projects }}
+{{"<!-- projects -->" | safeHTML }}
+<section id="projects" class="bg-one section">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-12">
+				{{"<!-- section title -->" | safeHTML }}
+				<div class="title text-center wow fadeIn" data-wow-duration="500ms">
+					<h2>{{ with .title }} {{ index (split . " ") 0 | safeHTML }} {{ end }}<span class="color">
+						{{ with .title }} {{ after (len (index (split . " ") 0)) . | safeHTML }} {{ end }}</span></h2>
+					<div class="border-meghna"></div>
+				</div>
+			</div>
+			{{"<!-- /section title -->" | safeHTML }}
+
+			{{ range .projects_item }}
+			{{"<!-- Single Project Item -->" | safeHTML }}
+			<div class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-duration="500ms">
+				<div class="service-block text-center">
+					<div class="service-icon text-center">
+						<img src="{{ .icon | absURL }}" alt="{{ .name }}" style="width: 80px; height: 80px;">
+					</div>
+					<h3>{{ .name }}</h3>
+					<p>{{ .description | markdownify }}</p>
+					<a href="{{ .link }}" target="_blank" rel="noopener noreferrer" class="btn-project-link">
+						{{ .link | replaceRE "^https?://" "" }}
+					</a>
+				</div>
+			</div>
+			{{"<!-- End Single Project Item -->" | safeHTML }}
+			{{ end }}
+		</div>
+	</div>
+</section>
+{{"<!-- /projects -->" | safeHTML }}
+{{ end }}
+{{ end }}
