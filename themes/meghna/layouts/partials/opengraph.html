@@ -72,3 +72,17 @@
     {{- end }}
   {{- end }}
 {{- end }}
+
+{{ "<!-- Twitter Card -->" | safeHTML }}
+<meta name="twitter:card" content="summary_large_image">
+{{- with or .Title site.Title site.Params.title | plainify }}
+<meta name="twitter:title" content="{{ . }}">
+{{- end }}
+{{- with or .Description .Summary site.Params.description | plainify | htmlUnescape }}
+<meta name="twitter:description" content="{{ trim . "\n\r\t " }}">
+{{- end }}
+{{- with partial "_funcs/get-page-images" . }}
+  {{- range . | first 1 }}
+<meta name="twitter:image" content="{{ .Permalink }}">
+  {{- end }}
+{{- end }}

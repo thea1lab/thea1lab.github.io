@@ -1,3 +1,4 @@
 User-agent: *
-Allow: /pt/sitemap.xml
-Disallow: /pt/
+Allow: /
+
+Sitemap: https://www.a1lab.com.br/sitemap.xml

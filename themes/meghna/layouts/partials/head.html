@@ -1,5 +1,8 @@
 <head>
 	<meta charset="utf-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<meta name="theme-color" content="#6cb670">
 	<title>{{ .Title }}</title>
 
 	{{ "<!-- mobile responsive meta -->" | safeHTML }}
@@ -8,6 +11,25 @@
 	{{ with site.Params.author }}
 	<meta name="author" content="{{ . }}">{{ end }}
 	{{ hugo.Generator }}
+
+	{{ "<!-- canonical + hreflang -->" | safeHTML }}
+	<link rel="canonical" href="{{ .Permalink }}">
+	{{- if .IsTranslated -}}
+		{{- range .Translations }}
+	<link rel="alternate" hreflang="{{ .Language.LanguageCode }}" href="{{ .Permalink }}">
+		{{- end }}
+	<link rel="alternate" hreflang="{{ .Language.LanguageCode }}" href="{{ .Permalink }}">
+	{{- end }}
+	{{- $defaultLang := site.Home.Permalink }}
+	{{- if .IsTranslated }}
+		{{- range .AllTranslations }}
+			{{- if eq .Language.Lang "pt" }}
+	<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+			{{- end }}
+		{{- end }}
+	{{- else }}
+	<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+	{{- end }}
 
   {{ partial "opengraph.html" . }}
 
@@ -27,6 +49,7 @@
 	{{ "<!--Favicon-->" | safeHTML }}
 	<link rel="shortcut icon" href="{{ `images/favicon.png` | absURL }}" type="image/x-icon">
 	<link rel="icon" href="{{ `images/favicon.png` | absURL }}" type="image/x-icon">
+	<link rel="apple-touch-icon" href="{{ `images/favicon.png` | absURL }}">
 
 	{{ with site.Params.google_analytics_id }}
 	{{ "<!-- Global Site Tag (gtag.js) - Google Analytics -->" | safeHTML }}
@@ -40,4 +63,5 @@
 	</script>
 	{{ end }}
 
+	{{ partial "schema.html" . }}
 </head>
