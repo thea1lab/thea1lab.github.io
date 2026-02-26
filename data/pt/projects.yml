@@ -16,5 +16,5 @@ projects:
     - name: BugTriage Bot
       icon: images/projects/bug-triage-bot.svg
       icon_class: "white-bg icon-lg"
-      description: "Bot para Slack que classifica relatos de bugs com Claude, faz investigação de código em modo somente leitura em repositórios GitHub conectados e cria tickets no Jira com fluxo de revisão por confiança."
+      description: "Bot para Slack que classifica relatos de bugs com o Claude Code SDK, faz investigação de código em modo somente leitura em repositórios GitHub conectados e cria tickets no Jira com revisão humana nos casos de baixa confiança."
       link: "https://github.com/thea1lab/bug-triage-bot"
