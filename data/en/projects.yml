@@ -12,3 +12,9 @@ projects:
       icon_class: "no-bg"
       description: "Real profit margin calculator that factors in fixed costs, variable costs, and taxes. Understand the difference between margin and markup, and discover your business's true profit. Free, no sign-up required."
       link: "https://margemforte.com.br"
+
+    - name: BugTriage Bot
+      icon: images/projects/bug-triage-bot.svg
+      icon_class: "white-bg icon-lg"
+      description: "Slack bot that classifies bug reports with Claude, runs read-only code investigation on connected GitHub repos, and creates Jira tickets with confidence-based review flows."
+      link: "https://github.com/thea1lab/bug-triage-bot"

@@ -12,3 +12,9 @@ projects:
       icon_class: "no-bg"
       description: "Calculadora de margem de lucro real que inclui custos fixos, variáveis e impostos. Entenda a diferença entre margem e markup, e descubra o lucro real do seu negócio. Gratuita e sem cadastro."
       link: "https://margemforte.com.br"
+
+    - name: BugTriage Bot
+      icon: images/projects/bug-triage-bot.svg
+      icon_class: "white-bg icon-lg"
+      description: "Bot para Slack que classifica relatos de bugs com Claude, faz investigação de código em modo somente leitura em repositórios GitHub conectados e cria tickets no Jira com fluxo de revisão por confiança."
+      link: "https://github.com/thea1lab/bug-triage-bot"

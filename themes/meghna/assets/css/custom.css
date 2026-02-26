@@ -57,6 +57,19 @@
   height: 90px;
 }
 
+.project-icon.white-bg {
+  background: #ffffff;
+}
+
+.project-card:hover .project-icon.white-bg {
+  background: #ffffff;
+}
+
+.project-icon.icon-lg img {
+  width: 84px;
+  height: 84px;
+}
+
 .project-card h3 {
   margin-bottom: 15px;
   font-size: 22px;
