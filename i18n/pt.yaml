@@ -56,6 +56,14 @@
   translation: Plano técnico para decisão
 - id: project_card_label
   translation: Experimento
+- id: project_page_eyebrow
+  translation: Protótipos reais, não teatro de portfólio
+- id: project_page_intro
+  translation: Cada experimento começa com uma restrição de negócio, passa por validação prática e termina com algo real o suficiente para apoiar uma decisão.
+- id: project_page_note
+  translation: Produção pequena de propósito. Menos lançamentos, mais sinal.
+- id: project_page_visit
+  translation: Abrir projeto
 - id: cta_eyebrow
   translation: Do problema a uma decisão clara
 - id: cta_proof_label
