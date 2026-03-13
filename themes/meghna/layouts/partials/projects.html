@@ -16,20 +16,21 @@
 			</div>
 			{{"<!-- /section title -->" | safeHTML }}
 
-			{{ range .projects_item }}
-			{{"<!-- Single Project Item -->" | safeHTML }}
-			<article class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-duration="500ms">
-				<div class="service-block text-center">
-					<div class="service-icon text-center has-img{{ with .icon_class }} {{ . }}{{ end }}">
-						<img src="{{ .icon | absURL }}" alt="{{ .name }}">
+				{{ range $index, $item := .projects_item }}
+				{{"<!-- Single Project Item -->" | safeHTML }}
+				<article class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-duration="500ms">
+					<div class="service-block text-center project-card" data-card-index="{{ add $index 1 }}">
+						<span class="project-card__label">{{ i18n "project_card_label" | default "Experimento" }}</span>
+						<div class="service-icon text-center has-img{{ with $item.icon_class }} {{ . }}{{ end }}">
+							<img src="{{ $item.icon | absURL }}" alt="{{ $item.name }}">
+						</div>
+						<h3>{{ $item.name }}</h3>
+						<p>{{ $item.description | markdownify }}</p>
+						<a href="{{ $item.link }}" target="_blank" rel="noopener noreferrer" class="btn btn-main btn-small">
+							{{ $item.link | replaceRE "^https?://" "" }} <i class="ti-arrow-right"></i>
+						</a>
 					</div>
-					<h3>{{ .name }}</h3>
-					<p>{{ .description | markdownify }}</p>
-					<a href="{{ .link }}" target="_blank" rel="noopener noreferrer" class="btn btn-main btn-small">
-						{{ .link | replaceRE "^https?://" "" }} <i class="ti-arrow-right"></i>
-					</a>
-				</div>
-			</article>
+				</article>
 			{{"<!-- End Single Project Item -->" | safeHTML }}
 			{{ end }}
 		</div>

@@ -24,17 +24,17 @@
       </div>
       {{ end }}
 
-      {{ range .qualifications }}
-      <article class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-duration="500ms">
-        <div class="service-block text-center">
-          <div class="service-icon text-center">
-            <i class="{{ .icon }}"></i>
-          </div>
-          <h3>{{ .title | markdownify }}</h3>
-          <p>{{ .content | markdownify }}</p>
-        </div>
-      </article>
-      {{ end }}
+	      {{ range $index, $item := .qualifications }}
+	      <article class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-duration="500ms">
+	        <div class="service-block text-center expertise-card" data-card-index="{{ add $index 1 }}">
+	          <div class="service-icon text-center">
+	            <i class="{{ $item.icon }}"></i>
+	          </div>
+	          <h3>{{ $item.title | markdownify }}</h3>
+	          <p>{{ $item.content | markdownify }}</p>
+	        </div>
+	      </article>
+	      {{ end }}
     </div>
   </div>
 </section>

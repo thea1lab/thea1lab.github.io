@@ -16,20 +16,20 @@
 			</div>
 			{{"<!-- /section title -->" | safeHTML}}
 
-			{{ range .about_item }}
-			{{"<!-- About item -->" | safeHTML}}
-			<div class="col-lg-4 text-center wow fadeInUp" data-wow-duration="500ms">
-				<div class="block">
-					<div class="icon-box">
-						{{with .icon}}<i class="{{ . }}"></i>{{ end }}
-					</div>
-					{{"<!-- Express About Yourself -->" | safeHTML}}
-					<div class="content text-center">
-						<h3>{{ .title | safeHTML }}</h3>
-						<p>{{ .content | markdownify }}</p>
+				{{ range $index, $item := .about_item }}
+				{{"<!-- About item -->" | safeHTML}}
+				<div class="col-lg-4 text-center wow fadeInUp" data-wow-duration="500ms">
+					<div class="block about-card" data-card-index="{{ add $index 1 }}">
+						<div class="icon-box">
+							{{with $item.icon}}<i class="{{ . }}"></i>{{ end }}
+						</div>
+						{{"<!-- Express About Yourself -->" | safeHTML}}
+						<div class="content text-center">
+							<h3>{{ $item.title | safeHTML }}</h3>
+							<p>{{ $item.content | markdownify }}</p>
+						</div>
 					</div>
 				</div>
-			</div>
 			{{ end }}
 		</div>
 	</div>
