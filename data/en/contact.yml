@@ -3,7 +3,7 @@ contact:
   enable: true
   title: Contact Us
   subtitle: Talk to the Lab
-  content: "Pick a reason for reaching out, leave your email, and briefly describe what you need — a problem, an idea, or a question. No need to be technical. We'll get back to you the same day."
+  content: "Describe the challenge in a few lines. We'll review the context and tell you whether a diagnostic, an experiment, or full development makes the most sense."
 
   # Contact details
   contact_list:

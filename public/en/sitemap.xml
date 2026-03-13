@@ -2,95 +2,95 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/en/</loc>
+    <loc>https://www.a1lab.com.br/en/</loc>
     <lastmod>2023-12-23T15:48:14+03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/"
+                href="https://www.a1lab.com.br/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en/"
+                href="https://www.a1lab.com.br/en/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/blog/ai-planning/</loc>
+    <loc>https://www.a1lab.com.br/en/blog/ai-planning/</loc>
     <lastmod>2023-12-23T15:48:14+03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/blog/ai-planning/"
+                href="https://www.a1lab.com.br/blog/ai-planning/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en/blog/ai-planning/"
+                href="https://www.a1lab.com.br/en/blog/ai-planning/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/blog/</loc>
+    <loc>https://www.a1lab.com.br/en/blog/</loc>
     <lastmod>2023-12-23T15:48:14+03:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/blog/"
+                href="https://www.a1lab.com.br/blog/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en/blog/"
+                href="https://www.a1lab.com.br/en/blog/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/author/</loc>
+    <loc>https://www.a1lab.com.br/en/author/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/author/"
+                href="https://www.a1lab.com.br/author/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en/author/"
+                href="https://www.a1lab.com.br/en/author/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/categories/</loc>
+    <loc>https://www.a1lab.com.br/en/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/categories/"
+                href="https://www.a1lab.com.br/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en/categories/"
+                href="https://www.a1lab.com.br/en/categories/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/author/claudio-scheer/</loc>
+    <loc>https://www.a1lab.com.br/en/author/claudio-scheer/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/author/claudio-scheer/"
+                href="https://www.a1lab.com.br/author/claudio-scheer/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en/author/claudio-scheer/"
+                href="https://www.a1lab.com.br/en/author/claudio-scheer/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/projects/</loc>
+    <loc>https://www.a1lab.com.br/en/projects/</loc>
   </url><url>
-    <loc>http://localhost:1313/en/tags/</loc>
+    <loc>https://www.a1lab.com.br/en/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="pt-br"
-                href="http://localhost:1313/tags/"
+                href="https://www.a1lab.com.br/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en-us"
-                href="http://localhost:1313/en/tags/"
+                href="https://www.a1lab.com.br/en/tags/"
                 />
   </url><url>
-    <loc>http://localhost:1313/en/team/</loc>
+    <loc>https://www.a1lab.com.br/en/team/</loc>
   </url>
 </urlset>
