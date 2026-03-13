@@ -102,3 +102,5 @@
   translation: Could not send. Please try again.
 - id: form_submit_success
   translation: Message sent successfully!
+- id: slogan
+  translation: Every problem deserves a lab.

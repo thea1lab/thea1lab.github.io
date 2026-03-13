@@ -8,7 +8,6 @@
 						<a href="{{ site.Home.Permalink }}">
 							<img src="{{ site.Params.logo | absURL }}" alt="{{ site.Title }}" width="144" height="54" />
 						</a>
-						<p>&copy; {{ now.Format "2006" }} A1 Lab.</p>
 					</div>
 
 					<nav class="footer-nav" aria-label="{{ i18n `footer_navigation` | default `Footer navigation` }}">
@@ -36,6 +35,10 @@
 								{{ end }}
 							</ul>
 						</div>
+				</div>
+				<div class="footer-bottom">
+					<p class="footer-slogan">{{ i18n "slogan" }}</p>
+					<p class="footer-copyright">&copy; {{ now.Format "2006" }} A1 Lab.</p>
 				</div>
 			</div>
 		</div>
