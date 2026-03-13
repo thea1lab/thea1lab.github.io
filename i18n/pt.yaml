@@ -68,3 +68,9 @@
   translation: Direção técnica viável
 - id: cta_proof_3
   translation: Próximos passos sem surpresas
+- id: footer_navigation
+  translation: Navegação do rodapé
+- id: cookie_message
+  translation: Este site usa cookies. Ao continuar navegando, você concorda com o uso de cookies.
+- id: cookie_accept
+  translation: Aceitar

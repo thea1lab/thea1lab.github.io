@@ -172,7 +172,7 @@ languageName = "Pt"
 languageCode = "pt-br"
 contentDir = "content/portuguese"
 weight = 1
-copyright = "Copyright &copy; 2021 Projetado por [Themefisher](https://themefisher.com) & Desenvolvido por [Gethugothemes](https://gethugothemes.com)."
+copyright = ""
 
 [Languages.pt.params]
 home = "Home"
@@ -183,7 +183,7 @@ languageName = "En"
 languageCode = "en-us"
 contentDir = "content/english"
 weight = 2
-copyright = "Copyright &copy; 2021 Designed by [Themefisher](https://themefisher.com) & Developed by [Gethugothemes](https://gethugothemes.com)."
+copyright = ""
 
 [Languages.en.params]
 home = "Home"

@@ -6,9 +6,9 @@
 				<div class="footer-shell">
 					<div class="footer-brand">
 						<a href="{{ site.Home.Permalink }}">
-							<img src="{{ site.Params.logo | absURL }}" alt="{{ site.Title }}" height="42" />
+							<img src="{{ site.Params.logo | absURL }}" alt="{{ site.Title }}" width="144" height="54" />
 						</a>
-						<p>{{ site.Params.copyright | markdownify }}</p>
+						<p>&copy; {{ now.Format "2006" }} A1 Lab.</p>
 					</div>
 
 					<nav class="footer-nav" aria-label="{{ i18n `footer_navigation` | default `Footer navigation` }}">
@@ -61,7 +61,7 @@
 {{ if site.Params.cookies.enable }}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
 <div id="js-cookie-box" class="cookie-box cookie-box-hide">
-	This site uses cookies. By continuing to use this website, you agree to their use. <span id="js-cookie-button" class="btn btn-transparent">I Accept</span>
+	{{ i18n "cookie_message" }} <span id="js-cookie-button" class="btn btn-transparent">{{ i18n "cookie_accept" }}</span>
 </div>
 <script>
 	(function ($) {

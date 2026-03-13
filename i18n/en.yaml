@@ -68,3 +68,9 @@
   translation: A viable technical direction
 - id: cta_proof_3
   translation: Next steps without the fluff
+- id: footer_navigation
+  translation: Footer navigation
+- id: cookie_message
+  translation: This site uses cookies. By continuing to use this website, you agree to their use.
+- id: cookie_accept
+  translation: I Accept
