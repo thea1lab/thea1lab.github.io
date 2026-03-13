@@ -149,6 +149,7 @@ expire_days = 2
 
 ############################# social icons ##########################
 [[params.social]]
+title = "GitHub"
 icon = "ti-github" # themify icon pack : https://themify.me/themify-icons
 link = "https://github.com/thea1lab"
 
@@ -157,10 +158,12 @@ link = "https://github.com/thea1lab"
 # link = "#"
 
 [[params.social]]
+title = "YouTube"
 icon = "ti-youtube" # themify icon pack : https://themify.me/themify-icons
 link = "https://www.youtube.com/@lab-a1"
 
 [[params.social]]
+title = "LinkedIn"
 icon = "ti-linkedin" # themify icon pack : https://themify.me/themify-icons
 link = "https://www.linkedin.com/company/thea1lab"
 
@@ -169,6 +172,7 @@ link = "https://www.linkedin.com/company/thea1lab"
 #link = "https://www.facebook.com/thea1lab"
 
 [[params.social]]
+title = "Instagram"
 icon = "ti-instagram" # themify icon pack : https://themify.me/themify-icons
 link = "https://www.instagram.com/thea1lab"
 

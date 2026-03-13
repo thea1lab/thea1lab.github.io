@@ -28,3 +28,7 @@
   translation: Contact
 - id: themefisher
   translation: Themefisher
+- id: navigation_toggle
+  translation: Open navigation menu
+- id: language_selector
+  translation: Select language

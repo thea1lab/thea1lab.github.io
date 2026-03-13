@@ -1,6 +1,6 @@
 .slogan {
   font-weight: bold;
-  color: #e1e1e1;
+  color: var(--color-text-strong);
 }
 
 /*=================================================================
@@ -13,17 +13,36 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: var(--color-overlay-dark);
   z-index: 0;
 }
 
 .hero-area {
   position: relative;
+  min-height: 100svh;
+  min-height: 100dvh;
+  height: auto;
+  padding: clamp(88px, 14vh, 132px) 24px clamp(72px, 10vh, 104px);
+  background-position: center center;
 }
 
 .hero-area .block {
   position: relative;
   z-index: 1;
+  width: min(100%, 760px);
+  margin: 0 auto;
+  padding-inline: clamp(8px, 2vw, 20px);
+}
+
+.hero-area .block h1 {
+  margin-bottom: clamp(18px, 4vw, 28px);
+}
+
+.hero-area .block h1 img {
+  display: block;
+  width: min(100%, 620px);
+  height: auto;
+  margin: 0 auto;
 }
 
 .hero-area .block h3.slogan {
@@ -74,7 +93,7 @@
 }
 
 .service-icon.white-bg {
-  background: #ffffff !important;
+  background: var(--color-text-inverse) !important;
   border-radius: 50%;
 }
 
@@ -105,7 +124,7 @@
   Service cards — styled with hover
 ==================================================================*/
 .service-block {
-  border: 1px solid rgba(236, 239, 241, 0.07);
+  border: 1px solid var(--color-border-subtle);
   border-radius: 8px;
   padding: 40px 30px;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
@@ -119,7 +138,7 @@
 
 .service-block i {
   font-size: 50px;
-  color: #f75847;
+  color: var(--color-focus-ring);
   margin-bottom: 20px;
   display: inline-block;
   transition: transform 0.3s ease;
@@ -136,8 +155,17 @@ section.call-to-action.overly:before {
   background: rgba(0, 0, 0, 0.75);
 }
 
+section.call-to-action {
+  background-position: center center;
+}
+
+section.call-to-action .container {
+  position: relative;
+  z-index: 1;
+}
+
 section.call-to-action h2 {
-  color: #fff;
+  color: var(--color-text-inverse);
   font-weight: 700;
 }
 
@@ -168,7 +196,7 @@ section.call-to-action .btn-main {
 .about .block .icon-box i {
   position: relative;
   z-index: 2;
-  color: #afbac4;
+  color: var(--color-text-heading);
   line-height: 1;
 }
 
@@ -186,7 +214,7 @@ section.call-to-action .btn-main {
 
 #feature .media .align-self-start i {
   font-size: 28px;
-  color: #f75847;
+  color: var(--color-focus-ring);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -200,8 +228,8 @@ section.call-to-action .btn-main {
 }
 
 #feature .media:hover .align-self-start i {
-  background: #f75847;
-  color: #fff;
+  background: var(--color-focus-ring);
+  color: var(--color-text-inverse);
 }
 
 #feature .media-heading {
@@ -224,7 +252,7 @@ section.call-to-action .btn-main {
   right: 30px;
   width: 60px;
   height: 60px;
-  background: #25D366;
+  background: #25d366;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -283,7 +311,7 @@ section.call-to-action .btn-main {
 
 #contact select.form-control option {
   background: #1a1a2e;
-  color: #fff;
+  color: var(--color-text-inverse);
 }
 
 #contact .con-info a {
@@ -292,7 +320,7 @@ section.call-to-action .btn-main {
 }
 
 #contact .con-info a:hover {
-  color: #f75847;
+  color: var(--color-focus-ring);
 }
 
 /*=================================================================
@@ -305,7 +333,7 @@ section.call-to-action .btn-main {
 
 
 .subtitle {
-  color: #afbac4 !important;
+  color: var(--color-text-heading) !important;
   font-size: 16px;
   margin-top: 10px;
 }
@@ -319,13 +347,151 @@ section.call-to-action .btn-main {
 }
 
 .team-description {
-  color: #afbac4;
+  color: var(--color-text-heading);
   font-size: 17px;
   line-height: 1.8;
   margin: 0;
   padding: 20px 25px;
-  border-left: 3px solid #f75847;
+  border-left: 3px solid var(--color-focus-ring);
   background: rgba(255, 255, 255, 0.04);
   border-radius: 0 6px 6px 0;
   text-align: left;
+}
+
+@media (max-width: 991px) {
+  .hero-area {
+    min-height: auto;
+    padding-top: 120px;
+    padding-bottom: 80px;
+  }
+
+  .hero-area .block h3.slogan {
+    font-size: 1.0625rem;
+    max-width: 34rem;
+    margin-bottom: 24px;
+  }
+
+  #feature .content-block {
+    padding: 48px 28px;
+  }
+
+  .service-block {
+    padding: 32px 24px;
+  }
+
+  section.call-to-action {
+    background-attachment: scroll;
+    padding: 56px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 64px 0;
+  }
+
+  .title {
+    padding-bottom: 40px;
+  }
+
+  .title h2 {
+    font-size: clamp(30px, 8vw, 38px);
+  }
+
+  .hero-area {
+    justify-content: flex-end;
+    padding-top: 112px;
+    padding-bottom: 64px;
+  }
+
+  .hero-area .block {
+    width: 100%;
+    padding-inline: 0;
+  }
+
+  .hero-area .block h1 img {
+    width: min(100%, 440px);
+  }
+
+  .hero-area .btn-main {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  #feature .content-block {
+    padding: 40px 24px;
+  }
+
+  #feature .media {
+    margin-bottom: 24px;
+  }
+
+  .team-description-wrapper {
+    margin-bottom: 28px;
+  }
+
+  .team-description {
+    padding: 18px 18px 18px 20px;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  section.call-to-action {
+    padding: 48px 0;
+  }
+
+  section.call-to-action p {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  section.call-to-action .btn-main {
+    width: 100%;
+    max-width: 320px;
+    padding: 14px 28px;
+  }
+
+  .contact-us {
+    padding-top: 64px;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero-area {
+    padding-top: 104px;
+    padding-bottom: 56px;
+  }
+
+  .hero-area .block h3.slogan {
+    font-size: 1rem;
+    line-height: 1.55;
+    margin-bottom: 20px;
+  }
+
+  .about .block {
+    padding: 24px 20px;
+  }
+
+  .about .block .icon-box {
+    margin: 38px auto 44px;
+    transform: scale(0.9);
+    transform-origin: center top;
+  }
+
+  .service-block {
+    padding: 28px 20px;
+    margin-bottom: 24px;
+  }
+
+  #feature .content-block {
+    padding: 36px 20px;
+  }
+
+  section.call-to-action {
+    padding: 44px 0;
+  }
+
+  .contact-us .container.pb-5 {
+    padding-bottom: 1rem !important;
+  }
 }

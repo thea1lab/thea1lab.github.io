@@ -22,10 +22,10 @@
 	{{- end }}
 	{{- $defaultLang := site.Home.Permalink }}
 	{{- if .IsTranslated }}
-		{{- range .AllTranslations }}
-			{{- if eq .Language.Lang "pt" }}
-	<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
-			{{- end }}
+			{{- range .AllTranslations }}
+				{{- if eq .Language.Lang "pt" }}
+		<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+				{{- end }}
 		{{- end }}
 	{{- else }}
 	<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
@@ -33,10 +33,22 @@
 
   {{ partial "opengraph.html" . }}
 
-	{{ "<!-- plugins -->" | safeHTML }}
-	{{ range site.Params.plugins.css }}
-	<link rel="stylesheet" href="{{ .link | absURL }}">
+	{{ if .IsHome }}
+	{{ $data := index site.Data site.Language.Lang }}
+	{{ with $data.banner.banner }}
+	<link rel="preload" as="image" href="{{ .bg_image_webp | absURL }}">
 	{{ end }}
+	<link rel="preload" as="image" href="{{ site.Params.logo2 | absURL }}">
+	<link rel="preload" as="image" href="{{ site.Params.logo | absURL }}">
+	{{ end }}
+
+		{{ "<!-- plugins -->" | safeHTML }}
+		{{ $homeCssExcludes := slice "plugins/magnific-popup/magnific-popup.css" "plugins/slick/slick.css" }}
+		{{ range site.Params.plugins.css }}
+		{{ if not (and $.IsHome (in $homeCssExcludes .link)) }}
+		<link rel="stylesheet" href="{{ .link | absURL }}">
+		{{ end }}
+		{{ end }}
 
 	{{"<!-- Main Stylesheet -->"|safeHTML}}
 	{{ $styles := resources.Get "css/style.css" | minify }}

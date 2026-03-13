@@ -5,7 +5,8 @@
 {{"<!-- Welcome Slider-->" | safeHTML}}
 <section class="hero-area" style='background-image: url("{{ .bg_image_webp | absURL }}")'>
 	<!-- this image is for trigger this section fallback background image -->
-	<img class="d-none" src="{{ .bg_image_webp | absURL }}" onerror="this.onerror=null;this.parentElement.style.backgroundImage= 'url({{ .bg_image | absURL }})'"/>
+	<img class="d-none" src="{{ .bg_image_webp | absURL }}" alt="" aria-hidden="true"
+		onerror="this.onerror=null;this.parentElement.style.backgroundImage= 'url({{ .bg_image | absURL }})'"/>
 
 	<div class="block">
 		{{ if .icon }}
@@ -15,7 +16,8 @@
 		{{ end }}
     <!--<h2>{{ .under_development | markdownify }}</h2>-->
 		<h1>
-			<img class="lozad" data-src="{{ site.Params.logo2 | absURL }}" alt="{{ .Site.Title }}" style="width: 100%; max-height: 300px;" />
+			<img src="{{ site.Params.logo2 | absURL }}" alt="{{ site.Title }}" width="2000" height="750"
+				fetchpriority="high" decoding="async" style="width: 100%; max-height: 300px;" />
 			<!-- {{ .title | markdownify }} -->
 		</h1>
 		<h3 class="slogan">{{ .content | markdownify }}</h3>

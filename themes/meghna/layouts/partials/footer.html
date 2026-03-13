@@ -8,10 +8,11 @@
 				<div class="social-icon">
 					<ul class="list-inline">
 						{{ range site.Params.social }}
-						<li class="list-inline-item"><a href="{{ .link | safeURL }}" target="_blank" rel="noopener noreferrer"><i class="{{ .icon }}"></i></a></li>
-						{{ end }}
-					</ul>
-				</div>
+							<li class="list-inline-item"><a href="{{ .link | safeURL }}" target="_blank" rel="noopener noreferrer"
+									aria-label="{{ .title | default .icon }}"><i class="{{ .icon }}" aria-hidden="true"></i></a></li>
+							{{ end }}
+						</ul>
+					</div>
 
 				{{"<!-- copyright -->" | safeHTML}}
 				<div class="copyright text-center">
@@ -30,12 +31,15 @@
 {{ "<!-- Google Map API -->" | safeHTML }}
 {{ if site.Params.map.enable }}
 <script src="{{ site.Params.map.gmap_api | safeURL }}"></script>
-{{ end }}
+	{{ end }}
 
-{{ "<!-- JS Plugins -->" | safeHTML }}
-{{ range site.Params.plugins.js}}
-<script src="{{ .link | absURL }}"></script>
-{{ end }}
+	{{ "<!-- JS Plugins -->" | safeHTML }}
+	{{ $homeJsExcludes := slice "plugins/slick/slick.min.js" "plugins/shuffle/shuffle.min.js" "plugins/magnific-popup/jquery.magnific-popup.min.js" "plugins/lazy-load/lozad.min.js" }}
+	{{ range site.Params.plugins.js}}
+	{{ if not (and $.IsHome (in $homeJsExcludes .link)) }}
+	<script src="{{ .link | absURL }}"></script>
+	{{ end }}
+	{{ end }}
 
 {{ "<!-- Main Script -->" | safeHTML }}
 {{ $script := resources.Get "js/script.js" | minify | fingerprint "sha384"}}

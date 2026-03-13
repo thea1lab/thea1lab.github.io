@@ -18,7 +18,7 @@
 	<link rel="canonical" href="http://localhost:1313/en/">
 	<link rel="alternate" hreflang="pt-br" href="http://localhost:1313/">
 	<link rel="alternate" hreflang="en-us" href="http://localhost:1313/en/">
-	<link rel="alternate" hreflang="x-default" href="http://localhost:1313/">
+		<link rel="alternate" hreflang="x-default" href="http://localhost:1313/">
 
   <meta property="og:url" content="http://localhost:1313/en/">
   <meta property="og:site_name" content="A1 Lab">
@@ -35,18 +35,34 @@
 <meta name="twitter:image" content="http://localhost:1313/images/full-background-logo.png">
 
 
-	<!-- plugins -->
 	
-	<link rel="stylesheet" href="http://localhost:1313/plugins/bootstrap/bootstrap.min.css">
 	
-	<link rel="stylesheet" href="http://localhost:1313/plugins/themify-icons/themify-icons.css">
 	
-	<link rel="stylesheet" href="http://localhost:1313/plugins/magnific-popup/magnific-popup.css">
+	<link rel="preload" as="image" href="http://localhost:1313/images/backgrounds/bg.webp">
 	
-	<link rel="stylesheet" href="http://localhost:1313/plugins/slick/slick.css">
+	<link rel="preload" as="image" href="http://localhost:1313/images/full-logo.png">
+	<link rel="preload" as="image" href="http://localhost:1313/images/logo.png">
 	
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anaheim%7cQuattrocento&#43;Sans:400,700&amp;display=swap">
-	
+
+		<!-- plugins -->
+		
+		
+		
+		<link rel="stylesheet" href="http://localhost:1313/plugins/bootstrap/bootstrap.min.css">
+		
+		
+		
+		<link rel="stylesheet" href="http://localhost:1313/plugins/themify-icons/themify-icons.css">
+		
+		
+		
+		
+		
+		
+		
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anaheim%7cQuattrocento&#43;Sans:400,700&amp;display=swap">
+		
+		
 
 	<!-- Main Stylesheet -->
 	
@@ -74,11 +90,11 @@
   <div id="content">
     
 <!-- preloader start -->
-<div class="preloader">
-  
-  <img src="http://localhost:1313/images/logo.png" alt="preloader">
-  
-</div>
+	<div class="preloader">
+	  
+	  <img src="http://localhost:1313/images/logo.png" alt="" aria-hidden="true">
+	  
+	</div>
 <!-- preloader end -->
 
 
@@ -91,13 +107,15 @@
 <!-- Welcome Slider-->
 <section class="hero-area" style='background-image: url("http://localhost:1313/images/backgrounds/bg.webp")'>
 	
-	<img class="d-none" src="http://localhost:1313/images/backgrounds/bg.webp" onerror="this.onerror=null;this.parentElement.style.backgroundImage= 'url(http:\/\/localhost:1313\/images\/backgrounds\/bg.jpg)'"/>
+	<img class="d-none" src="http://localhost:1313/images/backgrounds/bg.webp" alt="" aria-hidden="true"
+		onerror="this.onerror=null;this.parentElement.style.backgroundImage= 'url(http:\/\/localhost:1313\/images\/backgrounds\/bg.jpg)'"/>
 
 	<div class="block">
 		
     
 		<h1>
-			<img class="lozad" data-src="http://localhost:1313/images/full-logo.png" alt="" style="width: 100%; max-height: 300px;" />
+			<img src="http://localhost:1313/images/full-logo.png" alt="A1 Lab" width="2000" height="750"
+				fetchpriority="high" decoding="async" style="width: 100%; max-height: 300px;" />
 			
 		</h1>
 		<h3 class="slogan">Got a problem in your business you don&rsquo;t know how to solve? We research, test, and present you with the solution.</h3>
@@ -116,15 +134,20 @@
 <section class="sticky-top navigation">
 	<div class="container">
 		<nav class="navbar navbar-expand-lg navbar-dark">
-			<a class="navbar-brand p-0" href="/en">
-				
-				<img class="lozad" data-src="http://localhost:1313/images/logo.png" alt="A1 Lab" height="42">
-				
-			</a>
+				<a class="navbar-brand p-0" href="/en">
+					
+					
+					<img src="http://localhost:1313/images/logo.png" alt="A1 Lab" width="184" height="69" decoding="async"
+						style="height: 42px; width: auto;">
+					
+					
+				</a>
 
-			<button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
+				<button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
+					aria-controls="navigation" aria-expanded="false"
+					aria-label="Open navigation menu">
+					<span class="navbar-toggler-icon"></span>
+				</button>
 
 			<div class="collapse navbar-collapse" id="navigation">
 				<ul class="navbar-nav ml-auto">
@@ -155,7 +178,8 @@
 					
 				</ul>
 				
-				<select id="select-language" onchange="location = this.value;">
+					<label class="sr-only" for="select-language">Select language</label>
+					<select id="select-language" onchange="location = this.value;">
 					
 					
 					
@@ -271,8 +295,9 @@
 		<div class="row">
 			<div class="col-lg-6 padding-0" style="background-image: url('http://localhost:1313/images/about/about-business-man.webp'); background-size: cover; background-position: top center; background-repeat: no-repeat; min-height: 400px;">
 				
-				<img src="http://localhost:1313/images/about/about-business-man.webp" style="display: none;" onerror="this.onerror=null;this.parentElement.style.backgroundImage= 'url(http:\/\/localhost:1313\/images\/about\/about-business-man.jpg)'">
-			</div>
+					<img src="http://localhost:1313/images/about/about-business-man.webp" alt="" aria-hidden="true" style="display: none;"
+						onerror="this.onerror=null;this.parentElement.style.backgroundImage= 'url(http:\/\/localhost:1313\/images\/about\/about-business-man.jpg)'">
+				</div>
 			<div class="col-lg-6">
 				<div class="content-block">
 					<h2>How the Lab Works</h2>
@@ -427,21 +452,6 @@
 			</div>
 			<!-- /section title -->
 
-			
-			<!-- Single Project Item -->
-			<article class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-duration="500ms">
-				<div class="service-block text-center">
-					<div class="service-icon text-center has-img">
-						<img src="http://localhost:1313/images/projects/thoughts.svg" alt="Thoughts">
-					</div>
-					<h3>Thoughts</h3>
-					<p>Minimal Android app to capture thoughts by voice or text. On-device transcription powered by Whisper AI — no cloud, no accounts, no distractions. An experiment in privacy and simplicity.</p>
-					<a href="https://thoughts.a1lab.com.br" target="_blank" rel="noopener noreferrer" class="btn btn-main btn-small">
-						thoughts.a1lab.com.br <i class="ti-arrow-right"></i>
-					</a>
-				</div>
-			</article>
-			<!-- End Single Project Item -->
 			
 			<!-- Single Project Item -->
 			<article class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-duration="500ms">
@@ -613,15 +623,16 @@
 <!-- Start Call To Action -->
 <section id="cta" class="call-to-action section-sm bg-1 overly" style='background-image: url("http://localhost:1313/images/backgrounds/bg-white-wall.webp")'>
 	
-	<img src="http://localhost:1313/images/backgrounds/bg-white-wall.webp" style="display: none;" onerror="this.onerror=null;this.parentElement.style.backgroundImage= 'url(http:\/\/localhost:1313\/images\/backgrounds\/bg-white-wall.jpg)'">
+		<img src="http://localhost:1313/images/backgrounds/bg-white-wall.webp" alt="" aria-hidden="true" style="display: none;"
+			onerror="this.onerror=null;this.parentElement.style.backgroundImage= 'url(http:\/\/localhost:1313\/images\/backgrounds\/bg-white-wall.jpg)'">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
-				<h2>Have a technical challenge? Let&rsquo;s experiment together.</h2>
-				<p>Bring your problem. We research, prototype, and deliver a clear solution — no long-term commitment required.</p>
+				<h2>Ready to experiment?</h2>
+				<p>Tell us your challenge. In a few weeks you&rsquo;ll have a working prototype and a clear technical plan to make the best decision.</p>
 				
 				
-				<a href="#contact" class="btn btn-main">Talk to the Lab</a>
+				<a href="#contact" class="btn btn-main">Schedule a conversation</a>
 				
 				
 			</div>
@@ -653,18 +664,11 @@
 
 			<!-- Contact Details -->
 			<div class="contact-info col-lg-6 wow fadeInUp" data-wow-duration="500ms">
-				<h3>Bring your challenge</h3>
-				<p> Have a technical problem you don&rsquo;t know where to start? A process that could be automated? An idea that needs validation? Tell us — the lab exists for this. </p>
+				<h3>Talk to the Lab</h3>
+				<p> Pick a reason for reaching out, leave your email, and briefly describe what you need — a problem, an idea, or a question. No need to be technical. We&rsquo;ll get back to you the same day. </p>
 
 				
 				<div class="contact-details">
-					
-					<div class="con-info clearfix">
-						<i class="ti-location-pin"></i>
-						
-						<span>Brazil</span>
-						
-					</div>
 					
 					<div class="con-info clearfix">
 						<i class="ti-email"></i>
@@ -688,17 +692,22 @@
 			
 			
 			<div class="col-lg-6 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
-				<form id="contact-form" class="form-meghna" method="post" action="https://formspree.io/f/xdopvnez" role="form">
-					<div class="form-group">
-						<input type="text" placeholder="Your Name" class="form-control" name="name" id="name">
-					</div>
-					<div class="form-group">
-						<input type="email" placeholder="Your Email" class="form-control" name="email" id="email">
-					</div>
-					<div class="form-group">
-						
-						<select class="form-control" name="subject" id="subject">
-							<option value="" disabled selected>How can we help?</option>
+					<form id="contact-form" class="form-meghna" method="post" action="https://formspree.io/f/xdopvnez" role="form">
+						<div class="form-group">
+							<label for="name">Your Name</label>
+							<input type="text" placeholder="Your Name" class="form-control" name="name" id="name"
+								autocomplete="name" maxlength="120" required>
+						</div>
+						<div class="form-group">
+							<label for="email">Your Email</label>
+							<input type="email" placeholder="Your Email" class="form-control" name="email" id="email"
+								autocomplete="email" inputmode="email" maxlength="254" required>
+						</div>
+						<div class="form-group">
+							<label for="subject">How can we help?</label>
+							
+							<select class="form-control" name="subject" id="subject">
+								<option value="" disabled selected>How can we help?</option>
 							
 							<option value="I want a diagnostic">I want a diagnostic</option>
 							
@@ -709,11 +718,13 @@
 							<option value="Other">Other</option>
 							
 						</select>
-						
-					</div>
-					<div class="form-group">
-						<textarea rows="6" placeholder="Describe your challenge" class="form-control" name="message" id="message"></textarea>
-					</div>
+							
+						</div>
+						<div class="form-group">
+							<label for="message">Describe your challenge</label>
+							<textarea rows="6" placeholder="Describe your challenge" class="form-control" name="message" id="message"
+								maxlength="2000" required></textarea>
+						</div>
 					<div id="cf-submit">
 						<button type="submit" id="contact-submit" class="btn btn-transparent btn-block"
 							value="Submit">Submit</button>
@@ -742,16 +753,20 @@
 				<div class="social-icon">
 					<ul class="list-inline">
 						
-						<li class="list-inline-item"><a href="https://github.com/thea1lab" target="_blank" rel="noopener noreferrer"><i class="ti-github"></i></a></li>
-						
-						<li class="list-inline-item"><a href="https://www.youtube.com/@lab-a1" target="_blank" rel="noopener noreferrer"><i class="ti-youtube"></i></a></li>
-						
-						<li class="list-inline-item"><a href="https://www.linkedin.com/company/thea1lab" target="_blank" rel="noopener noreferrer"><i class="ti-linkedin"></i></a></li>
-						
-						<li class="list-inline-item"><a href="https://www.instagram.com/thea1lab" target="_blank" rel="noopener noreferrer"><i class="ti-instagram"></i></a></li>
-						
-					</ul>
-				</div>
+							<li class="list-inline-item"><a href="https://github.com/thea1lab" target="_blank" rel="noopener noreferrer"
+									aria-label="GitHub"><i class="ti-github" aria-hidden="true"></i></a></li>
+							
+							<li class="list-inline-item"><a href="https://www.youtube.com/@lab-a1" target="_blank" rel="noopener noreferrer"
+									aria-label="YouTube"><i class="ti-youtube" aria-hidden="true"></i></a></li>
+							
+							<li class="list-inline-item"><a href="https://www.linkedin.com/company/thea1lab" target="_blank" rel="noopener noreferrer"
+									aria-label="LinkedIn"><i class="ti-linkedin" aria-hidden="true"></i></a></li>
+							
+							<li class="list-inline-item"><a href="https://www.instagram.com/thea1lab" target="_blank" rel="noopener noreferrer"
+									aria-label="Instagram"><i class="ti-instagram" aria-hidden="true"></i></a></li>
+							
+						</ul>
+					</div>
 
 				<!-- copyright -->
 				<div class="copyright text-center">
@@ -770,24 +785,30 @@
 <!-- Google Map API -->
 
 
-<!-- JS Plugins -->
-
-<script src="http://localhost:1313/plugins/jquery/jquery.min.js"></script>
-
-<script src="http://localhost:1313/plugins/bootstrap/bootstrap.min.js"></script>
-
-<script src="http://localhost:1313/plugins/slick/slick.min.js"></script>
-
-<script src="http://localhost:1313/plugins/shuffle/shuffle.min.js"></script>
-
-<script src="http://localhost:1313/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
-
-<script src="http://localhost:1313/plugins/lazy-load/lozad.min.js"></script>
-
+	<!-- JS Plugins -->
+	
+	
+	
+	<script src="http://localhost:1313/plugins/jquery/jquery.min.js"></script>
+	
+	
+	
+	<script src="http://localhost:1313/plugins/bootstrap/bootstrap.min.js"></script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 <!-- Main Script -->
 
-<script src="/js/script.min.5e30532fc4073aca3b845458f86650055f74ad45bedeeb92d5337c9fa5ba67a355a59994fc050f8786b6a50dc55bc728.js" integrity="sha384-XjBTL8QHOso7hFRY&#43;GZQBV90rUW&#43;3uuS1TN8n6W6Z6NVpZmU/AUPh4a2pQ3FW8co"></script>
+<script src="/js/script.min.22067e766b9f596ce03cd5604eb1aa9dae99d3c7dd75f76b66151ea97593b37f4eb0ee544fc8d8e61fe9a67088b01702.js" integrity="sha384-IgZ&#43;dmufWWzgPNVgTrGqna6Z08fddfdrZhUeqXWTs39OsO5UT8jY5h/ppnCIsBcC"></script>
+
 
 
 

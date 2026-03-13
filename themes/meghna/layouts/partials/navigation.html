@@ -1,17 +1,25 @@
 <section class="sticky-top navigation">
 	<div class="container">
 		<nav class="navbar navbar-expand-lg navbar-dark">
-			<a class="navbar-brand p-0" href="{{ .Site.BaseURL | relLangURL }}">
-				{{ if site.Params.logo }}
-				<img class="lozad" data-src="{{ site.Params.logo | absURL }}" alt="{{ .Site.Title }}" height="42">
-				{{ else }}
-				{{ site.Title }}
-				{{ end }}
-			</a>
+				<a class="navbar-brand p-0" href="{{ .Site.BaseURL | relLangURL }}">
+					{{ if site.Params.logo }}
+					{{ if .IsHome }}
+					<img src="{{ site.Params.logo | absURL }}" alt="{{ .Site.Title }}" width="184" height="69" decoding="async"
+						style="height: 42px; width: auto;">
+					{{ else }}
+					<img class="lozad" data-src="{{ site.Params.logo | absURL }}" alt="{{ .Site.Title }}" width="184" height="69"
+						style="height: 42px; width: auto;">
+					{{ end }}
+					{{ else }}
+					{{ site.Title }}
+					{{ end }}
+				</a>
 
-			<button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
+				<button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
+					aria-controls="navigation" aria-expanded="false"
+					aria-label="{{ i18n `navigation_toggle` | default `Open navigation menu` }}">
+					<span class="navbar-toggler-icon"></span>
+				</button>
 
 			<div class="collapse navbar-collapse" id="navigation">
 				<ul class="navbar-nav ml-auto">
@@ -23,7 +31,8 @@
 				</ul>
 				<!-- Language List -->
 				{{- if site.IsMultiLingual }}
-				<select id="select-language" onchange="location = this.value;">
+					<label class="sr-only" for="select-language">{{ i18n "language_selector" | default "Select language" }}</label>
+					<select id="select-language" onchange="location = this.value;">
 					{{ $siteLanguages := site.Languages}}
 					{{ $pageLang := .Page.Lang}}
 					{{ range .Page.AllTranslations }}

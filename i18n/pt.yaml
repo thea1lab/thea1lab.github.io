@@ -28,3 +28,7 @@
   translation: Contato
 - id: themefisher
   translation: Themefisher
+- id: navigation_toggle
+  translation: Abrir menu de navegacao
+- id: language_selector
+  translation: Selecionar idioma

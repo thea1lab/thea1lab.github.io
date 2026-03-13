@@ -7,15 +7,43 @@ Version: 1.3
 Tags: one-page, single-page, portfolio, custom-colors, post-formats, responsive, html5, css3
 */
 /*=== MEDIA QUERY ===*/
+:root {
+  --color-bg-base: #353b43;
+  --color-bg-strong: #242930;
+  --color-bg-surface: #292f36;
+  --color-bg-surface-alt: #26292e;
+  --color-bg-preloader: #2c2f36;
+  --color-text-body: #737f8a;
+  --color-text-heading: #afbac4;
+  --color-text-strong: #ddd;
+  --color-text-inverse: #fff;
+  --color-text-subtle: #55606a;
+  --color-border-subtle: rgba(236, 239, 241, 0.07);
+  --color-border-soft: rgba(255, 255, 255, 0.1);
+  --color-overlay-soft: rgba(0, 0, 0, 0.096);
+  --color-overlay-hero: rgba(0, 0, 0, 0.63);
+  --color-overlay-dark: rgba(0, 0, 0, 0.7);
+  --color-accent-primary: #e87a00;
+  --color-accent-primary-hover: #c66800;
+  --color-accent-secondary: #6cb670;
+  --color-focus-ring: #f75847;
+  --font-display: "Anaheim", sans-serif;
+  --font-body: "Quattrocento Sans", sans-serif;
+  --space-section-lg: 100px;
+  --space-section-md: 80px;
+  --space-section-sm: 50px;
+  --radius-sm: 4px;
+}
+
 html {
-  background-color: #353b43;
-  color: #737f8a;
+  background-color: var(--color-bg-base);
+  color: var(--color-text-body);
 }
 
 body {
-  background-color: #353b43;
-  font-family: "Anaheim", sans-serif;
-  color: #737f8a;
+  background-color: var(--color-bg-base);
+  font-family: var(--font-display);
+  color: var(--color-text-body);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -26,12 +54,12 @@ h4,
 h5,
 h6 {
   font-weight: 400;
-  font-family: "Quattrocento Sans", sans-serif;
-  color: #afbac4;
+  font-family: var(--font-body);
+  color: var(--color-text-heading);
 }
 
 p {
-  font-family: "Quattrocento Sans", sans-serif;
+  font-family: var(--font-body);
 }
 
 [scroll-behavior="smooth"] {
@@ -39,7 +67,7 @@ p {
 }
 
 pre {
-  color: #afbac4;
+  color: var(--color-text-heading);
 }
 
 /*=================================================================
@@ -47,17 +75,17 @@ pre {
 ==================================================================*/
 ::-moz-selection {
   /* Code for Firefox */
-  color: #fff;
-  background: #e87a00;
+  color: var(--color-text-inverse);
+  background: var(--color-accent-primary);
 }
 
 ::selection {
-  color: #fff;
-  background: #e87a00;
+  color: var(--color-text-inverse);
+  background: var(--color-accent-primary);
 }
 
 hr {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--color-border-soft);
 }
 
 figure {
@@ -65,8 +93,20 @@ figure {
 }
 
 a {
-  color: #fff;
+  color: var(--color-text-inverse);
   transition: all 0.3s ease-in 0s;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 iframe {
@@ -82,7 +122,7 @@ a:hover {
 
 a:focus,
 a:hover {
-  color: #6cb670;
+  color: var(--color-accent-secondary);
 }
 
 .kill-margin-bottom {
@@ -99,14 +139,14 @@ a:hover {
 
 .btn {
   background-color: transparent;
-  color: #fff;
+  color: var(--color-text-inverse);
   padding: 10px 30px;
   border-radius: 0;
   transition: all 0.3s ease-in 0s;
 }
 
 .btn:focus {
-  color: #ddd;
+  color: var(--color-text-strong);
 }
 
 .btn-transparent {
@@ -115,13 +155,13 @@ a:hover {
 
 .btn-transparent:hover,
 .btn-transparent:focus {
-  background-color: #e87a00;
+  background-color: var(--color-accent-primary);
   border: 1px solid transparent;
-  color: #fff;
+  color: var(--color-text-inverse);
 }
 
 .border-meghna {
-  border-top: 2px solid rgba(236, 239, 241, 0.07);
+  border-top: 2px solid var(--color-border-subtle);
   height: 1px;
   margin: 15px auto 0;
   position: relative;
@@ -129,7 +169,7 @@ a:hover {
 }
 
 .border-meghna:before {
-  background-color: #fff;
+  background-color: var(--color-text-inverse);
   content: "";
   height: 6px;
   left: 50%;
@@ -137,11 +177,11 @@ a:hover {
   position: absolute;
   top: -4px;
   width: 50px;
-  background-color: #e87a00;
+  background-color: var(--color-accent-primary);
 }
 
 .color {
-  color: #6cb670;
+  color: var(--color-accent-secondary);
 }
 
 .sub-title {
@@ -163,11 +203,11 @@ a:hover {
 }
 
 .bg-one {
-  background-color: #353b43;
+  background-color: var(--color-bg-base);
 }
 
 .bg-dark {
-  background: #242930;
+  background: var(--color-bg-strong);
 }
 
 .parallax-section {
@@ -215,12 +255,12 @@ a:hover {
 
 a:focus,
 a:hover {
-  color: #e87a00;
+  color: var(--color-accent-primary);
 }
 
 .btn-main {
-  background: #e87a00;
-  color: #fff;
+  background: var(--color-accent-primary);
+  color: var(--color-text-inverse);
   display: inline-block;
   font-size: 14px;
   letter-spacing: 1px;
@@ -229,8 +269,8 @@ a:hover {
 }
 
 .btn-main:hover {
-  background: #c66800;
-  color: #fff;
+  background: var(--color-accent-primary-hover);
+  color: var(--color-text-inverse);
 }
 
 .mt-20 {
@@ -238,18 +278,18 @@ a:hover {
 }
 
 .section {
-  padding: 100px 0;
+  padding: var(--space-section-lg) 0;
 }
 
 @media (max-width: 480px) {
   .section {
-    padding: 50px 0;
+    padding: var(--space-section-sm) 0;
   }
 }
 
 @media (max-width: 768px) {
   .section {
-    padding: 80px 0;
+    padding: var(--space-section-md) 0;
   }
 }
 
@@ -262,7 +302,7 @@ a:hover {
 }
 
 .btn:focus {
-  color: #ddd;
+  color: var(--color-text-strong);
 }
 
 #home {
@@ -288,7 +328,7 @@ a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #2c2f36;
+  background-color: var(--color-bg-preloader);
   z-index: 9999;
   display: flex;
   align-items: center;
@@ -303,11 +343,11 @@ a:hover {
   text-transform: capitalize;
   font-weight: 700;
   font-size: 38px;
-  color: #fff;
+  color: var(--color-text-inverse);
 }
 
 .title h2 span {
-  color: #e87a00;
+  color: var(--color-accent-primary);
 }
 
 .title p {
@@ -323,7 +363,7 @@ a:hover {
 }
 
 .section-bg {
-  background: #292f36;
+  background: var(--color-bg-surface);
 }
 
 .overly {
@@ -332,7 +372,7 @@ a:hover {
 
 .overly:before {
   content: "";
-  background: rgba(0, 0, 0, 0.096);
+  background: var(--color-overlay-soft);
   position: absolute;
   top: 0;
   right: 0;
@@ -352,7 +392,7 @@ a:hover {
 }
 
 .header-bradcrumb a:hover {
-  color: #e87a00;
+  color: var(--color-accent-primary);
 }
 
 .slick-slide {
@@ -389,7 +429,7 @@ a:hover {
   background-size: cover;
   padding: 140px 0 70px;
   text-align: center;
-  color: #fff;
+  color: var(--color-text-inverse);
   position: relative;
 }
 
@@ -416,7 +456,7 @@ a:hover {
 .navbar-dark .navbar-nav .nav-link.active,
 .navbar-dark .navbar-nav .nav-link.show,
 .navbar-dark .navbar-nav .show > .nav-link {
-  color: #e87a00;
+  color: var(--color-accent-primary);
 }
 
 .navbar-toggler:focus {
@@ -445,7 +485,7 @@ a:hover {
 
 .hero-area:before {
   content: "";
-  background: rgba(0, 0, 0, 0.63);
+  background: var(--color-overlay-hero);
   position: absolute;
   top: 0;
   right: 0;
@@ -459,8 +499,8 @@ a:hover {
 }
 
 .hero-area .block .video-button {
-  background: #fff;
-  color: #e87a00;
+  background: var(--color-text-inverse);
+  color: var(--color-accent-primary);
   display: inline-block;
   height: 60px;
   width: 60px;
@@ -475,7 +515,7 @@ a:hover {
 
 .hero-area .block h1 {
   font-size: 90px;
-  color: #fff;
+  color: var(--color-text-inverse);
   text-transform: capitalize;
   font-weight: 700;
   margin-bottom: 20px;
@@ -488,7 +528,7 @@ a:hover {
 }
 
 .hero-area .block p {
-  color: #fff;
+  color: var(--color-text-inverse);
   font-size: 20px;
   width: 70%;
   margin: 0 auto;
@@ -536,7 +576,7 @@ a:hover {
 }
 
 .dark-bg {
-  background: rgba(0, 0, 0, 0.7);
+  background: var(--color-overlay-dark);
   height: 100%;
   width: 100%;
   position: absolute;
@@ -547,7 +587,7 @@ a:hover {
   About us section
 ==================================================================*/
 .about .block {
-  background: #242930;
+  background: var(--color-bg-strong);
   padding: 30px;
   border-bottom: 2px solid transparent;
   transition: 0.5s all;
@@ -555,7 +595,7 @@ a:hover {
 }
 
 .about .block:hover {
-  border-bottom: 2px solid #e87a00;
+  border-bottom: 2px solid var(--color-accent-primary);
 }
 
 .about .block:hover .icon-box {
@@ -570,8 +610,8 @@ a:hover {
   background-color: transparent;
   margin: 46.19px auto 60px;
   padding: 20px 0;
-  border-left: 2px solid rgba(236, 239, 241, 0.07);
-  border-right: 2px solid rgba(236, 239, 241, 0.07);
+  border-left: 2px solid var(--color-border-subtle);
+  border-right: 2px solid var(--color-border-subtle);
   font-size: 50px;
   -webkit-transform: translateZ(0px);
   transform: translateZ(0px);
@@ -596,18 +636,18 @@ a:hover {
 
 .about .block .icon-box:before {
   top: -56.5685px;
-  border-top: 2px solid rgba(236, 239, 241, 0.07);
-  border-right: 2px solid rgba(236, 239, 241, 0.07);
+  border-top: 2px solid var(--color-border-subtle);
+  border-right: 2px solid var(--color-border-subtle);
 }
 
 .about .block .icon-box:after {
   bottom: -56.5685px;
-  border-bottom: 2px solid rgba(236, 239, 241, 0.07);
-  border-left: 2px solid rgba(236, 239, 241, 0.07);
+  border-bottom: 2px solid var(--color-border-subtle);
+  border-left: 2px solid var(--color-border-subtle);
 }
 
 .about .block .icon-box h3 {
-  color: #afbac4;
+  color: var(--color-text-heading);
 }
 
 /*=================================================================
@@ -627,7 +667,7 @@ a:hover {
 
 .about-2 .content-block .media i {
   font-size: 30px;
-  color: #e87a00;
+  color: var(--color-accent-primary);
 }
 
 .about-2 .content-block .media h4 {
@@ -692,12 +732,21 @@ a:hover {
   margin-bottom: 60px;
 }
 
+.form-meghna label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--color-text-heading);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
 .form-meghna .form-control {
   background-color: transparent;
   border-radius: 0;
   padding: 5px 10px;
-  color: #ddd;
-  border: 1px solid rgba(236, 239, 241, 0.07);
+  color: var(--color-text-strong);
+  border: 1px solid var(--color-border-subtle);
 }
 
 .form-meghna .form-control:focus {
@@ -707,24 +756,24 @@ a:hover {
 
 .form-meghna input:hover,
 .form-meghna textarea:hover {
-  border-color: #e87a00;
+  border-color: var(--color-accent-primary);
 }
 
 #contact-submit {
-  border: 1px solid rgba(236, 239, 241, 0.07);
-  background: #e87a00;
+  border: 1px solid var(--color-border-subtle);
+  background: var(--color-accent-primary);
   padding: 12px 0;
   width: 100%;
   margin: 0;
 }
 
 #contact-submit:hover {
-  border-color: #c66800;
-  background-color: #c66800;
+  border-color: var(--color-accent-primary-hover);
+  background-color: var(--color-accent-primary-hover);
 }
 
 .form-meghna ::placeholder {
-  color: #ddd !important;
+  color: var(--color-text-strong) !important;
 }
 
 .google-map #map-canvas {
@@ -754,9 +803,9 @@ a:hover {
 }
 
 .success {
-  background-color: #6cb670;
+  background-color: var(--color-accent-secondary);
   border-radius: 4px;
-  color: #fff;
+  color: var(--color-text-inverse);
   display: none;
   font-size: 13px;
   padding: 10px;
@@ -773,7 +822,7 @@ a:hover {
 .counters-item {
   padding: 25px 0;
   margin-bottom: 10px;
-  background: #292f36;
+  background: var(--color-bg-surface);
 }
 
 .counters-item i {
@@ -798,18 +847,18 @@ a:hover {
   Pricing section
 ==================================================================*/
 .price-item {
-  border: 1px solid rgba(236, 239, 241, 0.07);
+  border: 1px solid var(--color-border-subtle);
   padding-bottom: 30px;
   margin-bottom: 15px;
 }
 
 .price-title {
-  background-color: #292f36;
+  background-color: var(--color-bg-surface);
   padding: 30px 0 20px;
 }
 
 .price-title h3 {
-  color: #e87a00;
+  color: var(--color-accent-primary);
   margin: 0 0 10px;
   text-transform: uppercase;
 }
@@ -1457,7 +1506,7 @@ a:hover {
 }
 
 .post-comment {
-  background-color: #292f36;
+  background-color: var(--color-bg-surface);
   padding: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -1485,18 +1534,18 @@ a:hover {
   font: inherit;
   padding: 10px;
   margin-top: 20px;
-  outline-color: #f76c5e;
+  outline-color: var(--color-focus-ring);
   width: 100%;
 }
 
 .post-comment-name {
-  color: #afbac4;
+  color: var(--color-text-heading);
   font-weight: 500;
   font-size: 18px;
 }
 
 .post-time {
-  color: #737f8a;
+  color: var(--color-text-body);
 }
 
 input#e-mail,
@@ -1520,7 +1569,7 @@ input#e-mail,
 }
 
 .social-icon ul li a {
-  background-color: #26292e;
+  background-color: var(--color-bg-surface-alt);
   border: 1px solid transparent;
   display: block;
   height: 70px;
@@ -1529,16 +1578,16 @@ input#e-mail,
 }
 
 .social-icon ul li a:hover {
-  background: #e87a00;
+  background: var(--color-accent-primary);
 }
 
 .social-icon ul li a:hover i {
-  color: #fff;
+  color: var(--color-text-inverse);
   opacity: 1;
 }
 
 .social-icon ul li a i {
-  color: #55606a;
+  color: var(--color-text-subtle);
   display: inline-block;
   font-size: 32px;
   line-height: 70px;
@@ -2268,9 +2317,43 @@ figcaption {
 }
 
 #select-language {
-  background: #353b43;
-  color: #ffffff;
+  background: var(--color-bg-base);
+  color: var(--color-text-inverse);
   border: 0;
+}
+
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+.navbar-toggler:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--color-focus-ring);
+  outline-offset: 3px;
+}
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  opacity: 0.85;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .whatsapp-float {
+    animation: none !important;
+  }
 }
 
 .simple-icon {
