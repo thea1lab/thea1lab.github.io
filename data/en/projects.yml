@@ -9,12 +9,12 @@ projects:
 
     - name: Margem Forte
       icon: images/projects/margemforte.svg
-      icon_class: "no-bg"
-      description: "Real profit margin calculator factoring in fixed costs, variable costs, and taxes. An experiment in making financial tools accessible for SMBs. Free, no sign-up required."
+      icon_class: "no-bg icon-sm"
+      description: "Real profit margin calculator factoring in fixed costs, variable costs, and taxes. Built to make financial tools accessible for SMBs. Free, no sign-up required."
       link: "https://margemforte.com.br"
 
     - name: BugTriage Bot
       icon: images/projects/bug-triage-bot.svg
       icon_class: "white-bg icon-lg"
-      description: "Slack bot that classifies bugs with Claude Code SDK, investigates code in GitHub repos, and creates Jira tickets. An experiment in intelligent triage automation."
+      description: "Slack bot that classifies bugs with Claude Code SDK, investigates code in GitHub repos, and creates Jira tickets automatically."
       link: "https://github.com/thea1lab/bug-triage-bot"

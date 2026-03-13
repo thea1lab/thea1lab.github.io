@@ -21,6 +21,9 @@
 							<li>
 								<a href="{{ `blog` | absLangURL }}">{{ i18n "blog" }}</a>
 							</li>
+							<li>
+								<a href="{{ if eq site.Language.Lang `pt` }}{{ `projetos` | absLangURL }}{{ else }}{{ `projects` | absLangURL }}{{ end }}">{{ i18n "projects" }}</a>
+							</li>
 						</ul>
 					</nav>
 
@@ -60,8 +63,8 @@
 <!-- cookie -->
 {{ if site.Params.cookies.enable }}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
-<div id="js-cookie-box" class="cookie-box cookie-box-hide">
-	{{ i18n "cookie_message" }} <span id="js-cookie-button" class="btn btn-transparent">{{ i18n "cookie_accept" }}</span>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide" role="dialog" aria-label="{{ i18n "cookie_message" }}">
+	{{ i18n "cookie_message" }} <button id="js-cookie-button" type="button" class="btn btn-transparent">{{ i18n "cookie_accept" }}</button>
 </div>
 <script>
 	(function ($) {

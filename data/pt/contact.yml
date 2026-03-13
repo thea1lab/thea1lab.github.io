@@ -3,7 +3,7 @@ contact:
   enable: true
   title: Contato
   subtitle: Fale com o Lab
-  content: "Descreva o desafio em poucas linhas. Nós vamos retornar para conversarmos mais sobre o seu desafio."
+  content: "Descreva o desafio em poucas linhas. Retornamos para conversar sobre os próximos passos."
 
   # Contact details
   contact_list:
@@ -27,4 +27,4 @@ contact:
       - "Quero saber mais"
       - "Outro"
     message: "Descreva seu desafio"
-    submit: "Enviar"
+    submit: "Enviar mensagem"

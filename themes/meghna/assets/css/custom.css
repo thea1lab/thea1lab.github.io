@@ -85,7 +85,7 @@
   border: 1px solid rgba(255, 255, 255, 0.16);
   background: rgba(18, 20, 24, 0.58);
   color: rgba(255, 255, 255, 0.9);
-  font-size: 0.76rem;
+  font-size: 16px !important;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -96,8 +96,12 @@
   width: 0.75rem;
   height: 0.75rem;
   border-radius: 999px;
-  background: linear-gradient(135deg, var(--color-accent-primary), var(--color-accent-secondary));
-  box-shadow: 0 0 0 0.3rem rgba(232, 122, 0, 0.15);
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--color-accent-primary) 72%, #ffd7a3),
+    color-mix(in srgb, var(--color-accent-primary) 88%, #fff1d9)
+  );
+  box-shadow: 0 0 0 0.3rem color-mix(in srgb, var(--color-accent-primary) 18%, transparent);
 }
 
 .hero-proof-list {
@@ -195,7 +199,6 @@
 ==================================================================*/
 .service-block {
   border: 1px solid var(--color-border-subtle);
-  border-radius: 8px;
   padding: 40px 30px;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   overflow: hidden;
@@ -825,9 +828,8 @@ section.call-to-action .btn-main {
 
 .footer-nav ul {
   display: grid;
-  grid-template-columns: repeat(2, auto);
-  column-gap: 28px;
-  row-gap: 10px;
+  grid-template-columns: 1fr;
+  row-gap: 8px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1062,6 +1064,11 @@ section.call-to-action .btn-main {
 .projects-page-item__icon.no-bg img {
   width: clamp(110px, 14vw, 148px);
   height: clamp(110px, 14vw, 148px);
+}
+
+.projects-page-item__icon.no-bg.icon-sm img {
+  width: clamp(68px, 8.5vw, 92px);
+  height: clamp(68px, 8.5vw, 92px);
 }
 
 .projects-page-item__content h2 {
@@ -1366,6 +1373,103 @@ section.call-to-action .btn-main {
   }
 }
 
+/*=================================================================
+  Accessibility — reduced motion
+==================================================================*/
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .wow {
+    visibility: visible !important;
+    animation: none !important;
+  }
+
+  .service-block:hover {
+    transform: none;
+  }
+
+  .service-block:hover i {
+    transform: none;
+  }
+}
+
+/*=================================================================
+  Accessibility — focus-visible for all interactive elements
+==================================================================*/
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.navbar-toggler:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.nav-link:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+.service-block:focus-within {
+  border-color: var(--color-focus-ring);
+}
+
+#select-language:focus-visible {
+  outline: 2px solid var(--color-focus-ring);
+  outline-offset: 2px;
+}
+
+/*=================================================================
+  Accessibility — form validation states
+==================================================================*/
+.form-meghna .form-control[aria-invalid="true"] {
+  border-color: var(--color-error, #e74c3c);
+}
+
+.form-meghna .field-error {
+  display: block;
+  margin-top: 4px;
+  color: var(--color-error, #e74c3c);
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.form-status {
+  margin-top: 16px;
+  padding: 12px 16px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  border-radius: 4px;
+}
+
+.form-status[role="alert"] {
+  background-color: var(--color-error-bg, rgba(231, 76, 60, 0.12));
+  color: var(--color-error, #e74c3c);
+}
+
+.form-status[role="status"] {
+  background-color: rgba(108, 182, 112, 0.14);
+  color: var(--color-accent-secondary);
+}
+
 @media (max-width: 575px) {
   .projects-page-intro__eyebrow {
     letter-spacing: 0.14em;
@@ -1406,7 +1510,7 @@ section.call-to-action .btn-main {
   .hero-eyebrow {
     width: 100%;
     justify-content: center;
-    font-size: 0.68rem;
+    font-size: 16px;
     letter-spacing: 0.11em;
   }
 

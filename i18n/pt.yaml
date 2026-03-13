@@ -24,6 +24,8 @@
   translation: Preço
 - id: blog
   translation: Blog
+- id: projects
+  translation: Projetos
 - id: contact
   translation: Contato
 - id: contact_eyebrow
@@ -57,11 +59,11 @@
 - id: project_card_label
   translation: Experimento
 - id: project_page_eyebrow
-  translation: Protótipos reais, não teatro de portfólio
+  translation: Experimentos práticos pensados para gerar clareza
 - id: project_page_intro
-  translation: Cada experimento começa com uma restrição de negócio, passa por validação prática e termina com algo real o suficiente para apoiar uma decisão.
+  translation: Cada experimento começa com uma restrição de negócio, passa por validação prática e resulta em algo concreto o suficiente para apoiar uma decisão.
 - id: project_page_note
-  translation: Produção pequena de propósito. Menos lançamentos, mais sinal.
+  translation: Trabalhamos com poucos experimentos por vez para dar a cada um a atenção necessária.
 - id: project_page_visit
   translation: Abrir projeto
 - id: cta_eyebrow
@@ -88,3 +90,15 @@
   translation: O Que Dominamos
 - id: cookie_accept
   translation: Aceitar
+- id: error_404_title
+  translation: Página Não Encontrada
+- id: error_404_back
+  translation: Voltar ao início
+- id: form_error_required
+  translation: Este campo é obrigatório.
+- id: form_error_email
+  translation: Informe um e-mail válido.
+- id: form_submit_error
+  translation: Não foi possível enviar. Tente novamente.
+- id: form_submit_success
+  translation: Mensagem enviada com sucesso!

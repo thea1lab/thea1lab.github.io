@@ -2,6 +2,7 @@
 	<meta charset="utf-8">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="https://www.googletagmanager.com">
 	<meta name="theme-color" content="#6cb670">
 	<title>{{ .Title }}</title>
 
@@ -36,7 +37,7 @@
 	{{ if .IsHome }}
 	{{ $data := index site.Data site.Language.Lang }}
 	{{ with $data.banner.banner }}
-	<link rel="preload" as="image" href="{{ .bg_image_webp | absURL }}">
+	<link rel="preload" as="image" href="{{ .bg_image_webp | absURL }}" fetchpriority="high">
 	{{ end }}
 	{{ end }}
 
@@ -54,12 +55,12 @@
 		{{ end }}
 
 	{{"<!-- Main Stylesheet -->"|safeHTML}}
-	{{ $styles := resources.Get "css/style.css" | minify }}
-	<link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen">
+	{{ $styles := resources.Get "css/style.css" | minify | fingerprint "sha384" }}
+	<link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
 
 	{{"<!-- Custom stylesheet - for your changes -->" |safeHTML}}
-	{{ $custom := resources.Get "css/custom.css" | minify }}
-  <link rel="stylesheet" href="{{ $custom.RelPermalink }}" media="screen">
+	{{ $custom := resources.Get "css/custom.css" | minify | fingerprint "sha384" }}
+  <link rel="stylesheet" href="{{ $custom.RelPermalink }}" integrity="{{ $custom.Data.Integrity }}" media="screen">
 
 	{{ "<!--Favicon-->" | safeHTML }}
 	<link rel="shortcut icon" href="{{ `images/favicon.png` | absURL }}" type="image/x-icon">

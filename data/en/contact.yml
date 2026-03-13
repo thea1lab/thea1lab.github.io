@@ -3,7 +3,7 @@ contact:
   enable: true
   title: Contact Us
   subtitle: Talk to the Lab
-  content: "Describe the challenge in a few lines. We'll get back to you so we can talk more about your challenge."
+  content: "Describe the challenge in a few lines. We'll get back to you to discuss next steps."
 
   # Contact details
   contact_list:
@@ -27,4 +27,4 @@ contact:
       - "I want to learn more"
       - "Other"
     message: "Describe your challenge"
-    submit: "Submit"
+    submit: "Send message"

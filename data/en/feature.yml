@@ -24,4 +24,4 @@ feature:
       # feature item loop
     - title: Deliver
       icon: ti-package # themify icon pack : https://themify.me/themify-icons
-      content: Functional PoC + technical plan + executive presentation for decision-making.
+      content: Working prototype + technical plan + executive presentation for decision-making.

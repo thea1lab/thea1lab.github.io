@@ -47,21 +47,28 @@
 							<p class="contact-form-shell__eyebrow">{{ i18n "contact_form_eyebrow" }}</p>
 							<h3>{{ i18n "contact_form_title" }}</h3>
 						</div>
-					<form id="contact-form" class="form-meghna" method="post" action="{{ .form_action }}" role="form">
+					<form id="contact-form" class="form-meghna" method="post" action="{{ .form_action }}" role="form" novalidate
+							data-error-required="{{ i18n "form_error_required" | default "This field is required." }}"
+							data-error-email="{{ i18n "form_error_email" | default "Please enter a valid email address." }}">
 						<div class="form-group">
 							<label for="name">{{ .name }}</label>
 							<input type="text" placeholder="{{ .name }}" class="form-control" name="name" id="name"
-								autocomplete="name" maxlength="120" required>
+								autocomplete="name" maxlength="120" required
+								aria-required="true" aria-describedby="name-error">
+							<span id="name-error" class="field-error" role="alert" hidden></span>
 						</div>
 						<div class="form-group">
 							<label for="email">{{ .email }}</label>
 							<input type="email" placeholder="{{ .email }}" class="form-control" name="email" id="email"
-								autocomplete="email" inputmode="email" maxlength="254" required>
+								autocomplete="email" inputmode="email" maxlength="254" required
+								aria-required="true" aria-describedby="email-error">
+							<span id="email-error" class="field-error" role="alert" hidden></span>
 						</div>
 						<div class="form-group">
 							<label for="subject">{{ .subject }}</label>
 							{{ if .interests }}
-							<select class="form-control" name="subject" id="subject" required>
+							<select class="form-control" name="subject" id="subject" required
+								aria-required="true" aria-describedby="subject-error">
 								<option value="" disabled selected>{{ .subject }}</option>
 							{{ range .interests }}
 							<option value="{{ . }}">{{ . }}</option>
@@ -69,18 +76,22 @@
 						</select>
 							{{ else }}
 							<input type="text" placeholder="{{ .subject }}" class="form-control" name="subject" id="subject"
-								maxlength="120">
+								maxlength="120" aria-describedby="subject-error">
 							{{ end }}
+							<span id="subject-error" class="field-error" role="alert" hidden></span>
 						</div>
 						<div class="form-group">
 							<label for="message">{{ .message }}</label>
 							<textarea rows="6" placeholder="{{ .message }}" class="form-control" name="message" id="message"
-								maxlength="2000" required></textarea>
+								maxlength="2000" required
+								aria-required="true" aria-describedby="message-error"></textarea>
+							<span id="message-error" class="field-error" role="alert" hidden></span>
 						</div>
 					<div id="cf-submit">
 						<button type="submit" id="contact-submit" class="btn btn-transparent btn-block"
 							value="{{ .submit }}">{{ .submit }}</button>
 					</div>
+					<div id="form-status" class="form-status" role="alert" aria-live="polite" hidden></div>
 				</form>
 					</div>
 			</div>

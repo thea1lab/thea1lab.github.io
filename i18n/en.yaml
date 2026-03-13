@@ -3,11 +3,11 @@
 - id: readMore
   translation: Read more
 - id: viewAllPost
-  translation: View All Post
+  translation: View All Posts
 - id: share
   translation: Share
 - id: aboutAuthor
-  translation: About author
+  translation: About the author
 - id: authorsPosts
   translation: Author's posts
 - id: all
@@ -15,7 +15,7 @@
 - id: about
   translation: About Us
 - id: services
-  translation: Service
+  translation: Services
 - id: portfolio
   translation: Portfolio
 - id: team
@@ -24,6 +24,8 @@
   translation: Pricing
 - id: blog
   translation: Blog
+- id: projects
+  translation: Projects
 - id: contact
   translation: Contact
 - id: contact_eyebrow
@@ -57,11 +59,11 @@
 - id: project_card_label
   translation: Experiment
 - id: project_page_eyebrow
-  translation: Working prototypes, not portfolio theater
+  translation: Practical experiments built to be useful
 - id: project_page_intro
-  translation: Each experiment starts with a business constraint, moves through hands-on validation, and ends with something real enough to support a decision.
+  translation: Each experiment starts with a business constraint, goes through hands-on validation, and results in something concrete enough to support a decision.
 - id: project_page_note
-  translation: Small batch by design. Fewer launches, more signal.
+  translation: We work on a small number of experiments at a time so each one gets proper attention.
 - id: project_page_visit
   translation: Open project
 - id: cta_eyebrow
@@ -88,3 +90,15 @@
   translation: What We Master
 - id: cookie_accept
   translation: I Accept
+- id: error_404_title
+  translation: Page Not Found
+- id: error_404_back
+  translation: Back to home
+- id: form_error_required
+  translation: This field is required.
+- id: form_error_email
+  translation: Please enter a valid email address.
+- id: form_submit_error
+  translation: Could not send. Please try again.
+- id: form_submit_success
+  translation: Message sent successfully!

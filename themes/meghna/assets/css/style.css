@@ -304,6 +304,15 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: preloader-dismiss 0.3s ease-out 0.4s forwards;
+}
+
+@keyframes preloader-dismiss {
+  to {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
 }
 
 .title {
@@ -851,7 +860,7 @@ a:hover {
 }
 
 .pricing li:last-child {
-  border-bottom: 1px solid rgba(236, 239, 241, 0.07);
+  border-bottom: 1px solid var(--color-border-subtle);
   margin-bottom: 20px;
 }
 
@@ -874,7 +883,7 @@ a:hover {
 
 .portfolio-filter .btn {
   outline: 0;
-  border: 1px solid rgba(236, 239, 241, 0.07);
+  border: 1px solid var(--color-border-subtle);
   background: transparent;
   display: inline-block;
   font-size: 16px;
@@ -894,7 +903,7 @@ a:hover {
 
 .portfolio-block:before {
   transition: all 0.3s ease-in-out;
-  background: white;
+  background: var(--color-text-inverse);
   opacity: 0;
   top: 20px;
   right: 20px;
@@ -962,11 +971,11 @@ a:hover {
 ==================================================================*/
 .service-block {
   padding: 60px 20px;
-  border-left: 1px solid rgba(236, 239, 241, 0.07);
-  border-top: 1px solid rgba(236, 239, 241, 0.07);
+  border-left: 1px solid var(--color-border-subtle);
+  border-top: 1px solid var(--color-border-subtle);
   margin-bottom: 40px;
   box-shadow: 2px 2px 5px rgba(44, 44, 44, 0.3),
-    13px 13px 0 rgba(255, 255, 255, 0.7);
+    13px 13px 0 var(--color-border-soft);
 }
 
 .service-block .service-icon {
@@ -1076,7 +1085,7 @@ a:hover {
 }
 
 .member-photo .mask {
-  background-color: rgba(232, 122, 0, 0.7);
+  background-color: color-mix(in srgb, var(--color-accent-primary) 70%, transparent);
   position: absolute;
   text-align: center;
   height: 100%;
@@ -1129,7 +1138,7 @@ a:hover {
   Testimonial section
 ==================================================================*/
 .testimonial:before {
-  background: rgba(42, 48, 55, 0.7);
+  background: color-mix(in srgb, var(--color-bg-base) 70%, transparent);
 }
 
 .client-info {
@@ -1967,7 +1976,7 @@ blockquote {
   background-color: transparent;
   padding: 5px 10px;
   color: var(--color-text-strong);
-  border: 1px solid rgba(236, 239, 241, 0.07);
+  border: 1px solid var(--color-border-subtle);
 }
 
 .form-control-meghna .form-control:focus {
@@ -1992,7 +2001,7 @@ figcaption {
 
 .resp-sharing-button__link {
   text-decoration: none;
-  color: #fff;
+  color: var(--color-text-inverse);
   margin: 0.5em;
 }
 
@@ -2017,14 +2026,14 @@ figcaption {
 
 /* Non solid icons get a stroke */
 .resp-sharing-button__icon {
-  stroke: #fff;
+  stroke: var(--color-text-inverse);
   fill: none;
 }
 
 /* Solid icons get a fill */
 .resp-sharing-button__icon--solid,
 .resp-sharing-button__icon--solidcircle {
-  fill: #fff;
+  fill: var(--color-text-inverse);
   stroke: none;
 }
 
