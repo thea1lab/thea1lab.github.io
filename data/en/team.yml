@@ -2,26 +2,33 @@
 team:
   enable: true
   title: Our Team
-  team_member:
-    - name: Claudio Scheer
-      image_webp: images/team/team-claudio.webp
-      image: images/team/team-claudio.jpg
-      designation: Software Engineer
-      content: "M.Sc. in Computer Science. Turns complex AI and backend challenges into clear, practical solutions — and shares the thinking behind them."
-      social:
-        - icon: ti-github # themify icon pack : https://themify.me/themify-icons
-          link: "https://github.com/claudioscheer"
-        - icon: ti-linkedin # themify icon pack : https://themify.me/themify-icons
-          link: "https://linkedin.com/in/claudioscheer"
-        - icon: ti-link # themify icon pack : https://themify.me/themify-icons
-          link: "https://claudioscheer.github.io"
-    - name: Welliton Scheer
-      image_webp: images/team/team-welliton.webp
-      image: images/team/team-welliton.jpg
-      designation: Software Engineer
-      content: "Makes full-stack and cloud infrastructure simple and understandable — building clean solutions anyone can learn from."
-      social:
-        - icon: ti-github # themify icon pack : https://themify.me/themify-icons
-          link: "https://github.com/wellitonscheer"
-        - icon: ti-linkedin # themify icon pack : https://themify.me/themify-icons
-          link: "https://linkedin.com/in/welliton-scheer"
+  subtitle: "What we know how to do — and why it matters to you."
+  description: "Computer Science background and experience in national and international projects. We build solutions that work today and scale with your business."
+  qualifications:
+    - icon: ti-light-bulb
+      title: "Artificial Intelligence"
+      content: "Systems that understand context, generate content, and make complex decisions. Scale tasks that previously required human time and judgment."
+    - icon: ti-thought
+      title: "Machine Learning"
+      content: "Models that learn from your data to find patterns and predict outcomes. Less guesswork, more precision in your business decisions."
+    - icon: ti-layout
+      title: "Software Architecture"
+      content: "Well-structured systems that grow with your business. No need to rebuild everything each time demand increases."
+    - icon: ti-cloud
+      title: "Cloud & Infrastructure"
+      content: "Applications running with high availability and optimized cost. Your system stays up when your customers need it."
+    - icon: ti-reload
+      title: "DevOps & CI/CD"
+      content: "Automated and reliable deployments with zero downtime. New features reach end users faster with no surprises."
+    - icon: ti-bar-chart
+      title: "Data Engineering"
+      content: "Pipelines that collect, transform, and deliver clean data. Strategic decisions based on real information, not intuition."
+    - icon: ti-desktop
+      title: "Full-stack Development"
+      content: "From database to user interface, everything integrated. A single team handles end-to-end, with no communication gaps."
+    - icon: ti-settings
+      title: "Process Automation"
+      content: "Repetitive tasks eliminated with custom software. Your team focuses on what creates value, not on operations."
+    - icon: ti-direction-alt
+      title: "Technical Consulting"
+      content: "Strategic guidance to choose the right technologies. Avoid rework and invest where it truly makes a difference."

@@ -1,27 +1,27 @@
 ############################# feature ###################################
 feature:
-  enable: false
+  enable: true
   image: images/about/about-business-man.jpg
   image_webp: images/about/about-business-man.webp
-  title: We’re A Digital Design Agency.
-  content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam tempora itaque, autem dolores culpa cum mollitia voluptate nesciunt voluptatibus quasi."
+  title: Como Funciona o Lab
+  content: "Nosso processo é desenhado para ir do problema à solução com velocidade e clareza. Cada etapa entrega valor real."
   feature_item:
     # feature item loop
-    - title: SEO Optimized
-      icon: ti-world # themify icon pack : https://themify.me/themify-icons
-      content: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus consectetur dolores repellendus eos saepe
+    - title: Escutar
+      icon: ti-headphone # themify icon pack : https://themify.me/themify-icons
+      content: Entendemos o problema real do seu negócio antes de pensar em tecnologia.
 
       # feature item loop
-    - title: Easy Customization
-      icon: ti-panel # themify icon pack : https://themify.me/themify-icons
-      content: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus consectetur dolores repellendus eos saepe
+    - title: Pesquisar
+      icon: ti-search # themify icon pack : https://themify.me/themify-icons
+      content: Mapeamos tecnologias e abordagens possíveis para o seu desafio.
 
       # feature item loop
-    - title: SEO Optimized
-      icon: ti-stats-up # themify icon pack : https://themify.me/themify-icons
-      content: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus consectetur dolores repellendus eos saepe
+    - title: Experimentar
+      icon: ti-settings # themify icon pack : https://themify.me/themify-icons
+      content: Construímos protótipos rápidos e testamos hipóteses com dados reais.
 
       # feature item loop
-    - title: Easy Customization
-      icon: ti-announcement # themify icon pack : https://themify.me/themify-icons
-      content: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus consectetur dolores repellendus eos saepe
+    - title: Entregar
+      icon: ti-package # themify icon pack : https://themify.me/themify-icons
+      content: PoC funcional + plano técnico + apresentação executiva para decisão.

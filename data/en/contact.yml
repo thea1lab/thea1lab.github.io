@@ -2,22 +2,17 @@
 contact:
   enable: true
   title: Contact Us
-  subtitle: Let's talk
-  content: "Want to chat about technology, open source, or the A1 way of doing things? Reach out — we love a good conversation."
+  subtitle: Talk to the Lab
+  content: "Pick a reason for reaching out, leave your email, and briefly describe what you need — a problem, an idea, or a question. No need to be technical. We'll get back to you the same day."
 
   # Contact details
   contact_list:
-    - icon: ti-location-pin # themify icon pack : https://themify.me/themify-icons
-      info: "Brazil"
-
-    #- icon : ti-mobile # themify icon pack : https://themify.me/themify-icons
-    #info : "Phone: +880-31-000-000"
-
-    #- icon : ti-printer # themify icon pack : https://themify.me/themify-icons
-    #info : "Fax: +880-31-000-000"
-
     - icon: ti-email # themify icon pack : https://themify.me/themify-icons
       info: "Email: contato@a1lab.com.br"
+
+    - icon: ti-comment-alt # themify icon pack : https://themify.me/themify-icons
+      info: "WhatsApp: +55 55 99613-3346"
+      link: "https://wa.me/555599613346"
 
   # Contact form
   contact_form:
@@ -25,6 +20,11 @@ contact:
     form_action: "https://formspree.io/f/xdopvnez" #contact form works with https://formspree.io
     name: "Your Name"
     email: "Your Email"
-    subject: "Subject"
-    message: "Message"
+    subject: "How can we help?"
+    interests:
+      - "I want a diagnostic"
+      - "I have a project"
+      - "I want to learn more"
+      - "Other"
+    message: "Describe your challenge"
     submit: "Submit"

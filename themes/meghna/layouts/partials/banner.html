@@ -21,7 +21,7 @@
 		<h3 class="slogan">{{ .content | markdownify }}</h3>
 		{{ if .button.enable }}
 		{{ with .button }}
-		<a href="{{ .link }}" class="btn btn-transparent">{{ .label }}</a>
+		<a href="{{ .link }}" class="btn btn-main">{{ .label }}</a>
 		{{ end }}
 		{{ end }}
 	</div>

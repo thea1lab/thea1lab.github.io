@@ -1,11 +1,11 @@
 ############################# call to action ##############################
 cta:
-  enable: false
+  enable: true
   bg_image: "images/backgrounds/bg-white-wall.jpg"
   bg_image_webp: "images/backgrounds/bg-white-wall.webp"
-  title: "Great Design & Incredible Features"
-  content: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis tenetur odio impedit incidunt? Omnis accusantium ea reiciendis, fugit commodi nostrum."
+  title: "Ready to experiment?"
+  content: "Tell us your challenge. In a few weeks you'll have a working prototype and a clear technical plan to make the best decision."
   button:
     enable: true
-    label: "Start a project with us"
+    label: "Schedule a conversation"
     link: "#contact"

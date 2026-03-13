@@ -52,22 +52,16 @@ url = "about"
 weight = 1
 
 [[Languages.en.menu.main]]
+name = "services"
+pre = "#"
+url = "services"
+weight = 2
+
+[[Languages.en.menu.main]]
 name = "projects"
 pre = "#"
 url = "projects"
-weight = 2
-
-# [[Languages.en.menu.main]]
-# name = "services"
-# pre = "/en/#"
-# url = "services"
-# weight = 3
-
-# [[Languages.en.menu.main]]
-# name = "portfolio"
-# pre = "/en/#"
-# url = "portfolio"
-# weight = 3
+weight = 3
 
 [[Languages.en.menu.main]]
 name = "team"
@@ -75,23 +69,16 @@ pre = "#"
 url = "team"
 weight = 4
 
-# [[Languages.en.menu.main]]
-# name = "pricing"
-# pre = "/en/#"
-# url = "pricing"
-# weight = 5
-
 [[Languages.en.menu.main]]
 name = "blog"
-pre = "#"
 url = "blog"
-weight = 6
+weight = 5
 
 [[Languages.en.menu.main]]
 name = "contact"
 pre = "#"
 url = "contact"
-weight = 7
+weight = 6
 
 ################### Portuguese Navigation ########################
 [[Languages.pt.menu.main]]
@@ -101,22 +88,16 @@ url = "about"
 weight = 1
 
 [[Languages.pt.menu.main]]
+name = "serviços"
+pre = "#"
+url = "services"
+weight = 2
+
+[[Languages.pt.menu.main]]
 name = "projetos"
 pre = "#"
 url = "projects"
-weight = 2
-
-# [[Languages.pt.menu.main]]
-# name = "serviços"
-# pre = "/#"
-# url = "services"
-# weight = 3
-
-# [[Languages.pt.menu.main]]
-# name = "portfólio"
-# pre = "/#"
-# url = "portfolio"
-# weight = 3
+weight = 3
 
 [[Languages.pt.menu.main]]
 name = "equipe"
@@ -124,30 +105,23 @@ pre = "#"
 url = "team"
 weight = 4
 
-# [[Languages.pt.menu.main]]
-# name = "preço"
-# pre = "/#"
-# url = "pricing"
-# weight = 5
-
 [[Languages.pt.menu.main]]
 name = "blog"
-pre = "#"
 url = "blog"
-weight = 6
+weight = 5
 
 [[Languages.pt.menu.main]]
 name = "contato"
 pre = "#"
 url = "contact"
-weight = 7
+weight = 6
 
 ############################# Default Parameters ##########################
 [params]
 logo = "images/logo.png"
 logo2 = "images/full-logo.png"
 # Meta data
-description = "A1 Lab — Turning complex software and AI into something clear, practical, and open for everyone."
+description = "A1 Lab — Laboratório de experimentação tecnológica. Pesquisamos, experimentamos e entregamos protótipos funcionais e planos técnicos para resolver seus desafios de negócio."
 author = "A1 Lab"
 images = ["images/full-background-logo.png"]
 # Google Analytics

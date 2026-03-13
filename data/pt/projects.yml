@@ -1,20 +1,20 @@
 projects:
   enable: true
-  title: Nossos Projetos
+  title: Experimentos do Lab
   projects_item:
-    - name: Thoughts
-      icon: images/projects/thoughts.svg
-      description: "Capture pensamentos passageiros — por voz ou texto. Um app Android minimalista e focado em privacidade, com transcrição local usando IA Whisper. Sem nuvem, sem contas, sem distrações."
-      link: "https://thoughts.a1lab.com.br"
+    # - name: Thoughts
+    #   icon: images/projects/thoughts.svg
+    #   description: "App Android minimalista para capturar pensamentos por voz ou texto. Transcrição local com IA Whisper — sem nuvem, sem contas, sem distrações. Um experimento em privacidade e simplicidade."
+    #   link: "https://thoughts.a1lab.com.br"
 
     - name: Margem Forte
       icon: images/projects/margemforte.svg
       icon_class: "no-bg"
-      description: "Calculadora de margem de lucro real que inclui custos fixos, variáveis e impostos. Entenda a diferença entre margem e markup, e descubra o lucro real do seu negócio. Gratuita e sem cadastro."
+      description: "Calculadora de margem de lucro real que inclui custos fixos, variáveis e impostos. Experimento em tornar ferramentas financeiras acessíveis para PMEs. Gratuita e sem cadastro."
       link: "https://margemforte.com.br"
 
     - name: BugTriage Bot
       icon: images/projects/bug-triage-bot.svg
       icon_class: "white-bg icon-lg"
-      description: "Bot para Slack que classifica relatos de bugs com o Claude Code SDK, faz investigação de código em modo somente leitura em repositórios GitHub conectados e cria tickets no Jira com revisão humana nos casos de baixa confiança."
+      description: "Bot para Slack que classifica bugs com Claude Code SDK, investiga código em repositórios GitHub e cria tickets no Jira. Experimento em automação inteligente de triagem."
       link: "https://github.com/thea1lab/bug-triage-bot"

@@ -16,33 +16,24 @@
       </div>
       {{"<!-- /section title -->" | safeHTML}}
 
-      {{ range .team_member}}
-      {{"<!-- team member -->" | safeHTML}}
-      <div class="col-lg-3 col-md-6 col-12 wow fadeInDown" data-wow-duration="500ms">
-        <div class="team-member">
-          <div class="member-photo">
-            {{"<!-- member photo -->" | safeHTML}}
-            <img class="img-fluid lozad" data-src="{{ .image_webp | absURL }}" onerror="this.onerror=null;this.src='{{ .image | absURL }}'" alt="{{ .name }}">
-
-            {{"<!-- member social profile -->" | safeHTML}}
-            <div class="mask">
-              <ul class="list-inline">
-                {{ range .social }}
-                <li class="list-inline-item"><a href="{{ .link | safeURL }}" target="_blank" rel="noopener noreferrer"><i class="{{ .icon }}"></i></a></li>
-                {{ end }}
-              </ul>
-            </div>
-          </div>
-
-          {{"<!-- member name & designation -->" | safeHTML}}
-          <div class="member-meta">
-            <h4>{{ .name }}</h4>
-            <span>{{ .designation | markdownify}}</span>
-            <p>{{ .content | markdownify }}</p>
-          </div>
+      {{ with .description }}
+      <div class="col-12 wow fadeInUp" data-wow-duration="500ms">
+        <div class="team-description-wrapper">
+          <p class="team-description">{{ . }}</p>
         </div>
       </div>
-      {{"<!-- end team member -->" | safeHTML}}
+      {{ end }}
+
+      {{ range .qualifications }}
+      <article class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-duration="500ms">
+        <div class="service-block text-center">
+          <div class="service-icon text-center">
+            <i class="{{ .icon }}"></i>
+          </div>
+          <h3>{{ .title | markdownify }}</h3>
+          <p>{{ .content | markdownify }}</p>
+        </div>
+      </article>
       {{ end }}
     </div>
   </div>

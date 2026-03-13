@@ -1,16 +1,16 @@
 ############################# About ###################################
 about:
   enable: true
-  title: About Us
+  title: About the Lab
   about_item:
+    - icon: ti-layers-alt # themify icon pack : https://themify.me/themify-icons
+      title: Real <span class="color">Experimentation</span>
+      content: "We don't deliver PowerPoints. We test real technologies and build functional prototypes. Every experiment is designed to validate hypotheses and generate concrete results for your business."
+
+    - icon: ti-settings # themify icon pack : https://themify.me/themify-icons
+      title: AI as a <span class="color">Specialty</span>
+      content: "Artificial intelligence is our flagship, but we cover everything from development to deployment. We integrate AI practically and deliberately — no buzzwords, no empty promises. Only what works."
+
     - icon: ti-light-bulb # themify icon pack : https://themify.me/themify-icons
-      title: Creative <span class="color">Thinking</span>
-      content: "We look at complex problems and find the simple solution hidden inside. At A1 Lab, we think differently — cutting through complexity to find what's clear and practical. It's a creative and enjoyable way to teach and learn, backed by the discipline and rigor that real results demand."
-
-    - icon: ti-briefcase # themify icon pack : https://themify.me/themify-icons
-      title: AI with <span class="color">Purpose</span>
-      content: "Artificial intelligence isn't a buzzword to us — it's a practical part of our daily work. We integrate AI thoughtfully and deliberately to solve real problems, and we share what we learn freely through our blog and open-source work. No hype, no empty promises."
-
-    - icon: ti-comments # themify icon pack : https://themify.me/themify-icons
       title: The <span class="color">A1 Way</span>
-      content: "The A1 Way is about turning complex software and AI into something clear, practical, and understandable. We openly share how we think, build, and solve problems through our blog and open-source work. The result is straightforward explanations, simple solutions to difficult challenges, and knowledge that anyone can learn from and use. That's the A1 Way."
+      content: "We simplify complexity. We take difficult technical challenges and turn them into clear, actionable plans. The result: you understand exactly what needs to be done, how much it costs, and how long it takes."

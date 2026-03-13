@@ -18,9 +18,9 @@
 
 			{{ range .projects_item }}
 			{{"<!-- Single Project Item -->" | safeHTML }}
-			<div class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-duration="500ms">
-				<div class="project-card">
-					<div class="project-icon{{ with .icon_class }} {{ . }}{{ end }}">
+			<article class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-duration="500ms">
+				<div class="service-block text-center">
+					<div class="service-icon text-center has-img{{ with .icon_class }} {{ . }}{{ end }}">
 						<img src="{{ .icon | absURL }}" alt="{{ .name }}">
 					</div>
 					<h3>{{ .name }}</h3>
@@ -29,7 +29,7 @@
 						{{ .link | replaceRE "^https?://" "" }} <i class="ti-arrow-right"></i>
 					</a>
 				</div>
-			</div>
+			</article>
 			{{"<!-- End Single Project Item -->" | safeHTML }}
 			{{ end }}
 		</div>

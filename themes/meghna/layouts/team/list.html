@@ -1,0 +1,43 @@
+{{ define "main" }}
+{{ partial "navigation.html" . }}
+
+{{ $data := index site.Data site.Language.Lang }}
+{{ if $data.team.team.enable }}
+{{ with $data.team.team }}
+<section class="section standalone-page">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-12">
+        <div class="title text-center">
+          <h2>{{ with .title }} {{ index (split . " ") 0 | safeHTML }} {{ end }}<span class="color">
+            {{ with .title }} {{ after (len (index (split . " ") 0)) . | safeHTML }} {{ end }}</span></h2>
+          <div class="border-meghna"></div>
+          {{ with .subtitle }}<p class="subtitle">{{ . }}</p>{{ end }}
+        </div>
+      </div>
+
+      {{ with .description }}
+      <div class="col-12">
+        <div class="team-description-wrapper">
+          <p class="team-description">{{ . }}</p>
+        </div>
+      </div>
+      {{ end }}
+
+      {{ range .qualifications }}
+      <article class="col-lg-4 col-md-6 col-12">
+        <div class="service-block text-center">
+          <div class="service-icon text-center">
+            <i class="{{ .icon }}"></i>
+          </div>
+          <h3>{{ .title | markdownify }}</h3>
+          <p>{{ .content | markdownify }}</p>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}
+{{ end }}

@@ -1,16 +1,16 @@
 ############################# About ###################################
 about:
   enable: true
-  title: Sobre Nós
+  title: Sobre o Lab
   about_item:
+    - icon: ti-layers-alt # themify icon pack : https://themify.me/themify-icons
+      title: Experimentação <span class="color">Real</span>
+      content: "Não entregamos PowerPoint. Testamos tecnologias de verdade e construímos protótipos funcionais. Cada experimento é desenhado para validar hipóteses e gerar resultados concretos para o seu negócio."
+
+    - icon: ti-settings # themify icon pack : https://themify.me/themify-icons
+      title: IA como <span class="color">Especialidade</span>
+      content: "Inteligência artificial é nosso carro-chefe, mas cobrimos do desenvolvimento ao deploy. Integramos IA de forma prática e deliberada — sem buzzwords, sem promessas vazias. Só o que funciona."
+
     - icon: ti-light-bulb # themify icon pack : https://themify.me/themify-icons
-      title: Pensamento <span class="color">Criativo</span>
-      content: "Olhamos para problemas complexos e encontramos a solução simples escondida dentro deles. Na A1 Lab, pensamos de forma diferente — cortamos a complexidade para encontrar o que é claro e prático. É um jeito criativo e divertido de ensinar e aprender, mas com a seriedade e a disciplina que resultados de verdade exigem."
-
-    - icon: ti-briefcase # themify icon pack : https://themify.me/themify-icons
-      title: IA com <span class="color">Propósito</span>
-      content: "Inteligência artificial não é um buzzword para nós — é parte prática do nosso dia a dia. Integramos IA de forma inteligente e deliberada para resolver problemas reais, e compartilhamos o que aprendemos livremente no nosso blog e projetos open source. Sem exageros, sem promessas vazias."
-
-    - icon: ti-comments # themify icon pack : https://themify.me/themify-icons
       title: O <span class="color">A1 Way</span>
-      content: "O A1 Way é sobre transformar software e IA complexos em algo claro, prático e compreensível. Compartilhamos abertamente como pensamos, construímos e resolvemos problemas através do nosso blog e projetos open source. O resultado são explicações diretas, soluções simples para desafios difíceis e conhecimento que qualquer pessoa pode aprender e usar. Esse é o jeito A1."
+      content: "Simplificamos complexidade. Pegamos desafios técnicos difíceis e transformamos em planos claros e acionáveis. O resultado: você entende exatamente o que precisa ser feito, quanto custa e quanto tempo leva."

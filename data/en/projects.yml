@@ -1,20 +1,20 @@
 projects:
   enable: true
-  title: Our Projects
+  title: Lab Experiments
   projects_item:
-    - name: Thoughts
-      icon: images/projects/thoughts.svg
-      description: "Capture your fleeting thoughts — by voice or text. A minimal, privacy-first Android app with on-device transcription powered by Whisper AI. No cloud, no accounts, no distractions."
-      link: "https://thoughts.a1lab.com.br"
+    # - name: Thoughts
+    #   icon: images/projects/thoughts.svg
+    #   description: "Minimal Android app to capture thoughts by voice or text. On-device transcription powered by Whisper AI — no cloud, no accounts, no distractions. An experiment in privacy and simplicity."
+    #   link: "https://thoughts.a1lab.com.br"
 
     - name: Margem Forte
       icon: images/projects/margemforte.svg
       icon_class: "no-bg"
-      description: "Real profit margin calculator that factors in fixed costs, variable costs, and taxes. Understand the difference between margin and markup, and discover your business's true profit. Free, no sign-up required."
+      description: "Real profit margin calculator factoring in fixed costs, variable costs, and taxes. An experiment in making financial tools accessible for SMBs. Free, no sign-up required."
       link: "https://margemforte.com.br"
 
     - name: BugTriage Bot
       icon: images/projects/bug-triage-bot.svg
       icon_class: "white-bg icon-lg"
-      description: "Slack bot that classifies bug reports with the Claude Code SDK, runs read-only code investigation on connected GitHub repos, and creates Jira tickets with human review for low-confidence cases."
+      description: "Slack bot that classifies bugs with Claude Code SDK, investigates code in GitHub repos, and creates Jira tickets. An experiment in intelligent triage automation."
       link: "https://github.com/thea1lab/bug-triage-bot"

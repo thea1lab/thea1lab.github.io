@@ -2,26 +2,33 @@
 team:
   enable: true
   title: Nossa Equipe
-  team_member:
-    - name: Claudio Scheer
-      image_webp: images/team/team-claudio.webp
-      image: images/team/team-claudio.jpg
-      designation: Software Engineer
-      content: "Mestre em Ciência da Computação. Transforma desafios complexos de IA e backend em soluções claras e práticas — e compartilha o raciocínio por trás delas."
-      social:
-        - icon: ti-github # themify icon pack : https://themify.me/themify-icons
-          link: "https://github.com/claudioscheer"
-        - icon: ti-linkedin # themify icon pack : https://themify.me/themify-icons
-          link: "https://linkedin.com/in/claudioscheer"
-        - icon: ti-link # themify icon pack : https://themify.me/themify-icons
-          link: "https://claudioscheer.github.io"
-    - name: Welliton Scheer
-      image_webp: images/team/team-welliton.webp
-      image: images/team/team-welliton.jpg
-      designation: Software Engineer
-      content: "Torna full-stack e infraestrutura cloud algo simples e compreensível — construindo soluções limpas que qualquer pessoa pode aprender."
-      social:
-        - icon: ti-github # themify icon pack : https://themify.me/themify-icons
-          link: "https://github.com/wellitonscheer"
-        - icon: ti-linkedin # themify icon pack : https://themify.me/themify-icons
-          link: "https://linkedin.com/in/welliton-scheer"
+  subtitle: "O que sabemos fazer — e por que isso importa para você."
+  description: "Formação em Ciência da Computação e experiência em projetos nacionais e internacionais. Construímos soluções que funcionam hoje e escalam com o seu negócio."
+  qualifications:
+    - icon: ti-light-bulb
+      title: "Inteligência Artificial"
+      content: "Sistemas que entendem contexto, geram conteúdo e tomam decisões complexas. Você ganha escala em tarefas que antes exigiam tempo e julgamento humano."
+    - icon: ti-thought
+      title: "Machine Learning"
+      content: "Modelos que aprendem com seus dados para encontrar padrões e prever resultados. Menos achismo e mais precisão nas decisões do seu negócio."
+    - icon: ti-layout
+      title: "Arquitetura de Software"
+      content: "Sistemas bem estruturados que crescem junto com o seu negócio. Você não precisa reconstruir tudo cada vez que a demanda aumenta."
+    - icon: ti-cloud
+      title: "Cloud & Infraestrutura"
+      content: "Aplicações rodando com alta disponibilidade e custo otimizado. Seu sistema fica no ar quando seus clientes precisam dele."
+    - icon: ti-reload
+      title: "DevOps & CI/CD"
+      content: "Deploys automáticos e confiáveis, sem downtime. Novas funcionalidades chegam ao usuário final mais rápido e sem surpresas."
+    - icon: ti-bar-chart
+      title: "Engenharia de Dados"
+      content: "Pipelines que coletam, transformam e entregam dados limpos. Decisões estratégicas baseadas em informação real, não em intuição."
+    - icon: ti-desktop
+      title: "Desenvolvimento Full-stack"
+      content: "Do banco de dados à interface do usuário, tudo integrado. Um único time cuida de ponta a ponta, sem ruído na comunicação."
+    - icon: ti-settings
+      title: "Automação de Processos"
+      content: "Tarefas repetitivas eliminadas com software sob medida. Sua equipe foca no que gera valor, não no que é operacional."
+    - icon: ti-direction-alt
+      title: "Consultoria Técnica"
+      content: "Orientação estratégica para escolher as tecnologias certas. Você evita retrabalho e investe onde realmente faz diferença."
