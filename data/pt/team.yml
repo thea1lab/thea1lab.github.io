@@ -3,7 +3,7 @@ team:
   enable: true
   title: Nossa Equipe
   subtitle: "O que sabemos fazer — e por que isso importa para você."
-  description: "Formação em Ciência da Computação e experiência em projetos nacionais e internacionais. Construímos soluções que funcionam hoje e escalam com o seu negócio."
+  description: "De IA e machine learning a infraestrutura cloud e automação — cobrimos toda a cadeia técnica para levar seu experimento do problema ao protótipo funcional."
   qualifications:
     - icon: ti-light-bulb
       title: "Inteligência Artificial"

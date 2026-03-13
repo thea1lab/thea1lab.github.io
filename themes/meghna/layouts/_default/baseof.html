@@ -3,6 +3,7 @@
 {{ partial "head.html" . }}
 
 <body id="body" data-spy="scroll" data-target=".navbar" data-offset="55">
+  <a href="#content" class="skip-to-content sr-only">{{ i18n "skip_to_content" | default "Skip to content" }}</a>
   <div id="content">
     {{ partial "preloader.html" . }}
     <main>

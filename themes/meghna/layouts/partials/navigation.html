@@ -32,7 +32,7 @@
 				<!-- Language List -->
 				{{- if site.IsMultiLingual }}
 					<label class="sr-only" for="select-language">{{ i18n "language_selector" | default "Select language" }}</label>
-					<select id="select-language" onchange="location = this.value;">
+					<select id="select-language">
 					{{ $siteLanguages := site.Languages}}
 					{{ $pageLang := .Page.Lang}}
 					{{ range .Page.AllTranslations }}

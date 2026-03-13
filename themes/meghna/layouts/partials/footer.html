@@ -37,13 +37,13 @@
 	{{ $homeJsExcludes := slice "plugins/slick/slick.min.js" "plugins/shuffle/shuffle.min.js" "plugins/magnific-popup/jquery.magnific-popup.min.js" "plugins/lazy-load/lozad.min.js" }}
 	{{ range site.Params.plugins.js}}
 	{{ if not (and $.IsHome (in $homeJsExcludes .link)) }}
-	<script src="{{ .link | absURL }}"></script>
+	<script src="{{ .link | absURL }}" defer></script>
 	{{ end }}
 	{{ end }}
 
 {{ "<!-- Main Script -->" | safeHTML }}
 {{ $script := resources.Get "js/script.js" | minify | fingerprint "sha384"}}
-<script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}"></script>
+<script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" defer></script>
 
 <!-- cookie -->
 {{ if site.Params.cookies.enable }}

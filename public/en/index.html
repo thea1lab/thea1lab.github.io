@@ -8,7 +8,7 @@
 	<title>A1 Lab</title>
 
 	<!-- mobile responsive meta -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="A1 Lab — Laboratório de experimentação tecnológica. Pesquisamos, experimentamos e entregamos protótipos funcionais e planos técnicos para resolver seus desafios de negócio.">
 	
 	<meta name="author" content="A1 Lab">
@@ -40,15 +40,16 @@
 	
 	<link rel="preload" as="image" href="https://www.a1lab.com.br/images/backgrounds/bg.webp">
 	
-	<link rel="preload" as="image" href="https://www.a1lab.com.br/images/full-logo.png">
-	<link rel="preload" as="image" href="https://www.a1lab.com.br/images/logo.png">
 	
 
 		<!-- plugins -->
 		
 		
 		
+		
 		<link rel="stylesheet" href="https://www.a1lab.com.br/plugins/bootstrap/bootstrap.min.css">
+		
+		
 		
 		
 		
@@ -60,7 +61,11 @@
 		
 		
 		
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anaheim%7cQuattrocento&#43;Sans:400,700&amp;display=swap">
+		
+		
+		<link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Anaheim%7cQuattrocento&#43;Sans:400,700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+		<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anaheim%7cQuattrocento&#43;Sans:400,700&amp;display=swap"></noscript>
+		
 		
 		
 
@@ -97,6 +102,7 @@
 
 
 <body id="body" data-spy="scroll" data-target=".navbar" data-offset="55">
+  <a href="#content" class="skip-to-content sr-only">Skip to content</a>
   <div id="content">
     
 <!-- preloader start -->
@@ -109,43 +115,6 @@
 
 
     <main>
-
-
-
-
-
-<!-- Welcome Slider-->
-<section class="hero-area" style='background-image: url("https://www.a1lab.com.br/images/backgrounds/bg.webp")'>
-	
-	<img class="d-none" src="https://www.a1lab.com.br/images/backgrounds/bg.webp" alt="" aria-hidden="true"
-		onerror="this.onerror=null;this.parentElement.style.backgroundImage= 'url(https:\/\/www.a1lab.com.br\/images\/backgrounds\/bg.jpg)'"/>
-
-	<div class="block">
-		<p class="hero-eyebrow">External lab for companies that need to test before they invest</p>
-		
-    
-		<h1>
-			<img src="https://www.a1lab.com.br/images/full-logo.png" alt="A1 Lab" width="2000" height="750"
-				fetchpriority="high" decoding="async" style="width: 100%; max-height: 300px;" />
-			
-		</h1>
-		<h3 class="slogan">Got a problem in your business you don&rsquo;t know how to solve? We research, test, and present you with the solution.</h3>
-		
-		
-		<a href="#contact" class="btn btn-main">Talk to the Lab</a>
-		
-		
-		<ul class="hero-proof-list" aria-label="What the Lab delivers">
-			<li>Business problem first</li>
-			<li>Functional PoC in weeks</li>
-			<li>Technical plan for decisions</li>
-		</ul>
-	</div>
-</section>
-<!-- /Welcome Slider-->
-
-
-
 
 <section class="sticky-top navigation">
 	<div class="container">
@@ -195,7 +164,7 @@
 				</ul>
 				
 					<label class="sr-only" for="select-language">Select language</label>
-					<select id="select-language" onchange="location = this.value;">
+					<select id="select-language">
 					
 					
 					
@@ -230,6 +199,43 @@
 		</nav>
 	</div>
 </section>
+
+
+
+
+
+
+<!-- Welcome Slider-->
+<section class="hero-area" style='background-image: url("https://www.a1lab.com.br/images/backgrounds/bg.webp")'>
+	
+	<img class="d-none" src="https://www.a1lab.com.br/images/backgrounds/bg.webp" alt="" aria-hidden="true"
+		onerror="this.onerror=null;this.parentElement.style.backgroundImage= 'url(https:\/\/www.a1lab.com.br\/images\/backgrounds\/bg.jpg)'"/>
+
+	<div class="block">
+		<p class="hero-eyebrow">External lab for companies that need to test before they invest</p>
+		
+    
+		<h1>
+			<img src="https://www.a1lab.com.br/images/full-logo.png" alt="A1 Lab" width="2000" height="750"
+				fetchpriority="high" decoding="async" style="width: 100%; max-height: 300px;" />
+			
+		</h1>
+		<p class="slogan">Got a problem in your business you don&rsquo;t know how to solve? We research, test, and present you with the solution.</p>
+		
+		
+		<a href="#contact" class="btn btn-main">Talk to the Lab</a>
+		
+		
+		<ul class="hero-proof-list" aria-label="What the Lab delivers">
+			<li>Business problem first</li>
+			<li>Functional PoC in weeks</li>
+			<li>Technical plan for decisions</li>
+		</ul>
+	</div>
+</section>
+<!-- /Welcome Slider-->
+
+
 
 
 
@@ -309,7 +315,7 @@
 <section class="section section-bg about-2 padding-0" id="feature">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-lg-6 padding-0" style="background-image: url('https://www.a1lab.com.br/images/about/about-business-man.webp'); background-size: cover; background-position: top center; background-repeat: no-repeat; min-height: 400px;">
+			<div class="col-lg-6 padding-0" role="img" aria-label="Team collaborating on technology experiments" style="background-image: url('https://www.a1lab.com.br/images/about/about-business-man.webp'); background-size: cover; background-position: top center; background-repeat: no-repeat; min-height: 400px;">
 				
 					<img src="https://www.a1lab.com.br/images/about/about-business-man.webp" alt="" aria-hidden="true" style="display: none;"
 						onerror="this.onerror=null;this.parentElement.style.backgroundImage= 'url(https:\/\/www.a1lab.com.br\/images\/about\/about-business-man.jpg)'">
@@ -413,8 +419,8 @@
 						<div class="service-icon text-center">
 							<i class="ti-search"></i>
 						</div>
-						<h3>Diagnostic Sprint</h3>
-						<p>1-2 weeks. Mapping opportunities and technological paths for your challenge. We deliver a clear report with actionable recommendations.</p>
+						<h3>Quick Diagnostic</h3>
+						<p>In 1-2 weeks, we analyze your challenge and deliver a report with real opportunities and clear next steps.</p>
 					</div>
 				</article>
 			<!-- End Single Service Item -->
@@ -427,7 +433,7 @@
 							<i class="ti-rocket"></i>
 						</div>
 						<h3>Full Experiment</h3>
-						<p>2-6 weeks. Diagnostic + functional PoC + detailed technical document. From hypothesis to tested and validated prototype.</p>
+						<p>In 2-6 weeks, we go from problem to working prototype. You get a tested PoC and a technical plan to decide with confidence.</p>
 					</div>
 				</article>
 			<!-- End Single Service Item -->
@@ -440,7 +446,7 @@
 							<i class="ti-reload"></i>
 						</div>
 						<h3>Continuous Lab</h3>
-						<p>Monthly retainer. Your external innovation lab. Constant experimentation to keep your company ahead.</p>
+						<p>Monthly subscription. A dedicated external team to test ideas and solve technical challenges on an ongoing basis.</p>
 					</div>
 				</article>
 			<!-- End Single Service Item -->
@@ -533,7 +539,7 @@
       
       <div class="col-12 wow fadeInUp" data-wow-duration="500ms">
         <div class="team-description-wrapper">
-          <p class="team-description">Computer Science background and experience in national and international projects. We build solutions that work today and scale with your business.</p>
+          <p class="team-description">From AI and machine learning to cloud infrastructure and automation — we cover the full technical stack to take your experiment from problem to working prototype.</p>
         </div>
       </div>
       
@@ -742,7 +748,7 @@
 						<div class="form-group">
 							<label for="subject">How can we help?</label>
 							
-							<select class="form-control" name="subject" id="subject">
+							<select class="form-control" name="subject" id="subject" required>
 								<option value="" disabled selected>How can we help?</option>
 							
 							<option value="I want a diagnostic">I want a diagnostic</option>
@@ -826,11 +832,11 @@
 	
 	
 	
-	<script src="https://www.a1lab.com.br/plugins/jquery/jquery.min.js"></script>
+	<script src="https://www.a1lab.com.br/plugins/jquery/jquery.min.js" defer></script>
 	
 	
 	
-	<script src="https://www.a1lab.com.br/plugins/bootstrap/bootstrap.min.js"></script>
+	<script src="https://www.a1lab.com.br/plugins/bootstrap/bootstrap.min.js" defer></script>
 	
 	
 	
@@ -844,7 +850,7 @@
 
 <!-- Main Script -->
 
-<script src="/js/script.min.22067e766b9f596ce03cd5604eb1aa9dae99d3c7dd75f76b66151ea97593b37f4eb0ee544fc8d8e61fe9a67088b01702.js" integrity="sha384-IgZ&#43;dmufWWzgPNVgTrGqna6Z08fddfdrZhUeqXWTs39OsO5UT8jY5h/ppnCIsBcC"></script>
+<script src="/js/script.min.baefb2bcc1d075d1bfca839c8feab4f81007b5fa04566431b8367679e0f8be88840692478b2296bbde4dec62fc600da1.js" integrity="sha384-uu&#43;yvMHQddG/yoOcj&#43;q0&#43;BAHtfoEVmQxuDZ2eeD4voiEBpJHiyKWu95N7GL8YA2h" defer></script>
 
 
 

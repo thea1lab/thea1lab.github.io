@@ -4,16 +4,16 @@ service:
   title: Nossos Serviços
   service_item:
     # service item loop
-    - name: Sprint de Diagnóstico
+    - name: Diagnóstico Rápido
       icon: ti-search # themify icon pack : https://themify.me/themify-icons
-      content: "1-2 semanas. Mapeamento de oportunidades e caminhos tecnológicos para o seu desafio. Entregamos um relatório claro com recomendações acionáveis."
+      content: "Em 1-2 semanas, analisamos seu desafio e entregamos um relatório com oportunidades reais e próximos passos claros."
 
     # service item loop
     - name: Experimento Completo
       icon: ti-rocket # themify icon pack : https://themify.me/themify-icons
-      content: "2-6 semanas. Diagnóstico + PoC funcional + documento técnico detalhado. Da hipótese ao protótipo testado e validado."
+      content: "Em 2-6 semanas, vamos do problema ao protótipo funcional. Você recebe uma PoC testada e um plano técnico para decidir com segurança."
 
     # service item loop
     - name: Lab Contínuo
       icon: ti-reload # themify icon pack : https://themify.me/themify-icons
-      content: "Retainer mensal. Seu laboratório externo de inovação contínua. Experimentação constante para manter sua empresa à frente."
+      content: "Assinatura mensal. Uma equipe externa dedicada a testar ideias e resolver desafios técnicos de forma contínua."

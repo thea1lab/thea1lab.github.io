@@ -53,7 +53,7 @@
 						<div class="form-group">
 							<label for="subject">{{ .subject }}</label>
 							{{ if .interests }}
-							<select class="form-control" name="subject" id="subject">
+							<select class="form-control" name="subject" id="subject" required>
 								<option value="" disabled selected>{{ .subject }}</option>
 							{{ range .interests }}
 							<option value="{{ . }}">{{ . }}</option>

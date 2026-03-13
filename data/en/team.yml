@@ -3,7 +3,7 @@ team:
   enable: true
   title: Our Team
   subtitle: "What we know how to do — and why it matters to you."
-  description: "Computer Science background and experience in national and international projects. We build solutions that work today and scale with your business."
+  description: "From AI and machine learning to cloud infrastructure and automation — we cover the full technical stack to take your experiment from problem to working prototype."
   qualifications:
     - icon: ti-light-bulb
       title: "Artificial Intelligence"
