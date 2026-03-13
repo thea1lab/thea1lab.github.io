@@ -1,26 +1,38 @@
 {{"<!-- end Contact Area -->" | safeHTML}}
-<footer id="footer" class="section-bg">
+<footer id="footer" class="section">
 	<div class="container">
 		<div class="row wow fadeInUp" data-wow-duration="500ms">
 			<div class="col-xl-12">
-
-				{{"<!-- Footer Social Links -->" | safeHTML}}
-				<div class="social-icon">
-					<ul class="list-inline">
-						{{ range site.Params.social }}
-							<li class="list-inline-item"><a href="{{ .link | safeURL }}" target="_blank" rel="noopener noreferrer"
-									aria-label="{{ .title | default .icon }}"><i class="{{ .icon }}" aria-hidden="true"></i></a></li>
-							{{ end }}
-						</ul>
+				<div class="footer-shell">
+					<div class="footer-brand">
+						<a href="{{ site.Home.Permalink }}">
+							<img src="{{ site.Params.logo | absURL }}" alt="{{ site.Title }}" height="42" />
+						</a>
+						<p>{{ site.Params.copyright | markdownify }}</p>
 					</div>
 
-				{{"<!-- copyright -->" | safeHTML}}
-				<div class="copyright text-center">
-					<a href="{{ site.Home.Permalink }}">
-						<img src="{{ site.Params.logo | absURL }}" alt="{{ site.Title }}" height="42" />
-					</a>
-					<br>
-					<p>{{ site.Params.copyright | markdownify }}</p>
+					<nav class="footer-nav" aria-label="{{ i18n `footer_navigation` | default `Footer navigation` }}">
+						<ul>
+							{{ range site.Menus.main }}
+							<li>
+								<a href="{{if .Pre}}{{ "/" | absLangURL }}{{.Pre}}{{ .URL }}{{else}}{{.URL | absLangURL}}{{end}}">{{ .Name }}</a>
+							</li>
+							{{ end }}
+							<li>
+								<a href="{{ `blog` | absLangURL }}">{{ i18n "blog" }}</a>
+							</li>
+						</ul>
+					</nav>
+
+					{{"<!-- Footer Social Links -->" | safeHTML}}
+					<div class="social-icon footer-social">
+						<ul class="list-inline">
+							{{ range site.Params.social }}
+								<li class="list-inline-item"><a href="{{ .link | safeURL }}" target="_blank" rel="noopener noreferrer"
+										aria-label="{{ .title | default .icon }}"><i class="{{ .icon }}" aria-hidden="true"></i></a></li>
+								{{ end }}
+							</ul>
+						</div>
 				</div>
 			</div>
 		</div>

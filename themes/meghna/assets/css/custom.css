@@ -599,6 +599,14 @@ section.call-to-action .btn-main {
   color: var(--color-text-inverse);
 }
 
+#about,
+#services,
+#projects,
+#team,
+#contact {
+  scroll-margin-top: clamp(72px, 9vh, 94px);
+}
+
 #contact .con-info a {
   color: inherit;
   text-decoration: none;
@@ -729,6 +737,70 @@ section.call-to-action .btn-main {
   margin-bottom: 22px;
 }
 
+.footer-shell {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  gap: 24px;
+  align-items: center;
+  padding: 46px 0 28px;
+}
+
+.footer-brand {
+  justify-self: start;
+}
+
+.footer-brand p {
+  margin: 14px 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.footer-nav {
+  justify-self: start;
+}
+
+.footer-nav ul {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  column-gap: 28px;
+  row-gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.footer-nav a {
+  color: var(--color-text-heading);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus {
+  color: var(--color-accent-primary);
+}
+
+.footer-social {
+  justify-self: end;
+  padding: 0;
+}
+
+.footer-social ul {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.footer-social ul li {
+  margin-bottom: 0;
+}
+
 /*=================================================================
   Standalone pages (projects, team, etc.)
 ==================================================================*/
@@ -800,6 +872,26 @@ section.call-to-action .btn-main {
   #team::before {
     top: 24px;
     left: 18px;
+  }
+
+  .footer-shell {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .footer-brand,
+  .footer-nav,
+  .footer-social {
+    justify-self: center;
+  }
+
+  .footer-nav ul {
+    text-align: center;
+  }
+
+  .footer-social ul {
+    justify-content: center;
   }
 }
 
