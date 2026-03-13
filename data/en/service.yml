@@ -3,17 +3,17 @@ service:
   enable: true
   title: Our Services
   service_item:
-    # service item loop
     - name: Quick Diagnostic
-      icon: ti-search # themify icon pack : https://themify.me/themify-icons
-      content: "In 1-2 weeks, we analyze your challenge and deliver a report with real opportunities and clear next steps."
+      icon: ti-search
+      content: "We understand your real business problem and map where technology can drive results. You get a report with concrete opportunities and clear next steps."
+      duration: "1–2 weeks"
 
-    # service item loop
-    - name: Full Experiment
-      icon: ti-rocket # themify icon pack : https://themify.me/themify-icons
-      content: "In 2-6 weeks, we go from problem to working prototype. You get a tested PoC and a technical plan to decide with confidence."
+    - name: Working Prototype
+      icon: ti-rocket
+      content: "We test technologies hands-on and deliver a running prototype — you see the solution working, not a presentation. It's the fastest way to know if the idea works."
+      duration: "2–6 weeks"
 
-    # service item loop
-    - name: Continuous Lab
-      icon: ti-reload # themify icon pack : https://themify.me/themify-icons
-      content: "Monthly subscription. A dedicated external team to test ideas and solve technical challenges on an ongoing basis."
+    - name: Technical Plan for Decision
+      icon: ti-settings
+      content: "You get a complete plan to make the best decision: what to do, which technologies to use, how much it costs, and how long it takes. All based on what we tested in the prototype."
+      duration: "Included in the experiment"

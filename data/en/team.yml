@@ -1,34 +1,17 @@
 ############################### team ############################
 team:
   enable: true
-  title: Our Team
+  cta_link: "/en/projects/"
+  title: Our Expertise
   subtitle: "What we know how to do — and why it matters to you."
-  description: "From AI and machine learning to cloud infrastructure and automation — we cover the full technical stack to take your experiment from problem to working prototype."
+  description: "You bring the business problem. We research, experiment, and deliver a working prototype with a technical plan so you can decide the next step."
   qualifications:
     - icon: ti-light-bulb
-      title: "Artificial Intelligence"
-      content: "Systems that understand context, generate content, and make complex decisions. Scale tasks that previously required human time and judgment."
-    - icon: ti-thought
-      title: "Machine Learning"
-      content: "Models that learn from your data to find patterns and predict outcomes. Less guesswork, more precision in your business decisions."
+      title: "AI & Data"
+      content: "We build smart systems that learn from your business data, organize information, and make decisions that used to depend on people — so you operate with precision, not guesswork."
     - icon: ti-layout
-      title: "Software Architecture"
-      content: "Well-structured systems that grow with your business. No need to rebuild everything each time demand increases."
-    - icon: ti-cloud
-      title: "Cloud & Infrastructure"
-      content: "Applications running with high availability and optimized cost. Your system stays up when your customers need it."
-    - icon: ti-reload
-      title: "DevOps & CI/CD"
-      content: "Automated and reliable deployments with zero downtime. New features reach end users faster with no surprises."
-    - icon: ti-bar-chart
-      title: "Data Engineering"
-      content: "Pipelines that collect, transform, and deliver clean data. Strategic decisions based on real information, not intuition."
-    - icon: ti-desktop
-      title: "Full-stack Development"
-      content: "From database to user interface, everything integrated. A single team handles end-to-end, with no communication gaps."
+      title: "Software & Infrastructure"
+      content: "We build everything from the system your customers use to the server it runs on. All done by a single team, with automatic updates and a structure that grows with your business."
     - icon: ti-settings
-      title: "Process Automation"
-      content: "Repetitive tasks eliminated with custom software. Your team focuses on what creates value, not on operations."
-    - icon: ti-direction-alt
-      title: "Technical Consulting"
-      content: "Strategic guidance to choose the right technologies. Avoid rework and invest where it truly makes a difference."
+      title: "Automation & Strategy"
+      content: "We eliminate repetitive tasks with custom software and guide the right technology choices — your team stops wasting time on what a computer can do."

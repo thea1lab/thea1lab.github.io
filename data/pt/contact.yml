@@ -3,7 +3,7 @@ contact:
   enable: true
   title: Contato
   subtitle: Fale com o Lab
-  content: "Descreva o desafio em poucas linhas. Nós avaliamos o contexto e indicamos se faz mais sentido um diagnóstico, um experimento ou desenvolvimento."
+  content: "Descreva o desafio em poucas linhas. Nós vamos retornar para conversarmos mais sobre o seu desafio."
 
   # Contact details
   contact_list:

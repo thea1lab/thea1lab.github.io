@@ -11,6 +11,14 @@
 				<p class="contact-eyebrow">{{ i18n "contact_eyebrow" }}</p>
 				<h2>{{ .subtitle | markdownify }}</h2>
 				<p class="contact-lead">{{ .content | markdownify }}</p>
+				<div class="contact-proof-list">
+					<p class="contact-proof-list__title">{{ i18n "cta_proof_title" }}</p>
+					<ul>
+						<li>{{ i18n "cta_proof_1" }}</li>
+						<li>{{ i18n "cta_proof_2" }}</li>
+						<li>{{ i18n "cta_proof_3" }}</li>
+					</ul>
+				</div>
 				<div class="contact-response-note">
 					<span class="contact-response-note__label">{{ i18n "contact_response_label" }}</span>
 					<strong>{{ i18n "contact_response_value" }}</strong>

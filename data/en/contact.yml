@@ -3,7 +3,7 @@ contact:
   enable: true
   title: Contact Us
   subtitle: Talk to the Lab
-  content: "Describe the challenge in a few lines. We'll review the context and tell you whether a diagnostic, an experiment, or full development makes the most sense."
+  content: "Describe the challenge in a few lines. We'll get back to you so we can talk more about your challenge."
 
   # Contact details
   contact_list:

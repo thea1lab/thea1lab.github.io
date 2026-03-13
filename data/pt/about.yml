@@ -5,12 +5,12 @@ about:
   about_item:
     - icon: ti-layers-alt # themify icon pack : https://themify.me/themify-icons
       title: Experimentação <span class="color">Real</span>
-      content: "Não entregamos PowerPoint. Testamos tecnologias de verdade e construímos protótipos funcionais. Cada experimento é desenhado para validar hipóteses e gerar resultados concretos para o seu negócio."
+      content: "Não entregamos PowerPoint. Testamos tecnologias de verdade e construímos protótipos que funcionam. Cada experimento é feito para testar ideias e gerar resultados concretos para o seu negócio."
 
     - icon: ti-settings # themify icon pack : https://themify.me/themify-icons
       title: IA como <span class="color">Especialidade</span>
-      content: "Inteligência artificial é nosso carro-chefe, mas cobrimos do desenvolvimento ao deploy. Integramos IA de forma prática e deliberada — sem buzzwords, sem promessas vazias. Só o que funciona."
+      content: "Inteligência artificial é nosso carro-chefe, mas cobrimos do software à infraestrutura. Integramos IA de forma prática e direta — sem termos da moda, sem promessas vazias. Só o que funciona."
 
     - icon: ti-light-bulb # themify icon pack : https://themify.me/themify-icons
       title: O <span class="color">A1 Way</span>
-      content: "Simplificamos complexidade. Pegamos desafios técnicos difíceis e transformamos em planos claros e acionáveis. O resultado: você entende exatamente o que precisa ser feito, quanto custa e quanto tempo leva."
+      content: "Simplificamos o que é complicado. Pegamos desafios técnicos difíceis e transformamos em planos claros que você pode seguir. O resultado: você entende exatamente o que precisa ser feito, quanto custa e quanto tempo leva."

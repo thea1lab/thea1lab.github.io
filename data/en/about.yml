@@ -5,12 +5,12 @@ about:
   about_item:
     - icon: ti-layers-alt # themify icon pack : https://themify.me/themify-icons
       title: Real <span class="color">Experimentation</span>
-      content: "We don't deliver PowerPoints. We test real technologies and build functional prototypes. Every experiment is designed to validate hypotheses and generate concrete results for your business."
+      content: "We don't deliver PowerPoints. We test real technologies and build working prototypes. Every experiment is designed to test ideas and generate concrete results for your business."
 
     - icon: ti-settings # themify icon pack : https://themify.me/themify-icons
       title: AI as a <span class="color">Specialty</span>
-      content: "Artificial intelligence is our flagship, but we cover everything from development to deployment. We integrate AI practically and deliberately — no buzzwords, no empty promises. Only what works."
+      content: "Artificial intelligence is our flagship, but we cover everything from software to infrastructure. We integrate AI in a practical, direct way — no jargon, no empty promises. Only what works."
 
     - icon: ti-light-bulb # themify icon pack : https://themify.me/themify-icons
       title: The <span class="color">A1 Way</span>
-      content: "We simplify complexity. We take difficult technical challenges and turn them into clear, actionable plans. The result: you understand exactly what needs to be done, how much it costs, and how long it takes."
+      content: "We simplify what's complicated. We take difficult technical challenges and turn them into clear plans you can follow. The result: you understand exactly what needs to be done, how much it costs, and how long it takes."

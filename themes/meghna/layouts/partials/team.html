@@ -2,7 +2,7 @@
 
 {{ if $data.team.team.enable }}
 {{ with $data.team.team }}
-{{"<!-- Start Our Team -->" | safeHTML}}
+{{"<!-- Start Competências -->" | safeHTML}}
 <section id="team" class="section">
   <div class="container">
     <div class="row justify-content-center">
@@ -24,20 +24,54 @@
       </div>
       {{ end }}
 
-	      {{ range $index, $item := .qualifications }}
-	      <article class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-duration="500ms">
-	        <div class="service-block text-center expertise-card" data-card-index="{{ add $index 1 }}">
-	          <div class="service-icon text-center">
-	            <i class="{{ $item.icon }}"></i>
-	          </div>
-	          <h3>{{ $item.title | markdownify }}</h3>
-	          <p>{{ $item.content | markdownify }}</p>
-	        </div>
-	      </article>
-	      {{ end }}
+      {{/* Service offerings — prominent cards */}}
+      <div class="col-12 wow fadeInUp" data-wow-duration="500ms">
+        <h4 class="section-subtitle text-center">{{ i18n "team_services_subtitle" }}</h4>
+      </div>
+      {{ with $data.service.service }}
+      {{ if .enable }}
+      {{ range $index, $item := .service_item }}
+      <article class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-duration="500ms">
+        <div class="service-block text-center service-card" data-card-index="{{ add $index 1 }}">
+          <span class="service-card__index">0{{ add $index 1 }}</span>
+          <div class="service-icon text-center">
+            <i class="{{ $item.icon }}"></i>
+          </div>
+          <h3>{{ $item.name | markdownify }}</h3>
+          {{ with $item.duration }}
+          <span class="service-card__duration">{{ . }}</span>
+          {{ end }}
+          <p>{{ $item.content | markdownify }}</p>
+        </div>
+      </article>
+      {{ end }}
+      {{ end }}
+      {{ end }}
+
+      {{/* Expertise cards */}}
+      <div class="col-12 wow fadeInUp" data-wow-duration="500ms">
+        <h4 class="section-subtitle text-center">{{ i18n "team_expertise_subtitle" }}</h4>
+      </div>
+      {{ range .qualifications }}
+      <article class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-duration="500ms">
+        <div class="service-block text-center expertise-card">
+          <div class="service-icon text-center">
+            <i class="{{ .icon }}"></i>
+          </div>
+          <h3>{{ .title | markdownify }}</h3>
+          <p>{{ .content | markdownify }}</p>
+        </div>
+      </article>
+      {{ end }}
+
+      <div class="col-12 text-center wow fadeInUp" data-wow-duration="500ms">
+        <a href="{{ .cta_link }}" class="btn btn-main btn-team-cta">
+          {{ i18n "team_cta_label" }}
+        </a>
+      </div>
     </div>
   </div>
 </section>
-{{"<!-- /team -->" | safeHTML}}
+{{"<!-- /competências -->" | safeHTML}}
 {{ end }}
 {{ end }}
