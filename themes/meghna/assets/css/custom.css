@@ -62,16 +62,18 @@
 }
 
 .hero-area .block .slogan {
-  font-size: 1.25rem;
-  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.35rem;
+  color: rgba(255, 255, 255, 0.88);
   max-width: 600px;
   margin: 0 0 30px;
   line-height: 1.6;
+  font-weight: 500;
 }
 
 .hero-area .btn-main {
-  padding: 16px 40px;
-  font-size: 15px;
+  padding: 18px 46px;
+  font-size: 16px;
+  font-weight: 700;
   letter-spacing: 1px;
   box-shadow: 0 18px 32px rgba(232, 122, 0, 0.24);
 }
@@ -85,9 +87,9 @@
   border: 1px solid rgba(255, 255, 255, 0.16);
   background: rgba(18, 20, 24, 0.58);
   color: rgba(255, 255, 255, 0.9);
-  font-size: 16px !important;
+  font-size: 15px !important;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
@@ -106,7 +108,7 @@
 
 .hero-proof-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 0.85rem;
   list-style: none;
   margin: 28px 0 0;
@@ -117,11 +119,12 @@
   display: inline-flex;
   align-items: center;
   min-height: 44px;
-  padding: 0.8rem 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(20, 23, 28, 0.7);
-  color: rgba(255, 255, 255, 0.88);
-  font-size: 0.9rem;
+  padding: 0.8rem 1.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(20, 23, 28, 0.72);
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.95rem;
+  font-weight: 500;
   line-height: 1.35;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
 }
@@ -221,6 +224,10 @@
 
 .service-block:hover i {
   transform: scale(1.1);
+}
+
+.service-block p {
+  color: var(--color-text-strong);
 }
 
 .title h2 {
@@ -1298,6 +1305,7 @@ section.call-to-action .btn-main {
   }
 
   .hero-proof-list {
+    flex-wrap: wrap;
     justify-content: center;
   }
 
@@ -1371,6 +1379,16 @@ section.call-to-action .btn-main {
     left: 50%;
     transform: translateX(-50%);
   }
+}
+
+/*=================================================================
+  Navigation — better legibility
+==================================================================*/
+.navbar-nav .nav-link {
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 0.6rem 0.9rem !important;
 }
 
 /*=================================================================

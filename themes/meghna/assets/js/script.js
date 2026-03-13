@@ -15,13 +15,7 @@ jQuery(function ($) {
 			$('.navbar-toggler').attr('aria-expanded', String(isExpanded));
 		});
 
-	/* ========================================================================= */
-	/*	Language selector
-	/* ========================================================================= */
-
-		$('#select-language').on('change', function () {
-			location = this.value;
-		});
+	/* Language selector is handled via inline onchange on the <select> element */
 
 
 	/* ========================================================================= */

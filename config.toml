@@ -144,7 +144,7 @@ link = "https://www.instagram.com/thea1lab"
 
 ################################ Portuguese Language ########################
 [Languages.pt]
-languageName = "Pt"
+languageName = "Português"
 languageCode = "pt-br"
 contentDir = "content/portuguese"
 weight = 1
@@ -155,7 +155,7 @@ home = "Home"
 
 ################################ English Language ########################
 [Languages.en]
-languageName = "En"
+languageName = "English"
 languageCode = "en-us"
 contentDir = "content/english"
 weight = 2

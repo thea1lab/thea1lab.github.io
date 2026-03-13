@@ -28,29 +28,28 @@
             <a class="nav-link" href="{{if .Pre}}{{ "/" | absLangURL }}{{.Pre}}{{ .URL }}{{else}}{{.URL | absLangURL}}{{end}}">{{ .Name }}</a>
 					</li>
 					{{ end }}
+					{{- if site.IsMultiLingual }}
+					<li class="nav-item">
+						<label class="sr-only" for="select-language">{{ i18n "language_selector" | default "Select language" }}</label>
+						<select id="select-language" onchange="location=this.value">
+						{{ $siteLanguages := site.Languages }}
+						{{ $pageLang := .Page.Lang }}
+						{{ range .Page.AllTranslations }}
+						{{ $translation := . }}
+						{{ range $siteLanguages }}
+						{{ if eq $translation.Lang .Lang }}
+						{{ if eq $pageLang .Lang }}
+						<option value="{{ $translation.Permalink }}" selected>{{ .LanguageName }}</option>
+						{{ else }}
+						<option value="{{ $translation.Permalink }}">{{ .LanguageName }}</option>
+						{{ end }}
+						{{ end }}
+						{{ end }}
+						{{ end }}
+					</select>
+					</li>
+					{{ end }}
 				</ul>
-				<!-- Language List -->
-				{{- if site.IsMultiLingual }}
-					<label class="sr-only" for="select-language">{{ i18n "language_selector" | default "Select language" }}</label>
-					<select id="select-language">
-					{{ $siteLanguages := site.Languages}}
-					{{ $pageLang := .Page.Lang}}
-					{{ range .Page.AllTranslations }}
-					{{ $translation := .}}
-					{{ range $siteLanguages }}
-					{{ if eq $translation.Lang .Lang }}
-					{{ $selected := false }}
-					{{ if eq $pageLang .Lang}}
-					<option id="{{ $translation.Language }}" value="{{ $translation.Permalink }}" selected>{{ .LanguageName }}
-					</option>
-					{{ else }}
-					<option id="{{ $translation.Language }}" value="{{ $translation.Permalink }}">{{ .LanguageName }}</option>
-					{{ end }}
-					{{ end }}
-					{{ end }}
-					{{ end }}
-				</select>
-				{{ end }}
 			</div>
 		</nav>
 	</div>
