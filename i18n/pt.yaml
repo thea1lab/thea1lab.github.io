@@ -33,14 +33,14 @@
 - id: language_selector
   translation: Selecionar idioma
 - id: hero_eyebrow
-  translation: Laboratorio externo para empresas que precisam testar antes de investir
+  translation: Laboratório externo para empresas que precisam testar antes de investir
 - id: hero_proof_label
   translation: O que o Lab entrega
 - id: hero_proof_1
-  translation: Problema de negocio primeiro
+  translation: Problema de negócio primeiro
 - id: hero_proof_2
   translation: PoC funcional em semanas
 - id: hero_proof_3
-  translation: Plano tecnico para decisao
+  translation: Plano técnico para decisão
 - id: project_card_label
   translation: Experimento
