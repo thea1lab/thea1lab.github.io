@@ -17,7 +17,7 @@ contact:
   # Contact form
   contact_form:
     enable: true
-    form_action: "https://formspree.io/f/xdopvnez" #contact form works with https://formspree.io
+    form_action: "/api/contact"
     name: "Your Name"
     email: "Your Email"
     subject: "How can we help?"

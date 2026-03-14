@@ -82,7 +82,7 @@ jQuery(function ($) {
 		}
 
 	/* ========================================================================= */
-	/*	Contact Form — accessible validation
+	/*	Contact Form — accessible validation + AJAX submit
 	/* =========================================================================  */
 
 		var $contactForm = $('#contact-form');
@@ -111,7 +111,9 @@ jQuery(function ($) {
 			});
 
 			$contactForm.on('submit', function (e) {
-				var fields = this.querySelectorAll('[required]');
+				e.preventDefault();
+				var form = this;
+				var fields = form.querySelectorAll('[required]');
 				var firstInvalid = null;
 				var statusEl = document.getElementById('form-status');
 
@@ -129,13 +131,54 @@ jQuery(function ($) {
 				}
 
 				if (firstInvalid) {
-					e.preventDefault();
 					firstInvalid.focus();
 					return;
 				}
 
 				// Disable button to prevent double-submit
 				$submitBtn.prop('disabled', true).css('opacity', '0.6');
+				statusEl.hidden = true;
+
+				var payload = {
+					name: form.name.value,
+					email: form.email.value,
+					subject: form.subject.value,
+					message: form.message.value
+				};
+
+				// Include Turnstile token if present
+				var turnstileInput = form.querySelector('[name="cf-turnstile-response"]');
+				if (turnstileInput) {
+					payload['cf-turnstile-response'] = turnstileInput.value;
+				}
+
+				fetch(form.action, {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify(payload)
+				})
+				.then(function (res) { return res.json(); })
+				.then(function (data) {
+					if (data.ok) {
+						statusEl.textContent = $contactForm.data('success-msg') || 'Message sent!';
+						statusEl.setAttribute('role', 'status');
+						statusEl.hidden = false;
+						form.reset();
+						if (window.turnstile) turnstile.reset();
+					} else {
+						statusEl.textContent = $contactForm.data('error-msg') || 'Something went wrong.';
+						statusEl.setAttribute('role', 'alert');
+						statusEl.hidden = false;
+					}
+				})
+				.catch(function () {
+					statusEl.textContent = $contactForm.data('error-msg') || 'Something went wrong.';
+					statusEl.setAttribute('role', 'alert');
+					statusEl.hidden = false;
+				})
+				.finally(function () {
+					$submitBtn.prop('disabled', false).css('opacity', '');
+				});
 			});
 		}
 

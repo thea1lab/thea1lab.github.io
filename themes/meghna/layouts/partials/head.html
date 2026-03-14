@@ -79,5 +79,9 @@
 	</script>
 	{{ end }}
 
+	{{ with site.Params.turnstile.site_key }}
+	<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+	{{ end }}
+
 	{{ partial "schema.html" . }}
 </head>

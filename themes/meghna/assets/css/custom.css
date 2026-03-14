@@ -1510,6 +1510,10 @@ textarea:focus-visible,
   color: var(--color-accent-secondary);
 }
 
+.cf-turnstile {
+  margin-bottom: 16px;
+}
+
 @media (max-width: 575px) {
   .projects-page-intro__eyebrow {
     letter-spacing: 0.14em;

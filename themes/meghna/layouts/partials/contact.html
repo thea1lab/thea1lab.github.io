@@ -49,7 +49,9 @@
 						</div>
 					<form id="contact-form" class="form-meghna" method="post" action="{{ .form_action }}" role="form" novalidate
 							data-error-required="{{ i18n "form_error_required" | default "This field is required." }}"
-							data-error-email="{{ i18n "form_error_email" | default "Please enter a valid email address." }}">
+							data-error-email="{{ i18n "form_error_email" | default "Please enter a valid email address." }}"
+							data-success-msg="{{ i18n "form_submit_success" }}"
+							data-error-msg="{{ i18n "form_submit_error" }}">
 						<div class="form-group">
 							<label for="name">{{ .name }}</label>
 							<input type="text" placeholder="{{ .name }}" class="form-control" name="name" id="name"
@@ -87,6 +89,9 @@
 								aria-required="true" aria-describedby="message-error"></textarea>
 							<span id="message-error" class="field-error" role="alert" hidden></span>
 						</div>
+					{{ with site.Params.turnstile.site_key }}
+					<div class="cf-turnstile" data-sitekey="{{ . }}"></div>
+					{{ end }}
 					<div id="cf-submit">
 						<button type="submit" id="contact-submit" class="btn btn-transparent btn-block"
 							value="{{ .submit }}">{{ .submit }}</button>
