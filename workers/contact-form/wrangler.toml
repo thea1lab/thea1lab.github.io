@@ -5,3 +5,8 @@ compatibility_date = "2024-01-01"
 [[routes]]
 pattern = "www.a1lab.com.br/api/contact"
 zone_name = "a1lab.com.br"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "a1lab-contacts"
+database_id = "ac46366b-a05f-4036-919c-8c012ed4810f"

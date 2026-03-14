@@ -73,6 +73,15 @@ export default {
       return Response.json({ ok: false, error: "Failed to send email" }, { status: 500 });
     }
 
+    // Persist to D1 (fire-and-forget — don't break response if this fails)
+    try {
+      await env.DB.prepare(
+        "INSERT INTO contacts (name, email, subject, message) VALUES (?, ?, ?, ?)"
+      ).bind(name.trim(), email.trim(), subject.trim(), message.trim()).run();
+    } catch {
+      // D1 insert failed — email was already sent, so we still return success
+    }
+
     return Response.json({ ok: true });
   },
 };
