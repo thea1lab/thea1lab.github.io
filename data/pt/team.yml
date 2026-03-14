@@ -8,10 +8,10 @@ team:
   qualifications:
     - icon: ti-light-bulb
       title: "IA & Dados"
-      content: "Investigamos os dados da sua empresa para encontrar padrões, correlações e oportunidades que você ainda não enxergou. Criamos sistemas inteligentes que organizam informação e tomam decisões que antes dependiam de pessoas — para você operar com precisão, não com achismo."
+      content: "Investigamos os dados da sua empresa para encontrar padrões, correlações e oportunidades que você ainda não enxergou. Testamos sistemas inteligentes que organizam informação e tomam decisões que antes dependiam de pessoas — para você operar com precisão, não com achismo."
     - icon: ti-layout
       title: "Software & Infraestrutura"
-      content: "Construímos desde o sistema que seus clientes usam até o servidor onde ele roda. Tudo feito por um único time, com atualizações automáticas e estrutura que cresce junto com o seu negócio."
+      content: "Prototipamos sistemas completos — da interface ao servidor — para você validar a solução antes de investir. Nosso time cuida de toda a stack, para que o protótipo já nasça com a arquitetura certa para escalar."
     - icon: ti-settings
       title: "Automação & Estratégia"
-      content: "Eliminamos tarefas repetitivas com software sob medida e orientamos as escolhas tecnológicas certas — sua equipe para de perder tempo com o que o computador pode fazer."
+      content: "Identificamos tarefas repetitivas e criamos protótipos de automação para provar o ganho antes da implementação definitiva — e orientamos as escolhas tecnológicas certas para o seu negócio."

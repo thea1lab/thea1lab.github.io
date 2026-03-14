@@ -6,14 +6,11 @@ service:
     - name: Quick Diagnostic
       icon: ti-search
       content: "We understand your real business problem and map where technology can drive results. You get a report with concrete opportunities and clear next steps."
-      duration: "1–2 weeks"
 
     - name: Working Prototype
       icon: ti-rocket
       content: "We test technologies hands-on and deliver a running prototype — you see the solution working, not a presentation. It's the fastest way to know if the idea works."
-      duration: "2–6 weeks"
 
     - name: Technical Plan for Decision
       icon: ti-settings
       content: "You get a complete plan to make the best decision: what to do, which technologies to use, how much it costs, and how long it takes. All based on what we tested in the prototype."
-      duration: "Included in the experiment"

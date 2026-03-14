@@ -8,10 +8,10 @@ team:
   qualifications:
     - icon: ti-light-bulb
       title: "AI & Data"
-      content: "We investigate your company's data to find patterns, correlations, and opportunities you haven't seen yet. We build smart systems that organize information and make decisions that used to depend on people — so you operate with precision, not guesswork."
+      content: "We investigate your company's data to find patterns, correlations, and opportunities you haven't seen yet. We test smart systems that organize information and make decisions that used to depend on people — so you operate with precision, not guesswork."
     - icon: ti-layout
       title: "Software & Infrastructure"
-      content: "We build everything from the system your customers use to the server it runs on. All done by a single team, with automatic updates and a structure that grows with your business."
+      content: "We prototype complete systems — from interface to server — so you can validate the solution before investing. Our team handles the full stack, so the prototype is already built with the right architecture to scale."
     - icon: ti-settings
       title: "Automation & Strategy"
-      content: "We eliminate repetitive tasks with custom software and guide the right technology choices — your team stops wasting time on what a computer can do."
+      content: "We identify repetitive tasks and create automation prototypes to prove the gains before full implementation — and guide the right technology choices for your business."
