@@ -8,7 +8,7 @@ team:
   qualifications:
     - icon: ti-light-bulb
       title: "AI & Data"
-      content: "We build smart systems that learn from your business data, organize information, and make decisions that used to depend on people — so you operate with precision, not guesswork."
+      content: "We investigate your company's data to find patterns, correlations, and opportunities you haven't seen yet. We build smart systems that organize information and make decisions that used to depend on people — so you operate with precision, not guesswork."
     - icon: ti-layout
       title: "Software & Infrastructure"
       content: "We build everything from the system your customers use to the server it runs on. All done by a single team, with automatic updates and a structure that grows with your business."
