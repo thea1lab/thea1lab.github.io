@@ -16,9 +16,11 @@ cluster: rag
 draft: false
 ---
 
-Se você está escolhendo como montar busca com IA em documentos reais, este guia encurta o caminho: mostra quando usar cada arquitetura de RAG e evita que você perca tempo com abordagens que funcionam só na demo.
+RAG importa porque é o que separa uma IA que soa convincente de uma IA que consegue responder com base no que a sua empresa realmente sabe. Sem um bom mecanismo de recuperação, o modelo improvisa, mistura contexto e erra justamente nas perguntas em que o negócio precisa de segurança.
 
-RAG não é uma arquitetura única. É uma família com trade-offs diferentes, e escolher errado é exatamente o que faz muita feature parecer boa na demo e falhar em produção.
+Na prática, é por isso que tantas empresas acabam precisando de RAG: políticas internas mudam, contratos são longos, catálogos têm códigos específicos, bases de conhecimento crescem, e ninguém quer depender de respostas genéricas quando a pergunta envolve operação, atendimento, compliance ou decisão comercial. RAG é a camada que conecta o modelo aos documentos certos na hora certa.
+
+O problema é que "usar RAG" não resolve nada sozinho. RAG não é uma arquitetura única. É uma família com trade-offs diferentes, e escolher errado é exatamente o que faz muita feature parecer boa na demo e falhar em produção.
 
 O ponto de partida costuma ser o pipeline ingênuo: picar os documentos em chunks, gerar embeddings dos chunks, gerar o embedding da pergunta do usuário, retornar os cinco mais parecidos e colar no prompt. Funciona para FAQ e textos de produto. Quebra em qualquer coisa longa, técnica ou estruturada, e a maioria dos times passa semanas ajustando o tamanho do chunk antes de aceitar que o tamanho do chunk nunca foi o problema.
 
