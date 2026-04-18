@@ -1,0 +1,51 @@
+################################# FAQ #################################
+faq:
+  # --- What is this? ---
+  - question: "What does A1 Lab do?"
+    answer: "Technology research. You bring us a business problem or idea, we investigate, test it for real, and deliver a working prototype with a technical plan so you can decide what comes next."
+
+  - question: "What types of technology do you work with?"
+    answer: "We're a technology lab. AI is what we reach for most often, but we also build software, set up integrations, and automate processes. We recommend whatever actually solves the problem."
+
+  # --- Is it for me? ---
+  - question: "Who is A1 Lab for?"
+    answer: "Companies that have a technology question but don't have the team or time to figure it out themselves."
+
+  - question: "Do you work with startups or only large companies?"
+    answer: "Both. Startups want to validate fast, bigger companies want to test without pulling their teams off other work. What matters is having a real problem."
+
+  - question: "Do I need a technical team to hire A1 Lab?"
+    answer: "No. We're your lab. We do the research and deliver results any manager can understand."
+
+  # --- How does it work? ---
+  - question: "How does a project at A1 Lab work?"
+    answer: "Every project includes three phases: diagnostic, prototyping, and technical plan. The outcome is a working prototype and a clear recommendation for what to do next."
+
+  - question: "How long does it take?"
+    answer: "The diagnostic takes 1 to 2 weeks. The prototype takes 2 to 4 weeks. The technical plan takes 1 week. Most three-phase engagements take 4 to 7 weeks total depending on complexity."
+
+  - question: "What do I get at the end?"
+    answer: "A working prototype, a technical plan with technologies and costs, and a presentation so you can make the decision."
+
+  - question: "How much of my time will it take?"
+    answer: "Not much. A few meetings to understand the problem, review progress, and align on direction. We keep you updated, but we do the heavy lifting."
+
+  # --- What does it cost? ---
+  - question: "How much does it cost?"
+    answer: "Depends on the scope. We talk, understand the challenge, and send a proposal with a fixed price, timeline, and scope."
+
+  - question: "How does payment work?"
+    answer: "Payment is split into two parts: 50% upfront to start the project and 50% before final delivery. One price for the whole three-phase project."
+
+  - question: "Do I have to commit to a large project?"
+    answer: "The engagement is one fixed-scope project with three phases: diagnostic, prototype, and technical plan. We define the price, timeline, and scope upfront. After that, you decide only whether a separate implementation project makes sense."
+
+  - question: "What if the experiment shows the idea doesn't work?"
+    answer: "Then you found out in weeks, not months. That's the whole point: test before you spend."
+
+  - question: "Do you build the final product or just the prototype?"
+    answer: "The main engagement is research, prototype, and technical plan. If the result looks right, we can scope a separate project to build the final product."
+
+  # --- Can I trust you? ---
+  - question: "Is my data safe?"
+    answer: "Yes. We sign NDAs when needed and treat everything confidentially."

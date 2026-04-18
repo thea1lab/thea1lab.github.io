@@ -1,0 +1,72 @@
+{{ $data := index hugo.Data site.Language.Name }}
+
+{{ if $data.expertise.expertise.enable }}
+{{ with $data.expertise.expertise }}
+{{"<!-- Start Competências -->" | safeHTML}}
+<section id="expertise" class="section bg-one">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-12">
+        {{"<!-- section title -->" | safeHTML}}
+        <div class="title text-center wow fadeInUp" data-wow-duration="500ms">
+          <h2>{{ with .title }} {{ index (split . " ") 0 | safeHTML }} {{ end }}<span class="color">
+            {{ with .title }} {{ after (len (index (split . " ") 0)) . | safeHTML }} {{ end }}</span></h2>
+          <div class="border-meghna"></div>
+        </div>
+      </div>
+      {{"<!-- /section title -->" | safeHTML}}
+
+      {{ with .description }}
+      <div class="col-12 wow fadeInUp" data-wow-duration="500ms">
+        <div class="team-description-wrapper">
+          <p class="team-description">{{ . }}</p>
+        </div>
+      </div>
+      {{ end }}
+
+      {{ with .credibility }}
+      <div class="col-12 wow fadeInUp" data-wow-duration="500ms">
+        <div class="credibility-badges">
+          {{ range . }}
+          <span class="credibility-badge">
+            <i class="{{ .icon }}"></i>
+            {{ .text }}
+          </span>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+
+      {{ range $index, $item := .qualifications }}
+      <article class="col-lg-6 col-md-6 col-12 wow fadeInUp" data-wow-duration="500ms">
+        {{ if $item.link }}<a href="{{ $item.link | relLangURL }}" class="capability-card-link">{{ end }}
+        <div class="service-block capability-card">
+          <div class="service-icon text-center">
+            <i class="{{ $item.icon }}"></i>
+          </div>
+          <h3>{{ $item.title | markdownify }}</h3>
+          {{ with $item.capabilities }}
+          <ul class="capability-list">
+            {{ range . }}<li>{{ . }}</li>{{ end }}
+          </ul>
+          {{ end }}
+          {{ with $item.content }}<p>{{ . | markdownify }}</p>{{ end }}
+        </div>
+        {{ if $item.link }}</a>{{ end }}
+      </article>
+      {{ end }}
+
+      {{/*
+      <div class="col-12 text-center wow fadeInUp" data-wow-duration="500ms">
+        <a href="{{ .cta_link }}" class="btn btn-main btn-team-cta">
+          {{ i18n "expertise_cta_label" }}
+        </a>
+      </div>
+      */}}
+
+    </div>
+  </div>
+</section>
+{{"<!-- /competências -->" | safeHTML}}
+{{ end }}
+{{ end }}

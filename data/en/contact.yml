@@ -1,0 +1,33 @@
+############################## Contact #############################
+contact:
+  enable: true
+  title: Contact Us
+  subtitle: Talk to the Lab
+  content: "Describe the challenge in a few lines. We'll get back to you to discuss next steps."
+
+  # Contact details
+  contact_list:
+    - icon: ti-email # themify icon pack : https://themify.me/themify-icons
+      info: "Email: contato@a1lab.com.br"
+
+  # Contact form
+  contact_form:
+    enable: true
+    form_action: "/api/contact"
+    name: "Your Name"
+    email: "Your Email"
+    company: "Company"
+    subject: "How can we help?"
+    interests:
+      - "I want a diagnostic"
+      - "I want to validate an idea"
+      - "I want to learn more"
+      - "Other"
+    stage: "Project stage"
+    stage_options:
+      - "Early idea"
+      - "Explored alternatives"
+      - "Need a prototype"
+      - "Ready to scope the next phase"
+    message: "Describe your challenge"
+    submit: "Send message"

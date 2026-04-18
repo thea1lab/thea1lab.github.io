@@ -1,0 +1,13 @@
+{{ define "main" }}
+
+{{ partial "navigation.html" . }}
+
+<section class="standalone-page standalone-faq">
+  <div class="container">
+    {{ partial "faq.html" . }}
+  </div>
+</section>
+
+{{ partial "contact.html" . }}
+
+{{ end }}

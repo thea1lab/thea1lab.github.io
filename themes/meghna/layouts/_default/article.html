@@ -1,0 +1,15 @@
+<article class="col-lg-4 col-md-6 col-12 clearfix wow fadeInUp mb-4{{ if .Params.featured }} post-featured{{ end }}" data-wow-duration="500ms" data-tags="{{ range .Params.tags }}{{ . }} {{ end }}" data-cluster="{{ .Params.cluster | default "" }}">
+  <div class="post-block">
+    <div class="media-wrapper">
+      {{ if .Params.cluster }}<span class="post-cluster-badge">{{ i18n (printf "cluster_%s" .Params.cluster) | default (humanize .Params.cluster) }}</span>{{ end }}
+      {{ if .Params.featured }}<span class="post-featured-badge">{{ i18n "featured" | default "Featured" }}</span>{{ end }}
+      <img class="img-fluid lozad" data-src="{{ .Params.Image_webp | relURL }}" onerror="this.onerror=null;this.src='{{ .Params.image | relURL }}'" alt="{{ .Title }}">
+    </div>
+
+    <div class="content">
+      <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+      <p>{{ .Summary }}</p>
+      <a class="btn btn-transparent" href="{{ .Permalink }}">{{ i18n "readMore" }}</a>
+    </div>
+  </div>
+</article>

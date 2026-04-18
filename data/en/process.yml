@@ -1,0 +1,33 @@
+################################# Process #################################
+process:
+  enable: true
+  title: How It Works
+  service_item:
+    - name: Quick Diagnostic (1-2 weeks)
+      icon: ti-search
+      serviceType: "Technology Diagnostic"
+      content: "We start from the problem you bring, understand the current workflow and constraints around it, compare possible approaches, and define the best path to prototype. You walk away with a clear diagnostic."
+      deliverables:
+        - "Current workflow analysis"
+        - "Approach comparison"
+        - "Impact estimate (time/cost)"
+
+    - name: Working Prototype (2-4 weeks)
+      icon: ti-widget
+      serviceType: "Technology Prototyping"
+      content: "We deliver a working prototype (e.g., support automation, internal tool, data integration). We share progress as we go, and you see it running, not on slides."
+      deliverables:
+        - "1 tested functional solution"
+        - "Initial performance metrics"
+        - "Live demo with real data"
+
+    - name: Technical Plan for Decision (1 week)
+      icon: ti-settings
+      serviceType: "Technical Consulting"
+      content: "A complete plan based on what we tested: technologies, real-world costs, and next steps. Everything you need to make the decision."
+      deliverables:
+        - "Suggested technical architecture"
+        - "Implementation roadmap"
+        - "Effort and investment estimate"
+
+  development: "One price, three phases. You walk away with a working prototype and a clear picture of what comes next. If you want to continue from there, we can talk about what a separate implementation phase would look like."

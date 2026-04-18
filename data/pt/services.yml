@@ -1,0 +1,191 @@
+integrations:
+  hero:
+    eyebrow: "Serviços de Integração e APIs"
+    title: "Conecte seus sistemas. Pare de redigitar dados."
+    description: "Se o seu time copia informações entre o ERP, o CRM e planilhas todo dia, algo está errado. Prototipamos integrações que levam os dados onde precisam ir. Entregamos o plano técnico para você decidir se vale construir."
+  capabilities:
+    - title: "O que prototipamos"
+      intro: "O padrão é sempre o mesmo. O time copia dados entre sistemas todo dia, os números divergem, e no fim do mês nada bate. Estes são os padrões de integração que prototipamos e testamos para avaliar se o problema é resolvível e o que seria necessário."
+      items:
+        - "<strong>Pipelines de sincronização entre ERP, CRM e planilhas.</strong> Escritas idempotentes para que retries nunca dupliquem registros e os dois lados continuem em acordo mesmo depois de uma falha."
+        - "<strong>Fluxos orientados por webhook.</strong> As coisas acontecem em tempo real em vez de rodar de madrugada e deixar o resto do negócio com números desatualizados até o dia seguinte."
+        - "<strong>Pontes entre plataformas.</strong> Slack, WhatsApp, e-mail e ferramentas internas conectados para a mensagem certa chegar no lugar certo sem ninguém encaminhando na mão."
+        - "<strong>Pipelines de dados com observabilidade embutida.</strong> Puxa de um sistema, aplica as transformações que você precisa, empurra para outro, e deixa log em cada etapa para você saber o que passou e o que falhou."
+        - "<strong>Jobs de reconciliação agendados.</strong> Detectam divergências entre sistemas antes do fechamento e corrigem automaticamente ou sinalizam para revisão."
+    - title: "Tecnologias"
+      intro: "Integração vive ou morre de observabilidade e de semântica de retry. A stack que usamos reflete isso: transporte testado em produção, autenticação clara e banco que combina com o formato dos dados reais."
+      items:
+        - "<strong>APIs.</strong> REST e GraphQL para a maior parte do trabalho, e gRPC quando a latência importa."
+        - "<strong>Filas de mensagens e streaming.</strong> Kafka, SQS, RabbitMQ e Redis Streams, escolhidos conforme a durabilidade, a retenção e o throughput que a carga exige."
+        - "<strong>Autenticação.</strong> OAuth2 para acesso no contexto do usuário, JWT para tokens de serviço e assinatura HMAC para validar webhooks."
+        - "<strong>Orquestração.</strong> Zapier e Make quando o volume é baixo e a lógica é simples, middleware customizado quando não é."
+        - "<strong>Bancos.</strong> PostgreSQL, MySQL, MongoDB e Redis, escolhidos pelo modelo de dados em vez de por preferência."
+  how_we_work:
+    challenge_label: "Uma situação comum"
+    challenge: "O time redigita pedidos do ERP no CRM toda manhã. Alguém copia dados de clientes de uma planilha para outra. Erros passam despercebidos, e no fim do mês os relatórios não batem."
+    approach_label: "Como conduzimos"
+    approach: "Mapeamos a superfície de integração, construímos uma sincronização one-way com escritas idempotentes, adicionamos logs de observabilidade para você ver o que passou e o que não passou. Entrega em 2-4 semanas."
+    result_label: "O que você recebe"
+    result: "Um protótipo funcional da integração, um plano técnico e métricas de base com dados reais. O suficiente para decidir se vale construir para produção."
+  faq:
+    title: "Dúvidas sobre integrações e APIs"
+    items:
+      - question: "Como integrar ERP e CRM sem duplicar dados?"
+        answer: "Escritas idempotentes em toda sincronização. Cada registro tem uma chave estável nos dois lados, e o mesmo evento aplicado duas vezes produz o mesmo resultado. Retries de rede viram ruído, não duplicatas."
+      - question: "Vocês trabalham com arquiteturas event-driven e dados em tempo real?"
+        answer: "Para fluxos de alto volume em tempo real usamos Kafka, com consumidores que confirmam o offset só depois de processar com sucesso, para uma queda não perder mensagens. Para pub/sub mais leve dentro do mesmo sistema, Redis Streams e Redis Pub/Sub custam menos e são mais simples de operar. Para sistemas de terceiros, preferimos webhooks com assinatura HMAC em vez de polling. A combinação sai do diagnóstico conforme carga, latência e retenção."
+      - question: "Integrações via webhook são mais confiáveis do que batch noturno?"
+        answer: "Para qualquer coisa que o usuário final percebe (notificação, status de pedido, saldo), sim. Webhook entrega em segundos em vez de deixar o dado envelhecer até o job das 3h da manhã. Para reconciliação contábil e relatórios fechados, batch ainda tem lugar."
+      - question: "Como saber se uma integração está funcionando?"
+        answer: "Observabilidade por etapa. Logs estruturados em cada transformação, métricas de sucesso e falha por endpoint, alertas quando a taxa de erro passa do esperado. Sem isso, integração é caixa-preta que parece funcionar até o dia em que não funciona."
+      - question: "Qual fila de mensagens escolher: SQS, RabbitMQ ou Redis Streams?"
+        answer: "Depende de durabilidade e throughput. SQS para workloads em AWS onde você quer o mínimo de operação. RabbitMQ quando precisa de roteamento por tópico ou confirmações por mensagem. Redis Streams quando a fila já divide cache com o resto da aplicação. A escolha entra no plano técnico conforme a carga real."
+      - question: "Com quais sistemas vocês integram?"
+        answer: "ERPs brasileiros como TOTVS, Senior e Omie, além das grandes plataformas internacionais: Salesforce, HubSpot, SAP, Oracle NetSuite, Microsoft Dynamics, Jira, Zendesk, Shopify, Stripe, QuickBooks, Google Workspace e Microsoft 365. Onde existe API REST ou SOAP, usamos. Onde o sistema não tem API exposta, usamos extração por arquivo, SFTP ou automação de browser."
+  cta:
+    label: "Agendar conversa gratuita"
+    link: "#contact"
+
+document-processing:
+  hero:
+    eyebrow: "Serviços de Processamento de Documentos"
+    title: "Leia, extraia e classifique documentos em escala"
+    description: "Se o seu time lê notas fiscais, contratos, PDFs e e-mails à mão e digita os dados em outro lugar, podemos prototipar uma automação para isso. Pipeline de extração funcionando em 2 a 4 semanas, com números de acurácia nos seus documentos reais antes de qualquer compromisso."
+  capabilities:
+    - title: "O que prototipamos"
+      intro: "Na maioria dos casos, processamento de documento é alguém lendo um PDF e digitando o que vê em outro sistema. Esse é o trabalho que prototipamos automatizar. Rápido o suficiente para ter números reais de acurácia antes de qualquer compromisso."
+      items:
+        - "<strong>Extração de notas fiscais e recibos.</strong> Itens de linha, totais, datas e dados do fornecedor vão direto para o sistema contábil em vez de passar por uma área de transferência."
+        - "<strong>Análise de contratos.</strong> Obrigações, cláusulas de risco, datas de renovação e valores financeiros aparecem em segundos, cada um com a citação da passagem de onde foi extraído."
+        - "<strong>Classificação e roteamento automáticos.</strong> Os arquivos que entram caem na fila certa pelo que contêm, não por quem estava olhando a caixa de entrada naquele dia."
+        - "<strong>Saída estruturada a partir de entrada confusa.</strong> JSON, CSV ou escrita direta no banco, com regras de validação nos campos que realmente importam para o processamento seguinte."
+        - "<strong>Triagem de currículos.</strong> Candidatos ranqueados pelos critérios que você definir, com a justificativa anexada para o time de contratação confiar na ordem e contestar quando discordar."
+    - title: "Tecnologias"
+      intro: "A stack muda conforme o caso. A maioria dos pipelines combina um modelo de linguagem para leitura com código determinístico para validação e entrega. Esse equilíbrio mantém a acurácia alta e o custo previsível."
+      items:
+        - "<strong>Modelos de linguagem.</strong> OpenAI, Claude, Gemini e opções open-source como Llama, Mistral, Gemma e Qwen, escolhidos por tarefa conforme acurácia, custo e requisitos de privacidade."
+        - "<strong>OCR.</strong> Opções open-source modernas como PaddleOCR, Qianfan-OCR e Tesseract quando podemos rodar no nosso ambiente, Google Vision ou AWS Textract quando a digitalização é ruim ou o volume é alto o suficiente para a via gerenciada compensar."
+        - "<strong>ML clássico.</strong> Scikit-learn e XGBoost para problemas de classificação mais estreitos, onde um modelo grande é exagero e um menor é mais barato e mais rápido."
+        - "<strong>Pipelines de validação.</strong> Thresholds de confiança e checagens de regra que barram extrações incertas antes de chegarem ao sistema downstream."
+        - "<strong>Entrega.</strong> Webhooks, escritas diretas no banco ou handoff via fila, conforme o jeito que seus sistemas realmente esperam receber os dados."
+  how_we_work:
+    challenge_label: "Uma situação comum"
+    challenge: "Alguém do time abre cada nota fiscal, lê os valores e datas, e digita no sistema contábil. Leva horas, erros acontecem, e a pilha só cresce."
+    approach_label: "Como conduzimos"
+    approach: "Pegamos uma amostra dos documentos reais, treinamos um pipeline de extração nos formatos que você realmente recebe, adicionamos regras de validação para os campos mais importantes, e conectamos a saída onde os dados precisam ir."
+    result_label: "O que você recebe"
+    result: "Um protótipo funcional do pipeline de extração com números de acurácia nos seus documentos reais, e um plano técnico com o que seria necessário para escalar."
+  faq:
+    title: "Dúvidas sobre automação de documentos"
+    items:
+      - question: "Como automatizar a leitura de notas fiscais em PDF?"
+        answer: "Combinamos OCR com um modelo de linguagem para ler notas fiscais eletrônicas e em PDF escaneado, extraímos itens de linha, totais, datas e dados do fornecedor, e entregamos os dados direto no seu sistema contábil por API, webhook ou escrita no banco. Sem templates fixos. Funciona mesmo com layouts diferentes por fornecedor."
+      - question: "Dá para extrair cláusulas de contratos com IA?"
+        answer: "Sim. Para contratos em português ou inglês, extraímos obrigações, valores, prazos de renovação e cláusulas de risco, sempre com a citação da passagem de origem anexada. Útil para revisão jurídica, due diligence e acompanhamento de vencimentos."
+      - question: "Qual OCR funciona melhor para documentos em português?"
+        answer: "Depende da qualidade da digitalização. Para PDFs nativos usamos extração direta. Para scans, o OCR open-source avançou bastante. PaddleOCR e Qianfan-OCR lidam bem com português, inclusive em scans ruins onde o Tesseract costumava falhar. Quando os requisitos passam do que o open-source entrega de forma confiável, Google Vision ou AWS Textract são a alternativa gerenciada. A escolha entra no plano técnico conforme seus documentos reais."
+      - question: "Como funciona classificação automática de documentos recebidos?"
+        answer: "Treinamos um classificador sobre uma amostra dos seus documentos para rotear cada arquivo que chega (por e-mail, upload ou pasta compartilhada) para a fila certa — contas a pagar, jurídico, RH, etc. O modelo aprende com os tipos que você realmente recebe, não com categorias genéricas."
+      - question: "Quanto custa automatizar a extração de documentos?"
+        answer: "Depende do volume, da variedade de layouts e de onde os dados precisam chegar. O diagnóstico inicial (1 a 2 semanas) fecha escopo e preço antes de construirmos o protótipo. Um pipeline de extração piloto costuma ficar pronto em 2 a 4 semanas."
+      - question: "Os dados dos nossos documentos ficam seguros?"
+        answer: "Sim. Assinamos NDA, processamos os documentos em ambiente controlado e, quando a privacidade exige, usamos modelos open-source (Llama, Mistral, Gemma, Qwen, entre outros) rodando na sua infraestrutura ou na nossa, sem envio para APIs externas."
+  cta:
+    label: "Agendar conversa gratuita"
+    link: "#contact"
+
+ai-agents:
+  hero:
+    eyebrow: "Serviços de IA e Agentes"
+    title: "IA que trabalha sobre seus documentos e dados, não chat genérico"
+    description: "Prototipamos assistentes e agentes que respondem com base nos documentos da sua empresa, com fontes citadas. Você vê funcionando nos seus dados reais antes de decidir se vale construir."
+  capabilities:
+    - title: "O que prototipamos"
+      intro: "Prototipamos IA que trabalha com o que a empresa realmente tem: os documentos, os registros e as perguntas que os usuários fazem todo dia. Cada resposta volta com a passagem de origem anexada."
+      items:
+        - "<strong>Assistentes com RAG.</strong> Respondem a partir dos seus documentos internos e citam a passagem de origem em cada resposta, para quem lê conseguir verificar que a resposta veio de algum lugar real."
+        - "<strong>Agentes autônomos para pesquisa, classificação e apoio à decisão.</strong> Com checkpoints humanos sempre que o custo de uma decisão errada justificar."
+        - "<strong>Machine learning clássico.</strong> Classificação, regressão, clustering, previsão e detecção de anomalias, usados onde um modelo grande seria mais lento, mais caro ou menos acurado do que um menor."
+        - "<strong>Pipelines com LLMs e ferramentas.</strong> Chamam APIs, buscam dados atualizados e produzem saída estruturada que seus sistemas consomem direto, sem uma pessoa reformatando a resposta."
+        - "<strong>Workflows multi-step.</strong> Um agente planeja, age, verifica o próprio trabalho e entrega um resultado limpo para o próximo passo, em vez de jogar tudo de volta para uma pessoa resolver."
+    - title: "Tecnologias"
+      intro: "A escolha do modelo importa menos do que o pipeline em volta dele. A maior parte do trabalho está em retrieval, avaliação e saída estruturada. São as partes que decidem se a resposta está certa, em vez de só soar bem."
+      items:
+        - "<strong>LLMs.</strong> OpenAI, Claude, Gemini e opções open-source como Llama, Mistral, Gemma e Qwen, escolhidos por tarefa conforme acurácia, custo, latência e requisitos de privacidade."
+        - "<strong>Bancos vetoriais.</strong> Pinecone e Weaviate para cargas dedicadas, pgvector quando você quer manter o retrieval dentro do Postgres que já está de pé."
+        - "<strong>Orquestração.</strong> LangChain e LlamaIndex para padrões comuns, código customizado quando o framework atrapalha o que você realmente precisa fazer."
+        - "<strong>Ferramentas de ML clássico.</strong> Scikit-learn e XGBoost para problemas tabulares em que um modelo estruturado supera um modelo de linguagem em qualidade e em custo."
+        - "<strong>Embeddings e retrieval.</strong> Busca híbrida que combina casamento semântico com busca por palavra-chave, porque busca puramente vetorial deixa passar coisas que um leitor humano não deixaria."
+  how_we_work:
+    challenge_label: "Uma situação comum"
+    challenge: "O time de suporte responde as mesmas perguntas toda semana. Alguém do financeiro passa uma hora procurando a cláusula certa num contrato. A base de conhecimento existe mas ninguém busca porque a busca não funciona."
+    approach_label: "Como conduzimos"
+    approach: "Indexamos seus documentos reais, construímos um pipeline de retrieval que encontra as passagens certas, ligamos a um LLM que responde com citações. Adicionamos etapas de verificação para o modelo saber quando não sabe, em vez de inventar."
+    result_label: "O que você recebe"
+    result: "Um protótipo de assistente funcionando com fontes citadas, um plano técnico para a próxima fase, e métricas de base sobre acurácia em perguntas reais."
+  faq:
+    title: "Dúvidas sobre IA e agentes"
+    items:
+      - question: "O que é RAG e por que ele importa?"
+        answer: "RAG é Retrieval-Augmented Generation. Em vez de pedir para um LLM responder do zero, você primeiro busca as passagens relevantes nos seus documentos e passa elas para o modelo usar como fonte. O resultado é uma resposta que cita de onde veio, em vez de parecer convincente e estar errada."
+      - question: "Como construir um assistente com IA sobre os documentos da empresa?"
+        answer: "Indexamos seus documentos em um banco vetorial (pgvector, Pinecone ou Weaviate conforme o caso), montamos um pipeline de retrieval que combina busca semântica e por palavra-chave, e conectamos ao LLM que responde com citações. O piloto sai em 2-4 semanas com os documentos reais, não com uma base de teste."
+      - question: "Quando usar LLM e quando usar ML clássico?"
+        answer: "LLM quando a entrada é texto não estruturado, linguagem livre ou quando a tarefa exige raciocínio. ML clássico (XGBoost, scikit-learn) quando os dados são tabulares e o padrão é previsível: classificação de churn, previsão de vendas, detecção de fraude. ML clássico costuma ser mais barato, mais rápido e mais acurado nessas tarefas."
+      - question: "pgvector, Pinecone ou Weaviate: qual banco vetorial usar?"
+        answer: "pgvector quando você já tem Postgres de pé e não quer um serviço a mais para operar. Pinecone quando a carga é alta e você quer um serviço gerenciado que apenas funciona. Weaviate quando precisa de recursos além de busca vetorial, como GraphQL ou filtros complexos. Para a maioria dos casos, pgvector resolve."
+      - question: "Como evitar que o agente invente respostas (alucinações)?"
+        answer: "Três coisas em conjunto. Retrieval de qualidade para o modelo ter o contexto certo. Etapas de verificação para ele dizer 'não sei' quando não encontra base. E avaliação com perguntas reais antes de colocar em produção. Alucinação não desaparece por completo, mas a taxa cai para um nível aceitável."
+      - question: "Nossos dados vão para a OpenAI ou a Anthropic?"
+        answer: "Depende da escolha. Se o caso permite, usamos a API da OpenAI ou Anthropic com acordos que impedem treinamento nos seus dados. Se a privacidade exige, rodamos modelos open-source como Llama, Mistral, Gemma ou Qwen na sua infraestrutura ou na nossa, sem envio para APIs externas. O plano técnico fecha essa decisão antes de construirmos o protótipo."
+  cta:
+    label: "Agendar conversa gratuita"
+    link: "#contact"
+
+automation:
+  hero:
+    eyebrow: "Serviços de Automação e Orquestração"
+    title: "Tire os passos manuais. Mantenha o controle."
+    description: "Se uma pessoa clica nos mesmos botões, copia os mesmos dados ou envia os mesmos e-mails todo dia, isso é trabalho que uma máquina pode fazer. Prototipamos a automação e entregamos números do que ela economiza antes de você se comprometer com uma construção completa."
+  capabilities:
+    - title: "O que prototipamos"
+      intro: "Onde uma pessoa clica nos mesmos botões, copia os mesmos dados ou manda os mesmos e-mails todo dia, tem trabalho que uma máquina assume. Esses são os padrões que mais aparecem."
+      items:
+        - "<strong>Workflows de ponta a ponta.</strong> Cada etapa se conecta à próxima, para nada ficar parado esperando uma pessoa mover de um sistema para outro."
+        - "<strong>Chatbots para WhatsApp, Instagram e Telegram.</strong> Resolvem conversas recorrentes direto e escalam o resto para uma pessoa real com contexto suficiente para o repasse ser útil."
+        - "<strong>Pipelines ETL.</strong> Extraem, transformam e carregam dados entre sistemas na cadência que seus relatórios realmente precisam, em vez de na cadência que foi mais fácil de montar."
+        - "<strong>Web scraping e coleta de dados públicos.</strong> Rodando com cache e rate limiting para as fontes não bloquearem, e com monitoramento para avisar quando o layout do site mudar."
+        - "<strong>Fluxos de notificação e escalação.</strong> O alerta chega na pessoa certa e pula quem não precisa ver, para o sinal continuar útil."
+    - title: "Tecnologias"
+      intro: "Automação quebra quando a stack é esperta demais. Mantemos a orquestração simples, monitoramos cada etapa e usamos serviços gerenciados sempre que são mais baratos do que operar o nosso."
+      items:
+        - "<strong>APIs de mensageria.</strong> WhatsApp Business, Telegram Bot e Instagram Messaging, com os templates certos aprovados antes do lançamento para compliance não virar surpresa."
+        - "<strong>Orquestração.</strong> Apache Airflow para pipelines de dados pesados, e código customizado quando a lógica não cabe confortavelmente."
+        - "<strong>Automação de browser.</strong> Selenium e Playwright com execuções headless, recuperação estruturada de erros, e retries para páginas que falham de forma intermitente."
+        - "<strong>Serverless.</strong> Cloud Functions, Lambda e schedulers gerenciados para jobs que rodam em cadência e precisam continuar baratos conforme o volume cresce."
+        - "<strong>Armazenamento.</strong> S3, Cloud Storage e pipelines baseados em arquivos quando o sistema de origem fala em arquivos em vez de APIs."
+  how_we_work:
+    challenge_label: "Uma situação comum"
+    challenge: "Toda segunda de manhã, alguém exporta os dados de vendas do Salesforce, abre o CSV no Excel para limpar algumas colunas, roda uma tabela dinâmica e sobe o resultado na ferramenta de BI para a liderança ver antes da reunião. Leva duas horas e quebra no momento em que uma coluna de origem é renomeada."
+    approach_label: "Como conduzimos"
+    approach: "Trocamos o ritual semanal por um job de ETL. Extrai do Salesforce via API em horário fixo, transforma os dados em código com mapeamento de coluna explícito e regras de validação, e carrega o resultado no warehouse da sua ferramenta de BI. Adicionamos alertas para o pipeline avisar quando algo muda em vez de entregar um dashboard desatualizado em silêncio."
+    result_label: "O que você recebe"
+    result: "Um protótipo do relatório automatizado, um plano técnico com o que seria necessário para escalar, e log de auditoria mostrando que o pipeline rodou como esperado."
+  faq:
+    title: "Dúvidas sobre automação de processos"
+    items:
+      - question: "Como automatizar processos empresariais do zero?"
+        answer: "Começamos mapeando o processo atual com a pessoa que executa hoje e identificamos onde está o tempo perdido (re-digitação, cópia entre sistemas, espera). A partir daí escolhemos o nível de automação que controla o custo: automatizamos o núcleo repetitivo, deixamos as exceções raras para uma pessoa e adicionamos monitoramento para você saber quando algo quebra em vez de descobrir no fechamento do mês. O diagnóstico fecha o escopo antes de construirmos o protótipo, para você ver preço e retorno antes de se comprometer."
+      - question: "Dá para prototipar um chatbot no WhatsApp Business que atende cliente?"
+        answer: "Sim. Construímos um protótipo funcional em cima da API oficial do WhatsApp Business, com templates aprovados previamente para compliance. Ele resolve conversas recorrentes (status de pedido, segunda via de boleto, horários) e escala para um humano com o contexto da conversa quando a pergunta sai do escopo. Você sai do projeto com um protótipo rodando e um plano técnico para levar a volume de produção, para decidir o próximo passo antes de se comprometer com uma construção completa."
+      - question: "Apache Airflow ou código customizado: quando usar cada um?"
+        answer: "Airflow para pipelines de dados pesados com dependências complexas entre tarefas. Código customizado quando a lógica não cabe bem em um pipeline framework, o que acontece mais do que parece."
+      - question: "Web scraping é legal? Vocês fazem?"
+        answer: "Depende do conteúdo e do site. Dados públicos em sites que não proíbem via robots.txt ou termos de uso são legítimos. Fazemos scraping com cache e rate limiting para não sobrecarregar a fonte, e com monitoramento que avisa quando o layout muda."
+      - question: "Quanto tempo leva automatizar um relatório semanal?"
+        answer: "Tipicamente 1-2 semanas, do mapeamento ao relatório rodando sozinho. Inclui extração via API, transformação em código com regras de validação, carga na ferramenta de BI e alertas para quando os dados de origem mudam de formato."
+      - question: "A automação quebra quando o sistema de origem muda?"
+        answer: "Eventualmente, sim. Por isso adicionamos monitoramento em cada etapa e alertas que disparam quando algo se mexe. Também escolhemos APIs antes de scraping ou automação de browser sempre que possível, porque APIs mudam com aviso e páginas mudam sem."
+  cta:
+    label: "Agendar conversa gratuita"
+    link: "#contact"

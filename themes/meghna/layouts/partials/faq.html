@@ -1,0 +1,36 @@
+{{ $data := index hugo.Data site.Language.Name }}
+
+{{ with $data.faq.faq }}
+{{ if gt (len .) 0 }}
+{{"<!-- Start FAQ Section -->" | safeHTML}}
+<section class="section" id="faq">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="title text-center wow fadeIn" data-wow-duration="500ms">
+          <h2>{{ i18n "faq_title" | default "Perguntas Frequentes" }}</h2>
+          <div class="border-meghna"></div>
+        </div>
+        <div class="faq-accordion" id="faqAccordion">
+          {{ range $index, $item := . }}
+          <div class="faq-item wow fadeInUp" data-wow-duration="500ms">
+            <button class="faq-question collapsed" type="button" data-toggle="collapse"
+              data-target="#faq-{{ $index }}" aria-expanded="false" aria-controls="faq-{{ $index }}">
+              {{ $item.question }}
+              <span class="faq-icon ti-plus" aria-hidden="true"></span>
+            </button>
+            <div id="faq-{{ $index }}" class="collapse" data-parent="#faqAccordion">
+              <div class="faq-answer">
+                <p>{{ $item.answer }}</p>
+              </div>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{"<!-- /FAQ -->" | safeHTML}}
+{{ end }}
+{{ end }}

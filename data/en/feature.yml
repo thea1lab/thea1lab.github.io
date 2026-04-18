@@ -1,0 +1,47 @@
+############################# feature ###################################
+feature:
+  enable: true
+  image: images/about/about.jpg
+  image_webp: images/about/about.png
+  title: Our working rhythm
+  content: "Once the package is scoped, every project runs through these four steps. Each one leaves you with something you can actually use."
+  feature_item:
+    # feature item loop
+    - title: Kickoff
+      icon: ti-headphone
+      short: "Problem mapped, working agreement set"
+      bullets:
+        - "30-minute kickoff call to understand the problem and the workflow around it."
+        - "We send the contract after the call. Once it's signed, we start mapping."
+        - "We map your current process with you in a shared document. You own the link."
+        - "We agree on the comms channel and how often we send updates. Questions get answered while the work is happening, not batched for a wrap-up meeting."
+      you_give: "Someone who knows the workflow, 1–2 hours across the week"
+
+    - title: Research
+      icon: ti-search
+      short: "Options compared, direction chosen"
+      bullets:
+        - "Every approach we try gets written up in the shared Doc with enough technical detail that you can actually evaluate it."
+        - "Libraries, APIs, and stack choices compared side by side, with tradeoffs."
+        - "You have comment access the whole time, so you can push back while we're still deciding."
+        - "The step ends with a recommended direction. You approve it before we write any code."
+      you_give: "~30 min to review the tradeoffs and pick a direction"
+
+    - title: Experiment
+      icon: ti-settings
+      short: "Code in flight, weekly check-ins"
+      bullets:
+        - "We work in a GitHub repo (ours by default, or yours if you'd rather give us access)."
+        - "Real data when you can share it. Mocked data that matches the same fields and structure when you can't."
+        - "Progress updates on the cadence you picked (weekly email is the default)."
+      you_give: "Data access (or shape description) and quick replies when blockers come up"
+
+    - title: Deliver
+      icon: ti-package
+      short: "Handoff week"
+      bullets:
+        - "Code handed off through the GitHub repo, with a README your team can follow."
+        - "A technical write-up in Google Docs covering what we tried and what worked."
+        - "Production cost breakdown: hosting, APIs, operations, with real numbers."
+        - "We stay available for questions after handoff. If you want to keep going, we scope the next phase separately."
+      you_give: "A 60-minute handoff call where we walk through everything. No technical background required."

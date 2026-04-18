@@ -1,0 +1,48 @@
+############################### expertise ############################
+expertise:
+  enable: true
+  cta_link: "/projetos/"
+  title: Nossas Competências
+  description: "Problemas reais que o nosso time investigou e prototipou, de startups a grandes empresas internacionais."
+  credibility:
+    - icon: ti-medall
+      text: "Mestres em Ciência da Computação"
+    - icon: ti-timer
+      text: "+10 anos em engenharia de software"
+    - icon: ti-world
+      text: "Experiência internacional em empresas dos EUA"
+    - icon: ti-server
+      text: "Aplicações web, mobile, IA e integrações"
+  qualifications:
+    - icon: ti-link
+      title: "Integrações & APIs"
+      link: "/integracoes-e-apis/"
+      capabilities:
+        - "Integração entre sistemas internos (ERP, CRM, planilhas)"
+        - "APIs REST, webhooks e filas de mensagens"
+        - "Automação entre plataformas (Slack, WhatsApp, e-mail)"
+        - "Sincronização de dados entre ferramentas desconectadas"
+    - icon: ti-files
+      title: "Processamento de Documentos"
+      link: "/processamento-de-documentos/"
+      capabilities:
+        - "Leitura automática de PDF, e-mail e imagens"
+        - "Extração de dados de contratos e notas fiscais"
+        - "Classificação e triagem por conteúdo"
+        - "Saída estruturada a partir de documentos não estruturados"
+    - icon: ti-thought
+      title: "IA & Agentes"
+      link: "/agentes-de-ia/"
+      capabilities:
+        - "Pipelines com LLMs: OpenAI, Claude, Gemini e opções open-source como Llama, Mistral, Gemma e Qwen"
+        - "Modelos clássicos de machine learning: classificação, regressão, clustering, previsão e detecção de anomalias"
+        - "Assistentes com RAG que respondem com base em documentos e dados internos da empresa, com rastreio de fonte"
+        - "Agentes autônomos para pesquisa, classificação e apoio à decisão"
+    - icon: ti-loop
+      title: "Automação & Orquestração"
+      link: "/automacao-e-orquestracao/"
+      capabilities:
+        - "Workflows que conectam etapas sem intervenção manual"
+        - "Chatbots para WhatsApp, Instagram e Telegram"
+        - "Pipelines ETL para extrair, transformar e carregar dados entre sistemas"
+        - "Web scraping e coleta automática de dados públicos"

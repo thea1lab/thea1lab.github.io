@@ -1,0 +1,11 @@
+############################# call to action ##############################
+cta:
+  enable: true
+  bg_image: "images/backgrounds/bg-white-wall.jpg"
+  bg_image_webp: "images/backgrounds/bg-white-wall.webp"
+  title: 'Por que a <span class="brand-a1">A1</span> <span class="brand-lab">Lab</span>?'
+  content: "Começamos entendendo o problema e avançamos rápido para um protótipo funcional com seus dados reais. Você vê rodando, avalia o resultado e decide o próximo passo — sem pressão."
+  button:
+    enable: true
+    label: "Agendar conversa de 30 min"
+    link: "#contact"

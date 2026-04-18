@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.a1lab.com.br/sitemap.xml
+Sitemap: https://www.a1lab.com.br/pt/sitemap.xml
+Sitemap: https://www.a1lab.com.br/en/sitemap.xml
+
+# LLM crawler guidance
+Llms-txt: https://www.a1lab.com.br/llms.txt

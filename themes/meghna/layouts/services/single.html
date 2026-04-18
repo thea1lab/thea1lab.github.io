@@ -1,0 +1,169 @@
+{{ define "main" }}
+
+{{ $data := index hugo.Data site.Language.Name }}
+{{ $svc := index $data.services .Params.service_key }}
+
+{{ partial "navigation.html" . }}
+
+{{ if $svc }}
+{{ with $svc }}
+
+{{/* ── Hero ── */}}
+<section class="service-landing-hero">
+  <div class="container">
+    {{ with .hero.eyebrow }}
+    <p class="service-landing-hero__eyebrow">{{ . }}</p>
+    {{ end }}
+    <h1>{{ .hero.title | safeHTML }}</h1>
+    {{ with .hero.description }}
+    <p class="service-landing-hero__description">{{ . }}</p>
+    {{ end }}
+  </div>
+</section>
+
+{{/* ── Capabilities + Technologies ── */}}
+{{ if .capabilities }}
+<section id="capabilities" class="section service-landing-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        {{ range .capabilities }}
+        <div class="capability-group">
+          <h3 class="capability-group__title">{{ .title }}</h3>
+          {{ with .intro }}<p class="capability-group__intro">{{ . | safeHTML }}</p>{{ end }}
+          <ul class="capability-list capability-list--detailed">
+            {{ range .items }}<li>{{ . | safeHTML }}</li>{{ end }}
+          </ul>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{/* ── How we'd work on this ── */}}
+{{ if .how_we_work }}
+<section id="how-we-work" class="section bg-one service-landing-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-12">
+        <div class="title text-center wow fadeInUp" data-wow-duration="500ms">
+          <h2>{{ i18n "service_how_title" | default "How we'd work on this" }}</h2>
+          <div class="border-meghna"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row how-we-work-grid">
+      <div class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-duration="500ms">
+        <div class="service-block how-we-work-card how-we-work-card--step-1">
+          <span class="how-we-work-card__step" aria-hidden="true">01</span>
+          <p class="how-we-work-card__label">{{ .how_we_work.challenge_label }}</p>
+          <p class="how-we-work-card__body">{{ .how_we_work.challenge }}</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="200ms">
+        <div class="service-block how-we-work-card how-we-work-card--step-2">
+          <span class="how-we-work-card__step" aria-hidden="true">02</span>
+          <p class="how-we-work-card__label">{{ .how_we_work.approach_label }}</p>
+          <p class="how-we-work-card__body">{{ .how_we_work.approach }}</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="400ms">
+        <div class="service-block how-we-work-card how-we-work-card--step-3 how-we-work-card--payoff">
+          <span class="how-we-work-card__step" aria-hidden="true">03</span>
+          <p class="how-we-work-card__label">{{ .how_we_work.result_label }}</p>
+          <p class="how-we-work-card__body">{{ .how_we_work.result }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{/* ── FAQ ── */}}
+{{ if .faq }}
+<section class="section" id="service-faq">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="title text-center wow fadeIn" data-wow-duration="500ms">
+          <h2>{{ .faq.title | default (i18n "faq_title") }}</h2>
+          <div class="border-meghna"></div>
+        </div>
+        <div class="faq-accordion" id="serviceFaqAccordion">
+          {{ range $index, $item := .faq.items }}
+          <div class="faq-item wow fadeInUp" data-wow-duration="500ms">
+            <button class="faq-question collapsed" type="button" data-toggle="collapse"
+              data-target="#service-faq-{{ $index }}" aria-expanded="false" aria-controls="service-faq-{{ $index }}">
+              {{ $item.question }}
+              <span class="faq-icon ti-plus" aria-hidden="true"></span>
+            </button>
+            <div id="service-faq-{{ $index }}" class="collapse" data-parent="#serviceFaqAccordion">
+              <div class="faq-answer">
+                <p>{{ $item.answer | safeHTML }}</p>
+              </div>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {{ range $i, $q := .faq.items }}{{ if $i }},{{ end }}{
+      "@type": "Question",
+      "name": {{ $q.question | jsonify }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ $q.answer | plainify | jsonify }}
+      }
+    }{{ end }}
+  ]
+}
+</script>
+{{ end }}
+
+{{/* ── CTA ── */}}
+{{ if .cta }}
+<section id="cta-service" class="call-to-action section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="cta-panel">
+          <div class="cta-panel__content">
+            {{ with .cta.eyebrow }}
+            <p class="cta-panel__eyebrow">{{ . }}</p>
+            {{ else }}
+            <p class="cta-panel__eyebrow">{{ i18n "service_cta_eyebrow" | default "Start with a 30-min call" }}</p>
+            {{ end }}
+            <h2>{{ .cta.title | default (i18n "service_cta_title" | default "Ready to start?") }}</h2>
+            {{ with .cta.content }}<p>{{ . }}</p>{{ end }}
+            <a href="{{ .cta.link | default "#contact" }}" class="btn btn-main">{{ .cta.label }}</a>
+          </div>
+          <div class="cta-panel__proof" aria-label="{{ i18n `cta_proof_label` | default `What you leave with` }}">
+            <p class="cta-panel__proof-title">{{ i18n "cta_proof_title" | default "What you leave with" }}</p>
+            <ul class="cta-panel__proof-list">
+              <li>{{ i18n "cta_proof_1" }}</li>
+              <li>{{ i18n "cta_proof_2" }}</li>
+              <li>{{ i18n "cta_proof_3" }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ end }}
+{{ end }}
+
+{{ partial "contact.html" . }}
+
+{{ end }}

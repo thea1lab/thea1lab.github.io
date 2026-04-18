@@ -1,0 +1,41 @@
+{{ $data := index hugo.Data site.Language.Name }}
+
+{{ if $data.cta.cta.enable}}
+{{ with $data.cta.cta}}
+{{"<!-- Start Call To Action -->" | safeHTML}}
+<section id="cta" class="call-to-action section-sm">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="cta-panel">
+						<div class="cta-panel__content">
+							<h2>{{ .title | markdownify }}</h2>
+							<p>{{ .content | markdownify }}</p>
+							{{ if .button.enable }}
+							{{ with .button }}
+							<a href="{{ .link }}" class="btn btn-main">{{ .label }}</a>
+							{{ end }}
+							{{ end }}
+						</div>
+						<div class="cta-panel__proof" aria-label="{{ i18n `cta_proof_label` | default `What you leave with` }}">
+							<p class="cta-panel__proof-title">{{ i18n "cta_proof_title" | default "Voce sai da conversa com" }}</p>
+							<ul class="cta-panel__proof-list">
+								<li>{{ i18n "cta_proof_1" | default "Escopo mais claro do problema" }}</li>
+								<li>{{ i18n "cta_proof_2" | default "Direcao tecnica viavel" }}</li>
+								<li>{{ i18n "cta_proof_3" | default "Proximos passos sem enrolacao" }}</li>
+							</ul>
+							<p class="cta-panel__proof-title cta-panel__proof-title--execution">{{ i18n "cta_execution_title" | default "Como construímos" }}</p>
+							<ul class="cta-panel__proof-list">
+								<li>{{ i18n "cta_execution_1" | default "Usamos APIs e sistemas existentes antes de propor arquitetura nova" }}</li>
+								<li>{{ i18n "cta_execution_2" | default "Priorizamos soluções simples antes de escalar" }}</li>
+								<li>{{ i18n "cta_execution_3" | default "Evitamos lock-in em ferramentas específicas" }}</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</section>
+{{"<!-- Start Services Section -->" | safeHTML}}
+{{ end }}
+{{ end }}

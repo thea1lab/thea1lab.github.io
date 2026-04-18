@@ -1,0 +1,53 @@
+############################# About ###################################
+about:
+  enable: true
+  title: O Que <span class="color">Prototipamos</span>
+  description: "Problemas que investigamos e prototipamos, desde automação de suporte até pipelines de dados."
+  about_item:
+    - icon: ti-reload
+      title: Automação de <span class="color">Processos</span>
+      content: |
+        - IA classifica e encaminha e-mails de suporte → triagem cai de horas pra minutos
+        - Pedidos por e-mail ou PDF lidos e processados, ninguém precisa digitar
+        - Tickets priorizados por urgência e sentimento do cliente
+        - Perguntas recorrentes ganham respostas automáticas
+
+    - icon: ti-files
+      title: Análise de <span class="color">Documentos</span>
+      content: |
+        - Notas fiscais lidas e dados inseridos direto no ERP
+        - Contratos analisados em segundos: obrigações, cláusulas de risco, valores
+        - Currículos triados e ranqueados pelos critérios que você definir
+        - Relatórios longos viram resumos com o que importa
+
+    - icon: ti-comment-alt
+      title: Assistentes <span class="color">Internos</span>
+      content: |
+        - Equipe pergunta em linguagem normal e recebe respostas da base interna
+        - Assistente que responde com base nos documentos e dados da empresa
+        - Dúvidas de RH, financeiro ou jurídico respondidas na hora
+        - Tickets criados e consultas feitas por texto, menos cliques
+
+    - icon: ti-comments
+      title: Atendimento ao <span class="color">Cliente</span>
+      content: |
+        - Bot que responde no WhatsApp às 2h. Prototipe antes do lançamento completo.
+        - Agendamentos pelo chat, não precisa ligar
+        - Leads qualificados antes de chegar no vendedor
+        - Se o bot não resolve, escala pra humano e o cliente nem percebe
+
+    - icon: ti-link
+      title: Software & <span class="color">Integrações</span>
+      content: |
+        - Dashboard que junta dados do ERP, CRM e planilhas em uma tela só
+        - Protótipo de ferramenta interna pra substituir um processo que vive em correntes de e-mail
+        - Integração de APIs conectando sistemas que não conversam entre si
+        - Workflow que encaminha o trabalho pra pessoa certa sem repasse manual
+
+    - icon: ti-stats-up
+      title: Previsão & <span class="color">Análise</span>
+      content: |
+        - Protótipo de previsão de demanda por produto. Valide a acurácia antes de implantar.
+        - Clientes com risco de sair identificados antes de cancelarem
+        - Anomalias em transações em tempo real, fraude barrada cedo
+        - Receita estimada com base no pipeline e histórico

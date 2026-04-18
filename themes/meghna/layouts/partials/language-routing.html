@@ -1,0 +1,35 @@
+{{- $languageVariants := slice -}}
+{{- with .Page -}}
+	{{- $languageVariants = .Rotate "language" -}}
+{{- end -}}
+<script>
+	(function () {
+		var storageKey = "a1lab-language";
+
+
+		{{- if and hugo.IsMultilingual .IsHome site.Language.IsDefault (gt (len $languageVariants) 1) }}
+		var preferredLanguage = null;
+		var languageTargets = {
+			{{- range $index, $translation := $languageVariants }}
+			{{- if gt $index 0 }},{{ end }}"{{ $translation.Language.Lang }}": "{{ $translation.Permalink }}"
+			{{- end }}
+		};
+
+		try {
+			preferredLanguage = window.localStorage.getItem(storageKey);
+		} catch (error) {}
+
+		if (!preferredLanguage) {
+			return;
+		}
+
+		var targetUrl = languageTargets[preferredLanguage] || languageTargets.en || "";
+		if (targetUrl) {
+			var targetPath = new URL(targetUrl).pathname;
+			if (targetPath !== window.location.pathname) {
+				window.location.replace(targetUrl + window.location.search + window.location.hash);
+			}
+		}
+		{{- end }}
+	})();
+</script>

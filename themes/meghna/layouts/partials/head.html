@@ -1,0 +1,85 @@
+<head>
+	<meta charset="utf-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+	<meta name="theme-color" content="#e87a00">
+	{{- if .IsHome -}}
+	<title>{{ .Title }} - {{ i18n "hero_eyebrow" }}</title>
+	{{- else -}}
+	<title>{{ .Title }} | {{ site.Title }}</title>
+	{{- end -}}
+
+	{{ "<!-- mobile responsive meta -->" | safeHTML }}
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Language.Params.description }}{{ . }}{{ else }}{{ with site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
+	<meta name="robots" content="{{ with .Params.robots }}{{ . }}{{ else }}index, follow{{ end }}">
+	{{ with site.Params.author }}
+	<meta name="author" content="{{ . }}">{{ end }}
+	{{ hugo.Generator }}
+
+	{{ "<!-- canonical + hreflang -->" | safeHTML }}
+	<link rel="canonical" href="{{ .Permalink }}">
+	<link rel="llms-txt" href="{{ "llms.txt" | absURL }}">
+	{{- with .Page }}
+		{{- $languageVariants := .Rotate "language" }}
+		{{- if gt (len $languageVariants) 0 }}
+			{{- range $languageVariants }}
+	<link rel="alternate" hreflang="{{ .Language.Locale }}" href="{{ .Permalink }}">
+			{{- end }}
+			{{- range $languageVariants }}
+				{{- if .Language.IsDefault }}
+	<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+				{{- end }}
+			{{- end }}
+		{{- else }}
+	<link rel="alternate" hreflang="x-default" href="{{ $.Permalink }}">
+		{{- end }}
+	{{- else }}
+	<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+	{{- end }}
+
+  {{ partial "opengraph.html" . }}
+
+
+		{{ "<!-- plugins -->" | safeHTML }}
+		{{ $homeCssExcludes := slice "plugins/magnific-popup/magnific-popup.css" "plugins/slick/slick.css" }}
+		{{ range site.Params.plugins.css }}
+		{{ if not (and $.IsHome (in $homeCssExcludes .link)) }}
+		{{ if hasPrefix .link "https://fonts.googleapis.com" }}
+		<link rel="preload" as="style" href="{{ .link }}" onload="this.onload=null;this.rel='stylesheet'">
+		<noscript><link rel="stylesheet" href="{{ .link }}"></noscript>
+		{{ else }}
+		<link rel="stylesheet" href="{{ .link | absURL }}">
+		{{ end }}
+		{{ end }}
+		{{ end }}
+
+	{{"<!-- Main Stylesheet -->"|safeHTML}}
+	{{ $styles := resources.Get "css/style.css" | minify | fingerprint "sha384" }}
+	<link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
+
+	{{"<!-- Custom stylesheet - for your changes -->" |safeHTML}}
+	{{ $custom := resources.Get "css/custom.css" | minify | fingerprint "sha384" }}
+  <link rel="stylesheet" href="{{ $custom.RelPermalink }}" integrity="{{ $custom.Data.Integrity }}" media="screen">
+
+	{{ "<!--Favicon-->" | safeHTML }}
+	<link rel="shortcut icon" href="{{ `images/favicon.png` | absURL }}" type="image/x-icon">
+	<link rel="icon" href="{{ `images/favicon.png` | absURL }}" type="image/x-icon">
+	<link rel="apple-touch-icon" href="{{ `images/favicon.png` | absURL }}">
+
+	{{ with site.Params.google_analytics_id }}
+	{{ "<!-- Global Site Tag (gtag.js) - Google Analytics -->" | safeHTML }}
+	<script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', '{{ . }}');
+	</script>
+	{{ end }}
+
+	{{ partial "schema.html" . }}
+	{{ partial "language-routing.html" . }}
+</head>

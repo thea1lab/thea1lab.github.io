@@ -1,0 +1,47 @@
+############################# feature ###################################
+feature:
+  enable: true
+  image: images/about/about.jpg
+  image_webp: images/about/about.png
+  title: Nosso ritmo de trabalho
+  content: "Depois que o pacote é fechado, todo projeto passa por essas quatro etapas. Cada uma te deixa com algo que você consegue usar de verdade."
+  feature_item:
+    # feature item loop
+    - title: Kickoff
+      icon: ti-headphone
+      short: "Problema mapeado, acordo de trabalho definido"
+      bullets:
+        - "Reunião inicial de 30 minutos pra entender o problema e o fluxo ao redor dele."
+        - "Mandamos o contrato depois da reunião inicial. Assim que for assinado, a gente começa o mapeamento."
+        - "Mapeamos o processo atual com você em um documento compartilhado. Você é dono do link."
+        - "Combinamos o canal de comunicação e a cadência dos updates. Dúvidas são respondidas enquanto o trabalho está acontecendo, não juntadas pra uma reunião de fechamento."
+      you_give: "Alguém que conhece o fluxo, 1–2 horas ao longo da semana"
+
+    - title: Pesquisar
+      icon: ti-search
+      short: "Opções comparadas, direção escolhida"
+      bullets:
+        - "Toda abordagem que a gente testa vai pro Doc compartilhado com detalhe técnico suficiente pra você avaliar de fato."
+        - "Bibliotecas, APIs e escolhas de stack comparadas lado a lado, com os tradeoffs."
+        - "Você tem acesso de comentário o tempo todo, então pode discordar enquanto ainda estamos decidindo."
+        - "A etapa fecha com uma direção recomendada. Você aprova antes da gente escrever código."
+      you_give: "~30 min pra revisar os tradeoffs e escolher a direção"
+
+    - title: Experimentar
+      icon: ti-settings
+      short: "Código em andamento, updates semanais"
+      bullets:
+        - "Trabalhamos em um repositório GitHub (o nosso por padrão, ou o seu se você preferir dar acesso)."
+        - "Dados reais quando dá pra compartilhar. Dados mockados que respeitam os mesmos campos e estrutura quando não dá."
+        - "Updates de progresso na cadência que você escolher (email semanal é o padrão)."
+      you_give: "Acesso aos dados (ou descrição da estrutura) e respostas rápidas quando surgem bloqueios"
+
+    - title: Entregar
+      icon: ti-package
+      short: "Semana de handoff"
+      bullets:
+        - "Código entregue pelo repositório GitHub, com um README que seu time consegue seguir."
+        - "Uma documentação técnica no Google Docs cobrindo o que testamos e o que funcionou."
+        - "Estimativa de custo em produção: hospedagem, APIs, operação, com números reais."
+        - "Continuamos disponíveis pra dúvidas depois da entrega. Se quiser seguir adiante, a gente combina a próxima fase separadamente."
+      you_give: "Uma reunião de handoff de 60 minutos onde passamos tudo junto. Sem necessidade de background técnico."

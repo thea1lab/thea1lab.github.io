@@ -1,0 +1,201 @@
+################################# Default configuration ###################
+baseURL = "https://www.a1lab.com.br"
+title = "A1 Lab"
+theme = "meghna"
+themesDir = "./themes"
+# post excerpt
+summaryLength = "15"
+# disable language
+disableLanguages = []
+defaultContentLanguage = "en"
+disableKinds = ["taxonomy", "term"]
+
+[markup.goldmark.extensions.typographer]
+apostrophe = "'"
+leftAngleQuote = "\""
+leftDoubleQuote = "\""
+leftSingleQuote = "'"
+rightAngleQuote = "\""
+rightDoubleQuote = "\""
+rightSingleQuote = "'"
+disable = false
+[markup.goldmark.renderer]
+unsafe = true
+disableAliases = true
+
+[pagination]
+pagerSize = 7
+
+############################# Plugins ##########################
+# css plugins
+[[params.plugins.css]]
+link = "plugins/bootstrap/bootstrap.min.css"
+[[params.plugins.css]]
+link = "plugins/themify-icons/themify-icons.css"
+[[params.plugins.css]]
+link = "plugins/magnific-popup/magnific-popup.css"
+[[params.plugins.css]]
+link = "plugins/slick/slick.css"
+[[params.plugins.css]]
+link = "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+
+# js plugins
+[[params.plugins.js]]
+link = "plugins/jquery/jquery.min.js"
+[[params.plugins.js]]
+link = "plugins/bootstrap/bootstrap.min.js"
+[[params.plugins.js]]
+link = "plugins/slick/slick.min.js"
+[[params.plugins.js]]
+link = "plugins/shuffle/shuffle.min.js"
+[[params.plugins.js]]
+link = "plugins/magnific-popup/jquery.magnific-popup.min.js"
+[[params.plugins.js]]
+link = "plugins/lazy-load/lozad.min.js"
+
+################### English Navigation ########################
+[[Languages.en.menu.main]]
+name = "how it works"
+pre = "#"
+url = "process"
+weight = 1
+
+[[Languages.en.menu.main]]
+name = "expertise"
+pre = "#"
+url = "expertise"
+weight = 2
+
+[[Languages.en.menu.main]]
+name = "FAQ"
+pre = "#"
+url = "faq"
+weight = 3
+
+################### Portuguese Navigation ########################
+[[Languages.pt.menu.main]]
+name = "como funciona"
+pre = "#"
+url = "process"
+weight = 1
+
+[[Languages.pt.menu.main]]
+name = "competências"
+pre = "#"
+url = "expertise"
+weight = 2
+
+[[Languages.pt.menu.main]]
+name = "FAQ"
+pre = "#"
+url = "faq"
+weight = 3
+
+############################# Default Parameters ##########################
+[params]
+logo = "images/full-background-logo.webp"
+logo2 = "images/full-logo.png"
+# Meta data
+description = "A1 Lab - Laboratório de experimentação tecnológica. Pesquisamos, experimentamos e entregamos protótipos funcionais e planos técnicos para resolver seus desafios de negócio."
+author = "A1 Lab"
+images = ["images/full-background-logo.webp"]
+# Google Analytics
+google_analytics_id = "G-384Q987MKZ"
+# post share
+post_share = false
+
+# preloader
+[params.preloader]
+enable = true
+preloader = "images/full-background-logo.webp"
+
+# turnstile captcha
+[params.turnstile]
+site_key = "0x4AAAAAACqpSTTxUQkMNCtC"
+
+# cookies
+[params.cookies]
+enable = false
+expire_days = 2
+
+# organization structured data
+[params.organization]
+foundingDate = "2024"
+numberOfEmployees_min = 2
+numberOfEmployees_max = 10
+areaServed = ["Worldwide"]
+knowsAbout = [
+  "Software Engineering",
+  "API Integration",
+  "Process Automation",
+  "Document Processing",
+  "Artificial Intelligence",
+  "Machine Learning",
+  "LLM Pipelines",
+  "RAG",
+  "Chatbots"
+]
+contactEmail = "contato@a1lab.com.br"
+contactType = "customer service"
+availableLanguage = ["Portuguese", "English"]
+
+# google map
+# [params.map]
+# enable = false
+# gmap_api = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"
+# map_latitude = "51.5223477"
+# map_longitude = "-0.1622023"
+# map_marker = "images/marker.png"
+
+############################# social icons ##########################
+[[params.social]]
+title = "GitHub"
+icon = "ti-github" # themify icon pack : https://themify.me/themify-icons
+link = "https://github.com/thea1lab"
+
+# [[params.social]]
+# icon = "ti-twitter-alt" # themify icon pack : https://themify.me/themify-icons
+# link = "#"
+
+[[params.social]]
+title = "YouTube"
+icon = "ti-youtube" # themify icon pack : https://themify.me/themify-icons
+link = "https://www.youtube.com/@lab-a1"
+
+[[params.social]]
+title = "LinkedIn"
+icon = "ti-linkedin" # themify icon pack : https://themify.me/themify-icons
+link = "https://www.linkedin.com/company/thea1lab"
+
+#[[params.social]]
+#icon = "ti-facebook" # themify icon pack : https://themify.me/themify-icons
+#link = "https://www.facebook.com/thea1lab"
+
+[[params.social]]
+title = "Instagram"
+icon = "ti-instagram" # themify icon pack : https://themify.me/themify-icons
+link = "https://www.instagram.com/thea1lab"
+
+################################ Portuguese Language ########################
+[Languages.pt]
+label = "Português"
+locale = "pt-BR"
+contentDir = "content/portuguese"
+weight = 2
+copyright = ""
+
+[Languages.pt.params]
+home = "Home"
+description = "A1 Lab - Laboratório de experimentação tecnológica. Pesquisamos, experimentamos e entregamos protótipos funcionais e planos técnicos para resolver seus desafios de negócio."
+
+################################ English Language ########################
+[Languages.en]
+label = "English"
+locale = "en-US"
+contentDir = "content/english"
+weight = 1
+copyright = ""
+
+[Languages.en.params]
+home = "Home"
+description = "A1 Lab - Technology experimentation lab. We research, experiment, and deliver working prototypes and technical plans to solve your business challenges."

@@ -1,0 +1,87 @@
+{{"<!-- end Contact Area -->" | safeHTML}}
+<footer id="footer" class="section">
+	<div class="container">
+		<div class="row wow fadeInUp" data-wow-duration="500ms">
+			<div class="col-xl-12">
+				<div class="footer-shell">
+					<div class="footer-brand">
+						<a href="{{ site.Home.Permalink }}">
+							<img src="{{ site.Params.logo | absURL }}" alt="{{ site.Title }}" width="144" height="54" />
+						</a>
+					</div>
+
+					<nav class="footer-nav" aria-label="{{ i18n `footer_navigation` | default `Footer navigation` }}">
+						<div class="footer-nav-columns">
+							<ul>
+								{{ range site.Menus.main }}
+								<li>
+									<a href="{{if .Pre}}{{ "/" | absLangURL }}{{.Pre}}{{ .URL }}{{else}}{{.URL | absLangURL}}{{end}}">{{ .Name }}</a>
+								</li>
+								{{ end }}
+								<li>
+									<a href="{{ `blog` | absLangURL }}">{{ i18n "blog" }}</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+
+					{{"<!-- Footer Social Links -->" | safeHTML}}
+					<div class="social-icon footer-social">
+						<ul class="list-inline">
+							{{ range site.Params.social }}
+								<li class="list-inline-item"><a href="{{ .link | safeURL }}" target="_blank" rel="noopener noreferrer"
+										aria-label="{{ .title | default .icon }}"><i class="{{ .icon }}" aria-hidden="true"></i></a></li>
+								{{ end }}
+							</ul>
+						</div>
+				</div>
+				<div class="footer-bottom">
+					<p class="footer-slogan">{{ i18n "slogan" }}</p>
+					<p class="footer-copyright">&copy; {{ now.Format "2006" }} A1 Lab.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+{{"<!-- /footer -->" | safeHTML}}
+
+{{ "<!-- Google Map API -->" | safeHTML }}
+{{ if site.Params.map.enable }}
+<script src="{{ site.Params.map.gmap_api | safeURL }}"></script>
+	{{ end }}
+
+	{{ "<!-- JS Plugins -->" | safeHTML }}
+	{{ $homeJsExcludes := slice "plugins/slick/slick.min.js" "plugins/shuffle/shuffle.min.js" "plugins/magnific-popup/jquery.magnific-popup.min.js" "plugins/lazy-load/lozad.min.js" }}
+	{{ range site.Params.plugins.js}}
+	{{ if not (and $.IsHome (in $homeJsExcludes .link)) }}
+	<script src="{{ .link | absURL }}" defer></script>
+	{{ end }}
+	{{ end }}
+
+{{ "<!-- Main Script -->" | safeHTML }}
+{{ $script := resources.Get "js/script.js" | minify | fingerprint "sha384"}}
+<script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}" defer></script>
+
+
+<!-- cookie -->
+{{ if site.Params.cookies.enable }}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+<div id="js-cookie-box" class="cookie-box cookie-box-hide" role="dialog" aria-label="{{ i18n "cookie_message" }}">
+	{{ i18n "cookie_message" }} <button id="js-cookie-button" type="button" class="btn btn-transparent">{{ i18n "cookie_accept" }}</button>
+</div>
+<script>
+	(function ($) {
+		const cookieBox = document.getElementById('js-cookie-box');
+		const cookieButton = document.getElementById('js-cookie-button');
+		if (!Cookies.get('cookie-box')) {
+			cookieBox.classList.remove('cookie-box-hide');
+			cookieButton.onclick = function () {
+				Cookies.set('cookie-box', true, {
+					expires: {{ site.Params.cookies.expire_days }}
+				});
+				cookieBox.classList.add('cookie-box-hide');
+			};
+		}
+	})(jQuery);
+</script>
+{{ end }}

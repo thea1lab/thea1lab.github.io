@@ -1,0 +1,64 @@
+{{ $data := index hugo.Data site.Language.Name }}
+
+{{ if $data.feature.feature.enable }}
+{{ with $data.feature.feature }}
+{{"<!-- feature -->" | safeHTML}}
+<section class="section section-bg about-2 padding-0" id="feature">
+	<div class="container-fluid">
+		<div class="feature-explorer">
+			{{ range $index, $item := .feature_item }}
+			<input type="radio" name="lab-step" id="lab-step-{{ add $index 1 }}" class="explorer-radio" {{ if eq $index 0 }}checked{{ end }}>
+			{{ end }}
+
+			<div class="explorer-grid">
+				<aside class="explorer-nav">
+					<div class="explorer-intro title text-center wow fadeIn" data-wow-duration="500ms">
+						<h2>{{ with .title }} {{ index (split . " ") 0 | safeHTML }} {{ end }}<span class="color">
+							{{ with .title }} {{ after (len (index (split . " ") 0)) . | safeHTML }} {{ end }}</span></h2>
+						<div class="border-meghna"></div>
+						<p>{{ .content | markdownify }}</p>
+					</div>
+					<ul class="step-list" role="tablist">
+						{{ range $index, $item := .feature_item }}
+						<li>
+							<label for="lab-step-{{ add $index 1 }}" class="step-item" data-stop="{{ add $index 1 }}" role="tab" tabindex="0">
+								<span class="step-num">0{{ add $index 1 }}</span>
+								<span class="step-icon"><i class="{{ .icon }}"></i></span>
+								<span class="step-text">
+									<span class="step-title">{{ .title }}</span>
+									{{ with .short }}<span class="step-hint">{{ . }}</span>{{ end }}
+								</span>
+								<span class="step-chevron" aria-hidden="true">→</span>
+							</label>
+						</li>
+						{{ end }}
+					</ul>
+				</aside>
+
+				<div class="explorer-detail">
+					{{ range $index, $item := .feature_item }}
+					<article class="detail-panel" data-stop="{{ add $index 1 }}" role="tabpanel">
+						<div class="detail-eyebrow">{{ i18n "feature_step_label" | default "Step" }} 0{{ add $index 1 }} — {{ .title }}</div>
+						{{ with .bullets }}
+						<ul class="detail-bullets">
+							{{ range . }}
+							<li>{{ . | markdownify }}</li>
+							{{ end }}
+						</ul>
+						{{ end }}
+						{{ with .you_give }}
+						<dl class="detail-exchange">
+							<dt>{{ i18n "feature_from_you" | default "From you" }}</dt>
+							<dd>{{ . | markdownify }}</dd>
+						</dl>
+						{{ end }}
+					</article>
+					{{ end }}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{{"<!-- /feature -->" | safeHTML}}
+{{ end }}
+{{ end }}

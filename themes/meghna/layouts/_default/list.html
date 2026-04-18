@@ -1,0 +1,80 @@
+{{ define "main" }}
+
+{{ partial "navigation.html" . }}
+
+{{"<!-- Start Blog Section -->" | safeHTML}}
+<section id="blog" class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        {{"<!-- section title -->" | safeHTML}}
+        <div class="title text-center wow fadeInDown">
+          <h2>{{ with i18n "blogTitle" }} {{ index (split . " ") 0 | safeHTML }} {{ end }}<span class="color">
+              {{ with i18n "blogTitle" }} {{ index (split . " ") 1 | safeHTML }} {{ end }}</span></h2>
+          <div class="border-meghna"></div>
+        </div>
+      </div>
+      {{"<!-- /section title -->" | safeHTML}}
+
+      {{"<!-- Tag filter buttons -->" | safeHTML}}
+      <div class="col-12">
+        <div class="blog-filters" role="group" aria-label="{{ i18n "filter_posts" | default "Filter posts" }}">
+          <button class="blog-filter-btn active" data-filter="all">{{ i18n "filter_all" | default "All" }}</button>
+          {{ $allTags := slice }}
+          {{ range .Data.Pages }}
+            {{ range .Params.tags }}
+              {{ $allTags = $allTags | append . }}
+            {{ end }}
+          {{ end }}
+          {{ $uniqueTags := $allTags | uniq }}
+          {{ range $uniqueTags }}
+            <button class="blog-filter-btn" data-filter="{{ . }}">{{ humanize . }}</button>
+          {{ end }}
+        </div>
+      </div>
+
+      {{ $paginator := .Paginate .Data.Pages }}
+      {{ if $paginator.HasPrev }}<link rel="prev" href="{{ $paginator.Prev.URL | absURL }}">{{ end }}
+      {{ if $paginator.HasNext }}<link rel="next" href="{{ $paginator.Next.URL | absURL }}">{{ end }}
+      <div id="blog-posts" class="blog-posts-grid">
+      {{ range $paginator.Pages }}
+      {{ .Render "article" }}
+      {{ end }}
+      </div>
+      <div class="col-12">
+        {{ template "_internal/pagination.html" . }}
+      </div>
+    </div>
+  </div>
+</section>
+{{"<!-- /blog -->" | safeHTML}}
+
+<script>
+(function () {
+  var filterBtns = document.querySelectorAll('.blog-filter-btn');
+  var posts = document.querySelectorAll('#blog-posts article');
+
+  if (!filterBtns.length || !posts.length) return;
+
+  filterBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      filterBtns.forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+
+      var filter = btn.getAttribute('data-filter');
+
+      posts.forEach(function (article) {
+        var tags = (article.getAttribute('data-tags') || '').trim();
+        var show = filter === 'all' || (' ' + tags + ' ').indexOf(' ' + filter + ' ') !== -1;
+        if (show) {
+          article.classList.remove('blog-filter-hidden');
+        } else {
+          article.classList.add('blog-filter-hidden');
+        }
+      });
+    });
+  });
+})();
+</script>
+
+{{ end }}

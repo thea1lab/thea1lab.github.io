@@ -1,0 +1,51 @@
+################################# FAQ #################################
+faq:
+  # --- O que é isso? ---
+  - question: "O que a A1 Lab faz?"
+    answer: "Pesquisa tecnológica. Você traz um problema ou uma ideia de negócio, a gente investiga, testa na prática e entrega um protótipo funcionando junto com um plano técnico pro próximo passo."
+
+  - question: "Com quais tipos de tecnologia vocês trabalham?"
+    answer: "Somos um laboratório de tecnologia. IA é o que usamos com mais frequência, mas também construímos software, fazemos integrações e automatizamos processos. A gente recomenda o que de fato resolve o problema."
+
+  # --- É pra mim? ---
+  - question: "Para quem a A1 Lab é indicada?"
+    answer: "Pra empresas que têm uma dúvida sobre tecnologia e não têm equipe ou tempo pra investigar por conta própria."
+
+  - question: "Vocês trabalham com startups ou só com empresas grandes?"
+    answer: "Com os dois. Startups querem validar rápido, empresas maiores querem testar sem parar a operação. O que importa é ter um problema real."
+
+  - question: "Preciso ter uma equipe técnica para contratar a A1 Lab?"
+    answer: "Não. A gente é o seu laboratório. Fazemos a pesquisa e entregamos resultados que qualquer gestor entende."
+
+  # --- Como funciona? ---
+  - question: "Como funciona um projeto na A1 Lab?"
+    answer: "Todo projeto inclui três fases: diagnóstico, prototipagem e plano técnico. O resultado é um protótipo funcional e uma recomendação clara sobre o próximo passo."
+
+  - question: "Quanto tempo leva?"
+    answer: "O diagnóstico leva de 1 a 2 semanas. O protótipo leva de 2 a 4 semanas. O plano técnico leva 1 semana. A maioria dos engajamentos de três fases leva de 4 a 7 semanas no total, dependendo da complexidade."
+
+  - question: "O que eu recebo no final?"
+    answer: "Um protótipo funcionando, um plano técnico com tecnologias e custos, e uma apresentação pra você tomar a decisão."
+
+  - question: "Quanto do meu tempo o projeto vai exigir?"
+    answer: "Pouco. Algumas reuniões pra entender o problema, acompanhar o progresso e alinhar a direção. Mantemos você por dentro, mas quem faz o trabalho pesado somos nós."
+
+  # --- Quanto custa e qual o risco? ---
+  - question: "Quanto custa?"
+    answer: "Depende do escopo. A gente conversa, entende o desafio e manda uma proposta com valor, prazo e escopo fechados."
+
+  - question: "Como funciona o pagamento?"
+    answer: "O pagamento é dividido em duas partes: 50% na entrada para iniciar o projeto e 50% antes da entrega final. Um valor fechado para todo o projeto de três fases."
+
+  - question: "Preciso me comprometer com um projeto grande?"
+    answer: "O trabalho é um projeto de escopo fechado com três fases: diagnóstico, protótipo e plano técnico. Definimos valor, prazo e escopo desde o início. Depois disso, você decide apenas se faz sentido abrir um projeto separado de implementação."
+
+  - question: "E se o experimento mostrar que a ideia não funciona?"
+    answer: "Aí você descobriu isso em semanas, não em meses. Esse é o ponto: testar antes de gastar."
+
+  - question: "Vocês constroem o produto final ou só o protótipo?"
+    answer: "O trabalho principal é pesquisa, protótipo e plano técnico. Se o resultado fizer sentido, podemos estruturar um projeto separado para construir o produto final."
+
+  # --- Posso confiar? ---
+  - question: "Meus dados ficam seguros?"
+    answer: "Sim. Assinamos NDA quando necessário e tratamos tudo com sigilo."

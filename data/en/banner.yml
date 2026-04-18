@@ -1,0 +1,17 @@
+############################### Banner ################################
+banner:
+  enable: true
+  bg_image_webp: "images/backgrounds/bg.webp"
+  bg_image: "images/backgrounds/bg.jpg"
+  icon: "" # themify icon pack : https://themify.me/themify-icons
+  title: "We solve business problems <span class=\"color\">fast</span>. AI, software, or whatever the problem actually needs."
+  subtitle: "Diagnostic in 1-2 weeks. Working prototype in 2-4 weeks. Technical plan in 1 week."
+  content: "You get a working prototype, a technical plan, real-world costs, and clarity to decide your next step."
+  button:
+    enable: true
+    label: "Talk to us"
+    link: "#contact"
+  button_secondary:
+    enable: true
+    label: "Common questions"
+    link: "#faq"

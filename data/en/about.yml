@@ -1,0 +1,53 @@
+############################# About ###################################
+about:
+  enable: true
+  title: What We <span class="color">Prototype</span>
+  description: "Problems we investigate and prototype, from support automation to data pipelines."
+  about_item:
+    - icon: ti-reload
+      title: Process <span class="color">Automation</span>
+      content: |
+        - AI classifies and routes support emails → triage drops from hours to minutes
+        - Orders arriving by email or PDF get read and processed, nobody types anything
+        - Tickets prioritized by urgency and customer sentiment
+        - Recurring questions get automatic replies
+
+    - icon: ti-files
+      title: Document <span class="color">Analysis</span>
+      content: |
+        - Invoices read and data pushed straight into your ERP
+        - Contracts analyzed in seconds: obligations, risk clauses, amounts
+        - Resumes screened and ranked by criteria you set
+        - Long reports turned into summaries with what matters
+
+    - icon: ti-comment-alt
+      title: Internal <span class="color">Assistants</span>
+      content: |
+        - Team asks in plain language, gets answers from internal knowledge
+        - Assistant that answers based on your company's documents and data
+        - HR, finance, or legal questions answered on the spot
+        - Tickets created and lookups done by text, fewer clicks
+
+    - icon: ti-comments
+      title: Customer <span class="color">Support</span>
+      content: |
+        - WhatsApp bot that handles messages at 2 AM. Prototype before full rollout.
+        - Appointments booked through chat, no need to call
+        - Leads qualified before reaching sales
+        - If the bot can't resolve it, it hands off to a human and the customer doesn't notice
+
+    - icon: ti-link
+      title: Software & <span class="color">Integrations</span>
+      content: |
+        - Dashboard that pulls data from your ERP, CRM, and spreadsheets into one view
+        - Internal tool prototype to replace a process that lives in email chains
+        - API integration connecting systems that don't talk to each other
+        - Workflow that routes work to the right person without manual handoffs
+
+    - icon: ti-stats-up
+      title: Prediction & <span class="color">Analytics</span>
+      content: |
+        - Demand forecast prototype per product. Validate accuracy before full deployment.
+        - Customers likely to leave identified before they cancel
+        - Transaction anomalies in real time, fraud caught early
+        - Revenue estimated from pipeline and history

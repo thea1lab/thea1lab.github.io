@@ -1,0 +1,48 @@
+############################### expertise ############################
+expertise:
+  enable: true
+  cta_link: "/en/projects/"
+  title: Our Expertise
+  description: "Real problems our team has investigated and prototyped, for startups to international companies."
+  credibility:
+    - icon: ti-medall
+      text: "Masters in Computer Science"
+    - icon: ti-timer
+      text: "10+ years in software engineering"
+    - icon: ti-world
+      text: "International experience at US-based companies"
+    - icon: ti-server
+      text: "Web apps, mobile, AI, and integrations"
+  qualifications:
+    - icon: ti-link
+      title: "Integrations & APIs"
+      link: "/integrations/"
+      capabilities:
+        - "Integration between internal systems (ERP, CRM, spreadsheets)"
+        - "REST APIs, webhooks, and message queues"
+        - "Cross-platform automation (Slack, WhatsApp, email)"
+        - "Data synchronization between disconnected tools"
+    - icon: ti-files
+      title: "Document Processing"
+      link: "/document-processing/"
+      capabilities:
+        - "Automatic reading of PDFs, emails, and images"
+        - "Data extraction from contracts and invoices"
+        - "Content-based classification and triage"
+        - "Structured output from unstructured documents"
+    - icon: ti-thought
+      title: "AI & Agents"
+      link: "/ai-agents/"
+      capabilities:
+        - "LLM pipelines with OpenAI, Claude, Gemini, and open-source options like Llama, Mistral, Gemma, and Qwen"
+        - "Classical machine learning models: classification, regression, clustering, forecasting, and anomaly detection"
+        - "RAG assistants that answer based on internal documents and company data, with source tracing"
+        - "Autonomous agents for research, classification, and decision support"
+    - icon: ti-loop
+      title: "Automation & Orchestration"
+      link: "/automation/"
+      capabilities:
+        - "Workflows connecting steps without manual intervention"
+        - "Chatbots for WhatsApp, Instagram, and Telegram"
+        - "ETL pipelines that extract, transform, and load data between systems"
+        - "Web scraping and automated collection of public data"

@@ -1,0 +1,148 @@
+{{ $data := index hugo.Data site.Language.Name }}
+
+{{ if $data.contact.contact.enable }}
+{{ with $data.contact.contact }}
+{{"<!-- Start Contact Us -->" | safeHTML}}
+<section id="contact" class="contact-us section-bg">
+	<div class="container pb-5">
+		<div class="row justify-content-between align-items-start">
+			{{"<!-- Contact Details -->" | safeHTML}}
+			<div class="contact-info col-lg-5 wow fadeInUp" data-wow-duration="500ms">
+				<p class="contact-eyebrow">{{ i18n "contact_eyebrow" }}</p>
+				<h2>{{ .subtitle | markdownify }}</h2>
+				<p class="contact-lead">{{ .content | markdownify }}</p>
+				<div class="contact-proof-list">
+					<p class="contact-proof-list__title">{{ i18n "contact_proof_title" }}</p>
+					<ul>
+						<li>{{ i18n "contact_proof_1" }}</li>
+						<li>{{ i18n "contact_proof_2" }}</li>
+						<li>{{ i18n "contact_proof_3" }}</li>
+					</ul>
+				</div>
+				<div class="contact-response-note">
+					<span class="contact-response-note__label">{{ i18n "contact_response_label" }}</span>
+					<strong>{{ i18n "contact_response_value" }}</strong>
+				</div>
+
+				<div class="contact-details" aria-label="{{ i18n "contact_channels_label" }}">
+					{{ range .contact_list }}
+					<div class="con-info clearfix">
+						<i class="{{ .icon }}"></i>
+						<div class="con-info__content">
+							{{ with .link }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ end }}
+							<span>{{ .info }}</span>
+							{{ with .link }}</a>{{ end }}
+						</div>
+					</div>
+					{{ end }}
+				</div>
+			</div>
+
+			{{"<!-- Contact Form -->" | safeHTML}}
+			{{ if .contact_form.enable }}
+			{{ $form := .contact_form }}
+			{{ with .contact_form }}
+			<div class="col-lg-6 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
+					<div class="contact-form-shell">
+						<div class="contact-form-shell__header">
+							<p class="contact-form-shell__eyebrow">{{ i18n "contact_form_eyebrow" }}</p>
+							<h3>{{ i18n "contact_form_title" }}</h3>
+						</div>
+					<form id="contact-form" class="form-meghna" method="post" action="{{ .form_action }}" role="form" novalidate
+							data-error-required="{{ i18n "form_error_required" | default "This field is required." }}"
+							data-error-email="{{ i18n "form_error_email" | default "Please enter a valid email address." }}"
+							data-success-msg="{{ i18n "form_submit_success" }}"
+							data-error-msg="{{ i18n "form_submit_error" }}">
+						<div class="form-group">
+							<label for="name">{{ .name }}</label>
+							<input type="text" class="form-control" name="name" id="name"
+								autocomplete="name" maxlength="120" required
+								aria-required="true" aria-describedby="name-error">
+							<span id="name-error" class="field-error" role="alert" hidden></span>
+						</div>
+						<div class="form-group">
+							<label for="email">{{ .email }}</label>
+							<input type="email" placeholder="{{ i18n "form_email_hint" | default "name@example.com" }}" class="form-control" name="email" id="email"
+								autocomplete="email" inputmode="email" maxlength="254" required
+								aria-required="true" aria-describedby="email-error">
+							<span id="email-error" class="field-error" role="alert" hidden></span>
+						</div>
+						{{ with .company }}
+						<div class="form-group">
+							<label for="company">{{ . }} <span class="label-optional">({{ i18n "form_optional" | default "optional" }})</span></label>
+							<input type="text" class="form-control" name="company" id="company"
+								autocomplete="organization" maxlength="120">
+						</div>
+						{{ end }}
+						<div class="form-group">
+							<label for="subject">{{ .subject }}</label>
+							{{ if .interests }}
+							<select class="form-control" name="subject" id="subject" required
+								aria-required="true" aria-describedby="subject-error">
+								<option value="" disabled selected>{{ i18n "form_select_placeholder" | default "Select an option" }}</option>
+							{{ range .interests }}
+							<option value="{{ . }}">{{ . }}</option>
+							{{ end }}
+						</select>
+							{{ else }}
+							<input type="text" class="form-control" name="subject" id="subject"
+								maxlength="120" aria-describedby="subject-error">
+							{{ end }}
+							<span id="subject-error" class="field-error" role="alert" hidden></span>
+						</div>
+						{{ with $form.stage_options }}
+						<div class="form-group">
+							<label for="stage">{{ $form.stage }} <span class="label-optional">({{ i18n "form_optional" | default "optional" }})</span></label>
+							<select class="form-control" name="stage" id="stage">
+								<option value="" disabled selected>{{ i18n "form_select_placeholder" | default "Select an option" }}</option>
+							{{ range . }}
+								<option value="{{ . }}">{{ . }}</option>
+							{{ end }}
+							</select>
+						</div>
+						{{ end }}
+						<div class="form-group">
+							<label for="message">{{ .message }}</label>
+							<textarea rows="6" class="form-control" name="message" id="message"
+								maxlength="2000" required
+								aria-required="true" aria-describedby="message-error"></textarea>
+							<span id="message-error" class="field-error" role="alert" hidden></span>
+						</div>
+					{{ with site.Params.turnstile.site_key }}
+					<div id="turnstile-container"></div>
+					<script>
+					var _turnstileWidgetId = null;
+					function onTurnstileLoad() {
+						if (_turnstileWidgetId !== null) return;
+						var el = document.getElementById('turnstile-container');
+						if (!el) return;
+						_turnstileWidgetId = turnstile.render(el, { sitekey: '{{ . }}' });
+					}
+					</script>
+					<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onTurnstileLoad" async defer></script>
+					{{ end }}
+					<div id="cf-submit">
+						<button type="submit" id="contact-submit" class="btn btn-transparent btn-block"
+							value="{{ .submit }}">{{ .submit }}</button>
+					</div>
+					<div id="form-status" class="form-status" role="alert" aria-live="polite" hidden></div>
+				</form>
+					</div>
+			</div>
+			{{ end }}
+			{{ else }}
+			<div class="contact-details">
+				{{ range .contact_list }}
+				<div class="con-info clearfix">
+					<i class="{{ .icon }}"></i>
+					<span>{{ .info }}</span>
+				</div>
+				{{ end }}
+			</div>
+			{{ end }}
+		</div>
+	</div>
+</section>
+{{"<!-- /contact -->" | safeHTML}}
+{{ end }}
+{{ end }}

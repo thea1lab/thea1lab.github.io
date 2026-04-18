@@ -1,0 +1,176 @@
+<!-- visual concepts for Lab Steps animation -->
+<style>
+  .concept-row {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .concept-box {
+    background: var(--bg-secondary);
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: 280px;
+  }
+  
+  .concept-box h3 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    color: var(--accent);
+  }
+  
+  .concept-box p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  
+  .visual-placeholder {
+    background: var(--bg-tertiary);
+    border-radius: 6px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .process-meta {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.7rem;
+  }
+  
+  .phase-badge {
+    background: var(--accent);
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+  
+  .duration-badge {
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+  }
+  
+  .sketch-area {
+    background: var(--bg-secondary);
+    border: 2px dashed var(--border);
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+  
+  .lab-metaphor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  
+  .lab-item {
+    font-size: 2rem;
+    padding: 0.5rem;
+  }
+  
+  .arrow-flow {
+    font-size: 1.5rem;
+    color: var(--accent);
+  }
+</style>
+
+<h2>Lab Steps: Single Animation Concepts</h2>
+<p class="subtitle">One cohesive animation that tells the story of all three phases</p>
+
+<div class="concept-row">
+  <div class="concept-box" onclick="toggleSelect(this)" data-choice="pipeline">
+    <h3>The Pipeline</h3>
+    <div class="visual-placeholder">📥 ➔ ⚙️ ➔ 📤</div>
+    <p>A continuous flow showing inputs entering, being processed through three stages, and emerging as a deliverable.</p>
+    <div class="process-meta">
+      <span class="phase-badge">3 phases</span>
+      <span class="duration-badge">4-7 weeks total</span>
+    </div>
+  </div>
+  
+  <div class="concept-box" onclick="toggleSelect(this)" data-choice="transformation">
+    <h3>The Transformation</h3>
+    <div class="visual-placeholder">❓ ➔ 🔧 ➔ ✅</div>
+    <p>A single element that morphs from "problem/question" state through "building" to "solution/completed" state.</p>
+    <div class="process-meta">
+      <span class="phase-badge">3 states</span>
+      <span class="duration-badge">morphing sequence</span>
+    </div>
+  </div>
+  
+  <div class="concept-box" onclick="toggleSelect(this)" data-choice="lab-experiment">
+    <h3>The Lab Experiment</h3>
+    <div class="visual-placeholder">🧪 ➔ 🔬 ➔ 📊</div>
+    <p>Beakers, test tubes, and lab equipment in a playful metaphor for the diagnostic → prototype → plan flow.</p>
+    <div class="process-meta">
+      <span class="phase-badge">lab theme</span>
+      <span class="duration-badge">on-brand for A1 Lab</span>
+    </div>
+  </div>
+</div>
+
+<div class="concept-row">
+  <div class="concept-box" onclick="toggleSelect(this)" data-choice="code-assembly">
+    <h3>Code Assembly</h3>
+    <div class="visual-placeholder">{ } ➔ &lt;/&gt; ➔ 📦</div>
+    <p>Abstract code blocks coming together, forming a working system, then packaging into a deliverable plan.</p>
+    <div class="process-meta">
+      <span class="phase-badge">tech focus</span>
+      <span class="duration-badge">developer aesthetic</span>
+    </div>
+  </div>
+  
+  <div class="concept-box" onclick="toggleSelect(this)" data-choice="progress-rings">
+    <h3>Progress Rings</h3>
+    <div class="visual-placeholder">◐ ➔ ◑ ➔ ◉</div>
+    <p>Three concentric or sequential rings/circles that fill progressively, representing the three phases completing.</p>
+    <div class="process-meta">
+      <span class="phase-badge">minimal</span>
+      <span class="duration-badge">elegant</span>
+    </div>
+  </div>
+  
+  <div class="concept-box" onclick="toggleSelect(this)" data-choice="story-loop">
+    <h3>Story Loop</h3>
+    <div class="visual-placeholder">↻ continuous</div>
+    <p>A short narrative scene that plays on loop: discovery → building → delivery, then cycles back to start.</p>
+    <div class="process-meta">
+      <span class="phase-badge">narrative</span>
+      <span class="duration-badge">10-15 sec loop</span>
+    </div>
+  </div>
+</div>
+
+<div class="sketch-area">
+  <h3 style="margin-bottom: 1rem;">Quick Sketch: The Lab Experiment Concept</h3>
+  <div class="lab-metaphor">
+    <div class="lab-item">🧪</div>
+    <div class="arrow-flow">→</div>
+    <div class="lab-item">⚗️</div>
+    <div class="arrow-flow">→</div>
+    <div class="lab-item">📋</div>
+  </div>
+  <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 0.5rem;">
+    A playful beaker fills with "research" liquid (diagnostic), then moves to a flask where reactions happen (prototype), 
+    finally crystallizing into a documented plan. Perfect for A1 Lab's brand.
+  </p>
+</div>
+
+<p style="text-align: center; margin-top: 2rem;">
+  <strong>Which concept direction feels right?</strong> Click to select, or describe what you're envisioning.
+</p>

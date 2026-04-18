@@ -1,0 +1,57 @@
+<header class="sticky-top navigation">
+	<div class="container">
+		<nav class="navbar navbar-expand-lg navbar-light">
+				<a class="navbar-brand p-0" href="{{ "/" | relLangURL }}">
+					{{ if site.Params.logo }}
+					{{ if .IsHome }}
+					<img src="{{ site.Params.logo | absURL }}" alt="{{ .Site.Title }}" width="184" height="69" decoding="async"
+						style="height: 42px; width: auto;">
+					{{ else }}
+					<img class="lozad" data-src="{{ site.Params.logo | absURL }}" alt="{{ .Site.Title }}" width="184" height="69"
+						style="height: 42px; width: auto;">
+					{{ end }}
+					{{ else }}
+					{{ site.Title }}
+					{{ end }}
+				</a>
+
+				<button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
+					aria-controls="navigation" aria-expanded="false"
+					aria-label="{{ i18n `navigation_toggle` | default `Open navigation menu` }}">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+			<div class="collapse navbar-collapse" id="navigation">
+				<ul class="navbar-nav ml-auto">
+					{{ range site.Menus.main }}
+					<li class="nav-item">
+            <a class="nav-link" href="{{if .Pre}}{{ "/" | relLangURL }}{{.Pre}}{{ .URL }}{{else}}{{.URL | relLangURL}}{{end}}">{{ .Name }}</a>
+					</li>
+					{{ end }}
+					{{- if hugo.IsMultilingual }}
+					{{- with .Page }}
+					{{- $variants := .Rotate "language" }}
+					{{- if gt (len $variants) 1 }}
+					{{- $labels := dict "en" "EN" "pt" "PT" }}
+					{{- range $variants }}
+					{{- if ne .Language.Lang $.Page.Language.Lang }}
+					<li class="nav-item nav-lang-item">
+						<a class="nav-link nav-flag" href="{{ .Permalink }}" data-lang="{{ .Language.Lang }}"
+							aria-label="{{ .Language.Label }}"
+							onclick="try{localStorage.setItem('a1lab-language','{{ .Language.Lang }}')}catch(e){}">
+							{{- index $labels .Language.Lang -}}
+						</a>
+					</li>
+					{{- end }}
+					{{- end }}
+					{{- end }}
+					{{- end }}
+					{{ end }}
+					<li class="nav-item nav-cta-item">
+						<a class="btn btn-nav-cta" href="{{ "/" | relLangURL }}#contact">{{ i18n "nav_cta" }}</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</header>

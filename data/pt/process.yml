@@ -1,0 +1,33 @@
+################################# Process #################################
+process:
+  enable: true
+  title: Como Funciona
+  service_item:
+    - name: Diagnóstico Rápido (1-2 semanas)
+      icon: ti-search
+      serviceType: "Technology Diagnostic"
+      content: "Partimos do problema que você traz, entendemos o fluxo atual e as restrições em volta dele, comparamos abordagens possíveis e definimos o melhor caminho para prototipar. Você sai com um diagnóstico claro."
+      deliverables:
+        - "Análise do fluxo atual"
+        - "Comparação de abordagens"
+        - "Estimativa de impacto (tempo/custo)"
+
+    - name: Protótipo Funcional (2-4 semanas)
+      icon: ti-widget
+      serviceType: "Technology Prototyping"
+      content: "Entregamos um protótipo funcional (ex: automação de atendimento, ferramenta interna, integração de dados). Compartilhamos o progresso ao longo do projeto, e você vê rodando, não em slides."
+      deliverables:
+        - "1 solução funcional testada"
+        - "Métricas iniciais de performance"
+        - "Demonstração prática com dados reais"
+
+    - name: Plano Técnico para Decisão (1 semana)
+      icon: ti-settings
+      serviceType: "Technical Consulting"
+      content: "Plano completo baseado no que testamos: tecnologias, custos reais e próximos passos. Tudo que você precisa pra tomar a decisão."
+      deliverables:
+        - "Arquitetura técnica sugerida"
+        - "Roadmap de implementação"
+        - "Estimativa de esforço e investimento"
+
+  development: "Um preço, três fases. Você sai com um protótipo funcionando e uma visão clara do que vem depois. Se fizer sentido seguir a partir daí, podemos conversar sobre como seria uma próxima fase de implementação."

@@ -1,0 +1,17 @@
+############################### Banner ################################
+banner:
+  enable: true
+  bg_image_webp: "images/backgrounds/bg.webp"
+  bg_image: "images/backgrounds/bg.jpg"
+  icon: "" # themify icon pack : https://themify.me/themify-icons
+  title: "Resolvemos problemas de negócio <span class=\"color\">rápido</span>. IA, software, ou o que o problema realmente precisar."
+  subtitle: "Diagnóstico em 1-2 semanas. Protótipo funcional em 2-4 semanas. Plano técnico em 1 semana."
+  content: "Você recebe um protótipo funcionando, um plano técnico, custos reais e clareza pra decidir o próximo passo."
+  button:
+    enable: true
+    label: "Fale conosco"
+    link: "#contact"
+  button_secondary:
+    enable: true
+    label: "Perguntas frequentes"
+    link: "#faq"

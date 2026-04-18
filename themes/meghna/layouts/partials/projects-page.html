@@ -1,0 +1,50 @@
+{{ $data := index hugo.Data site.Language.Name }}
+{{ if $data.projects.projects.enable }}
+{{ with $data.projects.projects }}
+<section class="section standalone-page standalone-projects">
+  <div class="container">
+    <div class="projects-page-intro">
+      <div class="projects-page-intro__copy">
+        <p class="projects-page-intro__eyebrow">{{ i18n "project_page_eyebrow" | default "Working prototypes, not portfolio theater" }}</p>
+        <h1>{{ .title }}</h1>
+        <p class="projects-page-intro__lede">{{ i18n "project_page_intro" | default "Each experiment starts with a business constraint, moves through hands-on validation, and ends with something real enough to support a decision." }}</p>
+      </div>
+
+      <div class="projects-page-intro__note">
+        <p>{{ i18n "project_page_note" | default "Small batch by design: fewer launches, more signal." }}</p>
+      </div>
+    </div>
+
+    <div class="projects-page-list" aria-label="{{ .title }}">
+      {{ range $index, $item := .projects_item }}
+      {{ $domain := replaceRE "/.*$" "" (replaceRE "^www\\." "" (replaceRE "^https?://" "" $item.link)) }}
+      <article class="projects-page-item{{ if eq (mod $index 2) 1 }} projects-page-item--reverse{{ end }}">
+        <div class="projects-page-item__rail" aria-hidden="true">
+          <span class="projects-page-item__index">{{ printf "%02d" (add $index 1) }}</span>
+          <span class="project-card__label">{{ i18n "project_card_label" | default "Experiment" }}</span>
+        </div>
+
+        <div class="projects-page-item__panel">
+          <div class="service-icon text-center has-img projects-page-item__icon{{ with $item.icon_class }} {{ . }}{{ end }}">
+            <img src="{{ $item.icon | absURL }}" alt="{{ $item.name }}">
+          </div>
+
+          <div class="projects-page-item__content">
+            <h2>{{ $item.name }}</h2>
+            <p>{{ $item.description | markdownify }}</p>
+
+            <div class="projects-page-item__footer">
+              <a href="{{ $item.link }}" target="_blank" rel="noopener noreferrer" class="btn btn-main projects-page-item__link">
+                {{ i18n "project_page_visit" | default "Open project" }} <i class="ti-arrow-right"></i>
+              </a>
+              <span class="projects-page-item__domain">{{ $domain }}</span>
+            </div>
+          </div>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+{{ end }}

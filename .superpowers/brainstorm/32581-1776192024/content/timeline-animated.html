@@ -1,0 +1,291 @@
+<!-- Lab Steps Timeline Animation - Matching site style with Themify icons -->
+<style>
+  .timeline-container {
+    background: var(--bg-secondary);
+    padding: 2rem;
+    margin: 1.5rem 0;
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+  }
+  
+  .timeline-header {
+    margin-bottom: 2rem;
+  }
+  
+  .timeline-header h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+  }
+  
+  .timeline-header h3 span {
+    color: #e87a00;
+  }
+  
+  .timeline {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+  }
+  
+  .timeline-track {
+    position: absolute;
+    top: 28px;
+    left: 28px;
+    right: 28px;
+    height: 4px;
+    background: #e0e0e0;
+  }
+  
+  .timeline-progress {
+    position: absolute;
+    top: 28px;
+    left: 28px;
+    height: 4px;
+    width: 0%;
+    background: #e87a00;
+    transition: width 1.5s ease-out;
+  }
+  
+  .timeline-stop {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .stop-marker {
+    width: 60px;
+    height: 60px;
+    background: #fffdf9;
+    border: 3px solid #1a1a1a;
+    box-shadow: 4px 4px 0 #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  
+  .stop-marker.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .stop-marker.active {
+    background: #e87a00;
+    transform: scale(1.15);
+    box-shadow: 6px 6px 0 #1a1a1a;
+  }
+  
+  .stop-marker i {
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    transition: color 0.3s ease;
+  }
+  
+  .stop-marker.active i {
+    color: #fffdf9;
+  }
+  
+  .stop-content {
+    text-align: center;
+    max-width: 180px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+  }
+  
+  .stop-content.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .stop-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #1a1a1a;
+    margin-bottom: 0.4rem;
+  }
+  
+  .stop-duration {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #595959;
+    margin-bottom: 0.6rem;
+    padding: 0.2rem 0.5rem;
+    border: 2px solid #1a1a1a;
+    background: #f5f0eb;
+    display: inline-block;
+  }
+  
+  .stop-deliverable {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    color: #3d3d3d;
+    line-height: 1.4;
+    padding: 0.6rem;
+    background: #fffdf9;
+    border: 2px solid #1a1a1a;
+  }
+  
+  .timeline-connector {
+    width: 50px;
+    height: 4px;
+    background: transparent;
+    margin-top: 26px;
+    position: relative;
+    z-index: 0;
+  }
+  
+  .timeline-footer {
+    margin-top: 2.5rem;
+    padding: 1.25rem 1.5rem;
+    background: #f5f0eb;
+    border: 3px solid #1a1a1a;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: #3d3d3d;
+    line-height: 1.6;
+    text-align: center;
+  }
+  
+  /* Animation keyframes shown as visual */
+  .animation-demo {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #fffdf9;
+    border: 2px dashed #d0d0d0;
+    border-radius: 4px;
+  }
+  
+  .demo-marker {
+    width: 12px;
+    height: 12px;
+    border: 2px solid #1a1a1a;
+    background: #e0e0e0;
+  }
+  
+  .demo-marker:nth-child(1) { animation: markerPulse 2s ease-in-out 0s infinite; }
+  .demo-marker:nth-child(2) { animation: markerPulse 2s ease-in-out 0.3s infinite; }
+  .demo-marker:nth-child(3) { animation: markerPulse 2s ease-in-out 0.6s infinite; }
+  .demo-marker:nth-child(4) { animation: markerPulse 2s ease-in-out 0.9s infinite; }
+  .demo-marker:nth-child(5) { animation: markerPulse 2s ease-in-out 1.2s infinite; }
+  
+  @keyframes markerPulse {
+    0%, 100% { transform: scale(1); background: #e0e0e0; }
+    50% { transform: scale(1.3); background: #e87a00; }
+  }
+  
+  @media (max-width: 768px) {
+    .timeline {
+      flex-direction: column;
+      padding-left: 40px;
+    }
+    
+    .timeline-track, .timeline-progress {
+      display: none;
+    }
+    
+    .timeline-connector {
+      display: none;
+    }
+    
+    .timeline-stop {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .stop-content {
+      text-align: left;
+    }
+  }
+</style>
+
+<h2>Lab Steps: Timeline Animation</h2>
+<p class="subtitle">Matching site style with Themify icons</p>
+
+<div class="timeline-container">
+  <div class="timeline-header">
+    <h3>How It <span>Works</span></h3>
+  </div>
+  
+  <div class="timeline">
+    <div class="timeline-track">
+      <div class="timeline-progress"></div>
+    </div>
+    
+    <div class="timeline-stop">
+      <div class="stop-marker active visible">
+        <i class="ti-search"></i>
+      </div>
+      <div class="stop-content visible">
+        <div class="stop-duration">1-2 weeks</div>
+        <div class="stop-title">Quick Diagnostic</div>
+        <div class="stop-deliverable">Workflow analysis + Approach comparison</div>
+      </div>
+    </div>
+    
+    <div class="timeline-connector"></div>
+    
+    <div class="timeline-stop">
+      <div class="stop-marker">
+        <i class="ti-widget"></i>
+      </div>
+      <div class="stop-content">
+        <div class="stop-duration">2-4 weeks</div>
+        <div class="stop-title">Working Prototype</div>
+        <div class="stop-deliverable">Functional solution + Live demo</div>
+      </div>
+    </div>
+    
+    <div class="timeline-connector"></div>
+    
+    <div class="timeline-stop">
+      <div class="stop-marker">
+        <i class="ti-settings"></i>
+      </div>
+      <div class="stop-content">
+        <div class="stop-duration">1 week</div>
+        <div class="stop-title">Technical Plan</div>
+        <div class="stop-deliverable">Architecture + Roadmap</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="timeline-footer">
+    One price, three phases. Prototype + clear next steps.
+  </div>
+</div>
+
+<div style="text-align: center; margin-top: 1.5rem;">
+  <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0.75rem;">
+    Animation preview — markers pulse in sequence as you scroll
+  </p>
+  <div class="animation-demo">
+    <div class="demo-marker"></div>
+    <div class="demo-marker"></div>
+    <div class="demo-marker"></div>
+    <div class="demo-marker"></div>
+    <div class="demo-marker"></div>
+  </div>
+</div>
+
+<p style="margin-top: 1.5rem; text-align: center; font-size: 0.85rem;">
+  <strong>Is this closer to what you want?</strong> Should the animation be different — scroll-triggered, 
+  continuous loop, or hover-based? And should each phase appear one at a time or all at once?
+</p>

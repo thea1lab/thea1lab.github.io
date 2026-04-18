@@ -1,0 +1,214 @@
+<!-- Lab Steps Timeline Animation - Neo-brutalist style matching site -->
+<style>
+  .timeline-container {
+    background: var(--bg-secondary);
+    padding: 2rem;
+    margin: 1.5rem 0;
+  }
+  
+  .timeline-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+  }
+  
+  .timeline {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    position: relative;
+  }
+  
+  .timeline::before {
+    content: "";
+    position: absolute;
+    top: 28px;
+    left: 20px;
+    right: 20px;
+    height: 3px;
+    background: #1a1a1a;
+  }
+  
+  .timeline-stop {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .stop-marker {
+    width: 56px;
+    height: 56px;
+    background: #fffdf9;
+    border: 3px solid #1a1a1a;
+    box-shadow: 4px 4px 0 #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .stop-marker.active {
+    background: #e87a00;
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 #1a1a1a;
+  }
+  
+  .stop-content {
+    text-align: center;
+    max-width: 160px;
+  }
+  
+  .stop-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+  }
+  
+  .stop-duration {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #595959;
+    margin-bottom: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border: 2px solid #1a1a1a;
+    background: #f5f0eb;
+    display: inline-block;
+  }
+  
+  .stop-deliverable {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    color: #3d3d3d;
+    line-height: 1.4;
+    padding: 0.75rem;
+    background: #fffdf9;
+    border: 2px solid #1a1a1a;
+  }
+  
+  .timeline-connector {
+    flex: 0 0 40px;
+    height: 3px;
+    background: #1a1a1a;
+    margin-top: 28px;
+  }
+  
+  .timeline-connector.active {
+    background: #e87a00;
+  }
+  
+  .timeline-description {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #f5f0eb;
+    border: 3px solid #1a1a1a;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: #3d3d3d;
+    line-height: 1.6;
+  }
+  
+  .timeline-description strong {
+    color: #1a1a1a;
+  }
+  
+  @media (max-width: 768px) {
+    .timeline {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .timeline::before {
+      top: 0;
+      bottom: 0;
+      left: 28px;
+      right: auto;
+      width: 3px;
+      height: auto;
+    }
+    
+    .timeline-connector {
+      display: none;
+    }
+    
+    .timeline-stop {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .stop-content {
+      text-align: left;
+      max-width: none;
+    }
+  }
+</style>
+
+<h2>Lab Steps: Timeline with Stop Points</h2>
+<p class="subtitle">Neo-brutalist style matching your site's design language</p>
+
+<div class="timeline-container">
+  <div class="timeline-label">How It Works</div>
+  
+  <div class="timeline">
+    <div class="timeline-stop">
+      <div class="stop-marker active">🔍</div>
+      <div class="stop-content">
+        <div class="stop-duration">1-2 weeks</div>
+        <div class="stop-title">Quick Diagnostic</div>
+        <div class="stop-deliverable">Current workflow analysis + Approach comparison + Impact estimate</div>
+      </div>
+    </div>
+    
+    <div class="timeline-connector active"></div>
+    
+    <div class="timeline-stop">
+      <div class="stop-marker">⚙️</div>
+      <div class="stop-content">
+        <div class="stop-duration">2-4 weeks</div>
+        <div class="stop-title">Working Prototype</div>
+        <div class="stop-deliverable">1 tested functional solution + Initial performance metrics + Live demo</div>
+      </div>
+    </div>
+    
+    <div class="timeline-connector"></div>
+    
+    <div class="timeline-stop">
+      <div class="stop-marker">📋</div>
+      <div class="stop-content">
+        <div class="stop-duration">1 week</div>
+        <div class="stop-title">Technical Plan</div>
+        <div class="stop-deliverable">Suggested architecture + Roadmap + Effort estimate</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="timeline-description">
+    <strong>One price, three phases.</strong> You walk away with a working prototype and a clear picture of what comes next. 
+    If you want to continue from there, we can talk about what a separate implementation phase would look like.
+  </div>
+</div>
+
+<p style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--text-secondary);">
+  The timeline shows each phase as a stop point. When you scroll through, each stop "activates" — the marker fills with 
+  accent color, the connector line fills, and the deliverable card appears with the key outputs.
+</p>
+
+<p style="margin-top: 1.5rem; text-align: center;">
+  <strong>Is this direction working for you?</strong> What adjustments would you like — position of elements, 
+  animation style, deliverable content, or something else?
+</p>

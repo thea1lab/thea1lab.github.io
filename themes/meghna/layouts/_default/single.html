@@ -1,0 +1,44 @@
+{{ define "main" }}
+
+{{ partial "navigation.html" . }}
+
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 text-center">
+        <article>
+        <h1>{{ .Title }}</h1>
+        {{ with .Params.subtitle }}<p class="post-subtitle">{{ . | markdownify }}</p>{{ end }}
+        <div class="post-byline">
+          {{ with .Params.Author }}<span class="post-byline__author">{{ i18n "by" | default "By" }} <a href="{{ `author/` | relLangURL }}{{ . | urlize }}/">{{ . }}</a></span>{{ end }}
+          <time class="post-byline__date" datetime="{{ $.Date.Format "2006-01-02" }}">{{ dateFormat "Jan 2, 2006" $.Date }}</time>
+        </div>
+        <img class="img-fluid mb-50 lozad" data-src="{{ .Params.Image | relURL }}" alt="{{ .Title }}">
+      </div>
+      <div class="col-lg-8 offset-lg-2">
+        <div class="post-single-content">
+          {{ .Content }}
+          </div>
+
+          <div class="blog-cta">
+            <div class="blog-cta__body">
+              <p class="blog-cta__heading">{{ i18n "blog_cta_heading" | default "Need help with this?" }}</p>
+              <p>{{ i18n "blog_cta_text" | default "We research, prototype, and deliver a technical plan so you can decide what comes next." }}</p>
+            </div>
+            <a href="{{ "/" | relLangURL }}#contact" class="btn btn-main">{{ i18n "blog_cta_button" | default "Talk to the Lab" }}</a>
+          </div>
+
+          </article>
+        {{ if site.Params.post_share }}
+        {{ partial "post-share.html" . }}
+        {{ end }}
+        <!-- comments -->
+        <div class="mt-5">
+          {{ template "_internal/disqus.html" . }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}

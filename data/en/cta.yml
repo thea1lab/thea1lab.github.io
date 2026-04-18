@@ -1,0 +1,11 @@
+############################# call to action ##############################
+cta:
+  enable: true
+  bg_image: "images/backgrounds/bg-white-wall.jpg"
+  bg_image_webp: "images/backgrounds/bg-white-wall.webp"
+  title: 'Why <span class="brand-a1">A1</span> <span class="brand-lab">Lab</span>?'
+  content: "We start by understanding the problem, then move fast to a working prototype using your real data. You see it running, evaluate the result, and decide the next step — no pressure."
+  button:
+    enable: true
+    label: "Book a 30-min call"
+    link: "#contact"

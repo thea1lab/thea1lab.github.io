@@ -1,0 +1,41 @@
+{{ $data := index hugo.Data site.Language.Name }}
+
+{{ if $data.projects.projects.enable }}
+{{ with $data.projects.projects }}
+{{"<!-- projects -->" | safeHTML }}
+<section id="projects" class="section-bg section">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-12">
+				{{"<!-- section title -->" | safeHTML }}
+				<div class="title text-center wow fadeIn" data-wow-duration="500ms">
+					<h2>{{ with .title }} {{ index (split . " ") 0 | safeHTML }} {{ end }}<span class="color">
+						{{ with .title }} {{ after (len (index (split . " ") 0)) . | safeHTML }} {{ end }}</span></h2>
+					<div class="border-meghna"></div>
+				</div>
+			</div>
+			{{"<!-- /section title -->" | safeHTML }}
+
+				{{ range $index, $item := .projects_item }}
+				{{"<!-- Single Project Item -->" | safeHTML }}
+				<article class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-duration="500ms">
+					<div class="service-block text-center project-card" data-card-index="{{ add $index 1 }}">
+						<span class="project-card__label">{{ i18n "project_card_label" | default "Experimento" }}</span>
+						<div class="service-icon text-center has-img{{ with $item.icon_class }} {{ . }}{{ end }}">
+							<img src="{{ $item.icon | absURL }}" alt="{{ $item.name }}">
+						</div>
+						<h3>{{ $item.name }}</h3>
+						<p>{{ $item.description | markdownify }}</p>
+						<a href="{{ $item.link }}" target="_blank" rel="noopener noreferrer" class="btn btn-main btn-small">
+							{{ $item.link | replaceRE "^https?://" "" }} <i class="ti-arrow-right"></i>
+						</a>
+					</div>
+				</article>
+			{{"<!-- End Single Project Item -->" | safeHTML }}
+			{{ end }}
+		</div>
+	</div>
+</section>
+{{"<!-- /projects -->" | safeHTML }}
+{{ end }}
+{{ end }}

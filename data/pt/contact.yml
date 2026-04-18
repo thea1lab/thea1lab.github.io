@@ -1,0 +1,33 @@
+############################## Contact #############################
+contact:
+  enable: true
+  title: Contato
+  subtitle: Fale com o Lab
+  content: "Descreva o desafio em poucas linhas. Retornamos para conversar sobre os próximos passos."
+
+  # Contact details
+  contact_list:
+    - icon: ti-email # themify icon pack : https://themify.me/themify-icons
+      info: "E-mail: contato@a1lab.com.br"
+
+  # Contact form
+  contact_form:
+    enable: true
+    form_action: "/api/contact"
+    name: "Seu nome"
+    email: "Seu e-mail"
+    company: "Empresa"
+    subject: "Como podemos ajudar?"
+    interests:
+      - "Quero um diagnóstico"
+      - "Quero validar uma ideia"
+      - "Quero saber mais"
+      - "Outro"
+    stage: "Estágio do projeto"
+    stage_options:
+      - "Ideia inicial"
+      - "Já pesquisei alternativas"
+      - "Preciso de um protótipo"
+      - "Pronto para definir a próxima fase"
+    message: "Descreva seu desafio"
+    submit: "Enviar mensagem"

@@ -1,0 +1,336 @@
+# A1 Lab — Full Context
+
+> A1 Lab solves business problems fast with the right technology — AI, software, or whatever the problem actually needs. Based in Brazil, serving clients worldwide in Portuguese and English.
+
+Website: https://www.a1lab.com.br/
+Languages: Portuguese (default), English
+Area served: Worldwide
+Slogan: Every problem deserves a lab.
+
+---
+
+## About A1 Lab
+
+A1 Lab is a technology research laboratory. Companies bring us a business problem or idea, we investigate it, test it in practice, and deliver a working prototype along with a technical plan for the next step.
+
+We're a technology lab — AI is what we reach for most often, but we also build software, set up integrations, and automate processes. We recommend whatever actually solves the problem.
+
+Our team holds Master's degrees in Computer Science, has 10+ years of software engineering experience, and international experience at US-based companies, covering web apps, mobile, AI, and integrations.
+
+---
+
+## Services — Three-Phase Process
+
+The project has one fixed scope, price, and timeline across all three phases. No long contracts, no surprises.
+
+### Phase 1: Quick Diagnostic (1-2 weeks)
+We start from the problem you bring, understand the current workflow and constraints around it, compare possible approaches, and define the best path to prototype.
+Deliverables:
+- Current workflow analysis
+- Approach comparison
+- Impact estimate (time/cost)
+
+### Phase 2: Working Prototype (2-4 weeks)
+We deliver a working prototype (e.g., support automation, internal tool, data integration). We share progress as we go, and you see it running, not on slides.
+Deliverables:
+- 1 tested functional solution
+- Initial performance metrics
+- Live demo with real data
+
+### Phase 3: Technical Plan for Decision (1 week)
+A complete plan based on what we tested: technologies, real costs, and next steps. Everything you need to decide.
+Deliverables:
+- Suggested technical architecture
+- Implementation roadmap
+- Effort and investment estimate
+
+---
+
+## Working Rhythm — How a Project Actually Runs
+
+Once the package is scoped, every project runs through these four steps. Each one leaves you with something you can actually use.
+
+### Step 01 — Kickoff
+Problem mapped, working agreement set.
+- 30-minute kickoff call to understand the problem and the workflow around it (Google Meet by default, or whichever tool your team uses)
+- We send the contract after the call. Once it's signed, we start mapping.
+- We map your current process with you in a shared Google Doc. You own the link.
+- We agree on the comms channel and how often we send updates. Questions get answered while the work is happening, not batched for a wrap-up meeting.
+- From you: someone who knows the workflow, 1–2 hours across the week.
+
+### Step 02 — Research
+Options compared, direction chosen.
+- Every approach we try gets written up in the shared Doc with enough technical detail that you can actually evaluate it.
+- Libraries, APIs, and stack choices compared side by side, with tradeoffs.
+- You have comment access the whole time, so you can push back while we're still deciding.
+- The step ends with a recommended direction. You approve it before we write any code.
+- From you: ~30 min to review the tradeoffs and pick a direction.
+
+### Step 03 — Experiment
+Code in flight, weekly check-ins.
+- We work in a GitHub repo (ours by default, or yours if you'd rather give us access).
+- Real data when you can share it. Mocked data that matches the same fields and structure when you can't.
+- Progress updates on the cadence you picked (weekly email is the default).
+- From you: data access (or shape description) and quick replies when blockers come up.
+
+### Step 04 — Deliver
+Handoff week.
+- Code handed off through the GitHub repo, with a README your team can follow.
+- A technical write-up in Google Docs covering what we tried and what worked.
+- Production cost breakdown: hosting, APIs, operations, with real numbers.
+- We stay available for questions after handoff. If you want to keep going, we scope the next phase separately.
+- From you: a 60-minute handoff call where we walk through everything. No technical background required.
+
+---
+
+## Expertise Areas
+
+### Integrations & APIs
+
+Service pages: https://www.a1lab.com.br/integrations/ · https://www.a1lab.com.br/pt/integracoes-e-apis/
+
+Connect your systems. Stop re-entering data. If your team copies information between the ERP, the CRM, and spreadsheets every day, something is wrong. We prototype integrations that move data where it needs to go. You get a technical plan to decide whether to build it out.
+
+What we prototype:
+- Sync pipelines between ERP, CRM, and spreadsheets with idempotent writes so retries never duplicate records
+- Webhook-driven event flows that run in real time rather than overnight
+- Cross-platform bridges across Slack, WhatsApp, email, and internal tools
+- Data pipelines with observability built in — logs at every step
+- Scheduled reconciliation jobs that catch drift before month-end
+
+Technologies: REST, GraphQL, gRPC; Kafka, SQS, RabbitMQ, Redis Streams; OAuth2, JWT, HMAC; Zapier, Make, custom middleware; PostgreSQL, MySQL, MongoDB, Redis
+
+How we'd approach it:
+Challenge: A team re-enters orders from the ERP into the CRM every morning. Someone copies client data from one spreadsheet into another. Mistakes get through, and by month-end the reports don't match.
+Approach: Map the integration surface, build a one-way sync with idempotent writes, add observability logs so you can see what went through and what didn't. Ship in 2-4 weeks.
+Result: A working prototype of the integration, a technical plan, and baseline metrics from real data. Enough to decide whether to build it out for production.
+
+Integrations FAQ:
+- How do you integrate ERP and CRM without duplicating data? Every sync uses idempotent writes. Each record has a stable key on both sides, so the same event applied twice produces the same result. Network retries become noise, not duplicates.
+- How do you handle real-time and event-driven integrations? For high-throughput real-time flows we use Kafka, with consumers that commit offsets only after successful processing. For lighter pub/sub, Redis Streams and Redis Pub/Sub. For third-party systems, we prefer webhooks with HMAC signing over polling.
+- Are webhook integrations more reliable than overnight batch jobs? For anything an end user notices (notifications, order status, account balance), yes. For accounting reconciliation and closed reports, batch still has its place.
+- How do we know whether an integration is actually working? Per-step observability. Structured logs at every transformation, success and failure metrics per endpoint, alerts when the error rate drifts.
+- Which message queue should we use: SQS, RabbitMQ, or Redis Streams? SQS for AWS workloads where you want minimal ops. RabbitMQ when you need topic routing or per-message acknowledgments. Redis Streams when the queue already shares cache with the rest of the app.
+- Which systems do you integrate with? Brazilian ERPs like TOTVS, Senior, and Omie, plus Salesforce, HubSpot, SAP, Oracle NetSuite, Microsoft Dynamics, Jira, Zendesk, Shopify, Stripe, QuickBooks, Google Workspace, and Microsoft 365. Where a REST or SOAP API exists, we use it. Where no API is exposed, we fall back to file extraction, SFTP drops, or browser automation.
+
+### Document Processing
+
+Service pages: https://www.a1lab.com.br/document-processing/ · https://www.a1lab.com.br/pt/processamento-de-documentos/
+
+Read, extract, and classify documents at scale. If your team reads invoices, contracts, PDFs, and emails by hand and types the data somewhere else, we can prototype an automation for that. Working extraction pipeline in 2-4 weeks, with accuracy numbers on your real documents before you commit.
+
+What we prototype:
+- Invoice and receipt extraction straight into accounting systems
+- Contract analysis with obligations, risk clauses, renewal dates cited back to source passages
+- Automatic classification and routing of incoming files
+- Structured output (JSON, CSV, direct DB writes) with validation on the fields that matter
+- Resume screening with attached reasoning
+
+Technologies: OpenAI, Claude, Gemini, Llama, Mistral, Gemma, Qwen; PaddleOCR, Qianfan-OCR, Tesseract, Google Vision, AWS Textract; Scikit-learn, XGBoost; webhook/queue/DB delivery
+
+How we'd approach it:
+Challenge: Someone on the team opens each invoice, reads the amounts and dates, and types them into the accounting system. It takes hours, mistakes happen, and the pile only grows.
+Approach: Get a sample of real documents, train an extraction pipeline on the actual formats you receive, add validation rules for the fields that matter most, and connect the output to where the data needs to go.
+Result: A working prototype extraction pipeline with real accuracy numbers from your documents, and a technical plan with what it would take to scale it.
+
+Document Processing FAQ:
+- How do you automate invoice data extraction from PDFs? We combine OCR with a language model to read both digital and scanned invoices, extract line items, totals, dates, and supplier information, then deliver the data straight into your accounting system via API, webhook, or direct database write. No fixed templates. It handles supplier-by-supplier layout variation.
+- Can AI extract clauses from contracts? Yes. For English or Portuguese contracts, we extract obligations, financial figures, renewal dates, and risk clauses, each one cited back to the source passage.
+- Which OCR works best for Portuguese documents? For native PDFs we use direct extraction. For scans, PaddleOCR and Qianfan-OCR handle Portuguese text well, including rougher scans where Tesseract used to struggle. When requirements push past what open-source can do reliably, Google Vision or AWS Textract are the managed fallback.
+- How does automatic classification of incoming documents work? We train a classifier on a sample of your documents so that every incoming file lands in the right queue — accounts payable, legal, HR, etc. The model learns from the document types you actually receive.
+- How much does document extraction automation cost? It depends on volume, layout variety, and where the data needs to land. The initial diagnostic (1-2 weeks) locks scope and price before we build the prototype. A pilot extraction pipeline typically ships in 2-4 weeks.
+- Is our document data kept secure? Yes. We sign NDAs, process documents in a controlled environment, and when privacy requires it, we use open-source models running on your infrastructure or ours, with no data sent to external APIs.
+
+### AI & Agents
+
+Service pages: https://www.a1lab.com.br/ai-agents/ · https://www.a1lab.com.br/pt/agentes-de-ia/
+
+AI that works on your documents and data, not generic chat. We prototype assistants and agents that answer from your company's documents, with sources cited. You see it working on your real data before deciding whether to build it out.
+
+What we prototype:
+- RAG assistants with per-response citations to source passages
+- Autonomous agents for research, classification, and decision support, with human checkpoints
+- Classical ML: classification, regression, clustering, forecasting, anomaly detection
+- LLM pipelines with tools that call APIs and produce structured output
+- Multi-step workflows where agents plan, act, and verify their own work
+
+Technologies: OpenAI, Claude, Gemini, Llama, Mistral, Gemma, Qwen; Pinecone, Weaviate, pgvector; LangChain, LlamaIndex, custom orchestration; Scikit-learn, XGBoost; hybrid semantic + keyword retrieval
+
+How we'd approach it:
+Challenge: The support team answers the same questions every week. Someone in finance spends an hour finding the right clause in a contract. The knowledge base exists but nobody searches it because the search doesn't work.
+Approach: Index your actual documents, build a retrieval pipeline that finds the right passages, wire it to an LLM that answers with citations. Add verification steps so the model can say when it doesn't know, instead of making something up.
+Result: A working prototype assistant with sources cited, a technical plan for the next phase, and baseline accuracy metrics from real queries.
+
+AI & Agents FAQ:
+- What is RAG and why does it matter? RAG stands for Retrieval-Augmented Generation. Instead of asking an LLM to answer from scratch, you first retrieve the relevant passages from your documents and pass them to the model as source material. The result is an answer that cites where it came from, instead of sounding confident and being wrong.
+- How do you build an AI assistant over company documents? We index your documents in a vector database (pgvector, Pinecone, or Weaviate depending on the case), build a retrieval pipeline that combines semantic and keyword search, and wire it to an LLM that answers with citations. The pilot ships in 2-4 weeks against your real documents, not a test corpus.
+- When should we use an LLM and when should we use classical ML? LLMs when the input is unstructured text, open-ended language, or the task requires reasoning. Classical ML (XGBoost, scikit-learn) when the data is tabular and the pattern is predictable: churn prediction, sales forecasting, fraud detection. Classical ML tends to be cheaper, faster, and more accurate for those jobs.
+- pgvector, Pinecone, or Weaviate: which vector database should we use? pgvector when you already run Postgres and do not want another service to operate. Pinecone when load is high and you want a managed service that just works. Weaviate when you need features beyond vector search, like GraphQL or complex filters. For most cases, pgvector is enough.
+- How do we stop the agent from making things up (hallucinations)? Three things together. Good retrieval so the model has the right context. Verification steps so it can say "I don't know" when it has no basis. Evaluation with real questions before going to production. Hallucinations do not disappear entirely, but the rate drops to an acceptable level.
+- Does our data go to OpenAI or Anthropic? That depends on the choice. When the case allows, we use the OpenAI or Anthropic API under agreements that prevent training on your data. When privacy requires it, we run open-source models like Llama, Mistral, Gemma, or Qwen on your infrastructure or ours, with no data sent to external APIs. The technical plan locks that decision before we build the prototype.
+
+### Automation & Orchestration
+
+Service pages: https://www.a1lab.com.br/automation/ · https://www.a1lab.com.br/pt/automacao-e-orquestracao/
+
+Remove the manual steps. Keep the control. If a person clicks the same buttons, copies the same data, or sends the same emails every day, that is work a machine can do. We prototype the automation and give you numbers on what it saves before you commit to a full build.
+
+What we prototype:
+- End-to-end workflows with no manual handoffs between steps
+- Chatbots for WhatsApp, Instagram, and Telegram with context-rich escalation
+- ETL pipelines on the cadence your reports actually need
+- Web scraping with caching, rate limiting, and layout-change monitoring
+- Notification and escalation flows that reach the right person
+
+Technologies: WhatsApp Business, Telegram Bot, Instagram Messaging; Apache Airflow; Selenium, Playwright; Cloud Functions, Lambda; S3, Cloud Storage
+
+How we'd approach it:
+Challenge: Every Monday morning, someone exports sales data from Salesforce, opens the CSV in Excel to clean a few columns, runs a pivot, and uploads the result into the BI tool so leadership sees it before the standup. It takes two hours and breaks the moment a source column gets renamed.
+Approach: Replace the weekly ritual with an ETL job. Extract from the Salesforce API on a schedule, transform the data in code with explicit column mappings and validation rules, and load the result into your BI warehouse. Add alerts so the pipeline yells when something shifts instead of silently producing a stale dashboard.
+Result: A working prototype of the automated report, a technical plan for production rollout, and an audit log showing the pipeline ran as expected.
+
+Automation FAQ:
+- How do you automate a business process from scratch? We start by mapping the current process with the person who runs it today and pinpoint where the time is lost. From there we pick the level of automation that controls the cost: automate the repetitive core, leave rare edge cases for a person, and add monitoring so you hear about breakages instead of discovering them at month-end. The diagnostic phase locks the scope before we build the prototype, so you see the price and the payoff before any commitment.
+- Can you prototype a WhatsApp Business chatbot that handles customer questions? Yes. We build a working prototype on top of the official WhatsApp Business API, with pre-approved message templates for compliance. It resolves recurring conversations (order status, invoice reissue, opening hours) and escalates to a human with full conversation context when the question goes outside its scope.
+- Apache Airflow or custom code: when should we use each? Airflow for heavy data pipelines with complex task dependencies. Custom code when the logic does not fit comfortably in a pipeline framework, which happens more often than you would expect.
+- Is web scraping legal? Do you do it? It depends on the content and the site. Public data from sites that do not prohibit it via robots.txt or terms of use is legitimate. We scrape with caching and rate limiting so we do not overload the source, and with monitoring that fires when the layout changes.
+- How long does it take to automate a weekly report? Typically 1-2 weeks, from mapping to a working prototype. That includes API extraction, transformation in code with validation rules, and a test run to confirm the pipeline produces the expected output.
+- Do automation bots break when the source system changes? Eventually, yes. That is why we add per-step monitoring and alerts that fire when something moves. We also prefer APIs over scraping or browser automation whenever possible, because APIs change with notice and web pages change without.
+
+---
+
+## What We Prototype — Use Cases
+
+### Process Automation
+- AI classifies and routes support emails — triage drops from hours to minutes
+- Orders arriving by email or PDF get read and processed automatically
+- Tickets prioritized by urgency and customer sentiment
+- Recurring questions get automatic replies
+
+### Document Analysis
+- Invoices read and data pushed straight into your ERP
+- Contracts analyzed in seconds: obligations, risk clauses, amounts
+- Resumes screened and ranked by criteria you set
+- Long reports turned into summaries with what matters
+
+### Internal Assistants
+- Team asks in plain language, gets answers from internal knowledge
+- Assistant that answers based on your company's documents and data
+- HR, finance, or legal questions answered on the spot
+- Tickets created and lookups done by text, fewer clicks
+
+### Customer Support
+- WhatsApp bot that handles messages at 2 AM — prototype before full rollout
+- Appointments booked through chat, no need to call
+- Leads qualified before reaching sales
+- If the bot can't resolve it, it hands off to a human seamlessly
+
+### Software & Integrations
+- Dashboard that pulls data from ERP, CRM, and spreadsheets into one view
+- Internal tool prototype to replace a process that lives in email chains
+- API integration connecting systems that don't talk to each other
+- Workflow that routes work to the right person without manual handoffs
+
+### Prediction & Analytics
+- Demand forecast prototype per product — validate accuracy before full deployment
+- Customers likely to leave identified before they cancel
+- Transaction anomalies in real time, fraud caught early
+- Revenue estimated from pipeline and history
+
+---
+
+## General FAQ
+
+### What does A1 Lab do?
+Technology research. You bring us a business problem or idea, we investigate, test it for real, and deliver a working prototype with a technical plan so you can decide what comes next.
+
+### What types of technology do you work with?
+We're a technology lab. AI is what we reach for most often, but we also build software, set up integrations, and automate processes. We recommend whatever actually solves the problem.
+
+### Who is A1 Lab for?
+Companies that have a technology question but don't have the team or time to figure it out themselves.
+
+### Do you work with startups or only large companies?
+Both. Startups want to validate fast, bigger companies want to test without pulling their teams off other work. What matters is having a real problem.
+
+### Do I need a technical team to hire A1 Lab?
+No. We're your lab. We do the research and deliver results any manager can understand.
+
+### How does a project at A1 Lab work?
+Every project includes three phases: diagnostic, prototyping, and technical plan. The outcome is a working prototype and a clear recommendation for what to do next.
+
+### How long does it take?
+The diagnostic takes 1 to 2 weeks. The prototype takes 2 to 4 weeks. The technical plan takes 1 week. Most three-phase engagements take 4 to 7 weeks total depending on complexity.
+
+### What do I get at the end?
+A working prototype, a technical plan with technologies and costs, and a presentation so you can make the decision.
+
+### How much of my time will it take?
+Not much. A few meetings to understand the problem, review progress, and align on direction. We keep you updated, but we do the heavy lifting.
+
+### How much does it cost?
+Depends on the scope. We talk, understand the challenge, and send a proposal with a fixed price, timeline, and scope.
+
+### How does payment work?
+Payment is split into two parts: 50% upfront to start the project and 50% before final delivery. One price for the whole three-phase project.
+
+### Do I have to commit to a large project?
+The engagement is one fixed-scope project with three phases: diagnostic, prototype, and technical plan. We define the price, timeline, and scope upfront. After that, you decide only whether a separate implementation project makes sense.
+
+### What if the experiment shows the idea doesn't work?
+Then you found out in weeks, not months. That's the whole point: test before you spend.
+
+### Do you build the final product or just the prototype?
+The main engagement is research, prototype, and technical plan. If the result looks right, we can scope a separate project to build the final product.
+
+### Is my data safe?
+Yes. We sign NDAs when needed and treat everything confidentially.
+
+---
+
+## Projects
+
+### Margem Forte
+Real profit margin calculator factoring in fixed costs, variable costs, and taxes. Built so small businesses can do the math right. Free, no sign-up required.
+URL: https://margemforte.com.br
+
+### BugTriage Bot
+Slack bot that classifies bugs with Claude Code SDK, investigates code in GitHub repos, and creates Jira tickets automatically.
+URL: https://github.com/thea1lab/bug-triage-bot
+
+---
+
+## Credibility
+
+- Masters in Computer Science
+- 10+ years in software engineering
+- International experience at US-based companies
+- Web apps, mobile, AI, and integrations
+
+---
+
+## Contact
+
+- Email: contato@a1lab.com.br
+- Contact form: https://www.a1lab.com.br/#contact
+
+## Links
+
+- Homepage (PT): https://www.a1lab.com.br/
+- Homepage (EN): https://www.a1lab.com.br/en/
+- Blog (PT): https://www.a1lab.com.br/blog/
+- Blog (EN): https://www.a1lab.com.br/en/blog/
+- FAQ (PT): https://www.a1lab.com.br/perguntas-frequentes/
+- FAQ (EN): https://www.a1lab.com.br/en/faq/
+- Service — Integrations & APIs (EN): https://www.a1lab.com.br/integrations/
+- Service — Integrations & APIs (PT): https://www.a1lab.com.br/pt/integracoes-e-apis/
+- Service — Document Processing (EN): https://www.a1lab.com.br/document-processing/
+- Service — Document Processing (PT): https://www.a1lab.com.br/pt/processamento-de-documentos/
+- Service — AI & Agents (EN): https://www.a1lab.com.br/ai-agents/
+- Service — AI & Agents (PT): https://www.a1lab.com.br/pt/agentes-de-ia/
+- Service — Automation & Orchestration (EN): https://www.a1lab.com.br/automation/
+- Service — Automation & Orchestration (PT): https://www.a1lab.com.br/pt/automacao-e-orquestracao/
+- Projects: https://www.a1lab.com.br/projetos/
+- GitHub: https://github.com/thea1lab
+- LinkedIn: https://www.linkedin.com/company/thea1lab
+- Instagram: https://www.instagram.com/thea1lab

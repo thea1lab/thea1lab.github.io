@@ -1,0 +1,80 @@
+# A1 Lab — Technology Experimentation Lab
+
+> A1 Lab solves business problems fast with the right technology — AI, software, or whatever the problem actually needs. Based in Brazil, serving clients worldwide in Portuguese and English.
+
+## What A1 Lab Does
+
+A1 Lab is a technology research laboratory. You bring a business problem, we investigate, test it in practice, and deliver a working prototype with a technical plan. We recommend whatever actually solves the problem — AI when it fits, software or integrations when they don't.
+
+## Services — Three-Phase Process
+
+1. **Quick Diagnostic (1-2 weeks)** — Understand the problem, map the current workflow, compare approaches, define the best path to prototype.
+2. **Working Prototype (2-4 weeks)** — Deliver a functional prototype (e.g., support automation, internal tool, data integration). You see it running, not on slides.
+3. **Technical Plan for Decision (1 week)** — Technologies, real costs, and next steps. Everything you need to decide.
+
+One fixed price, one fixed scope. Most projects take 4-7 weeks total.
+
+## Working Rhythm — Four Steps per Project
+
+Every project runs through these four steps. Each leaves you with something concrete.
+
+1. **Kickoff** — 30-min kickoff call, contract signed, then we map your current process with you in a shared Google Doc (you own the link). We agree on comms channel and update cadence upfront.
+2. **Research** — Approaches, libraries, APIs, and stacks compared side by side in the shared Doc with tradeoffs. You have comment access throughout and approve the recommended direction before any code is written.
+3. **Experiment** — Code in a GitHub repo (ours by default, or yours). Real data when you can share it; mocked data matching the same shape when you can't. Progress updates on the cadence you pick (weekly email by default).
+4. **Deliver** — Code handed off through the GitHub repo with a README, technical write-up in Google Docs, production cost breakdown (hosting, APIs, operations) with real numbers. 60-minute handoff call to walk through everything. No technical background required. We stay available for questions after handoff.
+
+## Services (detailed)
+
+### Integrations & APIs
+Connect your systems. Stop re-entering data. Sync pipelines, webhook-driven event flows, cross-platform bridges, data pipelines with observability, scheduled reconciliation jobs. Technologies: REST, GraphQL, gRPC; Kafka, SQS, RabbitMQ; OAuth2, JWT, HMAC; PostgreSQL, MySQL, MongoDB, Redis.
+Service page: https://www.a1lab.com.br/integrations/ · https://www.a1lab.com.br/pt/integracoes-e-apis/
+
+### Document Processing
+Read, extract, and classify documents at scale. Invoice extraction, contract analysis, automatic classification and routing, structured output from messy input, resume screening. Technologies: OpenAI, Claude, Gemini, Llama, Mistral; PaddleOCR, Tesseract, Google Vision, AWS Textract; Scikit-learn, XGBoost.
+Service page: https://www.a1lab.com.br/document-processing/ · https://www.a1lab.com.br/pt/processamento-de-documentos/
+
+### AI & Agents
+AI that works on your documents and data, not generic chat. RAG assistants with citations, autonomous agents with human checkpoints, classical ML, LLM pipelines with tools, multi-step agent workflows. Technologies: OpenAI, Claude, Gemini, Llama, Mistral; Pinecone, Weaviate, pgvector; LangChain, LlamaIndex.
+Service page: https://www.a1lab.com.br/ai-agents/ · https://www.a1lab.com.br/pt/agentes-de-ia/
+
+### Automation & Orchestration
+Remove the manual steps. Keep the control. End-to-end workflows, WhatsApp/Instagram/Telegram chatbots, ETL pipelines, web scraping with caching and rate limiting, notification and escalation flows. Technologies: WhatsApp Business, Airflow, Selenium, Playwright, Cloud Functions.
+Service page: https://www.a1lab.com.br/automation/ · https://www.a1lab.com.br/pt/automacao-e-orquestracao/
+
+Each service page includes: what we build, technologies we use, a concrete example of how we'd approach a common problem, and FAQ with detailed answers.
+
+## What We Prototype
+
+- Process automation (email triage, ticket routing, automatic replies)
+- Document analysis (invoice reading, contract review, report summaries)
+- Internal assistants (plain-language Q&A over company data)
+- Customer support (WhatsApp bots, appointment booking, lead qualification)
+- Software & integrations (dashboards, internal tools, API connections, workflow routing)
+- Prediction & analytics (demand forecasting, churn detection, anomaly detection)
+
+## Frequently Asked Questions
+
+- **What does A1 Lab do?** Technology research. You bring a business problem or idea, we investigate, test it for real, and deliver a working prototype with a technical plan so you can decide what comes next.
+- **What types of technology do you work with?** AI is what we reach for most often, but we also build software, set up integrations, and automate processes. We recommend whatever actually solves the problem.
+- **Do I need a technical team to hire A1 Lab?** No. We're your lab. We do the research and deliver results any manager can understand.
+- **How long does it take?** Diagnostic 1-2 weeks, prototype 2-4 weeks, technical plan 1 week. Most projects run 4-7 weeks total.
+- **How does payment work?** 50% upfront to start, 50% before final delivery. One fixed price for the full three-phase project.
+- **What if the experiment shows the idea doesn't work?** You found out in weeks, not months. That's the point: test before you spend.
+- **Is my data safe?** Yes. We sign NDAs when needed and treat everything confidentially.
+
+## Who It's For
+
+Companies with a business problem that needs technology investigation. No technical team required — we deliver results any manager can understand. Startups and larger companies alike.
+
+## Contact
+
+- Website: https://www.a1lab.com.br/
+- Email: contato@a1lab.com.br
+- Contact form: https://www.a1lab.com.br/#contact
+- GitHub: https://github.com/thea1lab
+- LinkedIn: https://www.linkedin.com/company/thea1lab
+- Instagram: https://www.instagram.com/thea1lab
+
+## Full Context
+
+For detailed information including per-service FAQs, example scenarios, and technology details, see: https://www.a1lab.com.br/llms-full.txt

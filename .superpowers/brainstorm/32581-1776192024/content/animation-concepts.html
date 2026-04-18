@@ -1,0 +1,189 @@
+<style>
+  .lab-steps-mockup {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .step-card {
+    background: var(--bg-secondary);
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: 200px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .step-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+  
+  .step-card h4 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .step-card p {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+  }
+  
+  .step-number {
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  
+  .arrow-between {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--text-tertiary);
+  }
+  
+  @media (max-width: 768px) {
+    .lab-steps-mockup { flex-direction: column; align-items: center; }
+    .arrow-between { transform: rotate(90deg); margin: 0.5rem 0; }
+  }
+  
+  .concept-section {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+  }
+  
+  .concept-section h3 {
+    margin-bottom: 1rem;
+    color: var(--accent);
+  }
+  
+  .animation-preview {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+  }
+  
+  .icon-demo {
+    width: 80px;
+    height: 80px;
+    background: var(--bg-tertiary);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+  }
+  
+  .flow-connector {
+    text-align: center;
+    padding: 1rem;
+    background: var(--bg-tertiary);
+    border-radius: 8px;
+    margin: 0.5rem 0;
+  }
+</style>
+
+<h2>Lab Steps Animation Concepts</h2>
+<p class="subtitle">Visualizing the two animation approaches you want: icon motion + sequential flow</p>
+
+<div class="concept-section">
+  <h3>Current State (Static)</h3>
+  <div class="lab-steps-mockup">
+    <div class="step-card">
+      <span class="step-number">01</span>
+      <span class="icon">🔍</span>
+      <h4>Quick Diagnostic</h4>
+      <p>1-2 weeks</p>
+    </div>
+    <div class="arrow-between">→</div>
+    <div class="step-card">
+      <span class="step-number">02</span>
+      <span class="icon">⚙️</span>
+      <h4>Working Prototype</h4>
+      <p>2-4 weeks</p>
+    </div>
+    <div class="arrow-between">→</div>
+    <div class="step-card">
+      <span class="step-number">03</span>
+      <span class="icon">📋</span>
+      <h4>Technical Plan</h4>
+      <p>1 week</p>
+    </div>
+  </div>
+</div>
+
+<div class="concept-section">
+  <h3>Approach A: Animated Icons</h3>
+  <p style="margin-bottom: 1rem; color: var(--text-secondary);">
+    Each icon has subtle, continuous motion that represents the phase's activity
+  </p>
+  <div class="animation-preview">
+    <div style="text-align: center;">
+      <div class="icon-demo" style="animation: pulse 2s infinite;">🔍</div>
+      <p style="font-size: 0.75rem; margin-top: 0.5rem;">Scanning / Searching<br><em>pulse or scan animation</em></p>
+    </div>
+    <div style="text-align: center;">
+      <div class="icon-demo" style="animation: spin 4s linear infinite;">⚙️</div>
+      <p style="font-size: 0.75rem; margin-top: 0.5rem;">Building / Working<br><em>gear rotation</em></p>
+    </div>
+    <div style="text-align: center;">
+      <div class="icon-demo" style="animation: bounce 2s infinite;">📋</div>
+      <p style="font-size: 0.75rem; margin-top: 0.5rem;">Planning / Delivering<br><em>checkmark or bounce</em></p>
+    </div>
+  </div>
+  <style>
+    @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.1); opacity: 0.8; } }
+    @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+  </style>
+</div>
+
+<div class="concept-section">
+  <h3>Approach B: Sequential Flow Animation</h3>
+  <p style="margin-bottom: 1rem; color: var(--text-secondary);">
+    A visual story showing the progression from problem to prototype to plan
+  </p>
+  
+  <div class="flow-connector">
+    <strong>Problem Input</strong> → <em>analysis animation</em> → 
+    <strong>Prototype Building</strong> → <em>construction animation</em> → 
+    <strong>Delivered Plan</strong>
+  </div>
+  
+  <p style="font-size: 0.85rem; margin-top: 1rem;">
+    Options for flow visualization:
+  </p>
+  <ul style="font-size: 0.8rem; margin-left: 1.5rem; color: var(--text-secondary);">
+    <li><strong>Connecting line animation:</strong> A path that draws itself between cards as user scrolls</li>
+    <li><strong>Active state highlighting:</strong> Cards light up in sequence (1 → 2 → 3) on scroll</li>
+    <li><strong>Particle/data flow:</strong> Small dots moving between cards representing "work" progressing</li>
+    <li><strong>Progress bar:</strong> A timeline that fills as user scrolls through the section</li>
+  </ul>
+</div>
+
+<div class="concept-section">
+  <h3>Combined Approach (A + B)</h3>
+  <p style="color: var(--text-secondary);">
+    The recommended combination: subtle icon animations play continuously, while the sequential flow 
+    activates on scroll — creating both ambient visual interest and narrative progression.
+  </p>
+</div>
+
+<p style="margin-top: 2rem; text-align: center;">
+  <strong>Which flow visualization appeals to you most?</strong> Let me know and I'll refine the design.
+</p>
