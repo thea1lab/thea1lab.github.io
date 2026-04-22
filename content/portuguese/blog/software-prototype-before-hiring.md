@@ -14,7 +14,7 @@ tags:
   - protótipo
   - consultoria
 cluster: decision
-draft: false
+draft: true
 ---
 
 Quem procura `protótipo de software antes de contratar` ou `como validar uma solução tecnológica sem gastar muito` normalmente está tentando evitar o mesmo erro: assinar um projeto grande antes de saber se a ideia funciona de verdade.

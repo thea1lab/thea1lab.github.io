@@ -14,7 +14,7 @@ tags:
   - prototype
   - consulting
 cluster: decision
-draft: false
+draft: true
 ---
 
 When people look for a software prototype before hiring a vendor, they are usually trying to avoid the same mistake: signing a large project before knowing whether the idea actually works.
