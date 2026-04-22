@@ -2739,6 +2739,13 @@ textarea:focus-visible,
   text-align: justify;
 }
 
+.post-single-content h4 {
+  margin-top: 1.75rem;
+  margin-bottom: 0.65rem;
+  font-size: clamp(1rem, 1.2vw, 1.125rem);
+  line-height: 1.35;
+}
+
 .post-single-content figure {
   margin: 48px auto;
   text-align: center;
