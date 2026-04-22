@@ -17,7 +17,7 @@ cluster: decision
 draft: true
 ---
 
-Quem procura `protótipo de software antes de contratar` ou `como validar uma solução tecnológica sem gastar muito` normalmente está tentando evitar o mesmo erro: assinar um projeto grande antes de saber se a ideia funciona de verdade.
+Quem está nessa fase normalmente está tentando evitar o mesmo erro: assinar um projeto grande antes de saber se a ideia funciona de verdade.
 
 Isso acontece o tempo todo. A empresa tem um problema real, recebe uma proposta fechada, aprova orçamento, entra em desenvolvimento e só meses depois descobre que a solução era grande demais, complicada demais ou simplesmente errada para o caso.
 

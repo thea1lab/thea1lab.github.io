@@ -11,8 +11,9 @@ else
   echo "No source changes to commit. Continuing with build and gh-pages deploy."
 fi
 
-# Build the site from a clean output directory so removed pages are not redeployed
-hugo -D --buildFuture --cleanDestinationDir
+# Build the production site from a clean output directory.
+# Drafts and future-dated posts stay hidden unless explicitly published.
+hugo --cleanDestinationDir
 
 # Deploy public/ to gh-pages using a temporary orphan approach
 cd public

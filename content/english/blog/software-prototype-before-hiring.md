@@ -17,7 +17,7 @@ cluster: decision
 draft: true
 ---
 
-When people look for a software prototype before hiring a vendor, they are usually trying to avoid the same mistake: signing a large project before knowing whether the idea actually works.
+At this stage, most companies are trying to avoid the same mistake: signing a large project before knowing whether the idea actually works.
 
 It happens all the time. A company has a real problem, gets a fixed proposal, approves the budget, starts development, and only months later finds out the solution was too big, too complex, or simply wrong for the real need.
 
