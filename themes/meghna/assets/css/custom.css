@@ -319,17 +319,25 @@ code {
 
 #about,
 #services,
+#process,
+#feature,
 #projects,
 #team,
-#faq {
+#expertise,
+#faq,
+#contact {
   position: relative;
 }
 
 #about::before,
 #services::before,
+#process::before,
+#feature::before,
 #projects::before,
 #team::before,
-#faq::before {
+#expertise::before,
+#faq::before,
+#contact::before {
   position: absolute;
   top: 38px;
   left: 24px;
@@ -349,6 +357,14 @@ code {
   content: "PROCESS";
 }
 
+#process::before {
+  content: "PROCESS";
+}
+
+#feature::before {
+  content: "FLOW";
+}
+
 #projects::before {
   content: "CASES";
 }
@@ -357,8 +373,16 @@ code {
   content: "STACK";
 }
 
+#expertise::before {
+  content: "STACK";
+}
+
 #faq::before {
   content: "FAQ";
+}
+
+#contact::before {
+  content: "CONTACT";
 }
 
 .about .col-lg-4 {
@@ -612,13 +636,27 @@ section.call-to-action.overly:before {
 }
 
 section.call-to-action {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   background-position: center center;
   background-color: var(--color-accent-primary);
   background-image: none !important;
 }
 
 section.call-to-action::after {
-  display: none;
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0)),
+    repeating-linear-gradient(
+      135deg,
+      rgba(0, 0, 0, 0.025) 0 28px,
+      rgba(0, 0, 0, 0) 28px 78px
+    );
 }
 
 section.call-to-action .container {
@@ -898,9 +936,12 @@ section.call-to-action .btn-main {
 
 #about,
 #services,
+#process,
 #feature,
 #projects,
 #team,
+#expertise,
+#cta,
 #faq,
 #contact {
   scroll-margin-top: clamp(72px, 9vh, 94px);
@@ -1570,9 +1611,13 @@ section.call-to-action .btn-main {
 
   #about::before,
   #services::before,
+  #process::before,
+  #feature::before,
   #projects::before,
   #team::before,
-  #faq::before {
+  #expertise::before,
+  #faq::before,
+  #contact::before {
     top: 24px;
     left: 18px;
   }
@@ -2022,9 +2067,13 @@ textarea:focus-visible,
 
   #about::before,
   #services::before,
+  #process::before,
+  #feature::before,
   #projects::before,
   #team::before,
-  #faq::before {
+  #expertise::before,
+  #faq::before,
+  #contact::before {
     display: none;
   }
 }

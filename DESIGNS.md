@@ -227,10 +227,12 @@ All cards share: `border: var(--border-brutal)`, `background: var(--color-bg-str
 ### Section Watermarks
 Large ghost text behind sections — `rgba(0,0,0,0.04)`, weight `900`, `clamp(3.5rem, 14vw, 9rem)`:
 - `#about` → "FOCUS"
-- `#services` → "PROCESS"
+- `#services`, `#process` → "PROCESS"
+- `#feature` → "FLOW"
 - `#projects` → "CASES"
-- `#team` → "STACK"
+- `#team`, `#expertise` → "STACK"
 - `#faq` → "FAQ"
+- `#contact` → "CONTACT"
 
 Hidden on mobile (`max-width: 575px`).
 
