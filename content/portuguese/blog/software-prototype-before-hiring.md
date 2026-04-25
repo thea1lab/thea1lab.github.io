@@ -12,9 +12,8 @@ images:
 tags:
   - software
   - protótipo
-  - consultoria
 cluster: decision
-draft: true
+draft: false
 ---
 
 Quem está nessa fase normalmente está tentando evitar o mesmo erro: assinar um projeto grande antes de saber se a ideia funciona de verdade.

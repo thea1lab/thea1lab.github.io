@@ -12,9 +12,8 @@ images:
 tags:
   - software
   - prototype
-  - consulting
 cluster: decision
-draft: true
+draft: false
 ---
 
 At this stage, most companies are trying to avoid the same mistake: signing a large project before knowing whether the idea actually works.

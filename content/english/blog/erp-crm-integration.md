@@ -11,10 +11,8 @@ images:
   - images/blog/erp-crm-integration/about.jpg
 tags:
   - integrations
-  - erp
-  - crm
 cluster: integrations
-draft: true
+draft: false
 ---
 
 Companies trying to connect ERP, CRM, and other disconnected systems usually face the same symptom: the data exist, but they do not flow. The team types the same information twice, fixes errors by hand, and wastes time checking whether one system matches the other.

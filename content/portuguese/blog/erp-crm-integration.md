@@ -11,10 +11,8 @@ images:
   - images/blog/erp-crm-integration/about.jpg
 tags:
   - integrações
-  - erp
-  - crm
 cluster: integrations
-draft: true
+draft: false
 ---
 
 Empresas que precisam conectar ERP, CRM e outros sistemas que hoje não se comunicam costumam enfrentar o mesmo sintoma: o dado existe, mas não flui. A equipe digita a mesma informação duas vezes, corrige erro manualmente e perde tempo conferindo se um sistema bate com o outro.
