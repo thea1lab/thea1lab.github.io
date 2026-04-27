@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+	<meta name="theme-color" content="#e87a00"><title>How Much Does It Cost to Implement AI: Infra, Tokens, and Dev Time (Real Numbers) | A1 Lab</title><!-- mobile responsive meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="How much does it cost to implement AI? Realistic breakdown of infra, tokens, development, and maintenance with real ranges by project type.">
+	<meta name="robots" content="index, follow">
+	
+	<meta name="author" content="A1 Lab">
+	<meta name="generator" content="Hugo 0.160.0">
+
+	<!-- canonical + hreflang -->
+	<link rel="canonical" href="https://www.a1lab.com.br/blog/how-much-does-ai-cost/">
+	<link rel="llms-txt" href="https://www.a1lab.com.br/llms.txt">
+	<link rel="alternate" hreflang="en-US" href="https://www.a1lab.com.br/blog/how-much-does-ai-cost/">
+	<link rel="alternate" hreflang="pt-BR" href="https://www.a1lab.com.br/pt/blog/quanto-custa-implementar-ia/">
+	<link rel="alternate" hreflang="x-default" href="https://www.a1lab.com.br/blog/how-much-does-ai-cost/">
+
+  <meta property="og:url" content="https://www.a1lab.com.br/blog/how-much-does-ai-cost/">
+  <meta property="og:site_name" content="A1 Lab">
+  <meta property="og:title" content="How Much Does It Cost to Implement AI: Infra, Tokens, and Dev Time (Real Numbers)">
+  <meta property="og:description" content="How much does it cost to implement AI? Realistic breakdown of infra, tokens, development, and maintenance with real ranges by project type.">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2026-04-16T11:00:00-03:00">
+    <meta property="article:modified_time" content="2026-04-16T11:00:00-03:00">
+  <meta property="article:author" content="https://www.a1lab.com.br/author/claudio-scheer/">
+  <meta property="og:image" content="https://www.a1lab.com.br/images/blog/how-much-does-ai-cost/about.jpg">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How Much Does It Cost to Implement AI: Infra, Tokens, and Dev Time (Real Numbers)">
+<meta name="twitter:description" content="How much does it cost to implement AI? Realistic breakdown of infra, tokens, development, and maintenance with real ranges by project type.">
+<meta name="twitter:image" content="https://www.a1lab.com.br/images/blog/how-much-does-ai-cost/about.jpg">
+
+
+
+		<!-- plugins -->
+		
+		
+		
+		
+		<link rel="stylesheet" href="https://www.a1lab.com.br/plugins/bootstrap/bootstrap.min.css">
+		
+		
+		
+		
+		
+		<link rel="stylesheet" href="https://www.a1lab.com.br/plugins/themify-icons/themify-icons.css">
+		
+		
+		
+		
+		
+		<link rel="stylesheet" href="https://www.a1lab.com.br/plugins/magnific-popup/magnific-popup.css">
+		
+		
+		
+		
+		
+		<link rel="stylesheet" href="https://www.a1lab.com.br/plugins/slick/slick.css">
+		
+		
+		
+		
+		
+		<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space&#43;Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+		<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space&#43;Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap"></noscript>
+		
+		
+		
+
+	<!-- Main Stylesheet -->
+	
+	<link rel="stylesheet" href="/css/style.min.62bfa557c1dbef9bbe292149d3081650ae15aa364f9789cd9519a06f8add3bd1e85b7e1d388a17810f5f17014bc5208a.css" integrity="sha384-Yr&#43;lV8Hb75u&#43;KSFJ0wgWUK4VqjZPl4nNlRmgb4rdO9HoW34dOIoXgQ9fFwFLxSCK" media="screen">
+
+	<!-- Custom stylesheet - for your changes -->
+	
+  <link rel="stylesheet" href="/css/custom.min.b4e9b14ea3b56edb0957cf7aa1586919f3689c6b50addea2b2941bb60b762f85b3fdc56ef2c3c9ebcdec9e87c7b5b198.css" integrity="sha384-tOmxTqO1btsJV896oVhpGfNonGtQrd6ispQbtgt2L4Wz/cVu8sPJ683snofHtbGY" media="screen">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="https://www.a1lab.com.br/images/favicon.png" type="image/x-icon">
+	<link rel="icon" href="https://www.a1lab.com.br/images/favicon.png" type="image/x-icon">
+	<link rel="apple-touch-icon" href="https://www.a1lab.com.br/images/favicon.png">
+
+	
+	<!-- Global Site Tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-384Q987MKZ"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-384Q987MKZ');
+	</script>
+	
+
+	
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","author":{"@type":"Person","name":"Claudio Scheer","url":"https://www.a1lab.com.br/author/claudio-scheer/"},"dateModified":"2026-04-16T11:00:00-03:00","datePublished":"2026-04-16T11:00:00-03:00","description":"How much does it cost to implement AI? Realistic breakdown of infra, tokens, development, and maintenance with real ranges by project type.","headline":"How Much Does It Cost to Implement AI: Infra, Tokens, and Dev Time (Real Numbers)","image":"https://www.a1lab.com.br/images/blog/how-much-does-ai-cost/about.jpg","inLanguage":"en-US","mainEntityOfPage":{"@id":"https://www.a1lab.com.br/blog/how-much-does-ai-cost/","@type":"WebPage"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.a1lab.com.br/images/full-logo.png"},"name":"A1 Lab"},"speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article .content p:first-of-type"]},"wordCount":2110}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://www.a1lab.com.br/","name":"A1 Lab","position":1},{"@type":"ListItem","item":"https://www.a1lab.com.br/blog/","name":"Blogs","position":2},{"@type":"ListItem","name":"How Much Does It Cost to Implement AI: Infra, Tokens, and Dev Time (Real Numbers)","position":3}]}</script>
+
+	<script>
+	(function () {
+		var storageKey = "a1lab-language";
+	})();
+</script>
+
+</head>
+
+
+<body id="body" data-spy="scroll" data-target=".navbar" data-offset="55">
+  <a href="#content" class="skip-to-content sr-only">Skip to content</a>
+  <div>
+    
+<!-- preloader start -->
+	<div class="preloader">
+	  
+	  <img src="https://www.a1lab.com.br/images/full-background-logo.webp" alt="" aria-hidden="true">
+	  
+	</div>
+<!-- preloader end -->
+
+
+    <main id="content">
+
+<header class="sticky-top navigation">
+	<div class="container">
+		<nav class="navbar navbar-expand-lg navbar-light">
+				<a class="navbar-brand p-0" href="/">
+					
+					
+					<img class="lozad" data-src="https://www.a1lab.com.br/images/full-background-logo.webp" alt="A1 Lab" width="184" height="69"
+						style="height: 42px; width: auto;">
+					
+					
+				</a>
+
+				<button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
+					aria-controls="navigation" aria-expanded="false"
+					aria-label="Open navigation menu">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+			<div class="collapse navbar-collapse" id="navigation">
+				<ul class="navbar-nav ml-auto">
+					
+					<li class="nav-item">
+            <a class="nav-link" href="/#process">how it works</a>
+					</li>
+					
+					<li class="nav-item">
+            <a class="nav-link" href="/#expertise">expertise</a>
+					</li>
+					
+					<li class="nav-item">
+            <a class="nav-link" href="/#faq">FAQ</a>
+					</li>
+					
+					<li class="nav-item nav-lang-item">
+						<a class="nav-link nav-flag" href="https://www.a1lab.com.br/pt/blog/quanto-custa-implementar-ia/" data-lang="pt"
+							aria-label="Português"
+							onclick="try{localStorage.setItem('a1lab-language','pt')}catch(e){}">PT</a>
+					</li>
+					
+					<li class="nav-item nav-cta-item">
+						<a class="btn btn-nav-cta" href="/#contact">Book a call</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</header>
+
+
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 text-center">
+        <article>
+        <h1>How Much Does It Cost to Implement AI: Infra, Tokens, and Dev Time (Real Numbers)</h1>
+        
+        <div class="post-byline">
+          <span class="post-byline__author">By <a href="/author/claudio-scheer/">Claudio Scheer</a></span>
+          <time class="post-byline__date" datetime="2026-04-16">Apr 16, 2026</time>
+        </div>
+        <img class="img-fluid mb-50 lozad" data-src="/images/blog/how-much-does-ai-cost/about.jpg" alt="How Much Does It Cost to Implement AI: Infra, Tokens, and Dev Time (Real Numbers)">
+      </div>
+      <div class="col-lg-8 offset-lg-2">
+        <div class="post-single-content">
+          <p>If you are trying to budget an AI project and keep getting vague answers, this guide gives you something concrete: realistic cost ranges, where the money actually goes, and how to avoid paying for complexity you do not need.</p>
+<p>Pricing conversations are asymmetric: when a vendor skips diagnosis, they tend to overscope the solution, and a company that needed something simple gets sold LLM plus vector database plus full pipeline before any value is proven.</p>
+<p>To make the ranges comparable, think of this baseline scenario:</p>
+<ul>
+<li>Small company (5–20 employees)</li>
+<li>A few thousand internal documents (PDFs, contracts, policies, manuals) in decent but not perfect shape</li>
+<li>API-based LLM, no hard privacy restrictions on sending data externally</li>
+<li>5–20 internal users</li>
+</ul>
+<p>If your scenario is different, with more documents, stricter privacy, real-time requirements, or multiple system integrations, expect costs on the higher end of each range.</p>
+<h3 id="why-estimates-go-wrong">Why estimates go wrong</h3>
+<p>Most cost estimates for AI projects fail for the same reason: the person estimating doesn't understand the problem yet. Imagine two scenarios:</p>
+<p>A company gets a quote for a $24k RAG project. No diagnosis, no prototype. Just a number. Four months in, the data turns out to be too messy for RAG to work well. The money is gone and the solution doesn't work.</p>
+<p>Another company budgets $1k/month for API tokens. Their document assistant pulls 15,000 tokens of context per question. With GPT-5, that means $2,400/month in tokens alone. Nobody had done the math.</p>
+<p>The cost of fixing a bad estimate is always higher than doing the math up front. The ranges below are what comes out after that math.</p>
+<h3 id="the-components-of-cost">The components of cost</h3>
+<p>An AI project has four cost components. Most people only think about the first two, which is why they're surprised by the third and fourth.</p>
+<h4 id="infrastructure">Infrastructure</h4>
+<p>Cloud, GPU, hosting, databases. If the solution runs LLMs via API (OpenAI, Anthropic, Google), you don't need GPU. The cost is in the calls. If it runs a custom model, you need GPU, and that has a price.</p>
+<ul>
+<li>API-only (Claude, Gemini, GPT-5, etc.): no fixed infra cost. You pay per token.</li>
+<li>Self-hosted open-source model (Llama, Qwen, Gemma, GLM, Kimi, and others): significant GPU infrastructure. A single A100 on AWS runs $2,000+/month, and you need DevOps expertise to maintain it. Smaller models are cheaper to host, but depending on the problem the company needs to solve, those models may not have the necessary capability. Self-hosting only makes sense when data cannot leave the company.</li>
+<li>Vector database (Pinecone, Weaviate, Qdrant): managed plans start around $70/month for small volumes.</li>
+</ul>
+<h4 id="tokens-and-api-calls">Tokens and API calls</h4>
+<p>This is the cost that catches people off guard. A chatbot answering 500 questions per day can cost $100–300/month in tokens, depending on the model and context size. Two factors drive this number.</p>
+<p>The first is context size. If the system retrieves 20 chunks of 500 tokens each and stitches them into the prompt, every call uses 10,000 tokens of context before the user has typed anything. Building a good context window (retrieving only what's relevant, trimming what isn't) is where most of the engineering effort goes. A sloppy context blows up cost fast.</p>
+<p>That's why RAG matters. RAG isn't just about "giving the model memory." It's about controlling what enters the context. A well-implemented RAG retrieves the right chunks, in the right amount, without unnecessary tokens. For this to work, the company's data structure needs to be understood: how documents are organized, what the typical questions are, how to query efficiently. That initial analysis is what separates a RAG that costs $100/month from one that costs $1,000/month.</p>
+<p>The second factor is model choice. GPT-5 is roughly 30x more expensive than Gemini Flash. Claude Opus costs more than Sonnet. For most business use cases, the smaller model works and costs a fraction.</p>
+<h4 id="development-time">Development time</h4>
+<p>This is where things get built: diagnosis, data pipeline, integration, testing, deployment, documentation. Timelines vary a lot by complexity and data quality. A document assistant for a small company with clean data can be ready in 4 weeks. A document processing pipeline for a large company with scattered data can take 8–12 weeks.</p>
+<p>Prototypes significantly reduce this time. With careful initial analysis, you can quickly find out whether the idea is viable, what it will actually cost to run, and what problems will come up, without needing to start the full project and only then discover the obstacles. That upfront work is what reduces risk before committing to a larger budget.</p>
+<h4 id="maintenance-and-evolution">Maintenance and evolution</h4>
+<p>AI isn't deploy-and-forget. Models change, APIs get deprecated, requirements evolve. But the most underestimated factor is this: the company's data changes.</p>
+<p>New contracts, new policies, new products. The AI needs to keep up with that evolution. The index needs updating, prompts need adjusting, and answer quality needs monitoring. Budget for:</p>
+<ul>
+<li>Prompt and pipeline adjustments: a few hours per month.</li>
+<li>Index reprocessing: if source data changes frequently, this is recurring.</li>
+<li>Monitoring: who notices when answer quality drops? That needs a process, not a wish.</li>
+</ul>
+<h3 id="what-defines-the-price-of-a-production-ai-project">What defines the price of a production AI project</h3>
+<p>These are market reference prices for full production projects, not A1 Lab's prices, since we work with prototypes. The general range is $6k–$24k in development, plus monthly infrastructure. What moves the price within that range are concrete technical decisions.</p>
+<h4 id="document-type">Document type</h4>
+<p>Digitally generated PDFs (selectable text) are the simplest case. When documents are scanned, such as photos of paper or scanner output, the system needs OCR before any indexing can happen. OCR isn't just converting image to text: it involves preprocessing, quality validation, and handling recognition failures. Impact: +$2,000–4,500 in development.</p>
+<p>When documents come from different sources, such as contracts from different vendors, reports from legacy systems, and forms from different departments, each layout family needs its own extraction logic. +$1,600–3,000 per distinct layout family.</p>
+<h4 id="volume">Volume</h4>
+<p>Volume affects two costs: development of the ingestion pipeline and monthly infrastructure for the vector database and storage.</p>
+<ul>
+<li>Up to 2,000 documents: simple pipeline, baseline</li>
+<li>2,000–10,000 documents: batch pipeline and incremental indexing. Added cost: +$1,600–4,000 development, +$60–160/month infra.</li>
+<li>10,000–50,000 documents: automated reprocessing, quality monitoring, and index partitioning. Added cost: +$4,000–8,000 development, +$160–400/month infra.</li>
+</ul>
+<h4 id="integrations-with-existing-systems">Integrations with existing systems</h4>
+<p>The simplest integration is manual upload or a shared folder, with no extra cost. When data needs to come from external systems:</p>
+<ul>
+<li>System with well-documented, stable API: +$1,000–2,400 per system</li>
+<li>Legacy system without an API (SFTP, manual export, scraping): +$2,000–4,000 per system</li>
+<li>Inconsistent data across systems (same customer with different IDs in three systems): +$3,000–7,000 for normalization and reconciliation</li>
+</ul>
+<h4 id="privacy-data-that-cant-leave-the-company">Privacy: data that can't leave the company</h4>
+<p>Using external APIs (OpenAI, Anthropic, Google) is cheaper and simpler. When that's unacceptable for compliance or internal policy reasons, the solution is hosting an open-source model (Llama, Qwen, Gemma, and similar). Extra development cost to build the serving infrastructure: +$2,400–5,000. Monthly GPU cost:</p>
+<ul>
+<li>Small model (7–13B parameters): $600–1,200/month</li>
+<li>Medium model (70B parameters): $1,800–4,000/month</li>
+</ul>
+<p>Worth checking first whether the restriction is real compliance or risk perception. The major API providers offer contracts that prohibit using your data for training, which resolves most cases without needing your own GPU.</p>
+<h4 id="context-and-model">Context and model</h4>
+<p>These two factors define the monthly API cost. Context is how many tokens the system uses per query; the model is the price per token. For a team of 5–20 people making around 100 queries per day (3,000/month):</p>
+<table>
+  <thead>
+      <tr>
+          <th></th>
+          <th>Cheap model (e.g. Gemini Flash)</th>
+          <th>Mid-tier model</th>
+          <th>Advanced model (e.g. GPT-5)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Simple FAQ (~5k tokens/query)</td>
+          <td>$2/month</td>
+          <td>$53/month</td>
+          <td>$263/month</td>
+      </tr>
+      <tr>
+          <td>Document assistant (~20k tokens)</td>
+          <td>$6/month</td>
+          <td>$210/month</td>
+          <td>$1,050/month</td>
+      </tr>
+      <tr>
+          <td>Agent with history (~50k tokens)</td>
+          <td>$16/month</td>
+          <td>$525/month</td>
+          <td>$2,625/month</td>
+      </tr>
+  </tbody>
+</table>
+<p>The model is a pure multiplier. The same system that costs $210/month on a mid-tier model can cost $6/month on a cheap one if it's good enough for the problem. Most internal use cases are. The advanced model only makes sense when complex reasoning has direct financial impact on the output.</p>
+<p>In practice: model is the easiest lever to adjust once the system is running. Context is the most impactful to get right upfront.</p>
+<p>Context depends on how well the RAG is implemented. A RAG with poor retrieval fills the context window with irrelevant chunks, and monthly costs can run 3–5x higher than necessary. That gap widens with usage volume.</p>
+<h3 id="what-reduces-cost">What reduces cost</h3>
+<p>Some levers have direct impact on cost and are more in your control than they might seem.</p>
+<p>The most obvious is using external APIs instead of hosting your own model. GPU is expensive, needs DevOps, and in most cases solves nothing that an API wouldn't. The major providers offer contracts prohibiting use of your data for training. That eliminates most privacy objections without any infrastructure of your own.</p>
+<p>Focused scope matters more than it looks. An assistant for one specific process with well-defined documents costs a fraction of a system trying to cover everything. Starting small and expanding later is cheaper than designing the perfect system before knowing what works.</p>
+<p>Data quality before the project has direct impact on development cost and monthly tokens. Clean, organized documents reduce ingestion work and prevent the context window from filling with noise.</p>
+<p>And the model. Using GPT-5 on a problem Gemini Flash solves costs 30x more per month. It's the easiest lever to adjust and has immediate effect on operating cost.</p>
+<h3 id="how-ai-project-pricing-models-work">How AI project pricing models work</h3>
+<p>AI projects are sold in three main ways, and each one distributes risk differently.</p>
+<p>Fixed scope: you pay a set amount for a defined deliverable. Works when scope is clear and data is understood upfront. If scope isn't well-defined, the risk is yours.</p>
+<p>Monthly retainer: fixed fee for ongoing capacity like maintenance, iteration, and support. It's the right model for sustaining a system that already works. It's not the right model for building from scratch.</p>
+<p>Usage-based: you pay per volume processed or per outcome. More common in SaaS products. Aligns incentives but hard to budget predictably.</p>
+<p>In practice, the combination that works best is: diagnosis and prototype on fixed scope, main development on fixed scope or retainer, maintenance on retainer. Quoting the entire project at fixed scope with no prior diagnosis rarely works because scope shifts once real data appears.</p>
+<h3 id="frequently-asked-questions-about-ai-implementation-costs">Frequently asked questions about AI implementation costs</h3>
+<p><strong>What's the minimum cost to implement AI in a small company?</strong>
+For a 5–20 person company with internal documents and no hard privacy restrictions, development typically starts around $6,000–10,000 for a working assistant. Monthly infrastructure and tokens run $40–300, depending on usage volume and model choice.</p>
+<p><strong>Is it worth using an open-source model to cut costs?</strong>
+It depends. Self-hosting an open-source model on GPU is more expensive in infrastructure than using an external API, and it requires DevOps expertise. It only makes sense when data genuinely cannot leave the company. In most cases, an external API with a data privacy contract is cheaper and simpler.</p>
+<p><strong>How long until I see return on investment?</strong>
+Depends on the automated process. For high-volume repetitive manual work, ROI in 6–12 months is reasonable. For more strategic use cases (analysis, knowledge synthesis), the return is harder to quantify quickly. A prototype with real data lets you estimate this before committing your full budget.</p>
+<p><strong>How do I compare quotes from different vendors?</strong>
+Ask each vendor to break out: development cost, monthly infrastructure and token cost, and maintenance cost. Quotes presenting just a single total number are hard to compare and usually obscure recurring costs. Also ask about the delivery model. If there's no prototype or diagnosis phase in the proposal, scope will almost certainly change once real data appears.</p>
+<h3 id="a1-labs-approach">A1 Lab's approach</h3>
+<p>Most of the risk in an AI project is in the first few weeks. Does the data support the solution? What does it actually cost to run? Those questions can't be answered in a proposal. You only answer them by running a prototype.</p>
+<p>We work with prototypes, not open-ended projects.</p>
+<p>The first phase is <strong>diagnosis</strong> (1–2 weeks): we understand the problem, analyze real data, and define scope. It costs a fraction of a month of generic consulting and already eliminates most of the uncertainty around feasibility and cost.</p>
+<p>Then comes the <strong>working prototype</strong> (2–4 weeks): a version that runs on the company's real data. You get concrete numbers for answer quality, latency, and estimated monthly token cost. With that in hand, you decide what to do next: continue with A1 Lab, build in-house, or bring in another vendor. If the solution doesn't perform as expected, you find out in the first few weeks, not after months of development. And you keep the diagnosis and the code.</p>
+<p>Going straight to the full project without a prototype is a bet. The prototype turns that into a decision.</p>
+<hr>
+<p><strong>See also:</strong></p>
+<ul>
+<li><a href="/blog/how-to-choose-ai-company/">How to choose an AI company</a></li>
+<li><a href="/blog/rag-architectures-and-how-to-choose/">RAG architectures (how to choose)</a></li>
+<li><a href="/document-processing/">Document processing with AI</a></li>
+<li><a href="/ai-agents/">AI agents</a></li>
+</ul>
+
+          </div>
+
+          <div class="blog-cta">
+            <div class="blog-cta__body">
+              <p class="blog-cta__heading">Need help with this?</p>
+              <p>We research, prototype, and deliver a technical plan so you can decide what comes next.</p>
+            </div>
+            <a href="/#contact" class="btn btn-main">Talk to the Lab</a>
+          </div>
+
+          </article>
+        
+        
+        <div class="mt-5">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    </main>
+  </div><!-- end Contact Area -->
+<footer id="footer" class="section">
+	<div class="container">
+		<div class="row wow fadeInUp" data-wow-duration="500ms">
+			<div class="col-xl-12">
+				<div class="footer-shell">
+					<div class="footer-brand">
+						<a href="https://www.a1lab.com.br/">
+							<img src="https://www.a1lab.com.br/images/full-background-logo.webp" alt="A1 Lab" width="144" height="54" />
+						</a>
+					</div>
+
+					<nav class="footer-nav" aria-label="Footer navigation">
+						<div class="footer-nav-columns">
+							<ul>
+								
+								<li>
+									<a href="https://www.a1lab.com.br/#process">how it works</a>
+								</li>
+								
+								<li>
+									<a href="https://www.a1lab.com.br/#expertise">expertise</a>
+								</li>
+								
+								<li>
+									<a href="https://www.a1lab.com.br/#faq">FAQ</a>
+								</li>
+								
+								<li>
+									<a href="https://www.a1lab.com.br/blog">Blog</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+
+					<!-- Footer Social Links -->
+					<div class="social-icon footer-social">
+						<ul class="list-inline">
+							
+								<li class="list-inline-item"><a href="https://github.com/thea1lab" target="_blank" rel="noopener noreferrer"
+										aria-label="GitHub"><i class="ti-github" aria-hidden="true"></i></a></li>
+								
+								<li class="list-inline-item"><a href="https://www.youtube.com/@lab-a1" target="_blank" rel="noopener noreferrer"
+										aria-label="YouTube"><i class="ti-youtube" aria-hidden="true"></i></a></li>
+								
+								<li class="list-inline-item"><a href="https://www.linkedin.com/company/thea1lab" target="_blank" rel="noopener noreferrer"
+										aria-label="LinkedIn"><i class="ti-linkedin" aria-hidden="true"></i></a></li>
+								
+								<li class="list-inline-item"><a href="https://www.instagram.com/thea1lab" target="_blank" rel="noopener noreferrer"
+										aria-label="Instagram"><i class="ti-instagram" aria-hidden="true"></i></a></li>
+								
+							</ul>
+						</div>
+				</div>
+				<div class="footer-bottom">
+					<p class="footer-slogan">Every problem deserves a lab.</p>
+					<p class="footer-copyright">&copy; 2026 A1 Lab.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- /footer -->
+
+<!-- Google Map API -->
+
+
+	<!-- JS Plugins -->
+	
+	
+	
+	<script src="https://www.a1lab.com.br/plugins/jquery/jquery.min.js" defer></script>
+	
+	
+	
+	<script src="https://www.a1lab.com.br/plugins/bootstrap/bootstrap.min.js" defer></script>
+	
+	
+	
+	<script src="https://www.a1lab.com.br/plugins/slick/slick.min.js" defer></script>
+	
+	
+	
+	<script src="https://www.a1lab.com.br/plugins/shuffle/shuffle.min.js" defer></script>
+	
+	
+	
+	<script src="https://www.a1lab.com.br/plugins/magnific-popup/jquery.magnific-popup.min.js" defer></script>
+	
+	
+	
+	<script src="https://www.a1lab.com.br/plugins/lazy-load/lozad.min.js" defer></script>
+	
+	
+
+<!-- Main Script -->
+
+<script src="/js/script.min.ba4c8065a7009cdcc9ea9d4c2785120d0f5f4b0d22eadda3da495ce1045a5565a31ac136a567d3533ab4b70378c1c4ad.js" integrity="sha384-ukyAZacAnNzJ6p1MJ4USDQ9fSw0i6t2j2klc4QRaVWWjGsE2pWfTUzq0twN4wcSt" defer></script>
+
+
+
+
+</body>
+
+</html>

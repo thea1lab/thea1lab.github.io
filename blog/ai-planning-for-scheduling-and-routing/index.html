@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+	<meta name="theme-color" content="#e87a00"><title>How to Solve Scheduling and Routing Problems with AI Planning | A1 Lab</title><!-- mobile responsive meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="How to use AI Planning to solve scheduling, routing, and sequencing problems, with a hands-on PDDL example you can adapt.">
+	<meta name="robots" content="index, follow">
+	
+	<meta name="author" content="A1 Lab">
+	<meta name="generator" content="Hugo 0.160.0">
+
+	<!-- canonical + hreflang -->
+	<link rel="canonical" href="https://www.a1lab.com.br/blog/ai-planning-for-scheduling-and-routing/">
+	<link rel="llms-txt" href="https://www.a1lab.com.br/llms.txt">
+	<link rel="alternate" hreflang="en-US" href="https://www.a1lab.com.br/blog/ai-planning-for-scheduling-and-routing/">
+	<link rel="alternate" hreflang="pt-BR" href="https://www.a1lab.com.br/pt/blog/planejamento-de-ia-para-roteamento-e-agendamento/">
+	<link rel="alternate" hreflang="x-default" href="https://www.a1lab.com.br/blog/ai-planning-for-scheduling-and-routing/">
+
+  <meta property="og:url" content="https://www.a1lab.com.br/blog/ai-planning-for-scheduling-and-routing/">
+  <meta property="og:site_name" content="A1 Lab">
+  <meta property="og:title" content="How to Solve Scheduling and Routing Problems with AI Planning">
+  <meta property="og:description" content="How to use AI Planning to solve scheduling, routing, and sequencing problems, with a hands-on PDDL example you can adapt.">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2023-12-23T15:48:14+03:00">
+    <meta property="article:modified_time" content="2023-12-23T15:48:14+03:00">
+  <meta property="article:author" content="https://www.a1lab.com.br/author/claudio-scheer/">
+  <meta property="og:image" content="https://www.a1lab.com.br/images/blog/ai-planning-for-scheduling-and-routing/about.jpg">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Solve Scheduling and Routing Problems with AI Planning">
+<meta name="twitter:description" content="How to use AI Planning to solve scheduling, routing, and sequencing problems, with a hands-on PDDL example you can adapt.">
+<meta name="twitter:image" content="https://www.a1lab.com.br/images/blog/ai-planning-for-scheduling-and-routing/about.jpg">
+
+
+
+		<!-- plugins -->
+		
+		
+		
+		
+		<link rel="stylesheet" href="https://www.a1lab.com.br/plugins/bootstrap/bootstrap.min.css">
+		
+		
+		
+		
+		
+		<link rel="stylesheet" href="https://www.a1lab.com.br/plugins/themify-icons/themify-icons.css">
+		
+		
+		
+		
+		
+		<link rel="stylesheet" href="https://www.a1lab.com.br/plugins/magnific-popup/magnific-popup.css">
+		
+		
+		
+		
+		
+		<link rel="stylesheet" href="https://www.a1lab.com.br/plugins/slick/slick.css">
+		
+		
+		
+		
+		
+		<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space&#43;Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+		<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space&#43;Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap"></noscript>
+		
+		
+		
+
+	<!-- Main Stylesheet -->
+	
+	<link rel="stylesheet" href="/css/style.min.62bfa557c1dbef9bbe292149d3081650ae15aa364f9789cd9519a06f8add3bd1e85b7e1d388a17810f5f17014bc5208a.css" integrity="sha384-Yr&#43;lV8Hb75u&#43;KSFJ0wgWUK4VqjZPl4nNlRmgb4rdO9HoW34dOIoXgQ9fFwFLxSCK" media="screen">
+
+	<!-- Custom stylesheet - for your changes -->
+	
+  <link rel="stylesheet" href="/css/custom.min.b4e9b14ea3b56edb0957cf7aa1586919f3689c6b50addea2b2941bb60b762f85b3fdc56ef2c3c9ebcdec9e87c7b5b198.css" integrity="sha384-tOmxTqO1btsJV896oVhpGfNonGtQrd6ispQbtgt2L4Wz/cVu8sPJ683snofHtbGY" media="screen">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="https://www.a1lab.com.br/images/favicon.png" type="image/x-icon">
+	<link rel="icon" href="https://www.a1lab.com.br/images/favicon.png" type="image/x-icon">
+	<link rel="apple-touch-icon" href="https://www.a1lab.com.br/images/favicon.png">
+
+	
+	<!-- Global Site Tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-384Q987MKZ"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-384Q987MKZ');
+	</script>
+	
+
+	
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","author":{"@type":"Person","name":"Claudio Scheer","url":"https://www.a1lab.com.br/author/claudio-scheer/"},"dateModified":"2023-12-23T15:48:14+03:00","datePublished":"2023-12-23T15:48:14+03:00","description":"How to use AI Planning to solve scheduling, routing, and sequencing problems, with a hands-on PDDL example you can adapt.","headline":"How to Solve Scheduling and Routing Problems with AI Planning","image":"https://www.a1lab.com.br/images/blog/ai-planning-for-scheduling-and-routing/about.jpg","inLanguage":"en-US","mainEntityOfPage":{"@id":"https://www.a1lab.com.br/blog/ai-planning-for-scheduling-and-routing/","@type":"WebPage"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.a1lab.com.br/images/full-logo.png"},"name":"A1 Lab"},"speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article .content p:first-of-type"]},"wordCount":1045}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://www.a1lab.com.br/","name":"A1 Lab","position":1},{"@type":"ListItem","item":"https://www.a1lab.com.br/blog/","name":"Blogs","position":2},{"@type":"ListItem","name":"How to Solve Scheduling and Routing Problems with AI Planning","position":3}]}</script>
+
+	<script>
+	(function () {
+		var storageKey = "a1lab-language";
+	})();
+</script>
+
+</head>
+
+
+<body id="body" data-spy="scroll" data-target=".navbar" data-offset="55">
+  <a href="#content" class="skip-to-content sr-only">Skip to content</a>
+  <div>
+    
+<!-- preloader start -->
+	<div class="preloader">
+	  
+	  <img src="https://www.a1lab.com.br/images/full-background-logo.webp" alt="" aria-hidden="true">
+	  
+	</div>
+<!-- preloader end -->
+
+
+    <main id="content">
+
+<header class="sticky-top navigation">
+	<div class="container">
+		<nav class="navbar navbar-expand-lg navbar-light">
+				<a class="navbar-brand p-0" href="/">
+					
+					
+					<img class="lozad" data-src="https://www.a1lab.com.br/images/full-background-logo.webp" alt="A1 Lab" width="184" height="69"
+						style="height: 42px; width: auto;">
+					
+					
+				</a>
+
+				<button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
+					aria-controls="navigation" aria-expanded="false"
+					aria-label="Open navigation menu">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+			<div class="collapse navbar-collapse" id="navigation">
+				<ul class="navbar-nav ml-auto">
+					
+					<li class="nav-item">
+            <a class="nav-link" href="/#process">how it works</a>
+					</li>
+					
+					<li class="nav-item">
+            <a class="nav-link" href="/#expertise">expertise</a>
+					</li>
+					
+					<li class="nav-item">
+            <a class="nav-link" href="/#faq">FAQ</a>
+					</li>
+					
+					<li class="nav-item nav-lang-item">
+						<a class="nav-link nav-flag" href="https://www.a1lab.com.br/pt/blog/planejamento-de-ia-para-roteamento-e-agendamento/" data-lang="pt"
+							aria-label="Português"
+							onclick="try{localStorage.setItem('a1lab-language','pt')}catch(e){}">PT</a>
+					</li>
+					
+					<li class="nav-item nav-cta-item">
+						<a class="btn btn-nav-cta" href="/#contact">Book a call</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</header>
+
+
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 text-center">
+        <article>
+        <h1>How to Solve Scheduling and Routing Problems with AI Planning</h1>
+        <p class="post-subtitle">When the problem is 'do these things in the right order,' you want a planner, not an LLM.</p>
+        <div class="post-byline">
+          <span class="post-byline__author">By <a href="/author/claudio-scheer/">Claudio Scheer</a></span>
+          <time class="post-byline__date" datetime="2023-12-23">Dec 23, 2023</time>
+        </div>
+        <img class="img-fluid mb-50 lozad" data-src="/images/blog/ai-planning-for-scheduling-and-routing/about.jpg" alt="How to Solve Scheduling and Routing Problems with AI Planning">
+      </div>
+      <div class="col-lg-8 offset-lg-2">
+        <div class="post-single-content">
+          <p>If your team keeps wrestling with scheduling, routing, or sequencing decisions and every workaround feels brittle, this is the right place to start: AI Planning gives you a practical way to turn constraints into an executable plan, without guessing.</p>
+<p>For this class of problem, you usually want a planner, not machine learning and not a general-purpose LLM.</p>
+<p>Think of a delivery company deciding which stops to make in which order, a hospital arranging treatments around a patient's medications, or a factory sequencing jobs on a shared machine. They all share the same shape: a starting state, a goal, actions you can take, and rules that forbid certain combinations. You describe that to a planner, and it hands you back a valid sequence of actions.</p>
+<p>This post walks through the basics and a small example you can adapt to your own case.</p>
+<h3 id="why-the-same-approach-works-across-domains">Why the same approach works across domains</h3>
+<p>A planner is a generic solver. It doesn't know what your problem is about. It only knows three things: the state your world is in, the actions that can change that state (and the rules for when each action is allowed), and the goal you want to reach.</p>
+<p>Describe your problem that way and the planner can solve it, whether you're routing a robot through a grid, scheduling surgeries into operating rooms, or sequencing factory jobs. The labels change. The planner doesn't care.</p>
+<p>The work on your side is translating your real-world problem into states, actions, and a goal. Once that's written, swapping problems is just swapping files. The planner stays the same.</p>
+<h3 id="pddl-how-you-tell-the-planner-what-you-want">PDDL: how you tell the planner what you want</h3>
+<p>The Planning Domain Definition Language (PDDL) is the format most planners read. You write two files:</p>
+<ul>
+<li>A <strong>domain</strong> file that describes the world: what kinds of objects exist, what actions you can take, and what each action needs and changes.</li>
+<li>A <strong>problem</strong> file that describes your specific case: what you have, where you start, and what "done" looks like.</li>
+</ul>
+<p>Any planner that reads PDDL can, in principle, solve any problem you write in it. In practice, support varies. Older planners may not handle PDDL 3, and newer ones sometimes drop parts of PDDL 2.1. Match the planner to the features you need.</p>
+<h3 id="a-worked-example-you-can-steal">A worked example you can steal</h3>
+<p>I'll use LAMA, a planner built for real-world problems. It uses heuristic forward search with landmarks and a progressively weighted A*. The full paper is <a href="https://arxiv.org/abs/1401.3839">here</a>.</p>
+<h4 id="installing-lama">Installing LAMA</h4>
+<p>The easiest way is <a href="https://github.com/AI-Planning/planutils">planutils</a>, a Linux toolkit for running and testing planners. Their README has the setup steps.</p>
+<h4 id="the-scenario">The scenario</h4>
+<p>A robot on a small grid needs to get from cell 1 to cell 5. Cell 3 is blocked, so the valid path is 1, 2, 4, 5.</p>
+<figure><img src="/images/blog/ai-planning-for-scheduling-and-routing/domain.png" height="200px"><figcaption>
+      <h4>Simple Robot Domain</h4>
+    </figcaption>
+</figure>
+
+<p>This is trivial on purpose. The point is the structure, not the puzzle. The same structure covers delivery routing, job scheduling, and workflow automation. You just change what the objects and actions mean.</p>
+<h4 id="the-domain-file">The domain file</h4>
+<p>You describe objects, predicates, and actions. Objects are the things in your world (here, robots and locations). Predicates are facts that can be true or false: where the robot is, which cells are blocked, which cells are adjacent. Actions are what the robot can do, with preconditions (things that must be true before the action runs) and effects (what changes after).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-lisp" data-lang="lisp"><span style="display:flex;"><span>(define (domain robot)
+</span></span><span style="display:flex;"><span>  (<span style="color:#e6db74">:requirements</span> <span style="color:#e6db74">:strips</span> <span style="color:#e6db74">:typing</span>)
+</span></span><span style="display:flex;"><span>  (<span style="color:#e6db74">:types</span> robot location)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  (<span style="color:#e6db74">:predicates</span>
+</span></span><span style="display:flex;"><span>    (at ?r <span style="color:#a6e22e">-</span> robot ?l <span style="color:#a6e22e">-</span> location)
+</span></span><span style="display:flex;"><span>    (blocked ?l <span style="color:#a6e22e">-</span> location)
+</span></span><span style="display:flex;"><span>    (adjacent ?l1 ?l2 <span style="color:#a6e22e">-</span> location)
+</span></span><span style="display:flex;"><span>  )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  (<span style="color:#e6db74">:action</span> move-up
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">:parameters</span> (?r <span style="color:#a6e22e">-</span> robot ?l1 <span style="color:#a6e22e">-</span> location ?l2 <span style="color:#a6e22e">-</span> location)
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">:precondition</span> (and (at ?r ?l1) (adjacent ?l1 ?l2))
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">:effect</span> (and (at ?r ?l2) (<span style="color:#a6e22e">not</span> (at ?r ?l1))))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  (<span style="color:#e6db74">:action</span> move-down
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">:parameters</span> (?r <span style="color:#a6e22e">-</span> robot ?l1 <span style="color:#a6e22e">-</span> location ?l2 <span style="color:#a6e22e">-</span> location)
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">:precondition</span> (and (at ?r ?l1) (adjacent ?l1 ?l2))
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">:effect</span> (and (at ?r ?l2) (<span style="color:#a6e22e">not</span> (at ?r ?l1))))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  (<span style="color:#e6db74">:action</span> move-left
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">:parameters</span> (?r <span style="color:#a6e22e">-</span> robot ?l1 <span style="color:#a6e22e">-</span> location ?l2 <span style="color:#a6e22e">-</span> location)
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">:precondition</span> (and (at ?r ?l1) (adjacent ?l1 ?l2))
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">:effect</span> (and (at ?r ?l2) (<span style="color:#a6e22e">not</span> (at ?r ?l1))))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  (<span style="color:#e6db74">:action</span> move-right
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">:parameters</span> (?r <span style="color:#a6e22e">-</span> robot ?l1 <span style="color:#a6e22e">-</span> location ?l2 <span style="color:#a6e22e">-</span> location)
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">:precondition</span> (and (at ?r ?l1) (adjacent ?l1 ?l2))
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">:effect</span> (and (at ?r ?l2) (<span style="color:#a6e22e">not</span> (at ?r ?l1)))))
+</span></span></code></pre></div><h4 id="the-problem-file">The problem file</h4>
+<p>The problem file pins down the specific case: the objects that exist, where the robot starts, and the goal.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-lisp" data-lang="lisp"><span style="display:flex;"><span>(define (problem robot)
+</span></span><span style="display:flex;"><span>  (<span style="color:#e6db74">:domain</span> robot)
+</span></span><span style="display:flex;"><span>  (<span style="color:#e6db74">:objects</span>
+</span></span><span style="display:flex;"><span>    robot1 <span style="color:#a6e22e">-</span> robot
+</span></span><span style="display:flex;"><span>    box1 box2 box3 box4 box5 <span style="color:#a6e22e">-</span> location
+</span></span><span style="display:flex;"><span>  )
+</span></span><span style="display:flex;"><span>  (<span style="color:#e6db74">:init</span>
+</span></span><span style="display:flex;"><span>    (at robot1 box1)
+</span></span><span style="display:flex;"><span>    (blocked box3)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    (adjacent box1 box2)
+</span></span><span style="display:flex;"><span>    (adjacent box1 box3)
+</span></span><span style="display:flex;"><span>    (adjacent box2 box4)
+</span></span><span style="display:flex;"><span>    (adjacent box3 box4)
+</span></span><span style="display:flex;"><span>    (adjacent box4 box5)
+</span></span><span style="display:flex;"><span>  )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  (<span style="color:#e6db74">:goal</span> (at robot1 box5))
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><p>Read this as: "One robot, five cells. The robot starts at box1. Box3 is blocked. Here are which boxes are adjacent. Get the robot to box5."</p>
+<h4 id="running-it">Running it</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>lama domain.pddl problem.pddl
+</span></span></code></pre></div><p>LAMA prints a valid plan, or tells you no solution exists.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-lisp" data-lang="lisp"><span style="display:flex;"><span>(move-down robot1 box1 box2)
+</span></span><span style="display:flex;"><span>(move-down robot1 box2 box4)
+</span></span><span style="display:flex;"><span>(move-down robot1 box4 box5)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">; cost = 3 (unit cost)</span>
+</span></span></code></pre></div><p>One robot and one goal here, but the same domain scales to many robots with separate goals.</p>
+<h3 id="mapping-your-own-problem-to-this">Mapping your own problem to this</h3>
+<p>Take whatever problem you actually have and answer four questions:</p>
+<ol>
+<li>What are the <strong>objects</strong>? (Trucks, tickets, orders, patients, jobs.)</li>
+<li>What <strong>facts</strong> describe their state? (Where is the truck? Is this order packed? Is that machine free?)</li>
+<li>What <strong>actions</strong> can change those facts, and what has to be true for the action to be valid?</li>
+<li>What is the <strong>starting state</strong>, and what does <strong>done</strong> look like?</li>
+</ol>
+<p>If you can answer those, you can write a PDDL file. And if you can write the PDDL, a planner can solve it.</p>
+<h3 id="going-further">Going further</h3>
+<p>The <a href="http://ipc.icaps-conference.org/">International Planning Competition</a> publishes benchmark problems if you want to see what harder domains look like.</p>
+<p>Some planners also support numeric planning, with variables for things like cost, time, fuel, or capacity. That's useful when reaching the goal isn't enough and you also need to minimize something. Logistics and scheduling usually need it.</p>
+<h3 id="final-take">Final take</h3>
+<p>If your problem is sequencing under hard constraints, use a planner. It gives you valid plans you can inspect, test, and improve. LLMs are a different tool for a different problem class.</p>
+<h3 id="resources">Resources</h3>
+<ul>
+<li><a href="https://planning.wiki/">https://planning.wiki</a></li>
+</ul>
+<hr>
+<p><strong>See also:</strong></p>
+<ul>
+<li><a href="/blog/how-to-choose-ai-company/">How to choose an AI company</a></li>
+<li><a href="/blog/how-much-does-ai-cost/">How much does AI cost?</a></li>
+<li><a href="/blog/rag-architectures-and-how-to-choose/">RAG architectures (how to choose)</a></li>
+</ul>
+
+          </div>
+
+          <div class="blog-cta">
+            <div class="blog-cta__body">
+              <p class="blog-cta__heading">Need help with this?</p>
+              <p>We research, prototype, and deliver a technical plan so you can decide what comes next.</p>
+            </div>
+            <a href="/#contact" class="btn btn-main">Talk to the Lab</a>
+          </div>
+
+          </article>
+        
+        
+        <div class="mt-5">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    </main>
+  </div><!-- end Contact Area -->
+<footer id="footer" class="section">
+	<div class="container">
+		<div class="row wow fadeInUp" data-wow-duration="500ms">
+			<div class="col-xl-12">
+				<div class="footer-shell">
+					<div class="footer-brand">
+						<a href="https://www.a1lab.com.br/">
+							<img src="https://www.a1lab.com.br/images/full-background-logo.webp" alt="A1 Lab" width="144" height="54" />
+						</a>
+					</div>
+
+					<nav class="footer-nav" aria-label="Footer navigation">
+						<div class="footer-nav-columns">
+							<ul>
+								
+								<li>
+									<a href="https://www.a1lab.com.br/#process">how it works</a>
+								</li>
+								
+								<li>
+									<a href="https://www.a1lab.com.br/#expertise">expertise</a>
+								</li>
+								
+								<li>
+									<a href="https://www.a1lab.com.br/#faq">FAQ</a>
+								</li>
+								
+								<li>
+									<a href="https://www.a1lab.com.br/blog">Blog</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+
+					<!-- Footer Social Links -->
+					<div class="social-icon footer-social">
+						<ul class="list-inline">
+							
+								<li class="list-inline-item"><a href="https://github.com/thea1lab" target="_blank" rel="noopener noreferrer"
+										aria-label="GitHub"><i class="ti-github" aria-hidden="true"></i></a></li>
+								
+								<li class="list-inline-item"><a href="https://www.youtube.com/@lab-a1" target="_blank" rel="noopener noreferrer"
+										aria-label="YouTube"><i class="ti-youtube" aria-hidden="true"></i></a></li>
+								
+								<li class="list-inline-item"><a href="https://www.linkedin.com/company/thea1lab" target="_blank" rel="noopener noreferrer"
+										aria-label="LinkedIn"><i class="ti-linkedin" aria-hidden="true"></i></a></li>
+								
+								<li class="list-inline-item"><a href="https://www.instagram.com/thea1lab" target="_blank" rel="noopener noreferrer"
+										aria-label="Instagram"><i class="ti-instagram" aria-hidden="true"></i></a></li>
+								
+							</ul>
+						</div>
+				</div>
+				<div class="footer-bottom">
+					<p class="footer-slogan">Every problem deserves a lab.</p>
+					<p class="footer-copyright">&copy; 2026 A1 Lab.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- /footer -->
+
+<!-- Google Map API -->
+
+
+	<!-- JS Plugins -->
+	
+	
+	
+	<script src="https://www.a1lab.com.br/plugins/jquery/jquery.min.js" defer></script>
+	
+	
+	
+	<script src="https://www.a1lab.com.br/plugins/bootstrap/bootstrap.min.js" defer></script>
+	
+	
+	
+	<script src="https://www.a1lab.com.br/plugins/slick/slick.min.js" defer></script>
+	
+	
+	
+	<script src="https://www.a1lab.com.br/plugins/shuffle/shuffle.min.js" defer></script>
+	
+	
+	
+	<script src="https://www.a1lab.com.br/plugins/magnific-popup/jquery.magnific-popup.min.js" defer></script>
+	
+	
+	
+	<script src="https://www.a1lab.com.br/plugins/lazy-load/lozad.min.js" defer></script>
+	
+	
+
+<!-- Main Script -->
+
+<script src="/js/script.min.ba4c8065a7009cdcc9ea9d4c2785120d0f5f4b0d22eadda3da495ce1045a5565a31ac136a567d3533ab4b70378c1c4ad.js" integrity="sha384-ukyAZacAnNzJ6p1MJ4USDQ9fSw0i6t2j2klc4QRaVWWjGsE2pWfTUzq0twN4wcSt" defer></script>
+
+
+
+
+</body>
+
+</html>

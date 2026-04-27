@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on A1 Lab</title>
+    <link>https://www.a1lab.com.br/blog/</link>
+    <description>Recent content in Blogs on A1 Lab</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sun, 26 Apr 2026 09:20:00 -0300</lastBuildDate>
+    <atom:link href="https://www.a1lab.com.br/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why You Should Build a Prototype Before Committing to Full Software Development</title>
+      <link>https://www.a1lab.com.br/blog/software-prototype-before-hiring/</link>
+      <pubDate>Sun, 26 Apr 2026 09:20:00 -0300</pubDate>
+      <guid>https://www.a1lab.com.br/blog/software-prototype-before-hiring/</guid>
+      <description>&lt;p&gt;At this stage, most companies are trying to avoid the same mistake: signing a large project before knowing whether the idea actually works.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to Build an AI Assistant That Answers from Your Company&#39;s Documents</title>
+      <link>https://www.a1lab.com.br/blog/internal-document-ai-assistant/</link>
+      <pubDate>Wed, 22 Apr 2026 09:00:00 -0300</pubDate>
+      <guid>https://www.a1lab.com.br/blog/internal-document-ai-assistant/</guid>
+      <description>&lt;p&gt;If you want an AI assistant that answers from your company&#39;s documents, the main problem is not the chatbot. The real problem is getting the system to fetch the right information from the right document and answer without making things up. That is where most projects look good in a demo and fall apart in real use.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How Much Does It Cost to Implement AI: Infra, Tokens, and Dev Time (Real Numbers)</title>
+      <link>https://www.a1lab.com.br/blog/how-much-does-ai-cost/</link>
+      <pubDate>Thu, 16 Apr 2026 11:00:00 -0300</pubDate>
+      <guid>https://www.a1lab.com.br/blog/how-much-does-ai-cost/</guid>
+      <description>&lt;p&gt;If you are trying to budget an AI project and keep getting vague answers, this guide gives you something concrete: realistic cost ranges, where the money actually goes, and how to avoid paying for complexity you do not need.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to Choose an AI Company (Technical &#43; Business Checklist)</title>
+      <link>https://www.a1lab.com.br/blog/how-to-choose-ai-company/</link>
+      <pubDate>Thu, 09 Apr 2026 10:00:00 -0300</pubDate>
+      <guid>https://www.a1lab.com.br/blog/how-to-choose-ai-company/</guid>
+      <description>&lt;p&gt;Choosing the right AI partner can save months of rework and a lot of budget, and this checklist helps you do exactly that by showing what to ask before you sign anything.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>RAG Architectures: How to Choose for Your Use Case</title>
+      <link>https://www.a1lab.com.br/blog/rag-architectures-and-how-to-choose/</link>
+      <pubDate>Thu, 02 Apr 2026 00:15:00 -0300</pubDate>
+      <guid>https://www.a1lab.com.br/blog/rag-architectures-and-how-to-choose/</guid>
+      <description>&lt;p&gt;RAG matters because it is what separates an AI system that sounds confident from one that can answer based on what your company actually knows. Without solid retrieval, the model fills gaps, mixes context, and gets the most important business questions wrong.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to Solve Scheduling and Routing Problems with AI Planning</title>
+      <link>https://www.a1lab.com.br/blog/ai-planning-for-scheduling-and-routing/</link>
+      <pubDate>Sat, 23 Dec 2023 15:48:14 +0300</pubDate>
+      <guid>https://www.a1lab.com.br/blog/ai-planning-for-scheduling-and-routing/</guid>
+      <description>&lt;p&gt;If your team keeps wrestling with scheduling, routing, or sequencing decisions and every workaround feels brittle, this is the right place to start: AI Planning gives you a practical way to turn constraints into an executable plan, without guessing.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

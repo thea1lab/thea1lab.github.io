@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on A1 Lab</title>
+    <link>https://www.a1lab.com.br/pt/blog/</link>
+    <description>Recent content in Blogs on A1 Lab</description>
+    <generator>Hugo</generator>
+    <language>pt-BR</language>
+    <lastBuildDate>Sun, 26 Apr 2026 09:20:00 -0300</lastBuildDate>
+    <atom:link href="https://www.a1lab.com.br/pt/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Por Que Criar um Protótipo Antes de Desenvolver um Software Completo</title>
+      <link>https://www.a1lab.com.br/pt/blog/prototipo-software-antes-de-contratar/</link>
+      <pubDate>Sun, 26 Apr 2026 09:20:00 -0300</pubDate>
+      <guid>https://www.a1lab.com.br/pt/blog/prototipo-software-antes-de-contratar/</guid>
+      <description>&lt;p&gt;Quem está nessa fase normalmente está tentando evitar o mesmo erro: assinar um projeto grande antes de saber se a ideia funciona de verdade.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Como Criar um Assistente de IA que Responde com Base nos Documentos da Sua Empresa</title>
+      <link>https://www.a1lab.com.br/pt/blog/assistente-ia-documentos-internos/</link>
+      <pubDate>Wed, 22 Apr 2026 09:00:00 -0300</pubDate>
+      <guid>https://www.a1lab.com.br/pt/blog/assistente-ia-documentos-internos/</guid>
+      <description>&lt;p&gt;Se você quer um assistente de IA que responda com base nos documentos da sua empresa, o problema principal não é o chatbot. O problema é fazer a IA buscar a informação certa, no documento certo, e responder sem inventar. É aí que a maioria dos projetos acerta na demo e erra no uso real.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Quanto Custa Implementar IA: Infra, Tokens e Desenvolvimento (com Números Reais)</title>
+      <link>https://www.a1lab.com.br/pt/blog/quanto-custa-implementar-ia/</link>
+      <pubDate>Thu, 16 Apr 2026 11:00:00 -0300</pubDate>
+      <guid>https://www.a1lab.com.br/pt/blog/quanto-custa-implementar-ia/</guid>
+      <description>&lt;p&gt;Se você está tentando montar orçamento para IA e só recebe respostas vagas, este guia foi feito para você: faixas de custo realistas, explicação clara de onde o dinheiro vai e como evitar pagar por complexidade que não precisa.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Como Escolher uma Empresa de IA (Checklist Técnico &#43; Negócios)</title>
+      <link>https://www.a1lab.com.br/pt/blog/como-escolher-empresa-ia/</link>
+      <pubDate>Thu, 09 Apr 2026 10:00:00 -0300</pubDate>
+      <guid>https://www.a1lab.com.br/pt/blog/como-escolher-empresa-ia/</guid>
+      <description>&lt;p&gt;Escolher a empresa certa para seu projeto de IA pode poupar meses de retrabalho e muito orçamento, e este checklist te ajuda a filtrar fornecedores com perguntas objetivas já na primeira conversa.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Arquiteturas de RAG: como escolher para o seu caso</title>
+      <link>https://www.a1lab.com.br/pt/blog/arquiteturas-rag-e-como-escolher/</link>
+      <pubDate>Thu, 02 Apr 2026 00:15:00 -0300</pubDate>
+      <guid>https://www.a1lab.com.br/pt/blog/arquiteturas-rag-e-como-escolher/</guid>
+      <description>&lt;p&gt;RAG importa porque é o que separa uma IA que soa convincente de uma IA que consegue responder com base no que a sua empresa realmente sabe. Sem um bom mecanismo de recuperação, o modelo improvisa, mistura contexto e erra justamente nas perguntas em que o negócio precisa de segurança.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Como Resolver Problemas de Agendamento e Roteamento com AI Planning</title>
+      <link>https://www.a1lab.com.br/pt/blog/planejamento-de-ia-para-roteamento-e-agendamento/</link>
+      <pubDate>Sat, 23 Dec 2023 15:48:14 +0300</pubDate>
+      <guid>https://www.a1lab.com.br/pt/blog/planejamento-de-ia-para-roteamento-e-agendamento/</guid>
+      <description>&lt;p&gt;Se sua equipe vive travando em decisões de agendamento, roteamento ou sequência de tarefas, este post é um ótimo ponto de partida: AI Planning transforma restrições reais em um plano executável, sem depender de tentativa e erro.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

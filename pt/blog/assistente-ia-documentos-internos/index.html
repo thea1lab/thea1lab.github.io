@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+	<meta name="theme-color" content="#e87a00"><title>Como Criar um Assistente de IA que Responde com Base nos Documentos da Sua Empresa | A1 Lab</title><!-- mobile responsive meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Como criar um assistente de IA com documentos internos, quando usar RAG, o que precisa estar pronto antes e quais erros evitar no projeto.">
+	<meta name="robots" content="index, follow">
+	
+	<meta name="author" content="A1 Lab">
+	<meta name="generator" content="Hugo 0.160.0">
+
+	<!-- canonical + hreflang -->
+	<link rel="canonical" href="https://www.a1lab.com.br/pt/blog/assistente-ia-documentos-internos/">
+	<link rel="llms-txt" href="https://www.a1lab.com.br/llms.txt">
+	<link rel="alternate" hreflang="en-US" href="https://www.a1lab.com.br/blog/internal-document-ai-assistant/">
+	<link rel="alternate" hreflang="pt-BR" href="https://www.a1lab.com.br/pt/blog/assistente-ia-documentos-internos/">
+	<link rel="alternate" hreflang="x-default" href="https://www.a1lab.com.br/blog/internal-document-ai-assistant/">
+
+  <meta property="og:url" content="https://www.a1lab.com.br/pt/blog/assistente-ia-documentos-internos/">
+  <meta property="og:site_name" content="A1 Lab">
+  <meta property="og:title" content="Como Criar um Assistente de IA que Responde com Base nos Documentos da Sua Empresa">
+  <meta property="og:description" content="Como criar um assistente de IA com documentos internos, quando usar RAG, o que precisa estar pronto antes e quais erros evitar no projeto.">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2026-04-22T09:00:00-03:00">
+    <meta property="article:modified_time" content="2026-04-22T09:00:00-03:00">
+  <meta property="article:author" content="https://www.a1lab.com.br/author/claudio-scheer/">
+  <meta property="og:image" content="https://www.a1lab.com.br/images/blog/internal-document-ai-assistant/about.jpg">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Como Criar um Assistente de IA que Responde com Base nos Documentos da Sua Empresa">
+<meta name="twitter:description" content="Como criar um assistente de IA com documentos internos, quando usar RAG, o que precisa estar pronto antes e quais erros evitar no projeto.">
+<meta name="twitter:image" content="https://www.a1lab.com.br/images/blog/internal-document-ai-assistant/about.jpg">
+
+
+
+		<!-- plugins -->
+		
+		
+		
+		
+		<link rel="stylesheet" href="https://www.a1lab.com.br/plugins/bootstrap/bootstrap.min.css">
+		
+		
+		
+		
+		
+		<link rel="stylesheet" href="https://www.a1lab.com.br/plugins/themify-icons/themify-icons.css">
+		
+		
+		
+		
+		
+		<link rel="stylesheet" href="https://www.a1lab.com.br/plugins/magnific-popup/magnific-popup.css">
+		
+		
+		
+		
+		
+		<link rel="stylesheet" href="https://www.a1lab.com.br/plugins/slick/slick.css">
+		
+		
+		
+		
+		
+		<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space&#43;Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+		<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space&#43;Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap"></noscript>
+		
+		
+		
+
+	<!-- Main Stylesheet -->
+	
+	<link rel="stylesheet" href="/css/style.min.62bfa557c1dbef9bbe292149d3081650ae15aa364f9789cd9519a06f8add3bd1e85b7e1d388a17810f5f17014bc5208a.css" integrity="sha384-Yr&#43;lV8Hb75u&#43;KSFJ0wgWUK4VqjZPl4nNlRmgb4rdO9HoW34dOIoXgQ9fFwFLxSCK" media="screen">
+
+	<!-- Custom stylesheet - for your changes -->
+	
+  <link rel="stylesheet" href="/css/custom.min.b4e9b14ea3b56edb0957cf7aa1586919f3689c6b50addea2b2941bb60b762f85b3fdc56ef2c3c9ebcdec9e87c7b5b198.css" integrity="sha384-tOmxTqO1btsJV896oVhpGfNonGtQrd6ispQbtgt2L4Wz/cVu8sPJ683snofHtbGY" media="screen">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="https://www.a1lab.com.br/images/favicon.png" type="image/x-icon">
+	<link rel="icon" href="https://www.a1lab.com.br/images/favicon.png" type="image/x-icon">
+	<link rel="apple-touch-icon" href="https://www.a1lab.com.br/images/favicon.png">
+
+	
+	<!-- Global Site Tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-384Q987MKZ"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-384Q987MKZ');
+	</script>
+	
+
+	
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","author":{"@type":"Person","name":"Claudio Scheer","url":"https://www.a1lab.com.br/pt/author/claudio-scheer/"},"dateModified":"2026-04-22T09:00:00-03:00","datePublished":"2026-04-22T09:00:00-03:00","description":"Como criar um assistente de IA com documentos internos, quando usar RAG, o que precisa estar pronto antes e quais erros evitar no projeto.","headline":"Como Criar um Assistente de IA que Responde com Base nos Documentos da Sua Empresa","image":"https://www.a1lab.com.br/images/blog/internal-document-ai-assistant/about.jpg","inLanguage":"pt-BR","mainEntityOfPage":{"@id":"https://www.a1lab.com.br/pt/blog/assistente-ia-documentos-internos/","@type":"WebPage"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://www.a1lab.com.br/images/full-logo.png"},"name":"A1 Lab"},"speakable":{"@type":"SpeakableSpecification","cssSelector":["article h1","article .content p:first-of-type"]},"wordCount":1240}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://www.a1lab.com.br/pt/","name":"A1 Lab","position":1},{"@type":"ListItem","item":"https://www.a1lab.com.br/pt/blog/","name":"Blogs","position":2},{"@type":"ListItem","name":"Como Criar um Assistente de IA que Responde com Base nos Documentos da Sua Empresa","position":3}]}</script>
+
+	<script>
+	(function () {
+		var storageKey = "a1lab-language";
+	})();
+</script>
+
+</head>
+
+
+<body id="body" data-spy="scroll" data-target=".navbar" data-offset="55">
+  <a href="#content" class="skip-to-content sr-only">Pular para o conteúdo</a>
+  <div>
+    
+<!-- preloader start -->
+	<div class="preloader">
+	  
+	  <img src="https://www.a1lab.com.br/images/full-background-logo.webp" alt="" aria-hidden="true">
+	  
+	</div>
+<!-- preloader end -->
+
+
+    <main id="content">
+
+<header class="sticky-top navigation">
+	<div class="container">
+		<nav class="navbar navbar-expand-lg navbar-light">
+				<a class="navbar-brand p-0" href="/pt/">
+					
+					
+					<img class="lozad" data-src="https://www.a1lab.com.br/images/full-background-logo.webp" alt="A1 Lab" width="184" height="69"
+						style="height: 42px; width: auto;">
+					
+					
+				</a>
+
+				<button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
+					aria-controls="navigation" aria-expanded="false"
+					aria-label="Abrir menu de navegação">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+			<div class="collapse navbar-collapse" id="navigation">
+				<ul class="navbar-nav ml-auto">
+					
+					<li class="nav-item">
+            <a class="nav-link" href="/pt/#process">como funciona</a>
+					</li>
+					
+					<li class="nav-item">
+            <a class="nav-link" href="/pt/#expertise">competências</a>
+					</li>
+					
+					<li class="nav-item">
+            <a class="nav-link" href="/pt/#faq">FAQ</a>
+					</li>
+					
+					<li class="nav-item nav-lang-item">
+						<a class="nav-link nav-flag" href="https://www.a1lab.com.br/blog/internal-document-ai-assistant/" data-lang="en"
+							aria-label="English"
+							onclick="try{localStorage.setItem('a1lab-language','en')}catch(e){}">EN</a>
+					</li>
+					
+					<li class="nav-item nav-cta-item">
+						<a class="btn btn-nav-cta" href="/pt/#contact">Agendar conversa</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</header>
+
+
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 offset-lg-2 text-center">
+        <article>
+        <h1>Como Criar um Assistente de IA que Responde com Base nos Documentos da Sua Empresa</h1>
+        <p class="post-subtitle">O ponto não é ter um chatbot. É conseguir resposta confiável.</p>
+        <div class="post-byline">
+          <span class="post-byline__author">By <a href="/pt/author/claudio-scheer/">Claudio Scheer</a></span>
+          <time class="post-byline__date" datetime="2026-04-22">abr. 22, 2026</time>
+        </div>
+        <img class="img-fluid mb-50 lozad" data-src="/images/blog/internal-document-ai-assistant/about.jpg" alt="Como Criar um Assistente de IA que Responde com Base nos Documentos da Sua Empresa">
+      </div>
+      <div class="col-lg-8 offset-lg-2">
+        <div class="post-single-content">
+          <p>Se você quer um assistente de IA que responda com base nos documentos da sua empresa, o problema principal não é o chatbot. O problema é fazer a IA buscar a informação certa, no documento certo, e responder sem inventar. É aí que a maioria dos projetos acerta na demo e erra no uso real.</p>
+<p>Esse tipo de necessidade aparece com nomes diferentes. Às vezes a empresa pensa em um assistente interno, às vezes em uma base de conhecimento com chat por cima. No fim, o problema é o mesmo: parar de depender de busca manual em PDF, política interna perdida em pasta compartilhada e respostas diferentes para a mesma pergunta.</p>
+<h3 id="o-que-esse-tipo-de-assistente-faz">O que esse tipo de assistente faz</h3>
+<p>Em termos simples, esse assistente recebe uma pergunta em linguagem natural e responde usando o conteúdo dos seus documentos. Manual interno, contrato, política, FAQ, catálogo, procedimento, norma, histórico de atendimento. Tudo isso pode entrar.</p>
+<p>O ponto importante é este: o modelo não deveria responder só com o que "sabe" de internet ou treino geral. Ele precisa responder com base no que a sua empresa realmente usa.</p>
+<p>Se um colaborador pergunta:</p>
+<ul>
+<li>"Qual é a política de reembolso de viagem?"</li>
+<li>"Esse contrato permite reajuste anual?"</li>
+<li>"Onde está o procedimento de troca?"</li>
+</ul>
+<p>o sistema precisa encontrar o trecho certo e usar aquele contexto para responder.</p>
+<h3 id="por-que-um-chatbot-comum-não-resolve">Por que um chatbot comum não resolve</h3>
+<p>Um chatbot comum pode conversar bem e ainda assim errar feio no conteúdo da empresa.</p>
+<p>Isso acontece porque documentos internos mudam. Política muda. Tabela muda. Processo muda. E o modelo, sozinho, não sabe disso. Ele tenta completar a resposta com o que parece mais provável. Para conversa casual, isso às vezes passa. Para operação, jurídico, financeiro ou atendimento, isso vira problema.</p>
+<p>É por isso que quase todo projeto sério desse tipo acaba precisando de <a href="/pt/blog/arquiteturas-rag-e-como-escolher/">RAG</a>. RAG é a parte que faz a IA buscar os documentos certos antes de responder.</p>
+<h3 id="o-que-é-preciso-para-funcionar-bem">O que é preciso para funcionar bem</h3>
+<p>A dúvida costuma ser mais ou menos esta: como montar um assistente que responda usando os documentos da própria empresa?</p>
+<p>A resposta curta é: você precisa de quatro coisas funcionando juntas.</p>
+<h4 id="1-documentos-minimamente-organizados">1. Documentos minimamente organizados</h4>
+<p>Não precisam estar perfeitos. Mas precisam existir de forma acessível e com alguma lógica.</p>
+<p>Se os arquivos estão espalhados entre e-mail, pastas locais, PDFs escaneados ruins e planilhas sem padrão, o projeto fica mais caro e mais frágil. A IA não corrige desorganização sozinha.</p>
+<h4 id="2-um-jeito-decente-de-buscar">2. Um jeito decente de buscar</h4>
+<p>Aqui entra a parte técnica que importa de verdade. A busca precisa encontrar o trecho certo mesmo quando a pergunta vem com palavras diferentes das usadas no documento.</p>
+<p>Exemplo simples:</p>
+<p>O usuário pergunta "posso pedir reembolso desse gasto?"<br>
+O documento fala em "despesas reembolsáveis".</p>
+<p>Se a busca for ruim, a resposta não vem. Ou pior: vem errada.</p>
+<h4 id="3-regras-sobre-o-que-fazer-quando-a-resposta-não-está-clara">3. Regras sobre o que fazer quando a resposta não está clara</h4>
+<p>Um bom assistente não precisa responder tudo. Ele precisa saber quando não encontrou base suficiente.</p>
+<p>Responder "não encontrei isso nos documentos disponíveis" é melhor do que inventar.</p>
+<h4 id="4-um-conjunto-de-perguntas-reais-para-testar">4. Um conjunto de perguntas reais para testar</h4>
+<p>Sem teste real, todo mundo acha que está funcionando. Depois da publicação aparecem as perguntas difíceis.</p>
+<p>O jeito certo de validar isso é separar um grupo de perguntas reais da empresa e conferir:</p>
+<ul>
+<li>a resposta está correta?</li>
+<li>o documento citado é o certo?</li>
+<li>a IA respondeu com segurança quando devia?</li>
+<li>a IA recusou quando não tinha base?</li>
+</ul>
+<h3 id="quando-usar-rag-e-quando-não-usar">Quando usar RAG e quando não usar</h3>
+<p>Nem todo caso precisa de uma arquitetura complexa.</p>
+<p>Se você tem poucos documentos, curtos e bem escritos, um fluxo simples pode funcionar.</p>
+<p>Se você tem contratos longos, políticas internas, documentos com tabelas, códigos, anexos e linguagem jurídica, a parte de recuperação fica muito mais importante. Aí RAG deixa de ser detalhe e vira a base do sistema.</p>
+<p>Na prática:</p>
+<ul>
+<li>FAQ curta e estável: dá para começar simples.</li>
+<li>Base de conhecimento interna: provavelmente precisa de RAG.</li>
+<li>Contratos, manuais e políticas: quase sempre precisa de RAG bem feito.</li>
+</ul>
+<p>Se quiser entender as opções com mais detalhe, o guia de <a href="/pt/blog/arquiteturas-rag-e-como-escolher/">arquiteturas de RAG</a> cobre isso com mais profundidade.</p>
+<h3 id="os-erros-mais-comuns-nesse-tipo-de-projeto">Os erros mais comuns nesse tipo de projeto</h3>
+<p>Os mesmos erros aparecem o tempo todo.</p>
+<h4 id="começar-pelo-chat-não-pelos-dados">Começar pelo chat, não pelos dados</h4>
+<p>É o erro mais comum. O time discute interface, nome do bot e canal de atendimento antes de entender os documentos.</p>
+<p>Se a base estiver ruim, o chat bonito só entrega erro com aparência melhor.</p>
+<h4 id="jogar-tudo-dentro-do-sistema-sem-recorte">Jogar tudo dentro do sistema sem recorte</h4>
+<p>Nem todo documento precisa entrar logo no início.</p>
+<p>Começar com todos os contratos, todas as políticas, todos os materiais de treinamento e todos os PDFs históricos costuma piorar a qualidade. O melhor começo quase sempre é um recorte claro: um processo, um time, um tipo de documento.</p>
+<h4 id="não-medir-qualidade">Não medir qualidade</h4>
+<p>Se ninguém mede, cada pessoa avalia pela pergunta que testou. A conversa vira opinião.</p>
+<p>É melhor ter 50 perguntas bem escolhidas do que mil impressões vagas.</p>
+<h4 id="achar-que-o-problema-é-o-modelo">Achar que o problema é o modelo</h4>
+<p>Na maioria dos casos, o problema não está no modelo. Está na recuperação, na organização dos dados ou na falta de regra para casos ambíguos.</p>
+<p>Trocar de modelo sem corrigir isso só muda o custo.</p>
+<h3 id="um-caminho-simples-para-começar">Um caminho simples para começar</h3>
+<p>Se você quer sair da teoria e montar algo útil, o caminho mais seguro costuma ser este:</p>
+<h4 id="escolha-um-caso-de-uso-pequeno">Escolha um caso de uso pequeno</h4>
+<p>Por exemplo:</p>
+<ul>
+<li>RH respondendo perguntas sobre políticas internas</li>
+<li>comercial consultando catálogo e regras de proposta</li>
+<li>jurídico consultando cláusulas padrão</li>
+<li>suporte interno consultando procedimentos</li>
+</ul>
+<h4 id="separe-os-documentos-realmente-usados-nesse-processo">Separe os documentos realmente usados nesse processo</h4>
+<p>Menos volume no começo ajuda mais do que atrapalha.</p>
+<h4 id="monte-uma-lista-de-perguntas-reais">Monte uma lista de perguntas reais</h4>
+<p>Não invente perguntas bonitas. Pegue perguntas que as pessoas fazem hoje.</p>
+<h4 id="prototipe-antes-de-expandir">Prototipe antes de expandir</h4>
+<p>Um protótipo responde o que importa:</p>
+<ul>
+<li>a qualidade da resposta está boa?</li>
+<li>os documentos estão legíveis para o sistema?</li>
+<li>o custo mensal faz sentido?</li>
+<li>o time realmente usaria isso?</li>
+</ul>
+<p>Ir direto para o projeto completo sem essa etapa costuma ser desperdício.</p>
+<h3 id="quanto-custa-esse-tipo-de-solução">Quanto custa esse tipo de solução</h3>
+<p>O custo depende menos do "chatbot" e mais de três fatores:</p>
+<ul>
+<li>qualidade dos documentos</li>
+<li>complexidade da busca</li>
+<li>integrações com outros sistemas</li>
+</ul>
+<p>Se os documentos já existem, são digitais e o escopo é pequeno, dá para começar com muito menos esforço do que muita proposta vende. Se os dados estão espalhados, exigem OCR, permissões, integração com outros sistemas e atualização constante, o custo sobe rápido.</p>
+<p>O artigo sobre <a href="/pt/blog/quanto-custa-implementar-ia/">quanto custa implementar IA</a> entra nessas faixas com mais detalhe.</p>
+<h3 id="onde-isso-costuma-gerar-valor-primeiro">Onde isso costuma gerar valor primeiro</h3>
+<p>Esse tipo de assistente costuma gerar valor mais rápido em situações em que alguém perde tempo procurando informação que já existe.</p>
+<p>Exemplos claros:</p>
+<ul>
+<li>atendimento interno</li>
+<li>consulta de políticas e normas</li>
+<li>apoio comercial</li>
+<li>consulta de contratos</li>
+<li>suporte a times operacionais</li>
+</ul>
+<p>Ele também funciona bem junto com <a href="/pt/processamento-de-documentos/">processamento de documentos</a>, quando parte da informação está em PDFs, anexos e arquivos que ninguém quer abrir um por um.</p>
+<h3 id="recomendação-final">Recomendação final</h3>
+<p>Se a sua empresa quer um assistente de IA com documentos internos, comece pequeno e teste com dados reais. O melhor projeto aqui não é o mais sofisticado. É o que consegue responder certo, citar a fonte certa e deixar claro quando não sabe.</p>
+<p>Se isso parece o seu caso, podemos ajudar a recortar o primeiro uso, testar com documentos reais e mostrar rapidamente se vale expandir ou não.</p>
+<hr>
+<p><strong>Veja também:</strong></p>
+<ul>
+<li><a href="/pt/blog/arquiteturas-rag-e-como-escolher/">Arquiteturas de RAG: como escolher para o seu caso</a></li>
+<li><a href="/pt/blog/quanto-custa-implementar-ia/">Quanto custa implementar IA?</a></li>
+<li><a href="/pt/processamento-de-documentos/">Processamento de documentos com IA</a></li>
+<li><a href="/pt/agentes-de-ia/">Agentes de IA</a></li>
+</ul>
+
+          </div>
+
+          <div class="blog-cta">
+            <div class="blog-cta__body">
+              <p class="blog-cta__heading">Precisa de ajuda com isso?</p>
+              <p>Pesquisamos, construímos um protótipo e entregamos um plano técnico pra você decidir o próximo passo.</p>
+            </div>
+            <a href="/pt/#contact" class="btn btn-main">Fale com o Lab</a>
+          </div>
+
+          </article>
+        
+        
+        <div class="mt-5">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    </main>
+  </div><!-- end Contact Area -->
+<footer id="footer" class="section">
+	<div class="container">
+		<div class="row wow fadeInUp" data-wow-duration="500ms">
+			<div class="col-xl-12">
+				<div class="footer-shell">
+					<div class="footer-brand">
+						<a href="https://www.a1lab.com.br/pt/">
+							<img src="https://www.a1lab.com.br/images/full-background-logo.webp" alt="A1 Lab" width="144" height="54" />
+						</a>
+					</div>
+
+					<nav class="footer-nav" aria-label="Navegação do rodapé">
+						<div class="footer-nav-columns">
+							<ul>
+								
+								<li>
+									<a href="https://www.a1lab.com.br/pt/#process">como funciona</a>
+								</li>
+								
+								<li>
+									<a href="https://www.a1lab.com.br/pt/#expertise">competências</a>
+								</li>
+								
+								<li>
+									<a href="https://www.a1lab.com.br/pt/#faq">FAQ</a>
+								</li>
+								
+								<li>
+									<a href="https://www.a1lab.com.br/pt/blog">Blog</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+
+					<!-- Footer Social Links -->
+					<div class="social-icon footer-social">
+						<ul class="list-inline">
+							
+								<li class="list-inline-item"><a href="https://github.com/thea1lab" target="_blank" rel="noopener noreferrer"
+										aria-label="GitHub"><i class="ti-github" aria-hidden="true"></i></a></li>
+								
+								<li class="list-inline-item"><a href="https://www.youtube.com/@lab-a1" target="_blank" rel="noopener noreferrer"
+										aria-label="YouTube"><i class="ti-youtube" aria-hidden="true"></i></a></li>
+								
+								<li class="list-inline-item"><a href="https://www.linkedin.com/company/thea1lab" target="_blank" rel="noopener noreferrer"
+										aria-label="LinkedIn"><i class="ti-linkedin" aria-hidden="true"></i></a></li>
+								
+								<li class="list-inline-item"><a href="https://www.instagram.com/thea1lab" target="_blank" rel="noopener noreferrer"
+										aria-label="Instagram"><i class="ti-instagram" aria-hidden="true"></i></a></li>
+								
+							</ul>
+						</div>
+				</div>
+				<div class="footer-bottom">
+					<p class="footer-slogan">Todo problema merece um laboratório.</p>
+					<p class="footer-copyright">&copy; 2026 A1 Lab.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- /footer -->
+
+<!-- Google Map API -->
+
+
+	<!-- JS Plugins -->
+	
+	
+	
+	<script src="https://www.a1lab.com.br/plugins/jquery/jquery.min.js" defer></script>
+	
+	
+	
+	<script src="https://www.a1lab.com.br/plugins/bootstrap/bootstrap.min.js" defer></script>
+	
+	
+	
+	<script src="https://www.a1lab.com.br/plugins/slick/slick.min.js" defer></script>
+	
+	
+	
+	<script src="https://www.a1lab.com.br/plugins/shuffle/shuffle.min.js" defer></script>
+	
+	
+	
+	<script src="https://www.a1lab.com.br/plugins/magnific-popup/jquery.magnific-popup.min.js" defer></script>
+	
+	
+	
+	<script src="https://www.a1lab.com.br/plugins/lazy-load/lozad.min.js" defer></script>
+	
+	
+
+<!-- Main Script -->
+
+<script src="/js/script.min.ba4c8065a7009cdcc9ea9d4c2785120d0f5f4b0d22eadda3da495ce1045a5565a31ac136a567d3533ab4b70378c1c4ad.js" integrity="sha384-ukyAZacAnNzJ6p1MJ4USDQ9fSw0i6t2j2klc4QRaVWWjGsE2pWfTUzq0twN4wcSt" defer></script>
+
+
+
+
+</body>
+
+</html>

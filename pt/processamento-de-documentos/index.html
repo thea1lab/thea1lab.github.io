@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+	<meta name="theme-color" content="#e87a00"><title>Soluções de Processamento Automatizado de Documentos | A1 Lab</title><!-- mobile responsive meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Extraia, classifique e encaminhe dados de notas fiscais, contratos e e-mails. Sem templates, sem re-digitação. Protótipo funcional em 2-4 semanas.">
+	<meta name="robots" content="index, follow">
+	
+	<meta name="author" content="A1 Lab">
+	<meta name="generator" content="Hugo 0.160.0">
+
+	<!-- canonical + hreflang -->
+	<link rel="canonical" href="https://www.a1lab.com.br/pt/processamento-de-documentos/">
+	<link rel="llms-txt" href="https://www.a1lab.com.br/llms.txt">
+	<link rel="alternate" hreflang="en-US" href="https://www.a1lab.com.br/document-processing/">
+	<link rel="alternate" hreflang="pt-BR" href="https://www.a1lab.com.br/pt/processamento-de-documentos/">
+	<link rel="alternate" hreflang="x-default" href="https://www.a1lab.com.br/document-processing/">
+
+  <meta property="og:url" content="https://www.a1lab.com.br/pt/processamento-de-documentos/">
+  <meta property="og:site_name" content="A1 Lab">
+  <meta property="og:title" content="Soluções de Processamento Automatizado de Documentos">
+  <meta property="og:description" content="Extraia, classifique e encaminhe dados de notas fiscais, contratos e e-mails. Sem templates, sem re-digitação. Protótipo funcional em 2-4 semanas.">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="servicos">
+  <meta property="og:image" content="https://www.a1lab.com.br/images/full-background-logo.webp">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Soluções de Processamento Automatizado de Documentos">
+<meta name="twitter:description" content="Extraia, classifique e encaminhe dados de notas fiscais, contratos e e-mails. Sem templates, sem re-digitação. Protótipo funcional em 2-4 semanas.">
+<meta name="twitter:image" content="https://www.a1lab.com.br/images/full-background-logo.webp">
+
+
+
+		<!-- plugins -->
+		
+		
+		
+		
+		<link rel="stylesheet" href="https://www.a1lab.com.br/plugins/bootstrap/bootstrap.min.css">
+		
+		
+		
+		
+		
+		<link rel="stylesheet" href="https://www.a1lab.com.br/plugins/themify-icons/themify-icons.css">
+		
+		
+		
+		
+		
+		<link rel="stylesheet" href="https://www.a1lab.com.br/plugins/magnific-popup/magnific-popup.css">
+		
+		
+		
+		
+		
+		<link rel="stylesheet" href="https://www.a1lab.com.br/plugins/slick/slick.css">
+		
+		
+		
+		
+		
+		<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space&#43;Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+		<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space&#43;Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap"></noscript>
+		
+		
+		
+
+	<!-- Main Stylesheet -->
+	
+	<link rel="stylesheet" href="/css/style.min.62bfa557c1dbef9bbe292149d3081650ae15aa364f9789cd9519a06f8add3bd1e85b7e1d388a17810f5f17014bc5208a.css" integrity="sha384-Yr&#43;lV8Hb75u&#43;KSFJ0wgWUK4VqjZPl4nNlRmgb4rdO9HoW34dOIoXgQ9fFwFLxSCK" media="screen">
+
+	<!-- Custom stylesheet - for your changes -->
+	
+  <link rel="stylesheet" href="/css/custom.min.b4e9b14ea3b56edb0957cf7aa1586919f3689c6b50addea2b2941bb60b762f85b3fdc56ef2c3c9ebcdec9e87c7b5b198.css" integrity="sha384-tOmxTqO1btsJV896oVhpGfNonGtQrd6ispQbtgt2L4Wz/cVu8sPJ683snofHtbGY" media="screen">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="https://www.a1lab.com.br/images/favicon.png" type="image/x-icon">
+	<link rel="icon" href="https://www.a1lab.com.br/images/favicon.png" type="image/x-icon">
+	<link rel="apple-touch-icon" href="https://www.a1lab.com.br/images/favicon.png">
+
+	
+	<!-- Global Site Tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-384Q987MKZ"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-384Q987MKZ');
+	</script>
+	
+
+	
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","areaServed":{"@type":"Place","name":"Worldwide"},"availableChannel":{"@type":"ServiceChannel","availableLanguage":["Portuguese","English"],"serviceUrl":"https://www.a1lab.com.br/pt/processamento-de-documentos/"},"description":"Se o seu time lê notas fiscais, contratos, PDFs e e-mails à mão e digita os dados em outro lugar, podemos prototipar uma automação para isso. Pipeline de extração funcionando em 2 a 4 semanas, com números de acurácia nos seus documentos reais antes de qualquer compromisso.","hasOfferCatalog":{"@type":"OfferCatalog","itemListElement":[{"@type":"Offer","description":"Alguém do time abre cada nota fiscal, lê os valores e datas, e digita no sistema contábil. Leva horas, erros acontecem, e a pilha só cresce.","name":"Uma situação comum"},{"@type":"Offer","description":"Pegamos uma amostra dos documentos reais, treinamos um pipeline de extração nos formatos que você realmente recebe, adicionamos regras de validação para os campos mais importantes, e conectamos a saída onde os dados precisam ir.","name":"Como conduzimos"},{"@type":"Offer","description":"Um protótipo funcional do pipeline de extração com números de acurácia nos seus documentos reais, e um plano técnico com o que seria necessário para escalar.","name":"O que você recebe"}]},"name":"Soluções de Processamento Automatizado de Documentos","provider":{"@type":"Organization","name":"A1 Lab","url":"https://www.a1lab.com.br/"},"url":"https://www.a1lab.com.br/pt/processamento-de-documentos/"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","item":"https://www.a1lab.com.br/pt/","name":"A1 Lab","position":1},{"@type":"ListItem","item":"https://www.a1lab.com.br/pt/processamento-de-documentos/","name":"Soluções de Processamento Automatizado de Documentos","position":2}]}</script>
+
+	<script>
+	(function () {
+		var storageKey = "a1lab-language";
+	})();
+</script>
+
+</head>
+
+
+<body id="body" data-spy="scroll" data-target=".navbar" data-offset="55">
+  <a href="#content" class="skip-to-content sr-only">Pular para o conteúdo</a>
+  <div>
+    
+<!-- preloader start -->
+	<div class="preloader">
+	  
+	  <img src="https://www.a1lab.com.br/images/full-background-logo.webp" alt="" aria-hidden="true">
+	  
+	</div>
+<!-- preloader end -->
+
+
+    <main id="content">
+
+
+
+
+<header class="sticky-top navigation">
+	<div class="container">
+		<nav class="navbar navbar-expand-lg navbar-light">
+				<a class="navbar-brand p-0" href="/pt/">
+					
+					
+					<img class="lozad" data-src="https://www.a1lab.com.br/images/full-background-logo.webp" alt="A1 Lab" width="184" height="69"
+						style="height: 42px; width: auto;">
+					
+					
+				</a>
+
+				<button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
+					aria-controls="navigation" aria-expanded="false"
+					aria-label="Abrir menu de navegação">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+			<div class="collapse navbar-collapse" id="navigation">
+				<ul class="navbar-nav ml-auto">
+					
+					<li class="nav-item">
+            <a class="nav-link" href="/pt/#process">como funciona</a>
+					</li>
+					
+					<li class="nav-item">
+            <a class="nav-link" href="/pt/#expertise">competências</a>
+					</li>
+					
+					<li class="nav-item">
+            <a class="nav-link" href="/pt/#faq">FAQ</a>
+					</li>
+					
+					<li class="nav-item nav-lang-item">
+						<a class="nav-link nav-flag" href="https://www.a1lab.com.br/document-processing/" data-lang="en"
+							aria-label="English"
+							onclick="try{localStorage.setItem('a1lab-language','en')}catch(e){}">EN</a>
+					</li>
+					
+					<li class="nav-item nav-cta-item">
+						<a class="btn btn-nav-cta" href="/pt/#contact">Agendar conversa</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</header>
+
+
+
+
+
+
+<section class="service-landing-hero">
+  <div class="container">
+    
+    <p class="service-landing-hero__eyebrow">Serviços de Processamento de Documentos</p>
+    
+    <h1>Leia, extraia e classifique documentos em escala</h1>
+    
+    <p class="service-landing-hero__description">Se o seu time lê notas fiscais, contratos, PDFs e e-mails à mão e digita os dados em outro lugar, podemos prototipar uma automação para isso. Pipeline de extração funcionando em 2 a 4 semanas, com números de acurácia nos seus documentos reais antes de qualquer compromisso.</p>
+    
+  </div>
+</section>
+
+
+
+<section id="capabilities" class="section service-landing-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        
+        <div class="capability-group">
+          <h3 class="capability-group__title">O que prototipamos</h3>
+          <p class="capability-group__intro">Na maioria dos casos, processamento de documento é alguém lendo um PDF e digitando o que vê em outro sistema. Esse é o trabalho que prototipamos automatizar. Rápido o suficiente para ter números reais de acurácia antes de qualquer compromisso.</p>
+          <ul class="capability-list capability-list--detailed">
+            <li><strong>Extração de notas fiscais e recibos.</strong> Itens de linha, totais, datas e dados do fornecedor vão direto para o sistema contábil em vez de passar por uma área de transferência.</li><li><strong>Análise de contratos.</strong> Obrigações, cláusulas de risco, datas de renovação e valores financeiros aparecem em segundos, cada um com a citação da passagem de onde foi extraído.</li><li><strong>Classificação e roteamento automáticos.</strong> Os arquivos que entram caem na fila certa pelo que contêm, não por quem estava olhando a caixa de entrada naquele dia.</li><li><strong>Saída estruturada a partir de entrada confusa.</strong> JSON, CSV ou escrita direta no banco, com regras de validação nos campos que realmente importam para o processamento seguinte.</li><li><strong>Triagem de currículos.</strong> Candidatos ranqueados pelos critérios que você definir, com a justificativa anexada para o time de contratação confiar na ordem e contestar quando discordar.</li>
+          </ul>
+        </div>
+        
+        <div class="capability-group">
+          <h3 class="capability-group__title">Tecnologias</h3>
+          <p class="capability-group__intro">A stack muda conforme o caso. A maioria dos pipelines combina um modelo de linguagem para leitura com código determinístico para validação e entrega. Esse equilíbrio mantém a acurácia alta e o custo previsível.</p>
+          <ul class="capability-list capability-list--detailed">
+            <li><strong>Modelos de linguagem.</strong> OpenAI, Claude, Gemini e opções open-source como Llama, Mistral, Gemma e Qwen, escolhidos por tarefa conforme acurácia, custo e requisitos de privacidade.</li><li><strong>OCR.</strong> Opções open-source modernas como PaddleOCR, Qianfan-OCR e Tesseract quando podemos rodar no nosso ambiente, Google Vision ou AWS Textract quando a digitalização é ruim ou o volume é alto o suficiente para a via gerenciada compensar.</li><li><strong>ML clássico.</strong> Scikit-learn e XGBoost para problemas de classificação mais estreitos, onde um modelo grande é exagero e um menor é mais barato e mais rápido.</li><li><strong>Pipelines de validação.</strong> Thresholds de confiança e checagens de regra que barram extrações incertas antes de chegarem ao sistema downstream.</li><li><strong>Entrega.</strong> Webhooks, escritas diretas no banco ou handoff via fila, conforme o jeito que seus sistemas realmente esperam receber os dados.</li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section id="how-we-work" class="section bg-one service-landing-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-12">
+        <div class="title text-center wow fadeInUp" data-wow-duration="500ms">
+          <h2>Como conduzimos</h2>
+          <div class="border-meghna"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row how-we-work-grid">
+      <div class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-duration="500ms">
+        <div class="service-block how-we-work-card how-we-work-card--step-1">
+          <span class="how-we-work-card__step" aria-hidden="true">01</span>
+          <p class="how-we-work-card__label">Uma situação comum</p>
+          <p class="how-we-work-card__body">Alguém do time abre cada nota fiscal, lê os valores e datas, e digita no sistema contábil. Leva horas, erros acontecem, e a pilha só cresce.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="200ms">
+        <div class="service-block how-we-work-card how-we-work-card--step-2">
+          <span class="how-we-work-card__step" aria-hidden="true">02</span>
+          <p class="how-we-work-card__label">Como conduzimos</p>
+          <p class="how-we-work-card__body">Pegamos uma amostra dos documentos reais, treinamos um pipeline de extração nos formatos que você realmente recebe, adicionamos regras de validação para os campos mais importantes, e conectamos a saída onde os dados precisam ir.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="400ms">
+        <div class="service-block how-we-work-card how-we-work-card--step-3 how-we-work-card--payoff">
+          <span class="how-we-work-card__step" aria-hidden="true">03</span>
+          <p class="how-we-work-card__label">O que você recebe</p>
+          <p class="how-we-work-card__body">Um protótipo funcional do pipeline de extração com números de acurácia nos seus documentos reais, e um plano técnico com o que seria necessário para escalar.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="section" id="service-faq">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="title text-center wow fadeIn" data-wow-duration="500ms">
+          <h2>Dúvidas sobre automação de documentos</h2>
+          <div class="border-meghna"></div>
+        </div>
+        <div class="faq-accordion" id="serviceFaqAccordion">
+          
+          <div class="faq-item wow fadeInUp" data-wow-duration="500ms">
+            <button class="faq-question collapsed" type="button" data-toggle="collapse"
+              data-target="#service-faq-0" aria-expanded="false" aria-controls="service-faq-0">
+              Como automatizar a leitura de notas fiscais em PDF?
+              <span class="faq-icon ti-plus" aria-hidden="true"></span>
+            </button>
+            <div id="service-faq-0" class="collapse" data-parent="#serviceFaqAccordion">
+              <div class="faq-answer">
+                <p>Combinamos OCR com um modelo de linguagem para ler notas fiscais eletrônicas e em PDF escaneado, extraímos itens de linha, totais, datas e dados do fornecedor, e entregamos os dados direto no seu sistema contábil por API, webhook ou escrita no banco. Sem templates fixos. Funciona mesmo com layouts diferentes por fornecedor.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="faq-item wow fadeInUp" data-wow-duration="500ms">
+            <button class="faq-question collapsed" type="button" data-toggle="collapse"
+              data-target="#service-faq-1" aria-expanded="false" aria-controls="service-faq-1">
+              Dá para extrair cláusulas de contratos com IA?
+              <span class="faq-icon ti-plus" aria-hidden="true"></span>
+            </button>
+            <div id="service-faq-1" class="collapse" data-parent="#serviceFaqAccordion">
+              <div class="faq-answer">
+                <p>Sim. Para contratos em português ou inglês, extraímos obrigações, valores, prazos de renovação e cláusulas de risco, sempre com a citação da passagem de origem anexada. Útil para revisão jurídica, due diligence e acompanhamento de vencimentos.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="faq-item wow fadeInUp" data-wow-duration="500ms">
+            <button class="faq-question collapsed" type="button" data-toggle="collapse"
+              data-target="#service-faq-2" aria-expanded="false" aria-controls="service-faq-2">
+              Qual OCR funciona melhor para documentos em português?
+              <span class="faq-icon ti-plus" aria-hidden="true"></span>
+            </button>
+            <div id="service-faq-2" class="collapse" data-parent="#serviceFaqAccordion">
+              <div class="faq-answer">
+                <p>Depende da qualidade da digitalização. Para PDFs nativos usamos extração direta. Para scans, o OCR open-source avançou bastante. PaddleOCR e Qianfan-OCR lidam bem com português, inclusive em scans ruins onde o Tesseract costumava falhar. Quando os requisitos passam do que o open-source entrega de forma confiável, Google Vision ou AWS Textract são a alternativa gerenciada. A escolha entra no plano técnico conforme seus documentos reais.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="faq-item wow fadeInUp" data-wow-duration="500ms">
+            <button class="faq-question collapsed" type="button" data-toggle="collapse"
+              data-target="#service-faq-3" aria-expanded="false" aria-controls="service-faq-3">
+              Como funciona classificação automática de documentos recebidos?
+              <span class="faq-icon ti-plus" aria-hidden="true"></span>
+            </button>
+            <div id="service-faq-3" class="collapse" data-parent="#serviceFaqAccordion">
+              <div class="faq-answer">
+                <p>Treinamos um classificador sobre uma amostra dos seus documentos para rotear cada arquivo que chega (por e-mail, upload ou pasta compartilhada) para a fila certa — contas a pagar, jurídico, RH, etc. O modelo aprende com os tipos que você realmente recebe, não com categorias genéricas.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="faq-item wow fadeInUp" data-wow-duration="500ms">
+            <button class="faq-question collapsed" type="button" data-toggle="collapse"
+              data-target="#service-faq-4" aria-expanded="false" aria-controls="service-faq-4">
+              Quanto custa automatizar a extração de documentos?
+              <span class="faq-icon ti-plus" aria-hidden="true"></span>
+            </button>
+            <div id="service-faq-4" class="collapse" data-parent="#serviceFaqAccordion">
+              <div class="faq-answer">
+                <p>Depende do volume, da variedade de layouts e de onde os dados precisam chegar. O diagnóstico inicial (1 a 2 semanas) fecha escopo e preço antes de construirmos o protótipo. Um pipeline de extração piloto costuma ficar pronto em 2 a 4 semanas.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="faq-item wow fadeInUp" data-wow-duration="500ms">
+            <button class="faq-question collapsed" type="button" data-toggle="collapse"
+              data-target="#service-faq-5" aria-expanded="false" aria-controls="service-faq-5">
+              Os dados dos nossos documentos ficam seguros?
+              <span class="faq-icon ti-plus" aria-hidden="true"></span>
+            </button>
+            <div id="service-faq-5" class="collapse" data-parent="#serviceFaqAccordion">
+              <div class="faq-answer">
+                <p>Sim. Assinamos NDA, processamos os documentos em ambiente controlado e, quando a privacidade exige, usamos modelos open-source (Llama, Mistral, Gemma, Qwen, entre outros) rodando na sua infraestrutura ou na nossa, sem envio para APIs externas.</p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "\"Como automatizar a leitura de notas fiscais em PDF?\"",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "\"Combinamos OCR com um modelo de linguagem para ler notas fiscais eletrônicas e em PDF escaneado, extraímos itens de linha, totais, datas e dados do fornecedor, e entregamos os dados direto no seu sistema contábil por API, webhook ou escrita no banco. Sem templates fixos. Funciona mesmo com layouts diferentes por fornecedor.\""
+      }
+    },{
+      "@type": "Question",
+      "name": "\"Dá para extrair cláusulas de contratos com IA?\"",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "\"Sim. Para contratos em português ou inglês, extraímos obrigações, valores, prazos de renovação e cláusulas de risco, sempre com a citação da passagem de origem anexada. Útil para revisão jurídica, due diligence e acompanhamento de vencimentos.\""
+      }
+    },{
+      "@type": "Question",
+      "name": "\"Qual OCR funciona melhor para documentos em português?\"",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "\"Depende da qualidade da digitalização. Para PDFs nativos usamos extração direta. Para scans, o OCR open-source avançou bastante. PaddleOCR e Qianfan-OCR lidam bem com português, inclusive em scans ruins onde o Tesseract costumava falhar. Quando os requisitos passam do que o open-source entrega de forma confiável, Google Vision ou AWS Textract são a alternativa gerenciada. A escolha entra no plano técnico conforme seus documentos reais.\""
+      }
+    },{
+      "@type": "Question",
+      "name": "\"Como funciona classificação automática de documentos recebidos?\"",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "\"Treinamos um classificador sobre uma amostra dos seus documentos para rotear cada arquivo que chega (por e-mail, upload ou pasta compartilhada) para a fila certa — contas a pagar, jurídico, RH, etc. O modelo aprende com os tipos que você realmente recebe, não com categorias genéricas.\""
+      }
+    },{
+      "@type": "Question",
+      "name": "\"Quanto custa automatizar a extração de documentos?\"",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "\"Depende do volume, da variedade de layouts e de onde os dados precisam chegar. O diagnóstico inicial (1 a 2 semanas) fecha escopo e preço antes de construirmos o protótipo. Um pipeline de extração piloto costuma ficar pronto em 2 a 4 semanas.\""
+      }
+    },{
+      "@type": "Question",
+      "name": "\"Os dados dos nossos documentos ficam seguros?\"",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "\"Sim. Assinamos NDA, processamos os documentos em ambiente controlado e, quando a privacidade exige, usamos modelos open-source (Llama, Mistral, Gemma, Qwen, entre outros) rodando na sua infraestrutura ou na nossa, sem envio para APIs externas.\""
+      }
+    }
+  ]
+}
+</script>
+
+
+
+
+<section id="cta-service" class="call-to-action section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="cta-panel">
+          <div class="cta-panel__content">
+            
+            <p class="cta-panel__eyebrow">Comece com uma call de 30 min</p>
+            
+            <h2>Pronto pra começar?</h2>
+            
+            <a href="#contact" class="btn btn-main">Agendar conversa gratuita</a>
+          </div>
+          <div class="cta-panel__proof" aria-label="Nossos diferenciais">
+            <p class="cta-panel__proof-title">Nossos diferenciais</p>
+            <ul class="cta-panel__proof-list">
+              <li>Protótipo funcional antes de qualquer decisão de longo prazo</li>
+              <li>Sem lock-in: você leva todo código e documentação</li>
+              <li>Projetos iniciam em dias, não semanas</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<!-- Start Contact Us -->
+<section id="contact" class="contact-us section-bg">
+	<div class="container pb-5">
+		<div class="row justify-content-between align-items-start">
+			<!-- Contact Details -->
+			<div class="contact-info col-lg-5 wow fadeInUp" data-wow-duration="500ms">
+				<p class="contact-eyebrow">Vamos falar do seu caso</p>
+				<h2>Fale com o Lab</h2>
+				<p class="contact-lead">Descreva o desafio em poucas linhas. Retornamos para conversar sobre os próximos passos.</p>
+				<div class="contact-proof-list">
+					<p class="contact-proof-list__title">O que acontece depois</p>
+					<ul>
+						<li>Conversa de 30 min, sem compromisso</li>
+						<li>Diagnóstico em 1-2 semanas</li>
+						<li>Protótipo funcional em 2-4 semanas, plano técnico em 1 semana</li>
+					</ul>
+				</div>
+				<div class="contact-response-note">
+					<span class="contact-response-note__label">Resposta inicial</span>
+					<strong>No mesmo dia útil</strong>
+				</div>
+
+				<div class="contact-details" aria-label="Canais de contato">
+					
+					<div class="con-info clearfix">
+						<i class="ti-email"></i>
+						<div class="con-info__content">
+							
+							<span>E-mail: contato@a1lab.com.br</span>
+							
+						</div>
+					</div>
+					
+				</div>
+			</div>
+
+			<!-- Contact Form -->
+			
+			
+			
+			<div class="col-lg-6 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
+					<div class="contact-form-shell">
+						<div class="contact-form-shell__header">
+							<p class="contact-form-shell__eyebrow">Comece por aqui</p>
+							<h3>Conte o desafio e onde a experimentação pode ajudar</h3>
+						</div>
+					<form id="contact-form" class="form-meghna" method="post" action="/api/contact" role="form" novalidate
+							data-error-required="Este campo é obrigatório."
+							data-error-email="Use um formato válido de e-mail (ex: nome@exemplo.com)."
+							data-success-msg="Mensagem enviada! Retornamos no mesmo dia útil."
+							data-error-msg="Não foi possível enviar. Verifique sua conexão e tente novamente.">
+						<div class="form-group">
+							<label for="name">Seu nome</label>
+							<input type="text" class="form-control" name="name" id="name"
+								autocomplete="name" maxlength="120" required
+								aria-required="true" aria-describedby="name-error">
+							<span id="name-error" class="field-error" role="alert" hidden></span>
+						</div>
+						<div class="form-group">
+							<label for="email">Seu e-mail</label>
+							<input type="email" placeholder="nome@exemplo.com" class="form-control" name="email" id="email"
+								autocomplete="email" inputmode="email" maxlength="254" required
+								aria-required="true" aria-describedby="email-error">
+							<span id="email-error" class="field-error" role="alert" hidden></span>
+						</div>
+						
+						<div class="form-group">
+							<label for="company">Empresa <span class="label-optional">(opcional)</span></label>
+							<input type="text" class="form-control" name="company" id="company"
+								autocomplete="organization" maxlength="120">
+						</div>
+						
+						<div class="form-group">
+							<label for="subject">Como podemos ajudar?</label>
+							
+							<select class="form-control" name="subject" id="subject" required
+								aria-required="true" aria-describedby="subject-error">
+								<option value="" disabled selected>Selecione uma opção</option>
+							
+							<option value="Quero um diagnóstico">Quero um diagnóstico</option>
+							
+							<option value="Quero validar uma ideia">Quero validar uma ideia</option>
+							
+							<option value="Quero saber mais">Quero saber mais</option>
+							
+							<option value="Outro">Outro</option>
+							
+						</select>
+							
+							<span id="subject-error" class="field-error" role="alert" hidden></span>
+						</div>
+						
+						<div class="form-group">
+							<label for="stage">Estágio do projeto <span class="label-optional">(opcional)</span></label>
+							<select class="form-control" name="stage" id="stage">
+								<option value="" disabled selected>Selecione uma opção</option>
+							
+								<option value="Ideia inicial">Ideia inicial</option>
+							
+								<option value="Já pesquisei alternativas">Já pesquisei alternativas</option>
+							
+								<option value="Preciso de um protótipo">Preciso de um protótipo</option>
+							
+								<option value="Pronto para definir a próxima fase">Pronto para definir a próxima fase</option>
+							
+							</select>
+						</div>
+						
+						<div class="form-group">
+							<label for="message">Descreva seu desafio</label>
+							<textarea rows="6" class="form-control" name="message" id="message"
+								maxlength="2000" required
+								aria-required="true" aria-describedby="message-error"></textarea>
+							<span id="message-error" class="field-error" role="alert" hidden></span>
+						</div>
+					
+					<div id="turnstile-container"></div>
+					<script>
+					var _turnstileWidgetId = null;
+					function onTurnstileLoad() {
+						if (_turnstileWidgetId !== null) return;
+						var el = document.getElementById('turnstile-container');
+						if (!el) return;
+						_turnstileWidgetId = turnstile.render(el, { sitekey: '0x4AAAAAACqpSTTxUQkMNCtC' });
+					}
+					</script>
+					<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onTurnstileLoad" async defer></script>
+					
+					<div id="cf-submit">
+						<button type="submit" id="contact-submit" class="btn btn-transparent btn-block"
+							value="Enviar mensagem">Enviar mensagem</button>
+					</div>
+					<div id="form-status" class="form-status" role="alert" aria-live="polite" hidden></div>
+				</form>
+					</div>
+			</div>
+			
+			
+		</div>
+	</div>
+</section>
+<!-- /contact -->
+
+
+
+
+
+    </main>
+  </div><!-- end Contact Area -->
+<footer id="footer" class="section">
+	<div class="container">
+		<div class="row wow fadeInUp" data-wow-duration="500ms">
+			<div class="col-xl-12">
+				<div class="footer-shell">
+					<div class="footer-brand">
+						<a href="https://www.a1lab.com.br/pt/">
+							<img src="https://www.a1lab.com.br/images/full-background-logo.webp" alt="A1 Lab" width="144" height="54" />
+						</a>
+					</div>
+
+					<nav class="footer-nav" aria-label="Navegação do rodapé">
+						<div class="footer-nav-columns">
+							<ul>
+								
+								<li>
+									<a href="https://www.a1lab.com.br/pt/#process">como funciona</a>
+								</li>
+								
+								<li>
+									<a href="https://www.a1lab.com.br/pt/#expertise">competências</a>
+								</li>
+								
+								<li>
+									<a href="https://www.a1lab.com.br/pt/#faq">FAQ</a>
+								</li>
+								
+								<li>
+									<a href="https://www.a1lab.com.br/pt/blog">Blog</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+
+					<!-- Footer Social Links -->
+					<div class="social-icon footer-social">
+						<ul class="list-inline">
+							
+								<li class="list-inline-item"><a href="https://github.com/thea1lab" target="_blank" rel="noopener noreferrer"
+										aria-label="GitHub"><i class="ti-github" aria-hidden="true"></i></a></li>
+								
+								<li class="list-inline-item"><a href="https://www.youtube.com/@lab-a1" target="_blank" rel="noopener noreferrer"
+										aria-label="YouTube"><i class="ti-youtube" aria-hidden="true"></i></a></li>
+								
+								<li class="list-inline-item"><a href="https://www.linkedin.com/company/thea1lab" target="_blank" rel="noopener noreferrer"
+										aria-label="LinkedIn"><i class="ti-linkedin" aria-hidden="true"></i></a></li>
+								
+								<li class="list-inline-item"><a href="https://www.instagram.com/thea1lab" target="_blank" rel="noopener noreferrer"
+										aria-label="Instagram"><i class="ti-instagram" aria-hidden="true"></i></a></li>
+								
+							</ul>
+						</div>
+				</div>
+				<div class="footer-bottom">
+					<p class="footer-slogan">Todo problema merece um laboratório.</p>
+					<p class="footer-copyright">&copy; 2026 A1 Lab.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- /footer -->
+
+<!-- Google Map API -->
+
+
+	<!-- JS Plugins -->
+	
+	
+	
+	<script src="https://www.a1lab.com.br/plugins/jquery/jquery.min.js" defer></script>
+	
+	
+	
+	<script src="https://www.a1lab.com.br/plugins/bootstrap/bootstrap.min.js" defer></script>
+	
+	
+	
+	<script src="https://www.a1lab.com.br/plugins/slick/slick.min.js" defer></script>
+	
+	
+	
+	<script src="https://www.a1lab.com.br/plugins/shuffle/shuffle.min.js" defer></script>
+	
+	
+	
+	<script src="https://www.a1lab.com.br/plugins/magnific-popup/jquery.magnific-popup.min.js" defer></script>
+	
+	
+	
+	<script src="https://www.a1lab.com.br/plugins/lazy-load/lozad.min.js" defer></script>
+	
+	
+
+<!-- Main Script -->
+
+<script src="/js/script.min.ba4c8065a7009cdcc9ea9d4c2785120d0f5f4b0d22eadda3da495ce1045a5565a31ac136a567d3533ab4b70378c1c4ad.js" integrity="sha384-ukyAZacAnNzJ6p1MJ4USDQ9fSw0i6t2j2klc4QRaVWWjGsE2pWfTUzq0twN4wcSt" defer></script>
+
+
+
+
+</body>
+
+</html>
